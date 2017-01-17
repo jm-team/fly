@@ -24,45 +24,35 @@
     margin-right: 20px;
     cursor: pointer;
 }
-.jm-radio-box:hover .jm-radio-icon,
-.jm-checkbox-box:hover .jm-checkbox-icon{
-    background-position: -86px 0;
-}
 .jm-radio-box .jm-radio-icon,
 .jm-checkbox-box .jm-checkbox-icon{
     display: inline-block;
-    width: 14px;
-    height: 14px;
     position: absolute;
     left: 0;
-    top: 3px;
+    top: 2px;
     z-index: 1;
+    font-size: 14px;
+    color: #cacaca;
     padding-right: 10px;
-    background: url('../img/jm-radio-icon.png') -45px 0 no-repeat;
 }
-.jm-checkbox-box .jm-checkbox-icon{
-    background: url('../img/jm-checkbox-icon.png') -45px 0 no-repeat;
+.jm-radio-box:hover .jm-radio-icon,
+.jm-checkbox-box:hover .jm-checkbox-icon{
+    color: #0080ca;
 }
-.jm-radio-box .jm-radio-icon.active,
-.jm-checkbox-box .jm-checkbox-icon.active{
-    background-position: 0 0;
+.jm-checkbox-box .jm-icon-checkbook,
+.jm-radio-box .jm-icon-radio{
+    color: #0080ca;
 }
 .jm-radio,
 .jm-checkbox{
-     vertical-align: middle;
+     vertical-align: text-bottom;
      margin-right: 10px;
+     height: 14px;
+     width: 14px;
      opacity: 0;
      filter: alpha(opacity=0);
 }
-.jm-radio-box.jm-radio-disabled .jm-radio-icon{
-    background-position: -174px 0;
-}
-.jm-radio-box.jm-radio-disabled .jm-radio-icon.active{
-    background-position: -131px 0;
-}
+.jm-radio-box.jm-radio-disabled .jm-radio-icon,
 .jm-checkbox-box.jm-checkbox-disabled .jm-checkbox-icon{
-    background-position: -172px 0;
-}
-.jm-checkbox-box.jm-checkbox-disabled .jm-checkbox-icon.active{
-    background-position: -129px 0;
+    color: #cacaca;
 }
