@@ -7,9 +7,9 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var hash = chunkhash = contenthash = '';
 
 
-hash = '[hash:8].';
-chunkhash = '[chunkhash:8].';
-contenthash = '[contenthash:8].';
+// hash = '[hash:8].';
+// chunkhash = '[chunkhash:8].';
+// contenthash = '[contenthash:8].';
 
 // multiple extract instances
 var extractCSS = new ExtractTextPlugin('css/[name].' + contenthash + 'css');
@@ -22,7 +22,7 @@ module.exports = merge({
      */
     entry: {
         // 公共文件
-        fly: './index.js'
+        fly: './components/style/index.js'
     },
 
     // 构建之后的文件目录配置
