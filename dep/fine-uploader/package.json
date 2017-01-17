@@ -1,0 +1,135 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "fine-uploader",
+        "scope": null,
+        "escapedName": "fine-uploader",
+        "name": "fine-uploader",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\xld\\developer\\fly"
+    ]
+  ],
+  "_cnpm_publish_time": 1483762989199,
+  "_from": "fine-uploader@latest",
+  "_id": "fine-uploader@5.12.0",
+  "_inCache": true,
+  "_location": "/fine-uploader",
+  "_nodeVersion": "5.0.0",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/fine-uploader-5.12.0.tgz_1483762988542_0.4244519241619855"
+  },
+  "_npmUser": {
+    "name": "rnicholus",
+    "email": "github@garstasio.com"
+  },
+  "_npmVersion": "3.3.6",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "fine-uploader",
+    "scope": null,
+    "escapedName": "fine-uploader",
+    "name": "fine-uploader",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npm.taobao.org/fine-uploader/download/fine-uploader-5.12.0.tgz",
+  "_shasum": "bc02a24e75beb040c1e2a682993446294467edc7",
+  "_shrinkwrap": null,
+  "_spec": "fine-uploader",
+  "_where": "C:\\Users\\xld\\developer\\fly",
+  "author": {
+    "name": "Widen Enterprises, Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/FineUploader/fine-uploader/issues"
+  },
+  "contributors": [
+    {
+      "name": "Ray Nicholus",
+      "url": "http://raynicholus.com"
+    }
+  ],
+  "dependencies": {},
+  "description": "Multiple file upload plugin with progress-bar, drag-and-drop, direct-to-S3 & Azure uploading, client-side image scaling, preview generation, form support, chunking, auto-resume, and tons of other features.",
+  "devDependencies": {
+    "clean-css": "3.4.23",
+    "jscs": "3.0.7",
+    "jshint": "2.9.4",
+    "karma": "1.3.0",
+    "karma-firefox-launcher": "1.0.0",
+    "karma-mocha": "1.3.0",
+    "karma-spec-reporter": "0.0.26",
+    "mocha": "3.2.0",
+    "node-static": "0.7.9",
+    "pica": "latest",
+    "uglify-js": "2.7.5"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "bc02a24e75beb040c1e2a682993446294467edc7",
+    "size": 5194011,
+    "noattachment": false,
+    "tarball": "http://registry.npm.taobao.org/fine-uploader/download/fine-uploader-5.12.0.tgz"
+  },
+  "homepage": "https://github.com/FineUploader/fine-uploader#readme",
+  "keywords": [
+    "amazon",
+    "api",
+    "aws",
+    "azure",
+    "chunk",
+    "chunking",
+    "cross-domain",
+    "cross-site",
+    "drag",
+    "drop",
+    "file",
+    "file-input",
+    "file-uploader",
+    "input",
+    "jquery",
+    "jquery-plugin",
+    "multiple",
+    "preview",
+    "progress",
+    "resume",
+    "s3",
+    "selection",
+    "upload",
+    "widget"
+  ],
+  "license": "MIT",
+  "main": "lib/traditional.js",
+  "maintainers": [
+    {
+      "name": "rnicholus",
+      "email": "github@garstasio.com"
+    }
+  ],
+  "name": "fine-uploader",
+  "optionalDependencies": {},
+  "publish_time": 1483762989199,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/FineUploader/fine-uploader.git"
+  },
+  "scripts": {
+    "build": "make clean; make build-all-ui",
+    "lint": "make lint",
+    "start": "make start-local-dev",
+    "test": "make lint && make test"
+  },
+  "title": "Fine Uploader",
+  "version": "5.12.0"
+}

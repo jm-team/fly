@@ -1,0 +1,21 @@
+{
+  "name": "upload-demo",
+  "version": "1.0.0",
+  "description": "file uploader demo",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "fine-uploader": "^5.12.0",
+    "mkdirp": "^0.5.1",
+    "multiparty": "^4.1.2",
+    "rimraf": "^2.5.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "set PUBLIC_DIR=$(pwd)/dep/fine-uploader WORKING_DIR=${pwd}/components/upload/demo UPLOADED_FILES_DIR=$(pwd)/components/upload/demo/uploaded/ node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
