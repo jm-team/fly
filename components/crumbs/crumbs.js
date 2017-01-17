@@ -1,6 +1,4 @@
 $(function () {
-    // 引用placeholder.js
-    $('input, textarea').placeholder({placeholderColor:'#bababa',customClass:'my-placeholder'});
     // 单选框事件
     $('.jm-radio-box').on('click', function () {
         if($(this).hasClass('jm-radio-disabled') == false){
@@ -9,7 +7,7 @@ $(function () {
             $(this).siblings().children('.jm-radio').removeAttr('checked');
             $(this).siblings().children('.jm-radio-icon').removeClass('active')
         } 
-    })
+    });
     // 多选框事件
     $('.jm-checkbox-box').on('click', function () {
         if ($(this).hasClass('jm-checkbox-disabled')) {

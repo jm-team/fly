@@ -14,62 +14,9 @@
     padding: 0 4px;
     color: #bababa;
 }
-
-/******input标签样式******/
-.jm-input-box{
-    position: relative;
-}
-.jm-input{
-    display: inline-block;
-    width: 100%;
-    height: 36px;
-    line-height: 36px;
-    padding: 0 10px;
+.jm-crumbs-icon{
     font-size: 14px;
-    color: #666666;
-    border: 1px solid #dddddd;
-}
-.jm-input:focus{
-    border: 1px solid #0080ca;
-    outline: none;
-}
-.jm-input:disabled{
-    background-color: #f6f6f6;
-}
-.jm-input-xs{
-    height: 26px;
-    line-height: 26px;
-    font-size: 12px;
-}
-.jm-input-sm{
-    height: 30px;
-    line-height: 30px;
-    font-size: 12px;
-}
-.jm-input-lg{
-    height: 42px;
-    line-height: 42px;
-}
-.jm-input-icon{
-    background: url('../img/jm-input-icon') no-repeat;
-}
-.jm-input.placeholder,
-.jm-input.my-placeholder{
-    color: #bababa;
-}
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #bababa;
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #bababa;
-   opacity:  1;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #bababa;
-   opacity:  1;
-}
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #bababa;
+    margin-right: 4px;
 }
 /******radio与checkbox标签样式******/
 .jm-radio-box,.jm-checkbox-box{
