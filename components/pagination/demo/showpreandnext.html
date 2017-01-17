@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>pagination-ShowPreAndNext</title>
+        <link rel="stylesheet" type="text/css" href="../style/laypage.css">
+    </head>
+    <body>
+        <div id="page"></div>
+        <script type="text/javascript" src="../../../dep/laypage-1.3.0/laypage.js"></script>
+        <script>
+            laypage({
+                cont:'page',
+                pages:100,
+                groups:0,
+                first:false,
+                last:false,
+                jump:function(obj){
+                    alert(obj.curr);
+                }
+            });
+        </script>
+    </body>
+</html>
