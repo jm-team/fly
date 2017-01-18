@@ -1,0 +1,104 @@
+.main-content header {
+    margin: 40px 40px 0 40px;
+}
+
+fieldset {
+    display: block;
+    margin: 40px;
+    padding: 35px 40px 40px;
+    border-radius: 4px;
+    color:#666666;
+}
+
+fieldset legend {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.jm-upload {
+    width: 360px;
+}
+
+.file-list {
+    margin-bottom: 34px;
+}
+
+.file-list li {
+    border-radius: 4px;
+    transition: all .5s cubic-bezier(.55,0,.1,1);
+}
+
+.file-list li:hover {
+    background-color: #eef1f6;
+}
+
+.file-list a {
+    font-size: 14px;
+    color:#777777;
+    line-height: 32px;
+    display: block;
+    margin-right: 40px;
+    overflow: hidden;
+    padding-left: 4px;
+    text-overflow: ellipsis;
+    transition: color .3s;
+    white-space: nowrap;
+}
+
+.file-list a:hover {
+    color:#20a0ff;
+}
+
+.file-list li+li {
+    margin-top: 10px;
+
+}
+
+.jm-icon {
+    margin-right: 10px;
+}
+
+
+.jm-btn {
+    min-width: 77px;
+    height: 36px;
+    font-size: 16px;
+    color:#fff;
+    background: #0080cb;
+    border:0;
+    border-radius: 3px;
+}
+
+.jm-upload-btn-delete {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    font-size: 12px;
+    color: #20a0ff;
+    cursor: pointer;
+    display: none;
+}
+
+.jm-upload li{
+    position: relative;
+}
+
+.jm-upload li:hover .jm-upload-btn-delete {
+    display: block;
+}
+
+.comments {
+    font-size: 14px;
+    color:#bababa;
+}
+
+.thumbnail {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.line-height32 {
+    line-height: 32px;
+}.line-height50 {
+    line-height: 50px;
+}
