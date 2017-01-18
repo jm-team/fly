@@ -1,3 +1,37 @@
 /*!
  laypage默认样式
-*/.jm-page_main a,.jm-page_main input,.jm-page_main span{height:34px;line-height:34px}.jm-page_main button,.jm-page_main input,.jm-pageskin_default a{border:1px solid #ccc;background-color:#fff}.jm-page_main{font-size:0;clear:both;color:#777}.jm-page_main *{display:inline-block;vertical-align:top;font-size:14px;text-align: center;}.jm-page_main a{text-decoration:none;color:#777}.jm-page_main a,.jm-page_main span{margin:0 5px 6px;padding:0 10px;min-width:14px;height:34px;line-height:34px;border-radius:2px;}.jm-page_main input{width:40px;margin:0 5px;padding:0 5px;border-radius:2px;}.jm-page_main button{height:36px;line-height:28px;margin-left:10px;padding:0 10px;color:#777;border-radius:2px;}.jm-pageskin_default span{height:36px;line-height:36px;color:#777}.jm-pageskin_default .jm-page_curr{font-weight:700;color:#fff;min-width:16px;height:36px;line-height:36px;background: #0080cb;}.jm-pageskin_molv a,.jm-pageskin_molv span{padding:0 12px;border-radius:2px}.jm-pageskin_molv a{background-color:#f1eff0}.jm-pageskin_molv .jm-page_curr{background-color:#00AA91;color:#fff}.jm-pageskin_molv input{height:24px;line-height:24px}.jm-pageskin_molv button{height:26px;line-height:26px}.jm-pageskin_yahei{color:#333}.jm-pageskin_yahei a,.jm-pageskin_yahei span{padding:0 13px;border-radius:2px;color:#333}.jm-pageskin_yahei .jm-page_curr{background-color:#333;color:#fff}.jm-pageskin_flow{text-align:center}.jm-pageskin_flow .jm-page_nomore{color:#999}
+*/
+.jm-page_main a,.jm-page_main input,.jm-page_main span{height:34px;line-height:34px}
+.jm-page_main button,.jm-page_main input,.jm-pageskin_default a{border:1px solid #ccc;background-color:#fff}
+.jm-page_main{font-size:0;clear:both;color:#777}
+.jm-page_main *{display:inline-block;vertical-align:top;font-size:14px;text-align: center;}
+.jm-page_main a{text-decoration:none;color:#777}
+.jm-page_main a,.jm-page_main span{margin:0 5px 6px;padding:0 10px;min-width:14px;height:34px;line-height:34px;border-radius:2px;}
+.jm-page_main input{width:40px;margin:0 5px;padding:0 5px;border-radius:2px;}
+.jm-page_main button{height:36px;line-height:28px;margin-left:10px;padding:0 10px;color:#777;border-radius:2px;}
+.jm-pageskin_default span{height:36px;line-height:36px;color:#777}
+.jm-pageskin_default .jm-page_curr{font-weight:700;color:#fff;min-width:16px;height:36px;line-height:36px;background: #0080cb;}
+.jm-pageskin_molv a,.jm-pageskin_molv span{padding:0 12px;border-radius:2px}
+.jm-pageskin_molv a{background-color:#f1eff0}
+.jm-pageskin_molv .jm-page_curr{background-color:#00AA91;color:#fff}
+.jm-pageskin_molv input{height:34px;line-height:34px}
+.jm-pageskin_molv button{height:36px;line-height:36px}
+.jm-pageskin_yahei{color:#333}
+.jm-pageskin_yahei a,.jm-pageskin_yahei span{padding:0 13px;border-radius:2px;color:#333}
+.jm-pageskin_yahei .jm-page_curr{background-color:#333;color:#fff}
+.jm-pageskin_flow{text-align:center}
+.jm-pageskin_flow .jm-page_nomore{color:#999}
+
+.jm-page_main.jm-page_sm a,.jm-page_main.jm-page_sm input,.jm-page_main.jm-page_sm span{height:20px;line-height:20px}
+.jm-page_main.jm-page_sm button,.jm-page_main.jm-page_sm input,.jm-pageskin_default.jm-page_sm a{border:1px solid #ccc;background-color:#fff}
+.jm-page_main.jm-page_sm a{border:0px solid #ccc}
+.jm-page_main.jm-page_sm a,.jm-page_main.jm-page_sm span{margin:0 2px 6px;padding:0 6px;min-width:8px;height:20px;line-height:20px;border-radius:2px;}
+.jm-page_main input{width:40px;margin:0 5px;padding:0 5px;border-radius:2px;}
+.jm-page_main.jm-page_sm button{height:22px;line-height:20px;margin-left:10px;padding:0 6px;color:#777;border-radius:2px;}
+.jm-pageskin_default.jm-page_sm span{height:22px;line-height:22px;color:#777}
+.jm-pageskin_default.jm-page_sm .jm-page_curr{font-weight:700;color:#fff;min-width:10px;height:22px;line-height:22px;background: #0080cb;}
+.jm-pageskin_molv.jm-page_sm a,.jm-pageskin_molv.jm-page_sm span{padding:0 12px;border-radius:2px}
+.jm-pageskin_molv.jm-page_sm a{background-color:#f1eff0}
+.jm-pageskin_molv.jm-page_sm .jm-page_curr{background-color:#00AA91;color:#fff}
+.jm-pageskin_molv.jm-page_sm input{height:24px;line-height:24px}
+.jm-pageskin_molv.jm-page_sm button{height:26px;line-height:26px}
