@@ -1,0 +1,58 @@
+/******面包屑样式******/
+.jm-crumbs li{
+    float: left;
+    color: #666666;
+    font-size: 14px;
+}
+.jm-crumbs a{
+    color: #666666;
+}
+.jm-crumbs .active{
+    color: #bababa;
+}
+.jm-crumbs i{
+    padding: 0 4px;
+    color: #bababa;
+}
+.jm-crumbs-icon{
+    font-size: 14px;
+    margin-right: 4px;
+}
+/******radio与checkbox标签样式******/
+.jm-radio-box,.jm-checkbox-box{
+    position: relative;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.jm-radio-box .jm-radio-icon,
+.jm-checkbox-box .jm-checkbox-icon{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    z-index: 1;
+    font-size: 14px;
+    color: #cacaca;
+    padding-right: 10px;
+}
+.jm-radio-box:hover .jm-radio-icon,
+.jm-checkbox-box:hover .jm-checkbox-icon{
+    color: #0080ca;
+}
+.jm-checkbox-box .jm-icon-checkbook,
+.jm-radio-box .jm-icon-radio{
+    color: #0080ca;
+}
+.jm-radio,
+.jm-checkbox{
+     vertical-align: text-bottom;
+     margin-right: 10px;
+     height: 14px;
+     width: 14px;
+     opacity: 0;
+     filter: alpha(opacity=0);
+}
+.jm-radio-box.jm-radio-disabled .jm-radio-icon,
+.jm-checkbox-box.jm-checkbox-disabled .jm-checkbox-icon{
+    color: #cacaca;
+}
