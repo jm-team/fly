@@ -131,6 +131,11 @@
                 endpoint: "/uploads",
                 forceConfirm: true,
                 enabled: true
+            },
+            validation: {
+                allowedExtensions: ['jpeg', 'jpg', 'png'],
+                itemLimit: 3,
+                sizeLimit: 512000 // 500 kB = 500 * 1024 bytes
             }
                         
         })
