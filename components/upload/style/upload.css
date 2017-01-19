@@ -60,13 +60,22 @@ fieldset legend {
 
 
 .jm-btn {
+    display: inline-block;
     min-width: 77px;
     height: 36px;
+    line-height: 36px;
+    padding: 0 23px;
     font-size: 16px;
     color:#fff;
     background: #0080cb;
     border:0;
     border-radius: 3px;
+    cursor: pointer;
+}
+
+.jm-btn:hover {
+    background: #4db3ff;
+    border-color: #4db3ff;
 }
 
 .jm-upload-btn-delete {
@@ -90,6 +99,7 @@ fieldset legend {
 .comments {
     font-size: 14px;
     color:#bababa;
+    margin-top: 10px;
 }
 
 .thumbnail {

@@ -27,6 +27,9 @@ var express = require("express"),
     fileInputName = process.env.FILE_INPUT_NAME || "qqfile",
     publicDir = process.env.PUBLIC_DIR, // 客户端静态资源文件
     workDir = process.env.WORKING_DIR, // 当前工作目录
+    styleDir = process.env.DEV_STYLE_DIR,
+    staticDir = process.env.STATIC_DIR,
+    distDir = process.env.DIST_DIR,
     uploadedFilesPath = process.env.UPLOADED_FILES_DIR, // 上传文件夹
     chunkDirName = "chunks",
     port = process.env.SERVER_PORT || 8000,
@@ -38,6 +41,9 @@ app.listen(port, function () {
 
 // routes
 app.use(express.static(publicDir));
+app.use('/style', express.static(styleDir));
+app.use('/static', express.static(staticDir));
+app.use('/dist', express.static(distDir));
 app.post("/uploads", onUpload);
 app.delete("/uploads/:uuid", onDeleteFile);
 
@@ -50,7 +56,7 @@ app.get('/demo2', function (req, res) {
 })
 
 app.get('/', function (req, res) {
-  res.send('Hello World!')
+  res.sendFile(workDir + "/index.html")
 })
 
 

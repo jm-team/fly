@@ -13,6 +13,9 @@
             "env": {
                 "WORKING_DIR": "${workspaceRoot}\\components\\upload\\demo",
                 "PUBLIC_DIR": "${workspaceRoot}\\dep\\fine-uploader",
+                "DEV_STYLE_DIR": "${workspaceRoot}\\components\\upload\\style",
+                "STATIC_DIR": "${workspaceRoot}\\components\\upload\\demo\\static",
+                "DIST_DIR": "${workspaceRoot}\\dist",
                 "UPLOADED_FILES_DIR": "${workspaceRoot}\\components\\upload\\demo\\uploaded\\"
             }
         },
