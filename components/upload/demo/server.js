@@ -22,18 +22,22 @@ var express = require("express"),
     mkdirp = require("mkdirp"),
     multiparty = require('multiparty'),
     app = express(),
+    path = require('path'),
 
     // paths/constants
     fileInputName = process.env.FILE_INPUT_NAME || "qqfile",
-    publicDir = process.env.PUBLIC_DIR, // 客户端静态资源文件
-    workDir = process.env.WORKING_DIR, // 当前工作目录
-    styleDir = process.env.DEV_STYLE_DIR,
-    staticDir = process.env.STATIC_DIR,
-    distDir = process.env.DIST_DIR,
-    uploadedFilesPath = process.env.UPLOADED_FILES_DIR, // 上传文件夹
+    publicDir = path.resolve(process.env.PUBLIC_DIR), // 客户端静态资源文件
+    styleDir = path.resolve(__dirname, '../style'),
+    staticDir = path.resolve(__dirname, './static'),
+    distDir = path.resolve(__dirname, '../../../dist'),
+    uploadedFilesPath = path.resolve(process.env.UPLOADED_FILES_DIR), // 上传文件夹
     chunkDirName = "chunks",
     port = process.env.SERVER_PORT || 8000,
     maxFileSize = process.env.MAX_FILE_SIZE || 0; // in bytes, 0 for unlimited
+
+    if (!uploadedFilesPath.endsWith("/")) {
+        uploadedFilesPath = uploadedFilesPath  + "/";
+    }
 
 app.listen(port, function () {
     console.log('app listening on port 8000!')
@@ -48,15 +52,15 @@ app.post("/uploads", onUpload);
 app.delete("/uploads/:uuid", onDeleteFile);
 
 app.get('/demo1', function (req, res) {
-  res.sendFile(workDir + "/demo1.html")
+  res.sendFile(__dirname + "/demo1.html")
 })
 
 app.get('/demo2', function (req, res) {
-  res.sendFile(workDir + "/demo2.html")
+  res.sendFile(__dirname + "/demo2.html")
 })
 
 app.get('/', function (req, res) {
-  res.sendFile(workDir + "/index.html")
+  res.sendFile(__dirname + "/index.html")
 })
 
 
