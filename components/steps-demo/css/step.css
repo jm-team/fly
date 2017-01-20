@@ -1,0 +1,214 @@
+.jm-step-wrap {
+    width: 100%;
+    padding: 50px 0;
+}
+
+.jm-steps-wrap {
+    margin: 20px 40px;
+}
+
+.jm-steps-wrap .jm-steps-item {
+    position: relative;
+    display: inline-block;
+    width: 48.5%;
+    margin-right: -35px;
+}
+
+.jm-steps-wrap .jm-steps-item:last-child {
+    width: auto;
+}
+
+.jm-steps-wrap .jm-steps-item .jm-steps-tail {
+    position: absolute;
+    top: 13px;
+    left: 0;
+    width: 100%;
+    padding: 0 45px;
+}
+
+.jm-steps-wrap .jm-steps-item .jm-steps-tail i {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 1px;
+    vertical-align: top;
+    background: #bababa;
+}
+
+.jm-steps-wrap .jm-steps-item .jm-steps-tail i:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    width: 0;
+    background: #bababa;
+    height: 100%;
+    opacity: 0;
+}
+
+.jm-steps-wrap .jm-steps-head {
+    background: #fff;
+}
+
+.jm-steps-wrap .jm-steps-item:not(:first-child) .jm-steps-head {
+    padding-left: 10px;
+    margin-left: -10px;
+}
+
+.jm-steps-wrap .jm-steps-head-inner {
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+    background-image: url("../img/jm-step-icon.png");
+    font-style: normal;
+    line-height: 26px;
+    text-align: center;
+    color: #bababa;
+}
+
+.jm-steps-wrap .jm-steps-head-inner .jm-step-icon {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.jm-steps-wrap.jm-steps-wrap-small .jm-steps-tail {
+    top: 8px;
+}
+
+.jm-steps-wrap.jm-steps-wrap-small .jm-steps-head-inner {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    background-image: url("../img/jm-min-step-icon.png");
+    line-height: 18px;
+}
+
+.jm-steps-wrap.jm-steps-wrap-small .jm-steps-head-inner .jm-step-icon {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.jm-steps-wrap.jm-steps-wrap-small .jm-steps-main .jm-steps-title {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.jm-steps-wrap .jm-steps-head,
+.jm-steps-wrap .jm-steps-main {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.jm-steps-wrap .jm-steps-main .jm-steps-title {
+    display: inline-block;
+    padding-right: 10px;
+    background: #fff;
+    font-size: 16px;
+    line-height: 26px;
+    color: #bababa;
+}
+
+.jm-steps-wrap .jm-steps-item-last .jm-steps-title {
+    width: 100%;
+    padding-right: 0;
+}
+
+.jm-steps-wrap .jm-steps-main .jm-steps-description {
+    color: #bababa;
+    line-height: 22px;
+}
+
+.jm-steps-wrap .jm-steps-finish .jm-steps-head-inner {
+    background-position: 0 -62px;
+    color: transparent;
+}
+
+.jm-steps-wrap.jm-steps-wrap-small .jm-steps-finish .jm-steps-head-inner {
+    background-position: 0 -46px;
+    color: transparent;
+}
+
+.jm-steps-wrap .jm-steps-finish .jm-steps-tail i:after {
+    width: 100%;
+    background: #0080ca;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+    opacity: 1;
+}
+
+.jm-steps-wrap .jm-steps-finish .jm-steps-title {
+    color: #0080ca;
+}
+
+/*处于当前步骤*/
+.jm-steps-wrap .jm-steps-cross .jm-steps-tail i:after {
+    background: #bababa;
+}
+
+.jm-steps-wrap .jm-steps-cross .jm-steps-head-inner {
+    background-position:0 -31px;
+    color: #fff;
+}
+
+.jm-steps-wrap .jm-steps-cross .jm-steps-title,
+.jm-steps-wrap .jm-steps-cross .jm-steps-description,
+.jm-steps-wrap .jm-steps-finish .jm-steps-title,
+.jm-steps-wrap .jm-steps-finish .jm-steps-description {
+    color: #0080ca;
+}
+
+.jm-steps-wrap.jm-steps-wrap-small .jm-steps-cross .jm-steps-head-inner {
+    background-position:0 -23px;
+    color: #fff;
+}
+
+/*错误状态*/
+.jm-steps-wrap .jm-steps-next-error .jm-steps-tail i:after {
+    background: #db3f40;
+}
+
+.jm-steps-wrap .jm-steps-error .jm-steps-head-inner {
+    background-position: 0 -93px;
+    color: transparent;
+}
+
+.jm-steps-wrap.jm-steps-wrap-small .jm-steps-error .jm-steps-head-inner {
+    background-position: 0 -69px;
+    color: transparent;
+}
+
+.jm-steps-wrap .jm-steps-error .jm-steps-title {
+    color: #db3f40;
+}
+
+.jm-steps-wrap.jm-steps-vertical .jm-steps-item {
+    display: block;
+    width: 100%;
+}
+
+.jm-steps-vertical .jm-steps-item .jm-steps-tail {
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: -32px;
+    padding-top: 30px;
+    padding-bottom: 4px;
+}
+
+.jm-steps-vertical .jm-steps-item .jm-steps-tail i {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    width: 1px;
+    vertical-align: top;
+    background: #bababa;
+}
+
+.jm-steps-vertical .jm-steps-main .jm-steps-description {
+    padding-bottom: 30px;
+}
+
+.jm-steps-wrap-small.jm-steps-vertical .jm-steps-item .jm-steps-tail {
+    left: 8px;
+    padding: 23px 0 5px 0;
+}
