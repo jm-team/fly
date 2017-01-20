@@ -1,0 +1,258 @@
+@charset "utf-8";
+/* 清除内外边距 */
+body,p,h1,h2,h3,h4,h5,h6,dl,dd,ul,ol,td,th,
+form,button,input,fieldset,
+figure,menu{
+    margin: 0;
+    padding: 0;
+}
+/* 设置默认字体 */
+body,
+button, input, select, textarea {
+    font: 14px/1 Arial, Helvetica, "Microsoft Yahei",Tahoma, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
+
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*input状态*/
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+/*单选、复选*/
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+
+input[type="text"]::-ms-clear{
+    display:none;
+}
+
+/* HTML5 媒体文件跟 icons 保持一致 */
+audio,canvas,video {
+    display: inline-block;*display: inline;*zoom: 1;
+}
+
+address, em { font-style: normal; } /* 将斜体扶正 */
+
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+
+/* 重置文本格式元素 */
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+
+img { border: none; vertical-align: middle;}
+
+
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+
+button, input, select, textarea {
+    font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+}
+
+/* 重置表格元素 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 重置 hr */
+hr {
+    border: none;
+    height: 1px;
+}
+
+/* 默认链接颜色 */
+a{outline-style:none;color:#333;text-decoration:none}
+a:hover{text-decoration:none;}
+/*清除链接虚框*/
+:focus {
+    outline: 0;
+}
+/*a,area {blr:expression(this.onFocus=this.blur()) } /!*for IE*!/*/
+
+/* 统一上标和下标 */
+sub, sup {
+    font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;
+}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html { overflow-y: scroll; }
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe {
+    display:block;
+}
+
+/* 隐藏, 通常用来与 JS 配合 */
+body .fn-hide {
+    display:none;
+}
+/* 人民币符号 */
+.fn-rmb {
+    font-family: arial;
+    font-style: normal;
+    padding-right: 4px;
+}
+/* 定位 */
+.vm{vertical-align:middle;}
+.pr{position:relative;}
+.pa{position:absolute;}
+
+/*对齐*/
+.tl{
+    text-align: left;
+}
+.tc {
+    text-align: center;
+}
+.tr{
+    text-align: right;
+}
+
+/* 设置内联, 减少浮动带来的bug */
+.fn-left,
+.fn-right {
+    display:inline;
+}
+.fn-left {
+    float:left;
+}
+.fn-right {
+    float:right;
+}
+
+/* 清理浮动 */
+.fn-clear:before, .fn-clear:after, .clearfix:before, .clearfix:after {
+    content: "";
+    display: inline-block;
+}
+
+.fn-clear:after, .clearfix:after {
+    clear: both;
+}
+
+.fn-clear, .clearfix {
+    zoom: 1;
+    /* for IE6 IE7 */
+}
+
+/* 单行文字溢出时出现省略号，需设定宽度 */
+.txt-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 两端对齐 CSS3 */
+.txt-justify {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+/*文字换行*/
+.txt-wrap {
+    word-wrap: break-word;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+
+.layout {
+    width: 1190px;
+    margin: 0 auto;
+}
+.m0{margin:0;}
+.m10{margin:10px;}
+.m15{margin:15px;}
+.m20{margin:20px;}
+.m30{margin:30px;}
+.mt5{margin-top:5px;}
+.mt10{margin-top:10px;}
+.mt15{margin-top:15px;}
+.mt20{margin-top:20px;}
+.mt30{margin-top:30px;}
+.mt40{margin-top: 40px;}
+.mt50{margin-top:50px;}
+.ml5{margin-left:5px;}
+.ml10{margin-left:10px;}
+.ml15{margin-left:15px;}
+.ml20{margin-left:20px;}
+.ml30{margin-left:30px;}
+.ml50{margin-left:50px;}
+.mr5{margin-right:5px;}
+.mr10{margin-right:10px;}
+.mr15{margin-right:15px;}
+.mr20{margin-right:20px;}
+.mr30{margin-right:30px;}
+.mr50{margin-right:50px;}
+.mb5{margin-bottom:5px;}
+.mb10{margin-bottom:10px;}
+.mb15{margin-bottom:15px;}
+.mb20{margin-bottom:20px;}
+.mb30{margin-bottom:30px;}
+.mb50{margin-bottom:50px;}
+
+.p5{padding:5px;}
+.p10{padding:10px;}
+.p15{padding:15px;}
+.p20{padding:20px;}
+.p30{padding:30px;}
+.pt5{padding-top:5px;}
+.pt10{padding-top:10px;}
+.pt15{padding-top:15px;}
+.pt20{padding-top:20px;}
+.pt30{padding-top:30px;}
+.pt50{padding-top:50px;}
+.pr5{padding-right:5px;}
+.pr10{padding-right:10px;}
+.pr15{padding-right:15px;}
+.pr20{padding-right:20px;}
+.pr30{padding-right:30px;}
+.pr50{padding-right:50px;}
+.pb5{padding-bottom:5px;}
+.pb10{padding-bottom:10px;}
+.pb15{padding-bottom:15px;}
+.pb20{padding-bottom:20px;}
+.pb30{padding-bottom:30px;}
+.pb50{padding-bottom:50px;}
+.pl5{padding-left:5px;}
+.pl10{padding-left:10px;}
+.pl15{padding-left:15px;}
+.pl20{padding-left:20px;}
+.pl30{padding-left:30px;}
+.pl50{padding-left:50px;}
