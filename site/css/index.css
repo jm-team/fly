@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    font-family: "Microsoft Yahei";
+}
+
+.home-body {
+    min-height: 100%;
+    background: url(../img/index.jpg) no-repeat;
+    background-size: cover;
+}
+
+.home-body .logo {
+    position: fixed;
+    top: 24px;
+    left: 40px;
+}
+
+.welcome-wrapper {
+    position: fixed;
+    width: 890px;
+    min-height: 560px;
+    top: 50%;
+    left: 50%;
+    margin: -280px -445px;
+    background: url(../img/welcome_bg.png) no-repeat;
+    color: #d2d2d2;
+    line-height: 1;
+    text-align: center;
+}
+
+.welcome-wrapper h2 {
+    font-size: 72px;
+    color: #0080ca;
+    margin-top: 70px;
+}
+
+.welcome-wrapper h2 small {
+    font-size: 36px;
+    color: #ece9c5;
+}
+
+.welcome-wrapper h3 {
+    font-size: 66px;
+    color: #0080ca;
+    margin-bottom: 10px;
+}
+
+.welcome-wrapper h3 small {
+    font-size: 24px;
+    color: #ece9c5;
+}
+
+.welcome-wrapper p {
+    width: 640px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.welcome-wrapper .btn-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+}
+
+.btn-link {
+    width: 160px;
+    font-size: 20px;
+    border: 1px solid #0080ca;
+    line-height: 48px;
+    border-radius: 25px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: 200px;
+    padding: 24px 20px;
+    background: #000;
+    background: rgba(0, 0, 0, .31);
+    color: #999;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=31);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=31);
+    /*transition: right ease-in-out .3s;*/
+}
+
+.sidebar:hover {
+    right: 0;
+}
+
+.menu-header {
+    position: relative;
+}
+
+.menu-header i {
+    position: fixed;
+    right: 15px;
+    font-size: 30px;
+    color: #ddd;
+}
+
+.sidebar:hover .menu-header i {
+    position: static;
+    color: #999;
+}
+
+.menu-list {
+    position: relative;
+    margin-left: 5px;
+    font-size: 16px;
+    line-height: 65px;
+}
+
+.menu-list li a {
+    color: #999;
+}
+
+.menu-list li span {
+    font-size: 14px;
+    color: #666;
+}
+
+.menu-list li a:hover,
+.menu-list li a:hover span {
+    color: #0080ca;
+}
+
+.home-body #footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #999;
+    line-height: 50px;
+    text-align: center;
+}
