@@ -1,23 +1,64 @@
-$(function () {
-    // 单选框事件
-    $('.jm-radio-box').on('click', function () {
-        if($(this).hasClass('jm-radio-disabled') == false){
-            $(this).children('.jm-radio').attr('checked', true);
-            $(this).children('.jm-radio-icon').addClass('jm-icon-radio').removeClass('jm-icon-radio-none');
-            $(this).siblings().children('.jm-radio').removeAttr('checked');
-            $(this).siblings().children('.jm-radio-icon').removeClass('jm-icon-radio').addClass('jm-icon-radio-none')
-        } 
-    });
-    // 多选框事件
-    $('.jm-checkbox-box').on('click', function () {
-        if ($(this).hasClass('jm-checkbox-disabled')) {
-            $(this).addClass('jm-checkbox-disabled')
-        } else if ($(this).children('.jm-checkbox').attr('checked')) {
-            $(this).children('.jm-checkbox').removeAttr('checked');
-            $(this).children('.jm-checkbox-icon').addClass('jm-icon-checkbaba').removeClass('jm-icon-checkbook')
-        } else {
-            $(this).children('.jm-checkbox').attr('checked', true);
-            $(this).children('.jm-checkbox-icon').addClass('jm-icon-checkbook').removeClass('jm-icon-checkbaba')
+// radio & checkbox Method
+(function($){
+    $.fn.extend({
+        // 扩展单选框方法
+        JmRadio : function(){
+            return this.each(function(){
+                var $this = $(this),
+                    _radioIcon = $this.find('.jm-radio-icon'),
+                    _input = $this.children('input'),
+                    siblings = $this.siblings();
+
+                if(_input.attr('disabled')){
+                    $this.addClass('jm-radio-disabled')
+                }
+
+                if(_input.attr("checked")){
+                    _radioIcon.addClass('jm-icon-radio')
+                }else{
+                    _radioIcon.addClass('jm-icon-radio-none')
+                }
+
+                $this.children('span').on("click",function(){
+                    if(!_input.attr("disabled")){
+                        _input.attr("checked",true);
+                        _radioIcon.removeClass('jm-icon-radio-none').addClass('jm-icon-radio')
+                        siblings.find('input').removeAttr("checked");
+                        siblings.find('.jm-radio-icon').removeClass('jm-icon-radio').addClass('jm-icon-radio-none');
+                    }
+                });
+            });
+        },
+        // 扩展多选框方法
+        JmCheckbox : function () {
+            return this.each(function () {
+                var $this = $(this),
+                    _checkboxIcon = $this.find('.jm-checkbox-icon'),
+                    _input = $this.children('input');
+
+                if(_input.attr('disabled')){
+                    $this.addClass('jm-checkbox-disabled')
+                }
+
+                if(_input.attr("checked")){
+                    _checkboxIcon.addClass('jm-icon-checkbook')
+                }else{
+                    _checkboxIcon.addClass('jm-icon-checkbaba')
+                }
+
+                $this.children('span').on("click",function(){
+                    if(_input.attr("disabled")){
+                        return false
+                    }
+                    if(_input.attr("checked")){
+                        _input.removeAttr('checked');
+                        _checkboxIcon.removeClass('jm-icon-checkbook').addClass('jm-icon-checkbaba')
+                    }else{
+                        _input.attr('checked',true);
+                        _checkboxIcon.removeClass('jm-icon-checkbaba').addClass('jm-icon-checkbook')
+                    }
+                });
+            })
         }
-    })
-});
+    });
+})(jQuery);
