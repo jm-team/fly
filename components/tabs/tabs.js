@@ -4,9 +4,15 @@ $(function() {
         var pos = pos || 0;
         $.get('../mock/mock.json', function(data) {
             $(selector).children().each(function(index, item) {
-                $(item).children('a').text(data[index].title);
+                if(index < 3){
+                    $(item).children('a').text(data[index].title);
+                }
             });
-            $(selector).siblings('.tab-content').text(data[pos].content);
+            if(pos < 3){
+                $(selector).siblings('.tab-content').text(data[pos].content);
+            }else{
+                $(selector).siblings('.tab-content').text('新建内容');
+            }
         });
     }
     
@@ -129,11 +135,9 @@ $(function() {
     $('.tab-card-add-icon').on('click', function(e) {
         e.preventDefault();
         var oLi = $('<li>').addClass('fn-left');
-        $(oLi).append($('<a>'));
+        $(oLi).append($('<a>').text('新标签'));
         $(oLi).append($('<i>').addClass('jm-icon jm-icon-wrong'));
         $(oLi).insertBefore($(this));
-        var index = $(oLi).index();
-        tabContent('.tab-card-add', index);
     });
 
 })
