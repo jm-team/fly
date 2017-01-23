@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-01-22 15:06:03
+ * @version $Id$
+ */
+ .jm-alert {
+     padding: 15px;
+     margin-bottom: 20px;
+     border: 1px solid transparent;
+     border-radius: 4px;
+ }
+ .jm-alert-success {
+     color: #3c763d;
+     background-color: #dff0d8;
+     border-color: #d6e9c6;
+ }
+ .jm-alert-info {
+     color: #31708f;
+     background-color: #d9edf7;
+     border-color: #bce8f1;
+ }
+ .jm-alert-warning {
+     color: #8a6d3b;
+     background-color: #fcf8e3;
+     border-color: #faebcc;
+ }
+ .jm-alert-danger {
+     color: #a94442;
+     background-color: #f2dede;
+     border-color: #ebccd1;
+ }
+ .jm-alert-success .alert-link {
+     color: #2b542c;
+ }
+ .jm-alert-info .alert-link {
+     color: #245269;
+ }
+ .jm-alert-warning .alert-link {
+     color: #66512c;
+ }
+ .jm-alert-danger .alert-link {
+     color: #843534;
+ }
+ .jm-alert .alert-link {
+     font-weight: 700;
+ }
+ .jm-alert-dismissible{
+     padding-right: 35px;
+ }
+ .jm-alert-dismissable .close, .jm-alert-dismissible .close {
+     position: relative;
+     top: -2px;
+     right: -21px;
+     color: inherit;
+ }
+ .jm-alert button.close {
+     -webkit-appearance: none;
+     padding: 0;
+     cursor: pointer;
+     background: 0 0;
+     border: 0;
+ }
+ .jm-alert .close {
+     float: right;
+     font-size: 21px;
+     font-weight: 700;
+     line-height: 1;
+     color: #000;
+     text-shadow: 0 1px 0 #fff;
+     filter: alpha(opacity=20);
+     opacity: .2;
+ }
+ .jm-alert .sr-only {
+     position: absolute;
+     width: 1px;
+     height: 1px;
+     padding: 0;
+     margin: -1px;
+     overflow: hidden;
+     clip: rect(0,0,0,0);
+     border: 0;
+ }
