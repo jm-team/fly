@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="fragment" content="!">
+    <link rel="stylesheet" type="text/css" href="../style/common.css">
+    <link rel="stylesheet" type="text/css" href="../style/toolTip.css">
+    <!-- <link rel="stylesheet" type="text/css" href="http://192.168.23.209:63344/fly/site/css/jm-code.css"> -->
+    <link rel="stylesheet" type="text/css" href="../style/jquery.qtip.min.css">
+
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js"></script>
+    <style type="text/css">
+        #target-test{
+            margin-top: 200px;
+            margin-left: 200px;
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <ul id="nav">
+        <li><a href="#normal-title">普通title提示</a></li>
+        <li><a href="#normal-html">html提示</a></li>
+        <li><a href="#ajax-html">ajax'd html提示</a></li>
+        <li><a href="#input-title">input 输入提示</a></li>
+        <li><a href="#jGrow">jGrow 弹框</a></li>
+        <li><a href="#dialogs">Alert Confirm Prompt</a></li>
+        <li><a href="#title-tip">可传入标题的提示框</a></li>
+        <li><a href="#position-tip">提示框位置控制</a></li>
+        <li><a href="#options">参数说明</a></li>
+    </ul>
+    <div id="tool-tip">
+        <div id="normal-title" class="cont-box">
+            <a href="#" title="My tooltip text">Mouse over me - title!</a>
+            <pre>
+                $('a[title]').qtip({
+                    style:{
+                        classes: 'qtip-blue'
+                    },
+                    position:{
+                        my: 'bottom center',
+                        at: 'top center'
+                    }
+                });
+            </pre>
+        </div>
+        <div id="normal-html" class="cont-box">
+            <a href="#" class="normal-html-demo">Mouse over me - html!</a>
+            <div class="tooltiptext">
+                Complex <b>inline</b> <i>HTML</i> in your <u>config</u><br>
+                Complex <b>inline</b> <i>HTML</i> in your <u>config</u>
+            </div>
+            <pre>
+                $('.normal-html-demo').qtip({
+                    content:{
+                        text:$('.tooltiptext')
+                    },
+                    style:{
+                        classes: 'qtip-blue'
+                    },
+                    position:{
+                        my: 'bottom center',
+                        at: 'top center'
+                    }
+                });
+            </pre>
+        </div>
+        <div id="ajax-html" class="cont-box">
+            <a href="#" class="ajax-html-demo">ajax'd html!</a>            
+            <pre>
+                $('.ajax-html-demo').qtip({
+                        content: {
+                            text: function(event, api) {
+                                $.ajax({
+                                    url: api.elements.target.attr('href') // Use href attribute as URL
+                                })
+                                .then(function(content) {
+                                    // Set the tooltip content upon successful retrieval
+                                    api.set('content.text', content);
+                                }, function(xhr, status, error) {
+                                    // Upon failure... set the tooltip content to error
+                                    api.set('content.text', status + ': ' + error);
+                                });
+                    
+                                return 'Loading...'; // Set some initial text
+                            }
+                        },
+                        position: {
+                            viewport: $(window)
+                        },
+                        style: 'qtip-wiki'
+                });
+            </pre>
+        </div>
+        <div id="input-title" class="cont-box">
+            <input type="text" value="Focus and blur" title="Please enter your name" />            
+            <pre>
+                $('input[title]').qtip({
+                        position:{
+                            my: 'left center',
+                            at: 'right center'
+                        },
+                        show: 'focus',
+                        hide: 'blur'
+                });
+            </pre>
+        </div>
+        <div id="jGrow" class="cont-box">
+            <div id="qtip-growl-container"></div>
+            <button onclick="createGrowl()">Create a Growl!</button>            
+            <pre>
+                window.createGrowl = function(persistent) {
+                    var target = $('.qtip.jgrowl:visible:last');
+
+                    $('<div/>').qtip({
+                        content: {
+                            text: 'This is a jGrowl-esque qTip!',
+                            title: {
+                                text: 'Attention!',
+                                button: true
+                            }
+                        },
+                        position: {
+                            target: [0,0],
+                            container: $('#qtip-growl-container')
+                        },
+                        show: {
+                            event: false,
+                            ready: true,
+                            effect: function() {
+                                $(this).stop(0, 1).animate({ height: 'toggle' }, 400, 'swing');
+                            },
+                            delay: 0,
+                            persistent: persistent
+                        },
+                        hide: {
+                            event: false,
+                            effect: function(api) {
+                                $(this).stop(0, 1).animate({ height: 'toggle' }, 400, 'swing');
+                            }
+                        },
+                        style: {
+                            width: 250,
+                            classes: 'jgrowl',
+                            tip: false
+                        },
+                        events: {
+                            render: function(event, api) {
+                                if(!api.options.show.persistent) {
+                                    $(this).bind('mouseover mouseout', function(e) {
+                                        var lifespan = 5000;
+
+                                        clearTimeout(api.timer);
+                                        if (e.type !== 'mouseover') {
+                                            api.timer = setTimeout(function() { api.hide(e) }, lifespan);
+                                        }
+                                    })
+                                    .triggerHandler('mouseout');
+                                }
+                            }
+                        }
+                    });
+                }
+            </pre>
+        </div>
+        <div id="title-tip" class="cont-box">
+            <a href="#" >可传入标题的提示框!</a>           
+            <pre>
+               $('#title-tip a').qtip({
+                   content:{
+                       title: "这里是title"
+                       text:$('.tooltiptext')
+                   },
+                   style:{
+                       classes: 'qtip-blue'
+                   },
+                   position:{
+                       my: 'bottom center',
+                       at: 'top center'
+                   }
+               });
+            </pre>
+        </div>
+        <div id="position-tip" class="cont-box">
+            <a href="#" class="one" >可传入标题的提示框!</a>
+            <a href="#" class="two" >可传入标题的提示框!</a> 
+            <a href="#" class="three" >可传入标题的提示框!</a> 
+            <a href="#" class="foure" >可传入标题的提示框!</a> 
+            <a href="#" class="five" >可传入标题的提示框!</a> 
+            <a href="#" class="six" >可传入标题的提示框!</a>            
+            <pre>
+               $('#position-tip a').qtip({
+                   content:{
+                       title: "这里是title"
+                       text:$('.tooltiptext')
+                   },
+                   style:{
+                       classes: 'qtip-blue'
+                   },
+                   position:{
+                       my: 'bottom center',
+                       at: 'top center'
+                   }
+               });
+            </pre>
+        </div>
+        <div id="dialogs" class="cont-box">
+            <button onclick="Alert()">Alert</button>
+            <button onclick="Prompt()">Prompt</button>
+            <button onclick="Confirm()">Confirm</button>            
+            <pre><code>
+                // Alert/Confirm/Prompt
+                function dialogue(content, title) {
+                    $('<div />').qtip({
+                        content: {
+                            text: content,
+                            title: title
+                        },
+                        position: {
+                            my: 'center', at: 'center',
+                            target: $(window)
+                        },
+                        show: {
+                            ready: true,
+                            modal: {
+                                on: true,
+                                blur: false
+                            }
+                        },
+                        hide: false,
+                        style: 'dialogue',
+                        events: {
+                            render: function(event, api) {
+                                $('button', api.elements.content).click(function(e) {
+                                    api.hide(e);
+                                });
+                            },
+                            hide: function(event, api) { api.destroy(); }
+                        }
+                    });
+                }
+
+
+                
+            <code></pre>
+        </div>
+        <div id="options" class="cont-box">
+            <a href="#" title="My tooltip text">接口参数说明!</a>
+            <pre>
+                $.fn.qtip.defaults = {
+                    prerender: false, // Render tooltip HTML on $(document).ready()
+                    id: false, // Incremental numerical ID used by default
+                    overwrite: true, // Overwrite previous tooltips on this element
+                    suppress: true, // Translate 'title' to 'oldtitle' attribute (prevent browser tooltip)
+                    content: {
+                        text: true,
+                        attr: 'title',
+                        text: false,
+                        button: false
+                    },
+                    position: {
+                        my: 'top left',
+                        at: 'bottom right',
+                        target: false, // Defaults to target element
+                        container: false, // Defaults to $(document.body)
+                        viewport: false, // Requires Viewport plugin
+                        adjust: {
+                            x: 0, y: 0, // Minor x/y adjustments
+                            mouse: true, // Follow mouse when using target:'mouse'
+                            resize: true, // Reposition on resize by default
+                            method: 'flip flip' // Requires Viewport plugin
+                        },
+                        effect: function(api, pos, viewport) {
+                            $(this).animate(pos, {
+                                duration: 200,
+                                queue: false
+                            });
+                        }
+                    },
+                    show: {
+                        target: false, // Defaults to target element
+                        event: 'mouseenter', // Show on mouse over by default
+                        effect: true, // Use default 90ms fade effect
+                        delay: 90, // 90ms delay before showing
+                        solo: false, // Do not hide others when showing
+                        ready: false, // Do not show immediately
+                        modal: { // Requires Modal plugin
+                            on: false, // No modal backdrop by default
+                            effect: true, // Mimic show effect on backdrop
+                            blur: true, // Hide tooltip by clicking backdrop
+                            escape: true // Hide tooltip when Esc pressed
+                        }
+                    },
+                    hide: {
+                        target: false, // Defaults to target element
+                        event: 'mouseleave', // Hide on mouse out by default
+                        effect: true, // Use default 90ms fade effect
+                        delay: 0, // No hide delay by default
+                        fixed: false, // Non-hoverable by default
+                        inactive: false, // Do not hide when inactive
+                        leave: 'window', // Hide when we leave the window
+                        distance: false // Don't hide after a set distance
+                    },
+                    style: {
+                        classes: '', // No additional classes added to .qtip element
+                        widget: false, // Not a jQuery UI widget
+                        width: false, // No set width
+                        height: false, // No set height
+                        tip: { // Requires Tips plugin
+                            corner: true, // Use position.my by default
+                            mimic: false, // Don't mimic a particular corner
+                            width: 8, 
+                            height: 8,
+                            border: true, // Detect border from tooltip style
+                            offset: 0 // Do not apply an offset from corner
+                        }
+                    },
+                    events: {
+                        render: null, // Called when tooltip rendered
+                        move: null, // Called when tooltip repositioned
+                        show: null, // Called when tooltip is about to be shown
+                        hide: null, // Called when tooltip is about to be hidden
+                        toggle: null, // Shortcut to binding to two events above
+                        visible: null, // Called when tooltip is shown
+                        hidden: null, // Called when tooltip is hidden
+                        focus: null, // Called when tooltip gains focus
+                        blur: null // Called when tooltip loses focus
+                    }
+                };
+            </pre>
+        </div>
+    </div>
+    
+    <!-- 
+    <div id="target-test">111111111</div> -->
+    <script type="text/javascript">
+    $(document).ready(function(){
+        //普通title提示
+        $('a[title]').qtip({
+            style:{
+                classes: 'qtip-orange'
+            },
+            position:{
+                my: 'bottom center',
+                at: 'top center'
+            }
+        });
+        //html提示
+        $('.normal-html-demo').qtip({
+            content:{
+                text:$('.tooltiptext')
+            },
+            style:{
+                classes: 'qtip-blue'
+            },
+            position:{
+                my: 'bottom center',
+                at: 'top center'
+            }
+        });
+        //ajax html 提示
+        $('.ajax-html-demo').qtip({
+                content: {
+                    text: function(event, api) {
+                        $.getJSON("test_json.js",function(result){
+                             api.set('content.text', content);
+                        });
+                        // $.ajax({
+                        //     url: 'test.js' // Use href attribute as URL
+                        // })
+                        // .then(function(content) {
+                        //     // Set the tooltip content upon successful retrieval
+                        //     api.set('content.text', content);
+                        // }, function(xhr, status, error) {
+                        //     // Upon failure... set the tooltip content to error
+                        //     api.set('content.text', status + ': ' + error);
+                        // });
+            
+                        return 'Loading...'; // Set some initial text
+                    }
+                },
+                position: {
+                    viewport: $(window)
+                },
+                style: 'qtip-wiki'
+        });
+        //input 输入提示
+        $('input[title]').qtip({
+                position:{
+                    my: 'left center',
+                    at: 'right center'
+                },
+                show: 'focus',
+                hide: 'blur'
+        });
+        window.createGrowl = function(persistent) {
+            var target = $('.qtip.jgrowl:visible:last');
+
+            $('<div/>').qtip({
+                content: {
+                    text: 'This is a jGrowl-esque qTip!',
+                    title: {
+                        text: 'Attention!',
+                        button: true
+                    }
+                },
+                position: {
+                    target: [0,0],
+                    container: $('#qtip-growl-container')
+                },
+                show: {
+                    event: false,
+                    ready: true,
+                    effect: function() {
+                        $(this).stop(0, 1).animate({ height: 'toggle' }, 400, 'swing');
+                    },
+                    delay: 0,
+                    persistent: persistent
+                },
+                hide: {
+                    event: false,
+                    effect: function(api) {
+                        $(this).stop(0, 1).animate({ height: 'toggle' }, 400, 'swing');
+                    }
+                },
+                style: {
+                    width: 250,
+                    classes: 'jgrowl',
+                    tip: false
+                },
+                events: {
+                    render: function(event, api) {
+                        if(!api.options.show.persistent) {
+                            $(this).bind('mouseover mouseout', function(e) {
+                                var lifespan = 5000;
+
+                                clearTimeout(api.timer);
+                                if (e.type !== 'mouseover') {
+                                    api.timer = setTimeout(function() { api.hide(e) }, lifespan);
+                                }
+                            })
+                            .triggerHandler('mouseout');
+                        }
+                    }
+                }
+            });
+        }
+        //Alert Prompt Confirm
+        // Alert/Confirm/Prompt
+        function dialogue(content, title) {
+            $('<div />').qtip({
+                content: {
+                    text: content,
+                    title: title
+                },
+                position: {
+                    my: 'center', at: 'center',
+                    target: $(window)
+                },
+                show: {
+                    ready: true,
+                    modal: {
+                        on: true,
+                        blur: false
+                    }
+                },
+                hide: false,
+                style: 'dialogue',
+                events: {
+                    render: function(event, api) {
+                        $('button', api.elements.content).click(function(e) {
+                            api.hide(e);
+                        });
+                    },
+                    hide: function(event, api) { api.destroy(); }
+                }
+            });
+        }
+
+
+        window.Alert = function() {
+          var message = $('<p />', { text: 'This is a sample alert dialogue' }),
+              ok = $('<button />', { text: 'Ok', 'class': 'full' });
+
+            dialogue( message.add(ok), 'Alert!' );
+        }
+
+        window.Prompt = function() {
+          var message = $('<p />', { text: 'What do you think about these custom dialogues?' }),
+              input = $('<input />', { val: 'Fantastic!' }),
+              ok = $('<button />', {
+                text: 'Ok'
+              }),
+              cancel = $('<button />', {
+                text: 'Cancel'
+              });
+
+            dialogue( message.add(input).add(ok).add(cancel), 'Attention!' );
+        }
+
+        window.Confirm = function() {
+          var message = $('<p />', { text: 'Click a button to exit the custom dialogue' }),
+              ok = $('<button />', {
+                text: 'Ok'
+              }),
+              cancel = $('<button />', {
+                text: 'Cancel'
+              });
+
+            dialogue( message.add(ok).add(cancel), 'Do you agree?' );
+        }
+
+        //带有title的提示框
+        $('#title-tip a').qtip({
+            content:{
+                title: "这里是title",
+                text:$('.tooltiptext')
+            },
+            style:{
+                classes: 'qtip-blue'
+            },
+            position:{
+                my: 'top left',
+                at: 'bottom right'
+            }
+        });
+        //提示框位置控制
+        $('#position-tip a.one').qtip({
+            content:{
+                title: "这里是title",
+                text: '<div>这里是内容</div>'
+            },
+            style:{
+                classes: 'qtip-blue'
+            },
+            position:{
+                my: 'top left',
+                at: 'bottom right'
+            }
+        });
+        $('#position-tip a.two').qtip({
+            content:{
+                title: "这里是title",
+                text:'<div>这里是内容</div>'
+            },
+            style:{
+                classes: 'qtip-blue'
+            },
+            position:{
+                my: 'left center',
+                at: 'right center'
+            }
+        });
+        $('#position-tip a.three').qtip({
+            content:{
+                title: "这里是title",
+                text:'<div>这里是内容</div>'
+            },
+            style:{
+                classes: 'qtip-blue'
+            },
+            position:{
+                my: 'bottom left',
+                at: 'top right'
+            }
+        });
+        $('#position-tip a.foure').qtip({
+            content:{
+                title: "这里是title",
+                text:'<div>这里是内容</div>'
+            },
+            style:{
+                classes: 'qtip-blue'
+            },
+            position:{
+                my: 'bottom center',
+                at: 'top center'
+            }
+        });
+        $('#position-tip a.five').qtip({
+            content:{
+                title: "这里是title",
+                text:'<div>这里是内容</div>'
+            },
+            style:{
+                classes: 'qtip-blue'
+            },
+            position:{
+                my: 'top center',
+                at: 'bottom center'
+            }
+        });
+      
+    })
+        // $('#target-test').qtip({
+        //     show: 'click',
+        //     // hide: 'click',
+        //     hide: {
+        //         event: 'mouseout',
+        //         // delay: 1000,
+        //         inactive: false,
+        //         fixed: true,   //没试出区别 defalut false
+        //         leave: window //default window
+        //     },
+        //     position: {
+        //         my: 'top left',  //参考点
+        //         at: 'bottom right', //相对位置                
+        //         target: 'mouse', //以鼠标位置为参考点
+        //         target: $("#target-test"),//toolTip目标对象
+        //         adjust: {            // 位置调整
+        //             x: 10,
+        //             y: -10,
+        //             mouse: true, //toolTip位置根据鼠标的移动来调整   default true
+        //             mouse: false, //toolTip位置不根据鼠标的移动来调整
+        //             resize: true,  // window resize时 toolTip位置是否调整 default true
+        //             resize: false, //window resize时 toolTip位置不调整    //没试出区别
+        //             scroll: true   //没试出区别
+        //         }
+        //     },
+        //     content:{
+        //         title: "this is a test",
+        //         text: 'this is the content'
+        //     },
+        //     effect: function(api, pos, viewport) {
+        //         // "this" refers to the tooltip
+        //         $(this).animate(pos, {
+        //             duration: 600,
+        //             easing: 'linear',
+        //             queue: false // Set this to false so it doesn't interfere with the show/hide animations
+        //         });
+        //     }
+        // });
+        // $('#target-test').qtip({
+        //     content: {
+        //         title: 'this is title',
+        //         text: 'I will not hide when you click the link I target (.selector)',
+        //     },
+        //     position:{
+        //         my:'top center',   //tiparrow
+        //         at: 'bottom center'
+        //     },
+        //     hide: {
+        //         effect: function(offset) {    //隐藏时的事件   Function, true, false 
+        //             // console.log($(this));
+        //             $(this).slideDown(100); // "this" refers to the tooltip
+
+        //         }
+        //     },
+        //     style: {
+        //         classes: 'qtip-shadow qtip-rounded qtip-red',
+        //         width: '500',
+        //         height: '300'
+
+        //     },
+        //     events: {
+        //         show: function(event, api) {
+        //             // event.preventDefault(); // 停止事件继续执行
+        //             console.log("4")
+        //         },
+        //         render: function(event, api) {
+        //             $('.cartTotal').triggerHandler('update');
+        //         },
+        //         hide: function(event, api) {
+        //             console.log("1")
+        //         },
+        //         toggle: function(event, api) {
+        //            api.elements.target.toggleClass('test');
+        //         },
+        //         move: function(event, api) {
+        //             console.log($(this));
+        //         },
+        //         visible: function(){
+        //             console.log("3")
+        //         },
+        //         hidden:function(){
+        //             console.log("2")
+        //         },
+        //         focus: function(){
+        //             console.log(5)
+        //         },
+        //         blur: function(){
+        //             console.log(5)
+        //         }
+        //     }
+        // });
+    </script>
+   
+</body>
+</html>
