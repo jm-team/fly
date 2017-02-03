@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-01-19 16:02:44
+ * @version $Id$
+ */
+ 
+
+#nav{
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    width: 256px;
+    border: 1px solid #0080ca;
+    padding: 30px 20px 25px;
+    background: #069af0;
+}
+#nav li{
+    border-bottom: 1px solid #0080ca;
+    padding: 0 15px;
+    height: 22px;
+    line-height: 22px;    
+}
+#nav a{
+    color: #fff;
+}
+#tool-tip{
+    padding: 50px;
+}
+.cont-box{
+    margin-top: 50px;
+}
+#normal-html .tooltiptext{
+    display: none;
+}
+pre{
+    display: block;
+    background: #E5F6FE;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 30px;
+}
+#input-title input{
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    line-height: 22px;
+}
+#jGrow button,#dialogs button{
+    background: #069af0;
+    line-height: 36px;
+    color: #fff;
+    padding: 0 15px;
+    cursor: pointer;
+}
+#qtip-growl-container{
+    position: fixed;
+    top: 10px; right: 10px;
+}
+#qtip-growl-container .qtip{
+    position: static;
+    min-height: 0;
+    overflow: hidden;
+    margin: 0 0 5px 0;
+}
+#position-tip a{
+    margin: 0 50px 30px 0;
+}
