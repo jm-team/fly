@@ -140,6 +140,13 @@ fieldset legend {
     vertical-align: middle;
 }
 
+.thumbnail100-100 {
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+}
+
+
 .jm-upload-plus {
     margin-top: 49px;
    font-size: 26px;
@@ -185,4 +192,51 @@ fieldset legend {
 
 .jm-dragger-text em {
     color:#0080cb;
+}
+
+.pic-wall-list li {
+    float: left;
+    position: relative;
+}
+
+.jm-pic-wall-placeholder {
+    width: 100px;
+    height: 100px;
+    border-radius: 2px;
+    border: 1px dashed #ddd;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.jm-pic-wall-placeholder .jm-upload-plus {
+    /*margin-top: 25px;*/
+   font-size: 26px;
+}
+
+.jm-pic-wall-placeholder .jm-icon {
+    margin-right: 0;
+}
+
+.jm-pic-wall-upload-content {
+    padding-top: 25px;
+}
+
+
+.pic-wall-list .jm-upload-btn-delete {
+    height: 32px;
+    line-height: 32px;
+    position: absolute;
+    right: 15px;
+    top: 80%;
+    margin-top: -16px;
+    font-size: 12px;
+    color: #20a0ff;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+.pic-wall-list li:hover .jm-upload-btn-delete {
+    display: block;
 }
