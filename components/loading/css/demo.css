@@ -1,0 +1,81 @@
+
+button{
+	display:block;
+	width: 100px;
+	height:60px;
+	margin:20px 0px;
+	padding:20px;
+	text-align: center;
+	background: #069af0;
+	color:#fff;
+}
+
+.loading-demo{
+	font-family:'Microsoft Yahei','Arial';
+	font-size:14px;
+	color:#666;
+	padding:34px 40px;
+}
+
+.loading-title{
+	margin-bottom:32px;
+	line-height: 42px;
+}
+
+.loading-title h3{
+	font-size: 20px;
+	font-weight:normal;
+}
+
+.loading-page{
+	width:1160px;
+	min-height:570px;
+	border:1px solid #ddd;
+	padding:0px 40px;
+}
+
+.loading-page legend{
+	font-size:20px;
+	font-weight:bold;
+}
+
+.page-example{
+	width:718px;
+	height:423px;
+	margin:50px 0px;
+}
+
+.page-example-descr {
+	width:318px;
+	height:424px;
+	margin:50px 20px;
+}
+
+.page-example-descr .condition{
+	color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.page-example-descr .alert{
+	width:318px;
+	padding:15px;
+    margin-bottom: 20px;
+    border-radius:4px;
+    border:1px solid transparent;
+}
+
+.section-example{
+	width:600px;
+	height:200px;
+	padding:16px;
+	margin:50px 0px;
+	color: #31708f;
+    background-color: #d9edf7;
+    border:1px solid #d9edf7;
+}
+
+
+.dp-highlighter li{
+	list-style: decimal;
+}
