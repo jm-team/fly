@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/* 公共样式 */
+body {
+  font: 14px/1.5 'Microsoft Yahei', Arial, Helvetica, 'Helvetica Neue';
+  color: #333;
+}
+
+a {
+  color: #666;
+  cursor: pointer;
+}
+
+.pr {
+  position: relative;
+}
+
+.w1190 {
+  margin: 0 auto;
+  width: 1190px;
+}
+
+.jm-dib {
+  display: inline-block;
+}
+
+.jm-text-left {
+  text-align: left;
+}
+
+.jm-text-right {
+  text-align: right;
+}
+
+.jm-text-center {
+  text-align: center;
+}
+
+li.active > a {
+  color: #0080ca;
+}
+
+.tab-content {
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+}
+
+/* tab干净样式  默认*/
+.tabs {
+  margin-bottom: 30px;
+}
+
+.tabs > ul {
+  border-bottom: 1px solid #bababa;
+}
+
+.tabs li {
+  position: relative;
+  top: 1px;
+}
+
+.tab-clear li.active {
+  border-bottom: 2px solid #0080ca;
+}
+
+.tabs a {
+  line-height: 36px;
+  padding: 0px 22px;
+}
+
+/* tab干净样式 禁止 */
+.tab-disabled, .tab-disabled > a {
+  cursor: not-allowed;
+  color: #ddd;
+}
+
+.tab-disabled:hover {
+  color: #ddd;
+}
+
+/* tab干净样式 icon */
+.jm-icon:before {
+  margin-right: 10px;
+}
+
+.tab-clear .jm-icon {
+  font-size: 14px;
+}
+
+.tab-clear .jm-icon:before {
+  font-size: 16px;
+}
+
+/* tab卡片样式 默认 */
+.tab-card li {
+  background-color: #f6f6f6;
+  margin-right: 10px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border: 1px solid #bababa;
+}
+
+.tab-card li.active {
+  background-color: #fff;
+  border-bottom-color: #fff;
+}
+
+/* tab卡片样式 关闭 */
+.tab-card li > i {
+  display: none;
+}
+
+.tab-card li.active > i {
+  display: block;
+  font-size: 12px;
+  color: #0080ca;
+  position: absolute;
+  right: -5px;
+  top: 10px;
+  cursor: pointer;
+}
+
+/* tab卡片样式 添加 */
+.tab-card-add-icon {
+  font-size: 20px !important;
+  color: #0080ca;
+  padding: 0px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>highlight demo</title>
+    <link rel="stylesheet" href="../css/jm-code.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js"></script>
+</head>
+<body>
+<script>
+    function $initHighlight(block, cls) {
+        try {
+            if (cls.search(/\bno\-highlight\b/) != -1)
+                return process(block, true, 0x0F) +
+                        ` class="${cls}"`;
+        } catch (e) {
+            /* handle exception */
+        }
+        for (var i = 0 / 2; i < classes.length; i++) {
+            if (checkCondition(classes[i]) === undefined)
+                console.log('undefined');
+        }
+    }
+
+    export  $initHighlight;
+</script>
+<pre>
+    <code class="JavaScript">
+    function $initHighlight(block, cls) {
+      try {
+        if (cls.search(/\bno\-highlight\b/) != -1)
+          return process(block, true, 0x0F) +
+                 ` class="${cls}"`;
+      } catch (e) {
+        /* handle exception */
+      }
+      for (var i = 0 / 2; i < classes.length; i++) {
+        if (checkCondition(classes[i]) === undefined)
+          console.log('undefined');
+      }
+    }
+
+    export  $initHighlight;
+    </code>
+</pre>
+<pre>
+    <code id="html-code" class="html">
+    <div class="tec-right fn-right">
+        <!--图文结合 start-->
+        <div class="tec-right-imgp">
+            <div class=" fn-left"><img src="img/tec-img_2.jpg"> </div>
+            <div class="tec-right-p fn-right">
+                <h1>物联网之基础倍受青睐 RFID市场前景可期</h1>
+                <p>
+                    随着技术的不断进步，RFID产品的种类将越来越丰富，在满足应用需求的同时，也将极大地促
+                    进了市场的需求与应用的发展。
+                    <span class="more">[详细]</span>
+                </p>
+            </div>
+            <!--图文结合 end-->
+        </div>
+    </div>
+    </code>
+</pre>
+<pre>
+    <code class="css">
+    @font-face {
+      font-family: Chunkfive; src: url('Chunkfive.otf');
+    }
+
+    body, .usertext {
+      color: #F0F0F0; background: #600;
+      font-family: Chunkfive, sans;
+    }
+
+    @import url(print.css);
+    @media print {
+      a[href^=http]::after {
+        content: attr(href)
+      }
+    }
+    </code>
+</pre>
+<script>
+    document.getElementById('html-code').innerHTML = document.createElement('a').appendChild(document.createTextNode(document.getElementById('html-code').innerHTML)).parentNode.innerHTML;
+    hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>

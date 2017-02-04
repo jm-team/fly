@@ -12,33 +12,48 @@
     <body>
         <form action="">
             <ul class="form-ul">
+                <li>可选择单选框</li>
                 <li>
                     <label class="jm-radio-box" for="">
-                        <span class="jm-radio-icon jm-icon jm-icon-radio"></span>
-                        <input type="radio" class="jm-radio" checked="checked" name="isMale">男
+                        <span>
+                            <span class="jm-icon"></span>一
+                        </span>
+                        <input type="radio" class="jm-radio" checked name="isMale">
                     </label>
                     <label class="jm-radio-box" for="">
-                        <span class="jm-radio-icon jm-icon jm-icon-radio-none"></span>
-                        <input type="radio" class="jm-radio" name="isMale">女
+                        <span>
+                            <span class="jm-icon"></span>二
+                        </span>
+                        <input type="radio" class="jm-radio" name="isMale">
                     </label>
                     <label class="jm-radio-box" for="">
-                        <span class="jm-radio-icon jm-icon jm-icon-radio-none"></span>
-                        <input type="radio" class="jm-radio" name="isMale">人妖
+                        <span>
+                            <span class="jm-icon"></span>三
+                        </span>
+                        <input type="radio" class="jm-radio" name="isMale">
                     </label>
                 </li>
+                <li>禁止单选框</li>
                 <li>
-                    <label class="jm-radio-box jm-radio-disabled" for="">
-                        <span class="jm-radio-icon jm-icon jm-icon-radio"></span>
-                        <input type="radio" class="jm-radio" checked="checked" name="isMale">人鱼
+                    <label class="jm-radio-box" for="">
+                        <span>
+                            <span class="jm-icon"></span>四
+                        </span>
+                        <input type="radio" class="jm-radio" checked="checked" disabled name="isMale">
                     </label>
-                    <label class="jm-radio-box jm-radio-disabled" for="">
-                        <span class="jm-radio-icon jm-icon jm-icon-radio-none"></span>
-                        <input type="radio" class="jm-radio" name="isMale">妖人
+                    <label class="jm-radio-box" for="">
+                        <span>
+                            <span class="jm-icon"></span>五
+                        </span>
+                        <input type="radio" class="jm-radio" disabled name="isMale">
                     </label>
                 </li>
             </ul>
         </form>
         <script src="../../../dep/jquery-1.11.1/jquery.min.js"></script>
         <script src="../radio_checkbox.js"></script>
+        <script>
+            $('.jm-radio-box').JmRadio()
+        </script>
     </body>
 </html>
