@@ -1,3 +1,7 @@
+/*******************************************
+  common
+*******************************************/
+
 .main-content header {
     margin: 40px 40px 0 40px;
 }
@@ -15,26 +19,28 @@ fieldset legend {
     font-weight: bold;
 }
 
-.jm-upload {
-    width: 360px;
-}
-
 .file-list {
-    margin-bottom: 34px;
+  width: 360px;
+  margin-bottom: 34px;
 }
 
 .file-list li {
-    border-radius: 4px;
-    transition: all .5s cubic-bezier(.55,0,.1,1);
+  position: relative;
+  border-radius: 4px;
+  transition: all .5s cubic-bezier(.55,0,.1,1);
 }
 
 .file-list li:hover {
     background-color: #eef1f6;
 }
 
+.file-list li:hover .jm-upload-btn-delete {
+    display: block;
+}
+
 .file-list a {
     font-size: 14px;
-    color:#777777;
+    color:#777;
     line-height: 32px;
     display: block;
     margin-right: 40px;
@@ -51,13 +57,21 @@ fieldset legend {
 
 .file-list li+li {
     margin-top: 10px;
-
 }
 
-.jm-icon {
-    margin-right: 10px;
+.comments {
+    font-size: 14px;
+    color:#bababa;
+    margin-top: 10px;
 }
 
+.jm-margin-r-10px {
+  margin-right: 10px;
+}
+
+.jm-upload-plus {
+  font-size: 26px;
+}
 
 .jm-btn {
     display: inline-block;
@@ -91,26 +105,27 @@ fieldset legend {
     display: none;
 }
 
-.jm-upload li{
-    position: relative;
-}
-
-.jm-upload li:hover .jm-upload-btn-delete {
-    display: block;
-}
-
-.comments {
-    font-size: 14px;
-    color:#bababa;
-    margin-top: 10px;
-}
-
-.thumbnail {
+.thumbnail50-50 {
     width: 50px;
     height: 50px;
-    margin-right: 10px;
     vertical-align: middle;
 }
+
+.thumbnail100-100 {
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+}
+
+.thumbnail150-150 {
+    width: 150px;
+    height: 150px;
+    vertical-align: middle;
+}
+
+/*******************************************
+  单个图片
+*******************************************/
 
 .jm-single-upload-placeholder {
     width: 150px;
@@ -121,35 +136,13 @@ fieldset legend {
     text-align: center;
 }
 
-.jm-single-upload-placeholder .jm-icon {
-    margin-right: 0;
-}
-
-.jm-single-upload-placeholder .jm-upload {
+.jm-single-upload-placeholder .file-list {
     width: 150px;
 }
 
 .jm-single-upload-placeholder .file-list a {
     margin-right: 0;
     padding-left:0;
-}
-
-.thumbnail150-150 {
-    width: 150px;
-    height: 150px;
-    vertical-align: middle;
-}
-
-.thumbnail100-100 {
-    width: 100px;
-    height: 100px;
-    vertical-align: middle;
-}
-
-
-.jm-upload-plus {
-    margin-top: 49px;
-   font-size: 26px;
 }
 
 .jm-single-upload-btn-text {
@@ -160,6 +153,10 @@ fieldset legend {
 .jm-single-upload-content {
     margin-top: 50px;
 }
+
+/*******************************************
+  拖拽上传
+*******************************************/
 
 .jm-drag-zone {
     width: 333px;
@@ -181,7 +178,6 @@ fieldset legend {
     margin-bottom: 10px;
 }
 
-
 .jm-icon-upload {
     display: block;
     width: 48px;
@@ -193,6 +189,10 @@ fieldset legend {
 .jm-dragger-text em {
     color:#0080cb;
 }
+
+/*******************************************
+  照片墙
+*******************************************/
 
 .pic-wall-list li {
     float: left;
@@ -208,19 +208,9 @@ fieldset legend {
     text-align: center;
 }
 
-.jm-pic-wall-placeholder .jm-upload-plus {
-    /*margin-top: 25px;*/
-   font-size: 26px;
-}
-
-.jm-pic-wall-placeholder .jm-icon {
-    margin-right: 0;
-}
-
 .jm-pic-wall-upload-content {
     padding-top: 25px;
 }
-
 
 .pic-wall-list .jm-upload-btn-delete {
     height: 32px;
@@ -235,11 +225,13 @@ fieldset legend {
     display: none;
 }
 
-
-
 .pic-wall-list li:hover .jm-upload-btn-delete {
     display: block;
 }
+
+/*******************************************
+  图片预览
+*******************************************/
 
 .large-preview {
     position: fixed;
