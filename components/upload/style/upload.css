@@ -240,3 +240,17 @@ fieldset legend {
 .pic-wall-list li:hover .jm-upload-btn-delete {
     display: block;
 }
+
+.large-preview {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.large-preview button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
