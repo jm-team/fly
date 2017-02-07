@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Select选择框</title>
+  <link rel="stylesheet" type="text/css" href="../../../dep/select2-4.0.3/css/select2.min.css">
+  <link rel="stylesheet" type="text/css" href="../style/jm-select2.css">
+  <script src="../../../dep/jquery-1.11.1/jquery.min.js"></script>
+  <script src="../../../dep/select2-4.0.3/js/select2.min.js"></script>
+  <script src="../../../dep/select2-4.0.3/js/i18n/zh-CN.js"></script>
+  <script src="index.js"></script>
+  <style>
+  html{
+  	font-size: 14px;
+  	font-family: 'microsoft yahei','微软雅黑',arial;
+  }
+  .content{
+  	width: 980px;
+  	margin: 0 auto;
+  	padding-top: 20px;
+  	font-size: 14px;
+  	font-family: 'microsoft yahei','微软雅黑',arial;
+  }
+  fieldset{
+  	margin: 30px 0;
+  	padding: 30px;
+  	border: solid 1px #DDDDDD;
+  }
+  fieldset legend{
+  	font-size: 20px;
+  	font-weight: bold;
+  	padding: 0 1em;
+  }
+  fieldset select, .select2{
+  	margin-right: 12px;
+  }
+  fieldset.t-basic select,
+  fieldset.t-single select{
+  	width: 350px;
+  }
+  fieldset.t-mix .select2{
+  	margin-right: 5px;
+  }
+  fieldset input[type="text"]{
+  	line-height: 26px;
+  	height: 26px;
+  	padding: 0 3px;
+  	font-size: 14px;
+  	vertical-align: top;
+  	border: solid 1px #DDDDDD;
+  	font-family: inherit;
+  }
+  .t-select-value{
+  	color: #BBBBBB;
+  }
+  ::-webkit-input-placeholder { /* WebKit browsers */ 
+	color: #BBBBBB;
+  } 
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+	color: #BBBBBB;
+  } 
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+	color: #BBBBBB;
+  } 
+  :-ms-input-placeholder { /* Internet Explorer 10+ */ 
+	color: #BBBBBB;
+  } 
+  </style>
+ </head>
+ <body>
+ 	<div id="wrapper">
+ 		<div class="content">
+		  	<form>
+		  	<fieldset class="t-basic">
+		  		<legend>基本用法&尺寸</legend>
+			  	<select name="list1" data-placeholder="请选择" data-allow-clear="true">
+			  		<option></option>
+				  	<option>列表项01</option>
+				  	<option>列表项02</option>
+				  	<option>列表项03</option>
+				  	<option>列表项04</option>
+				  	<option>列表项05</option>
+			  	</select>	
+		  	</fieldset>
+		  	<fieldset class="t-single">
+		  		<legend>单个用法</legend>
+			  	<select name="list2" data-placeholder="请选择(常见最简单方法)">
+			  		<option></option>
+				  	<option>列表项01</option>
+				  	<option>列表项02</option>
+				  	<option>列表项03</option>
+				  	<option>列表项04</option>
+				  	<option>列表项05</option>
+			  	</select>
+			  	<select name="list2a" data-placeholder="请选择(有禁用选项)">
+			  		<option></option>
+				  	<option>列表项01</option>
+				  	<option disabled>禁用选项</option>
+				  	<option>列表项03</option>
+				  	<option>列表项04</option>
+				  	<option>列表项05</option>
+			  	</select>
+			  	<br><br>
+				<select name="list3" data-placeholder="请选择(列表显示二级分类)">
+					<option></option>
+					<optgroup label="列表分类01">
+						<option>1111</option>
+					  	<option>2222</option>
+					  	<option>3333</option>
+					</optgroup>
+					<optgroup label="列表分类02">
+					  	<option>aaaa</option>
+					  	<option>bbbb</option>
+					  	<option>cccc</option>
+					</optgroup>
+					<optgroup label="列表分类03">
+						<option>4444</option>
+					  	<option>5555</option>
+					  	<option>6666</option>
+					</optgroup>
+			  	</select>
+			  	<select name="list3a" data-placeholder="请选择(文字提示两侧对其)">
+			  		<option></option>
+				  	<option>列表项01</option>
+				  	<option>列表项02</option>
+				  	<option>列表项03</option>
+				  	<option>列表项04</option>
+				  	<option>列表项05</option>
+			  	</select>
+			  	<br><br>	
+			  	<select name="list4" data-placeholder="请选择(列表显示二级分类)" data-minimum-results-for-search="0">
+			  		<option></option>
+			  		<optgroup label="列表分类01">
+						<option>1111</option>
+					  	<option>2222</option>
+					  	<option>3333</option>
+					</optgroup>
+					<optgroup label="列表分类02">
+					  	<option>aaaa</option>
+					  	<option>bbbb</option>
+					  	<option>cccc</option>
+					</optgroup>
+					<optgroup label="列表分类03">
+						<option>4444</option>
+					  	<option>5555</option>
+					  	<option>6666</option>
+					</optgroup>
+			  	</select>
+			  	<select name="list4a" data-placeholder="请选择(提示已选项)" data-allow-clear="true" style="width: 230px">
+				  	<option></option>
+				  	<option value="列表值01">列表项01</option>
+				  	<option value="列表值02">列表项02</option>
+				  	<option value="列表值03">列表项03</option>
+				  	<option value="列表值04">列表项04</option>
+				  	<option value="列表值05">列表项05</option>
+			  	</select>
+			  	<span class="t-select-value"></span>
+			  	<br><br>
+			  	<select name="list5" data-placeholder="请选择(可清空单选)" data-allow-clear="true">
+			  		<option></option>
+				  	<option>列表项01</option>
+				  	<option>列表项02</option>
+				  	<option>列表项03</option>
+				  	<option>列表项04</option>
+				  	<option>列表项05</option>
+			  	</select>
+			  	<select name="list5a" data-placeholder="请选择(下拉选择或自行输入关键字)" data-tags="true" data-allow-clear="true" data-minimum-results-for-search="0">
+			  		<option></option>
+				  	<option>列表项01</option>
+				  	<option>列表项02</option>
+				  	<option>列表项03</option>
+				  	<option>列表项04</option>
+				  	<option>列表项05</option>
+			  	</select>
+			  	<br><br>		  		
+		  	</fieldset>
+		  	<fieldset class="t-mix">
+		  		<legend>混合用法</legend>
+			  	<select name="province1" data-placeholder="请选择(省级地区显示)" style="width: 290px;">
+			  		<option></option>
+				  	<option value="bj">北京</option>
+				  	<option value="sh">上海</option>
+				  	<option value="zj">浙江</option>
+			  	</select>
+			  	<select name="city1" data-placeholder="请选择(市级地区显示)" style="width: 290px">
+			  		<option></option>
+			  	</select>
+			  	<br><br>
+			  	<select name="province2" data-placeholder="省级" style="width: 190px">
+			  		<option></option>
+				  	<option value="bj">北京</option>
+				  	<option value="sh">上海</option>
+				  	<option value="zj">浙江</option>
+			  	</select>
+			  	<select name="city2" data-placeholder="市级" style="width: 190px">
+			  		<option></option>
+			  	</select>
+			  	<select name="county2" data-placeholder="县级" style="width: 190px">
+			  		<option></option>
+			  	</select>
+			  	
+			  	<br><br>
+			  	<select name="province3" data-placeholder="省级" style="width: 120px;">
+			  		<option></option>
+				  	<option value="bj">北京</option>
+				  	<option value="sh">上海</option>
+				  	<option value="zj">浙江</option>
+			  	</select>
+			  	<select name="city3" data-placeholder="市级" style="width: 120px">
+			  		<option></option>
+			  	</select>
+			  	<select name="county3" data-placeholder="县级" style="width: 120px">
+			  		<option></option>
+			  	</select>
+			  	<input type="text" placeholder="具体详细地址" style="width: 194px;">
+			  	<br><br>
+			  	<select name="province4" data-placeholder="省级" style="width: 120px;">
+			  		<option></option>
+				  	<option value="bj">北京</option>
+				  	<option value="sh">上海</option>
+				  	<option value="zj">浙江</option>
+			  	</select>
+			  	<select name="city4" data-placeholder="市级" style="width: 120px">
+			  		<option></option>
+			  	</select>
+			  	<input type="text" placeholder="具体详细地址" style="width: 323px">
+		  	</fieldset>
+		  	</form>
+ 		</div>
+ 	</div>
+ </body>
+</html>

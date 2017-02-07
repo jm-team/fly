@@ -5,6 +5,21 @@
     <title>组件库</title>
     <link rel="stylesheet" href="../../dist/css/fly.less.css">
     <link rel="stylesheet" href="../css/index.css">
+    <style>
+        .jm-icon-loading {
+            display: inline-block;
+            animation: rotate360 1s linear infinite;
+        }
+        @keyframes rotate360 {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+    </style>
 </head>
 <body class="home-body">
     <div class="logo"><img src="../img/logo.png" alt="聚贸 Jumore"/></div>
@@ -12,6 +27,8 @@
         <h2>
             <small>Story</small>
             组件故事
+            <i class="jm-icon jm-icon-loading" style="font-size: 50px;"></i>
+
         </h2>
         <h3>Components
             <small>welcome</small>
