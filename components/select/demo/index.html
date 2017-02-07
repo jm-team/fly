@@ -46,14 +46,28 @@
   }
   fieldset input[type="text"]{
   	line-height: 26px;
+  	height: 26px;
   	padding: 0 3px;
   	font-size: 14px;
+  	vertical-align: top;
   	border: solid 1px #DDDDDD;
   	font-family: inherit;
   }
   .t-select-value{
   	color: #BBBBBB;
   }
+  ::-webkit-input-placeholder { /* WebKit browsers */ 
+	color: #BBBBBB;
+  } 
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+	color: #BBBBBB;
+  } 
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+	color: #BBBBBB;
+  } 
+  :-ms-input-placeholder { /* Internet Explorer 10+ */ 
+	color: #BBBBBB;
+  } 
   </style>
  </head>
  <body>
@@ -117,7 +131,7 @@
 				  	<option>列表项05</option>
 			  	</select>
 			  	<br><br>	
-			  	<select name="list4" data-placeholder="请选择(列表显示二级分类)">
+			  	<select name="list4" data-placeholder="请选择(列表显示二级分类)" data-minimum-results-for-search="0">
 			  		<option></option>
 			  		<optgroup label="列表分类01">
 						<option>1111</option>
