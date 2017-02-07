@@ -30,6 +30,7 @@ var express = require("express"),
     styleDir = path.resolve(__dirname, '../style'),
     staticDir = path.resolve(__dirname, './static'),
     distDir = path.resolve(__dirname, '../../../dist'),
+    nodeModulesDir = path.resolve(__dirname, './node_modules'),
     uploadedFilesPath = path.resolve(process.env.UPLOADED_FILES_DIR), // 上传文件夹
     chunkDirName = "chunks",
     port = process.env.SERVER_PORT || 8000,
@@ -48,6 +49,7 @@ app.use(express.static(publicDir));
 app.use('/style', express.static(styleDir));
 app.use('/static', express.static(staticDir));
 app.use('/dist', express.static(distDir));
+app.use("/node_modules", express.static(nodeModulesDir));
 app.post("/uploads", onUpload);
 app.delete("/uploads/:uuid", onDeleteFile);
 
@@ -194,7 +196,7 @@ function moveFile(destinationDir, sourceFile, destinationFile, success, failure)
     });
 }
 
-function getUploadedUuidPath(uuid) {  
+function getUploadedUuidPath(uuid) {
     return uploadedFilesPath + uuid + "/";
 }
 
