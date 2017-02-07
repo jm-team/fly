@@ -1,0 +1,19 @@
+.select2-container--default .select2-selection--single{
+	border: solid 1px #DDDDDD;
+	border-radius: 0;
+}
+.select2-container--default .select2-selection--single .select2-selection__placeholder{
+	color: #BBBBBB;
+}
+.select2-dropdown{
+	font-size: 14px;
+	border: solid 1px #DDDDDD;
+	border-radius: 0;
+	color: #666666;
+}
+.select2-results__group{
+	color: #B8B8B8;
+}
+.select2-container--default .select2-results__option[aria-disabled=true]{
+	color: #BABABA
+}
