@@ -1,0 +1,27 @@
+.jm-input{
+	box-sizing: border-box;
+}
+input.jm-input1[type="text"]{
+	height: 26px;
+	line-height: 24px;
+	font-size: 12px;
+	padding: 0 10px;
+}
+input.jm-input2[type="text"]{
+	height: 30px;
+	line-height: 28px;
+	font-size: 12px;
+	padding: 0 10px;
+}
+input.jm-input3[type="text"]{
+	height: 36px;
+	line-height: 34px;
+	font-size: 14px;
+	padding: 0 10px;
+}
+input.jm-input4[type="text"]{
+	height: 42px;
+	line-height: 40px;
+	font-size: 14px;
+	padding: 0 12px;
+}
