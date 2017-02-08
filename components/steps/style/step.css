@@ -58,7 +58,7 @@
     width: 26px;
     height: 26px;
     margin-right: 10px;
-    background-image: url("../img/jm-step-icon.png");
+    background-image: url("img/jm-step-icon.png");
     font-style: normal;
     line-height: 26px;
     text-align: center;
@@ -78,7 +78,7 @@
     width: 18px;
     height: 18px;
     margin-right: 6px;
-    background-image: url("../img/jm-min-step-icon.png");
+    background-image: url("img/jm-min-step-icon.png");
     line-height: 18px;
 }
 
