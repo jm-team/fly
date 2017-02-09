@@ -14,6 +14,7 @@ var hash = chunkhash = contenthash = '';
 // multiple extract instances
 var extractCSS = new ExtractTextPlugin('css/[name].' + contenthash + 'css');
 var extractLESS = new ExtractTextPlugin('css/[name].less.' + contenthash + 'css');
+var extractSASS = new ExtractTextPlugin('css/sass.[name].'+ contenthash +'css');
 
 module.exports = merge({
     /**
@@ -75,6 +76,11 @@ module.exports = merge({
                 loader: extractLESS.extract(['css', 'less!postcss'])
             },
 
+            {
+                test: /\.scss$/i,
+                loader: extractSASS.extract(['css', 'sass!postcss'])
+            },
+
             // 处理html图片
             {
                 test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
@@ -120,6 +126,7 @@ module.exports = merge({
         // 单独使用link标签加载css并设置路径，
         // 相对于output配置中的publickPath
         extractLESS,
+        extractSASS,
         // 启用文件压缩混淆
         new webpack.optimize.UglifyJsPlugin({
             output: {
