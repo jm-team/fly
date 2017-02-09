@@ -33,6 +33,7 @@
 	height: 20px;
 	min-width: 20px;
 	border-radius: 10px;
+	border: 1px solid #f00;
 	box-shadow: 0 0 0 1px #fff;
 }
 .badge-bg .badge-text{
@@ -73,8 +74,6 @@
 	display: inline-block;
 }
 .badge-bubble .icon-badge.icon-badge-clear{
-	position: static;
-	display: inline-block;
 	color: #666;
 	background: #fff;
 	border: 1px solid #ddd;
