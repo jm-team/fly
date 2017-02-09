@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="../css/jm-spec.css">
 </head>
 <body>
+
+<!-- 漂浮导航-->
+<div class="nav-float">
+    <ul class="">
+        <li><a href="#use">Color色彩</a></li>
+        <li><a href="#tips" onclick="$.scrollify('move','#color-form')">色彩的交互使用</a></li>
+        <li><a href="#" onclick="$.scrollify('move','#color-form')">常用色彩的基本构成</a></li>
+    </ul>
+</div>
+
 <!--内页公共导航 开始-->
 <div class="top clearfix">
     <div class="logo fn-left"></div>
@@ -157,7 +167,7 @@
         </div>
 
         <!-- 常用色彩的基本构成-->
-        <div class="mt40">
+        <div class="mt40" name="color-form" id="color-form">
             <h1>常用色彩的基本构成</h1>
             <!-- 灰色-->
             <div class="color-form-list ">
@@ -480,9 +490,9 @@
 </div>
 
 <!--页脚-->
-<div class=" footer">
+<div class="footer clearfix">
     <p class="fn-left">JuMore Component library 版权所有</p>
+    <span class="fn-right "></span>
 </div>
-
 </body>
 </html>
