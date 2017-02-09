@@ -10,7 +10,7 @@
 	vertical-align: middle;
 	position: relative;
 	background: #ddd;
-	border-radius: 4px;
+	border-radius: 6px;
 	margin-right: 50px;
 }
 .badge-clear{
@@ -27,31 +27,45 @@
 	position: absolute;
 	color: #fff;
 	background: #f00;
-	padding: 0px 5px;
+	padding: 0px 6px;
 	font-size: 14px;
 	line-height: 20px;
+	height: 20px;
+	min-width: 20px;
 	border-radius: 10px;
+	box-shadow: 0 0 0 1px #fff;
+}
+.badge-bg .badge-text{
+	display: inline-block;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
 }
 .badge-bg .icon-badge{
-	top: -5px;
-	left: 80%;
+	top: -10px;
+	left: 100%;
+	margin-left: -15px;
 }
 .badge-clear .icon-badge{
 	top:5px;
-	right:-15px;
+	right:0px;
 }
 /* badge 红点样式 */
-.badge-point .icon-badge{
+.badge-point .icon-badge-point{
 	width: 10px;
 	height: 10px;
-	padding: 0px;
+	position: absolute;
+	background: #f00;
 	border-radius: 50%;
+	box-shadow: 0 0 0 1px #fff;
 }
-.badge-point .badge-bg .icon-badge{
-	left: 90%;
+.badge-point .badge-bg .icon-badge-point{
+	right: -5px;
+	top: -5px;
 }
-.badge-point .badge-clear .icon-badge{
-	right: 12px;
+.badge-point .badge-clear .icon-badge-point{
+	right: 15px;
+	top: 5px;
 }
 /*badge 气泡样式*/
 .badge-bubble .icon-badge{
