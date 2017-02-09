@@ -14,6 +14,15 @@
   	font-size: 14px;
   	font-family: 'microsoft yahei','微软雅黑',arial;
   }
+  ul{
+    padding:0px;
+  }
+  ul li{
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+  }
   .content{
   	width: 980px;
   	margin: 0 auto;
@@ -114,6 +123,20 @@
   .jm-input4{
   	width: 360px;
   }
+
+  .t-mix-type ul{
+    clear:both;
+    overflow: hidden;
+  } 
+
+  .t-mix-type li{
+    float:left;
+    margin-right: 45px;
+  }
+
+  .t-mix-type a{
+    color:#0080ca;
+  }
   </style>
  </head>
  <body>
@@ -143,14 +166,22 @@
 		  	<fieldset class="t-mix">
 		  		<legend>混合组合</legend>			  	
 			  	<input class="jm-input3" type="text" placeholder="" value="0579" style="width: 141px;"><input class="jm-input3" type="text" value="88788251" placeholder="" style="width: 348px;margin-left: 20px;"><br>
-			  	<span class="jm-select-wrap"><span>HTTP://</span><input class="jm-input3" type="text" placeholder="默认文字颜色#bababa  字号：14px"></span><br>
-			  	<div>
+			  	<span class="jm-select-wrap"><span class="jm-link-input">HTTP://</span><input class="jm-input3" type="text" placeholder="默认文字颜色#bababa  字号：14px"></span><br>
+			  	<div class="t-mix-type">
 			  		<ul><li><a href="javascript:void(0)">类别1</a></li><li><a href="javascript:void(0)">类别2</a></li></ul>
-			  		<span class="jm-select-wrap"><input class="jm-input3" type="text" placeholder="默认文字颜色#bababa  字号：14px"><a></a></span>
 			  	</div>
-			  	<span class="jm-select-wrap"><input class="jm-input3" type="text" placeholder="默认文字颜色#bababa  字号：14px"><a></a></span><br>
-			  	<span class="jm-select-wrap"><span>选择分类</span><input class="jm-input3" type="text" placeholder="默认文字颜色#bababa  字号：14px"><a></a></span><br>
-			  	<input class="jm-input3" type="text" placeholder="激活列出输入建议"><input class="jm-input3" type="text" placeholder="输入后匹配输入建议" style="margin-left: 20px"><br>
+          <div>
+            <span class="jm-select-wrap"><input class="jm-input3" type="text" placeholder="默认文字颜色#bababa  字号：14px"><a class="jm-input-search"></a></span>
+          </div>
+          <div>
+			  	  <span class="jm-select-wrap"><input class="jm-input3" type="text" placeholder="默认文字颜色#bababa  字号：14px"><a class="jm-input-search"></a></span>
+          </div>
+          <div>
+			  	  <span class="jm-select-wrap"><span class="select-classify">选择分类</span><input class="jm-input3" type="text" placeholder="默认文字颜色#bababa  字号：14px"><a></a></span>
+          </div>
+          <div>
+			  	  <input class="jm-input3" type="text" placeholder="激活列出输入建议"><input class="jm-input3" type="text" placeholder="输入后匹配输入建议" style="margin-left: 20px">
+          </div>
 		  	</fieldset>
 		  	</form>
  		</div>
