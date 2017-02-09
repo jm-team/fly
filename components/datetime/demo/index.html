@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>DateTimePicker日期时间选择器</title>
+  <link rel="stylesheet" type="text/css" href="../../../dep/bootstrap-3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../../../dep/bootstrap-datetimepicker-4.17.45/css/bootstrap-datetimepicker.min.css">
+  <link rel="stylesheet" type="text/css" href="../../input/style/jm-input.css">
+  <link rel="stylesheet" type="text/css" href="../style/jm-datetime.css">
+  <script src="../../../dep/jquery-1.11.1/jquery.min.js"></script>
+  <script src="../../../dep/moment-2.17.1/moment-with-locales.min"></script>
+  <script src="../../../dep/bootstrap-datetimepicker-4.17.45/js/bootstrap-datetimepicker.min.js"></script>
+  <script src="index.js"></script>
+  <style>
+  html{
+  	font-size: 14px;
+  	font-family: 'microsoft yahei','微软雅黑',arial;
+  }
+  .content{
+  	width: 980px;
+  	margin: 0 auto;
+  	padding-top: 20px;
+  	font-size: 14px;
+  	font-family: 'microsoft yahei','微软雅黑',arial;
+  }
+  fieldset{
+  	margin: 30px 0;
+  	padding: 30px;
+  	border: solid 1px #DDDDDD;
+  }
+  fieldset legend{
+  	font-size: 20px;
+  	font-weight: bold;
+  	padding: 0 1em;
+  	width: auto;
+  	border-bottom: none;
+  	margin-bottom: 0;
+  }
+  fieldset.t-basic input,
+  fieldset.t-single input{
+  	width: 350px;
+  	margin-bottom: 40px;
+  }
+  ::-webkit-input-placeholder { /* WebKit browsers */ 
+	color: #BBBBBB;
+  } 
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+	color: #BBBBBB;
+  } 
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+	color: #BBBBBB;
+  } 
+  :-ms-input-placeholder { /* Internet Explorer 10+ */ 
+	color: #BBBBBB;
+  } 
+  </style>
+ </head>
+ <body>
+ 	<div id="wrapper">
+ 		<div class="content">
+		  	<form>
+		  	<fieldset class="t-basic">
+		  		<legend>Input类型</legend>
+		  		<input class="jm-input jm-input3" type="text" placeholder="常见选择日期"><br>
+		  		<input class="jm-input jm-input3" type="text" placeholder="日期双月同时显示"><br>
+		  		<input class="jm-input jm-input3" type="text" placeholder="日期范围"><br>
+		  		<input class="jm-input jm-input3" type="text" placeholder="快捷选择具体日期范围"><br>
+		  	</fieldset>
+		  	<fieldset class="t-single">
+		  		<legend>单独选择日期</legend>
+		  		<input class="jm-input jm-input3" type="text" placeholder="单独选择年"><br>
+		  		<input class="jm-input jm-input3" type="text" placeholder="单独选择月"><br>
+		  	</fieldset>
+		  	</form>
+ 		</div>
+ 	</div>
+ </body>
+</html>
