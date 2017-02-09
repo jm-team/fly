@@ -370,7 +370,6 @@ table {
     width: 15%;
     height: 100%;
     background: #f6f6f6;
-    padding:30px 0px;
     margin-bottom:-9999px;
     padding-bottom:9999px
 }
@@ -869,10 +868,22 @@ table {
     border-bottom: 1px solid #ddd;
 
 }
+.com-search i{
+    position: relative;
+    top:35px;
+    left: 10px;
+    font-size: 22px;
+    display: inline-block;
+    color: #bababa;
+}
+.com-search input{
+    width: 100%;
+    border-radius: 22px;
+}
 .com-search .search{
     height:42px;
     line-height: 42px;
-    padding-left:45px;
+    padding-left:35px;
 }
 
 .nav-item{
@@ -914,12 +925,13 @@ table {
 .nav-float ul li{
     height: 30px;
     line-height: 30px;
+    font-size: 14px;
+    color: #cbcbcb;
 }
 .nav-float ul li a{
-    color: #333333;
+    color: #666;
     font-size: 14px;
-    padding-left: 20px;
-    background: url(../img/li-img.png) no-repeat left;
+    padding-left: 10px;
 }
 .nav-float ul li a:hover{
     display: inline-block;
