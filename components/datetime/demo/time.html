@@ -5,18 +5,16 @@
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
-  <title>DateTimePicker日期时间选择器</title>  
+  <title>TimePicker时间选择器</title>
   <link rel="stylesheet" type="text/css" href="../../../dep/bootstrap-3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="../../../dep/bootstrap-datetimepicker-4.17.37/css/bootstrap-datetimepicker.min.css">
-  <link rel="stylesheet" type="text/css" href="../../../dep/bootstrap-daterangepicker-2.1.25/daterangepicker.min.css">
+  <link rel="stylesheet" type="text/css" href="../../../dep/bootstrap-datetimepicker-4.17.45/css/bootstrap-datetimepicker.min.css">
   <link rel="stylesheet" type="text/css" href="../../input/style/jm-input.css">
   <link rel="stylesheet" type="text/css" href="../style/jm-datetime.css">
   <script src="../../../dep/jquery-1.11.1/jquery.min.js"></script>
   <script src="../../../dep/bootstrap-3.3.7/js/bootstrap.min.js"></script>
   <script src="../../../dep/moment-2.17.1/moment-with-locales.min.js"></script>
-  <script src="../../../dep/bootstrap-datetimepicker-4.17.37/js/bootstrap-datetimepicker.min.js"></script>
-  <script src="../../../dep/bootstrap-daterangepicker-2.1.25/daterangepicker.min.js"></script>
-  <script src="index.js"></script>
+  <script src="../../../dep/bootstrap-datetimepicker-4.17.45/js/bootstrap-datetimepicker.min.js"></script>
+  <script src="time.js"></script>
   <style>
   html{
   	font-size: 14px;
@@ -66,13 +64,21 @@
  		<div class="content">
 		  	<form>
 		  	<fieldset class="t-basic">
-		  		<legend>Input类型</legend>
-		  		<span class="jm-datetime"><input class="jm-input jm-input3" type="text" name="datetime1" placeholder="常见选择日期"></span><br>
+		  		<legend>常用时间段</legend>
+		  		<span class="jm-time"><input class="jm-input jm-input3" type="text" name="time1" placeholder="时间选择"></span><br>
 		  	</fieldset>
-		  	<fieldset class="t-single">
-		  		<legend>单独选择日期</legend>
-		  		<span class="jm-datetime"><input class="jm-input jm-input3" type="text" name="datetime2" placeholder="单独选择年"></span><br>
-		  		<span class="jm-datetime"><input class="jm-input jm-input3" type="text" name="datetime3" placeholder="单独选择月"></span><br>
+		  	<fieldset class="t-anytime">
+		  		<legend>任意时间点</legend>
+		  		<span class="jm-time"><input class="jm-input jm-input3" type="text" name="time2" placeholder="选择任意时间点"></span><br>
+		  	</fieldset>
+		  	<fieldset class="t-anytimescope">
+		  		<legend>任意时间范围</legend>
+		  		<span class="jm-time"><input class="jm-input jm-input3" type="text" name="time3" placeholder="选择任意时间范围"></span><br>
+		  	</fieldset>
+		  	<fieldset class="t-timescope">
+		  		<legend>固定时间范围</legend>
+		  		<span class="jm-time"><input class="jm-input jm-input3" type="text" name="time4" placeholder="开始时间"></span>&nbsp;&nbsp;&nbsp;
+		  		<span class="jm-time"><input class="jm-input jm-input3" type="text" name="time5" placeholder="结束时间"></span><br>
 		  	</fieldset>
 		  	</form>
  		</div>
