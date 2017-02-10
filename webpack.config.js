@@ -6,15 +6,11 @@ var merge = require('webpack-merge');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var hash = chunkhash = contenthash = '';
 
-
 // hash = '[hash:8].';
 // chunkhash = '[chunkhash:8].';
 // contenthash = '[contenthash:8].';
 
-// multiple extract instances
-var extractCSS = new ExtractTextPlugin('css/[name].' + contenthash + 'css');
-var extractLESS = new ExtractTextPlugin('css/[name].less.' + contenthash + 'css');
-var extractSASS = new ExtractTextPlugin('css/sass.[name].'+ contenthash +'css');
+var extractSASS = new ExtractTextPlugin('css/[name].'+ contenthash +'css');
 
 module.exports = merge({
     /**
@@ -23,7 +19,7 @@ module.exports = merge({
      */
     entry: {
         // 公共文件
-        fly: './components/style/index.js'
+        fly: './index.js'
     },
 
     // 构建之后的文件目录配置
@@ -66,15 +62,6 @@ module.exports = merge({
             },
             // 配置css的抽取器、加载器。'-loader'可以省去
             // 这里使用自动添加CSS3 浏览器前缀
-            {
-                test: /\.css$/i,
-                loader: extractCSS.extract('style-loader', 'css!postcss')
-            },
-
-            {
-                test: /\.less$/i,
-                loader: extractLESS.extract(['css', 'less!postcss'])
-            },
 
             {
                 test: /\.scss$/i,
@@ -125,7 +112,6 @@ module.exports = merge({
     plugins: [
         // 单独使用link标签加载css并设置路径，
         // 相对于output配置中的publickPath
-        extractLESS,
         extractSASS,
         // 启用文件压缩混淆
         new webpack.optimize.UglifyJsPlugin({

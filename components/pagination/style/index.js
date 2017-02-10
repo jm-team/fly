@@ -1,1 +1,1 @@
-import './laypage.css';
+import './laypage.scss';
