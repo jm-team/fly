@@ -30,7 +30,6 @@ $(function() {
         var self = $(this);
         var value = self.val();
         if (value) {
-
             var oTag = $('<a href="javascript:;">').text(value);
             // 添加自定义标签
             oTag.append($('<i class="jm-icon jm-icon-wrong">'));
@@ -39,6 +38,15 @@ $(function() {
         } else {
             addTag(self);
         }
+    });
+
+    // input 回车事件添加新的标签
+    $('.tag-dynamic').on('keyup', 'input', function(e) {
+        e.preventDefault();
+        var self = $(this);
+        if(e.which === 13){
+            self.trigger('blur');
+        }     
     });
 
     // tag 可点击
