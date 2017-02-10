@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../../../dist/css/sass.fly.css"/>
+
+    <title>button</title>
+
+    <style>
+        body{
+            padding: 20px 0;
+            font-family: "Microsoft Yahei";
+            color: #676a6c;
+        }
+        h3{ font-size: 16px;}
+
+
+        .ibox{
+            margin-bottom: 25px;
+            margin-top: 0;
+            clear: both;
+            padding: 0;
+        }
+        .ibox-title {
+            padding: 14px 15px 7px;
+            border-color: #e7eaec;
+            border-style: solid solid none;
+            border-width: 4px 1px 1px;
+            min-height: 48px;
+            background-color: #fff;
+        }
+        .ibox-title h5 {
+            float: left;
+            margin: 0;
+            font-size: 14px;
+            text-overflow: ellipsis;
+            font-weight: 600;
+        }
+
+        .ibox-content {
+            background-color: #fff;
+            color: inherit;
+            border: 1px solid #e7eaec;
+            padding: 15px 20px 20px 20px;
+            clear: both;
+        }
+        .ibox-content h1, .ibox-content h2, .ibox-content h3, .ibox-content h4, .ibox-content h5 {
+            margin-top: 5px;
+        }
+        button{
+            margin-top: 5px;
+        }
+        h3, h4, h5 {
+            margin-top: 5px;
+            font-weight: 600;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5>Colors buttons</h5>
+                    </div>
+
+                    <div class="ibox-content">
+                        <p>使用任何可用的按钮类快速创建一个样式的按钮.</p>
+                        <h3>正常按钮</h3>
+                        <p>
+                            <button class="jm-btn jm-btn-default">Default</button>
+                            <button class="jm-btn jm-btn-primary">Primary</button>
+                            <button class="jm-btn" disabled>禁用状态</button>
+                            <button class="jm-btn jm-btn-success">成功按钮</button>
+                            <button class="jm-btn jm-btn-warning">警告按钮</button>
+                            <button class="jm-btn jm-btn-danger">错误按钮</button>
+                        </p>
+
+                        <h3>正常带icon按钮</h3>
+                        <p>
+                            <button class="jm-btn jm-btn-default"><i class="jm-icon jm-icon-wangwang"></i> Default</button>
+                            <button class="jm-btn jm-btn-primary"><i class="jm-icon jm-icon-refresh"></i> Primary</button>
+                            <button class="jm-btn" disabled><i class="jm-icon jm-icon-passenger"></i> 禁用状态</button>
+                            <button class="jm-btn jm-btn-success"><i class="jm-icon jm-icon-search"></i> 成功按钮</button>
+                            <button class="jm-btn jm-btn-warning"><i class="jm-icon jm-icon-vacation"></i> 警告按钮</button>
+                            <button class="jm-btn jm-btn-danger"><i class="jm-icon jm-icon-ticket"></i> 错误按钮</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5>不同大小</h5>
+                    </div>
+
+                    <div class="ibox-content">
+                        <p>如果您想要更大或更小的按钮您可以添加.jm-btn-lg，.jm-btn-sm, .jm-btn-md或.jm-btn-xs类</p>
+                        <h3>按钮尺寸</h3>
+                        <p>
+                            <button class="jm-btn jm-btn-default jm-btn-lg">large button</button>
+                            <button class="jm-btn jm-btn-primary jm-btn-lg">large button</button>
+                        </p>
+                        <p>
+                            <button class="jm-btn jm-btn-default jm-btn-md">md button</button>
+                            <button class="jm-btn jm-btn-primary jm-btn-md">md button</button>
+                        </p>
+                        <p>
+                            <button class="jm-btn jm-btn-default jm-btn-sm">sm button</button>
+                            <button class="jm-btn jm-btn-primary jm-btn-sm">sm button</button>
+                        </p>
+                        <p>
+                            <button class="jm-btn jm-btn-default jm-btn-xs">xs button</button>
+                            <button class="jm-btn jm-btn-primary jm-btn-xs">xs button</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5>边线和块级按钮</h5>
+                    </div>
+
+                    <div class="ibox-content">
+                        <p>通过添加.btn-block或.btn-outline创建块级按钮或边线按钮</p>
+
+                        <h3>边线按钮</h3>
+                        <p>
+                            <button class="jm-btn jm-btn-primary jm-btn-lg jm-btn-outline">primary button</button>
+                            <button class="jm-btn jm-btn-info jm-btn-lg jm-btn-outline">info button</button>
+                            <button class="jm-btn jm-btn-success jm-btn-lg jm-btn-outline">success button</button>
+                            <button class="jm-btn jm-btn-warning jm-btn-lg jm-btn-outline">warning button</button>
+                            <button class="jm-btn jm-btn-danger jm-btn-lg jm-btn-outline">danger button</button>
+                        </p>
+
+                        <h3>块级按钮</h3>
+                        <p>
+                            <button class="jm-btn jm-btn-default jm-btn-block">block button</button>
+                            <button class="jm-btn jm-btn-primary jm-btn-block">block button</button>
+                            <button class="jm-btn jm-btn-info jm-btn-block">block button</button>
+                            <button class="jm-btn jm-btn-success jm-btn-block">block button</button>
+                            <button class="jm-btn jm-btn-warning jm-btn-block">block button</button>
+                            <button class="jm-btn jm-btn-danger jm-btn-block">block button</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5>固定尺寸按钮</h5>
+                    </div>
+
+                    <div class="ibox-content">
+                        <p>通过添加.jm-btn-absolute-md, .jm-btn-absolute-md,.jm-btn-absolute-md ,jm-btn-absolute-md创建固定高度按钮</p>
+
+                        <h3>各个大小固定高度的按钮</h3>
+                        <p>
+                            <button class="jm-btn jm-btn-primary jm-btn-absolute-xs">20px</button>
+                            <button class="jm-btn jm-btn-primary jm-btn-absolute-sm">30px</button>
+                            <button class="jm-btn jm-btn-primary jm-btn-absolute-md">40px</button>
+                            <button class="jm-btn jm-btn-primary jm-btn-absolute-lg">50px</button>
+                        </p>
+
+                        <h3>带icon各个大小固定高度的按钮</h3>
+                        <p>
+                            <button class="jm-btn jm-btn-primary jm-btn-absolute-xs"><i class="jm-icon jm-icon-file"></i>文件</button>
+                            <button class="jm-btn jm-btn-primary jm-btn-absolute-sm"><i class="jm-icon jm-icon-file"></i>文件</button>
+                            <button class="jm-btn jm-btn-primary jm-btn-absolute-md"><i class="jm-icon jm-icon-file"></i>文件</button>
+                            <button class="jm-btn jm-btn-primary jm-btn-absolute-lg"><i class="jm-icon jm-icon-file"></i>文件</button>
+                        </p>
+
+
+                        <p>通过添加.jm-btn-circle-xs, .jm-btn-circle-sm,.jm-btn-circle-md ,jm-btn-circle-lg创建圆形的固定按钮</p>
+                        <h3>圆形的固定按钮</h3>
+                        <p>
+                            <button class="jm-btn jm-btn-danger jm-btn-circle-xs">
+                                <i class="jm-icon jm-icon-delete"></i>
+                            </button>
+                            <button class="jm-btn jm-btn-danger jm-btn-circle-sm">
+                                <i class="jm-icon jm-icon-delete"></i>
+                            </button>
+                            <button class="jm-btn jm-btn-danger jm-btn-circle-md">
+                                <i class="jm-icon jm-icon-delete"></i>
+                            </button>
+                            <button class="jm-btn jm-btn-danger jm-btn-circle-lg">
+                                <i class="jm-icon jm-icon-delete"></i>
+                            </button>
+                        </p>
+
+
+                        <h3>icon圆角按钮</h3>
+                        <p>
+                            <button class="jm-btn jm-btn-primary jm-btn-radius-xs">
+                                <i class="jm-icon jm-icon-wifi"></i>
+                            </button>
+                            <button class="jm-btn jm-btn-info jm-btn-radius-sm">
+                                <i class="jm-icon jm-icon-like2shape"></i>
+                            </button>
+                            <button class="jm-btn jm-btn-success jm-btn-radius-md">
+                                <i class="jm-icon jm-icon-diamond"></i>
+                            </button>
+                            <button class="jm-btn jm-btn-danger jm-btn-radius-lg">
+                                <i class="jm-icon jm-icon-lamp"></i>
+                            </button>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-12">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5>3D</h5>
+                    </div>
+
+                    <div class="ibox-content">
+                        <p>通过添加.jm-btn-dim, .jm-btn-dim-lg增加按钮3D效果</p>
+
+                        <h3>3D效果</h3>
+                        <p>
+                            <button class="jm-btn jm-btn-primary jm-btn-absolute-xs jm-btn-dim">20px</button>
+                            <button class="jm-btn jm-btn-primary jm-btn-absolute-sm jm-btn-dim">30px</button>
+                            <button class="jm-btn jm-btn-primary jm-btn-absolute-md jm-btn-dim">40px</button>
+                            <button class="jm-btn jm-btn-primary jm-btn-absolute-lg jm-btn-dim">50px</button>
+                        </p>
+
+                        <p>
+                            <button class="jm-btn jm-btn-primary jm-btn-dim">
+                                <i class="jm-icon jm-icon-refresh"></i>
+                            </button>
+                            <button class="jm-btn jm-btn-info jm-btn-dim">
+                                <i class="jm-icon jm-icon-reminder"></i>
+                            </button>
+                            <button class="jm-btn jm-btn-success jm-btn-dim">
+                                <i class="jm-icon jm-icon-ship"></i>
+                            </button>
+                            <button class="jm-btn jm-btn-warning jm-btn-dim">
+                                <i class="jm-icon jm-icon-lighton"></i>
+                            </button>
+
+                            <button class="jm-btn jm-btn-danger jm-btn-dim">
+                                <i class="jm-icon jm-icon-flight"></i>
+                            </button>
+
+                        </p>
+
+                        <p>
+                            <button class="jm-btn jm-btn-primary jm-btn-dim jm-btn-dim-lg">
+                                <i class="jm-icon jm-icon-refresh"></i>
+                            </button>
+                            <button class="jm-btn jm-btn-info jm-btn-dim jm-btn-dim-lg">
+                                <i class="jm-icon jm-icon-reminder"></i>
+                            </button>
+                            <button class="jm-btn jm-btn-success jm-btn-dim jm-btn-dim-lg">
+                                <i class="jm-icon jm-icon-ship"></i>
+                            </button>
+                            <button class="jm-btn jm-btn-warning jm-btn-dim jm-btn-dim-lg">
+                                <i class="jm-icon jm-icon-lighton"></i>
+                            </button>
+
+                            <button class="jm-btn jm-btn-danger jm-btn-dim jm-btn-dim-lg">
+                                <i class="jm-icon jm-icon-flight"></i>
+                            </button>
+                        </p>
+
+                        <p>
+                            <button class="jm-btn jm-btn-primary jm-btn-circle-lg jm-btn-dim jm-btn-dim-lg">
+                                <i class="jm-icon jm-icon-search"></i>
+                            </button>
+                            <button class="jm-btn jm-btn-info jm-btn-circle-lg jm-btn-dim jm-btn-dim-lg">
+                                <i class="jm-icon jm-icon-chef"></i>
+                            </button>
+                            <button class="jm-btn jm-btn-success jm-btn-circle-lg jm-btn-dim jm-btn-dim-lg">
+                                <i class="jm-icon jm-icon-help"></i>
+                            </button>
+                            <button class="jm-btn jm-btn-warning jm-btn-circle-lg jm-btn-dim jm-btn-dim-lg">
+                                <i class="jm-icon jm-icon-guidepost"></i>
+                            </button>
+                            <button class="jm-btn jm-btn-danger jm-btn-circle-lg jm-btn-dim jm-btn-dim-lg">
+                                <i class="jm-icon jm-icon-delete"></i>
+                            </button>
+
+                        </p>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-12">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5>按钮组</h5>
+                    </div>
+
+                    <div class="ibox-content">
+
+                        <p>
+
+                            <div class="jm-btn-group">
+                                <button type="button" class="jm-btn jm-btn-default">Left</button>
+                                <button type="button" class="jm-btn jm-btn-default">Middle</button>
+                                <button type="button" class="jm-btn jm-btn-default">Right</button>
+                            </div>
+
+                        </p>
+
+                        <p>
+
+                        <div class="jm-btn-group">
+                            <button type="button" class="jm-btn jm-btn-default">
+                                <i class="jm-icon jm-icon-back"></i>上一页
+                            </button>
+                            <button type="button" class="jm-btn jm-btn-default">
+                                下一页<i class="jm-icon jm-icon-enter"></i>
+                            </button>
+                        </div>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
