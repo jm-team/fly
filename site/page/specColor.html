@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../dist/css/fly.less.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/jm-spec.css">
+</head>
+<body>
+
+<!-- 漂浮导航-->
+<div class="nav-float">
+    <ul class="">
+        <li><a href="#use">Color色彩</a></li>
+        <li><a href="#tips" onclick="$.scrollify('move','#color-form')">色彩的交互使用</a></li>
+        <li><a href="#" onclick="$.scrollify('move','#color-form')">常用色彩的基本构成</a></li>
+    </ul>
+</div>
+
+<!--内页公共导航 开始-->
+<div class="top clearfix">
+    <div class="logo fn-left"></div>
+    <div class="nav fn-right ">
+        <ul class="clearfix">
+            <li class="current fn-left"><a>首页</a></li>
+            <li class="fn-left"><a href="#">指南</a></li>
+            <li class="fn-left"><a href="#">规范</a></li>
+            <li class="fn-left"><a href="#">组件</a></li>
+            <li class="fn-left"><a href="#">模式</a></li>
+            <li class="fn-left"><a href="#">资源</a></li>
+        </ul>
+    </div>
+</div>
+<!--内页公共导航 结束-->
+
+
+<div class="main-wrapper fn-clear">
+    <!--左侧导航开始-->
+    <div class="main-left fn-left">
+        <ul class="mt20">
+            <li class="main-left-title">设计规范</li>
+            <li>
+                <ul class="">
+                    <li><a href="#">字体</a></li>
+                    <li><a href="#">排版</a></li>
+                    <li><a href="#">色彩</a></li>
+                    <li><a href="#">安装</a></li>
+                    <li><a href="#">更新日志</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+    <!--右侧内容模块-->
+    <div class="main-right fn-left">
+        <!-- 中文常用字体-->
+        <div class="font-setting">
+            <h1>Color色彩</h1>
+            <ul class="clearfix">
+                <li class="fn-left">概述</li>
+                <li class="fn-left">色彩的基本构成</li>
+                <li class="fn-left">色彩的交互使用</li>
+            </ul>
+        </div>
+        <!--概述-->
+        <div class="mt40 color-about">
+            <h1>概述</h1>
+            <p>不管是做设计还是做前端，有时候也是很难把握好色彩的搭配。下面归纳的是常见的色彩场景及用法，仅供参考</p>
+        </div>
+        <!--色彩的交互使用-->
+        <div class="mt40">
+            <h1>色彩的交互使用</h1>
+            <ul class="color-list mt20 clearfix">
+                <li class="fn-left">
+                    <div class="color-use blue-click">
+                         <p class="">Click</p>
+                         <p class="">#069af0</p>
+                    </div>
+                    <div class="color-use blue-hover">
+                        <p class="">Hover</p>
+                        <p class="">#0080ca</p>
+                    </div>
+                    <div class="color-scene">
+                        <h3 class="mt10">使用场景：</h3>
+                        <p>整站的风格用色，如突出的文字，导航，背景链接文字颜色等触发按钮的颜色</p>
+                    </div>
+                </li>
+                <li class="fn-left">
+                    <div class="color-use green-click">
+                        <p class="">Click</p>
+                        <p class="">#069af0</p>
+                    </div>
+                    <div class="color-use green-hover">
+                        <p class="">Hover</p>
+                        <p class="">#0080ca</p>
+                    </div>
+                    <div class="color-scene">
+                        <h3 class="mt10">使用场景：</h3>
+                        <p>用于认证成功、注册成功、登录成功等成功提示性文字和图标的颜色</p>
+                    </div>
+                </li>
+                <li class="fn-left">
+                    <div class="color-use yellow-click">
+                        <p class="">Click</p>
+                        <p class="">#069af0</p>
+                    </div>
+                    <div class="color-use yellow-hover">
+                        <p class="">Hover</p>
+                        <p class="">#0080ca</p>
+                    </div>
+                    <div class="color-scene">
+                        <h3 class="mt10">使用场景：</h3>
+                        <p>用于警告一类、提示ICON背景色、提示类按钮</p>
+                    </div>
+                </li>
+                <li class="fn-left">
+                    <div class="color-use red-click">
+                        <p class="">Click</p>
+                        <p class="">#069af0</p>
+                    </div>
+                    <div class="color-use red-hover">
+                        <p class="">Hover</p>
+                        <p class="">#0080ca</p>
+                    </div>
+                    <div class="color-scene">
+                        <h3 class="mt10">使用场景：</h3>
+                        <p>用于消息提示、删除、输入框的错误等提示性</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="black-white mt40 clearfix">
+            <ul class="fn-left">
+                <li class=" fn-left clearfix">
+                    <p class="color-use bg-333 fn-left ">#333</p>
+                    <span class="fn-left ml20">主要文字、标题性质文字主导航背景色、表格标题的文字颜色</span>
+                </li>
+                <li class="fn-left clearfix">
+                    <p class="color-use bg-666 fn-left ">#666</p>
+                    <span class="fn-left ml20">标签类文字、部分文字、大段的段落文字、小标题的颜色</span>
+                </li>
+                <li class=" fn-left clearfix">
+                    <p class="color-use bg-999 fn-left ">#999</p>
+                    <span class="fn-left ml20">导航文字颜色</span>
+                </li>
+            </ul>
+
+            <ul class="black-white  fn-left">
+                <li class=" fn-left clearfix">
+                    <p class="color-use bg-bababa fn-left ">#bababa</p>
+                    <span class="fn-left ml20">输入框的提示文字颜色CSS、HTML注释文字颜色</span>
+                </li>
+                <li class="fn-left clearfix">
+                    <p class="color-use bg-ddd fn-left ">#ddddd</p>
+                    <span class="fn-left ml20">描边、分割线、表格标题的背景色、禁用按钮的文字、时间</span>
+                </li>
+                <li class=" fn-left clearfix">
+                    <p class="color-use bg-f9f9f9 fn-left ">#f9f9f9</p>
+                    <span class="fn-left ml20">整站背景色、取消按钮的背景色</span>
+                </li>
+            </ul>
+
+
+        </div>
+
+        <!-- 常用色彩的基本构成-->
+        <div class="mt40" name="color-form" id="color-form">
+            <h1>常用色彩的基本构成</h1>
+            <!-- 灰色-->
+            <div class="color-form-list ">
+                <div class="mt20 clearfix">
+                    <ul class="fn-left">
+                        <li class="gray-1 pt30 pb30"></li>
+                        <li class="mt10">#fff</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="gray-2 pt30 pb30"></li>
+                        <li  class="mt10">#fcfcfc</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="gray-3 pt30 pb30"></li>
+                        <li class="mt10">#ececec</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="gray-4 pt30 pb30"></li>
+                        <li class="mt10">#d9d9d9</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="gray-5 pt30 pb30"></li>
+                        <li class="mt10">#ccc</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="gray-6 pt30 pb30"></li>
+                        <li class="mt10">#989898</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="gray-7 pt30 pb30"></li>
+                        <li class="mt10">#666</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="gray-8 pt30 pb30"></li>
+                        <li class="mt10">#323232</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="gray-9 pt30 pb30"></li>
+                        <li class="mt10">#000</li>
+                    </ul>
+                </div>
+                <div class="mt10">
+                    <p class="mt20 mb30"><span class="color-list-title">灰色</span>是中性化的颜色，通常传递出来的感觉是沉稳，在配色心理学中描述 “专业化、系统化”的词条中灰色的使用占了较高的比例。建议可用于字体颜色的选择以及界面中大面积背景的底色搭配。</p>
+                </div>
+            </div>
+
+            <!-- 红色-->
+            <div class="color-form-list ">
+                <div class="mt35 clearfix">
+                    <ul class="fn-left">
+                        <li class="red-1 pt30 pb30"></li>
+                        <li class="mt10">#f9ccd6</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="red-2 pt30 pb30"></li>
+                        <li  class="mt10">#ffa5b4</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="red-3 pt30 pb30"></li>
+                        <li class="mt10">#fa727d</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="red-4 pt30 pb30"></li>
+                        <li class="mt10">#ff3858</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="red-5 pt30 pb30"></li>
+                        <li class="mt10">#e01515</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="red-6 pt30 pb30"></li>
+                        <li class="mt10">#bb0606</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="red-7 pt30 pb30"></li>
+                        <li class="mt10">#881414</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="red-8 pt30 pb30"></li>
+                        <li class="mt10">#4e1212</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="red-9 pt30 pb30"></li>
+                        <li class="mt10">#260404</li>
+                    </ul>
+                </div>
+                <div class="mt10">
+                    <p class="mt20 mb30"><span class="color-list-title">红色</span>是具有强烈情感因素的颜色，通常红色传递的心理暗示有激情、欲望、战争以及危险。考虑到红色的特性，在后台系统的设计中建议作为辅助色来突出元素特性或是强化信息，常见的有图表元素，状态，危险信号，错误提示等。</p>
+                </div>
+            </div>
+
+            <!--绿色-->
+            <div class="color-form-list ">
+                <div class="mt35 clearfix">
+                    <ul class="fn-left">
+                        <li class="green-1 pt30 pb30"></li>
+                        <li class="mt10">#e2f582</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="green-2 pt30 pb30"></li>
+                        <li  class="mt10">#d0ee9c</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="green-3 pt30 pb30"></li>
+                        <li class="mt10">#a6e33c</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="green-4 pt30 pb30"></li>
+                        <li class="mt10">#70d445</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="green-5 pt30 pb30"></li>
+                        <li class="mt10">#60be29</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="green-6 pt30 pb30"></li>
+                        <li class="mt10">#39a30e</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="green-7 pt30 pb30"></li>
+                        <li class="mt10">#18791b</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="green-8 pt30 pb30"></li>
+                        <li class="mt10">#1f4a12</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="green-9 pt30 pb30"></li>
+                        <li class="mt10">#102803</li>
+                    </ul>
+                </div>
+                <div class="mt10">
+                    <p class="mt20 mb30"><span class="color-list-title">绿色</span>是非常务实的颜色，它吸收了蓝色的沉稳同时具备黄色的活力。绿色蕴含着和平、生命、希望、轻松、富饶的含义。在我们的设计实例中绿色可用来传达任务完成、健康状态以及安全感等状态。</p>
+                </div>
+            </div>
+
+            <!--蓝色-->
+            <div class="color-form-list ">
+                <div class="mt35 clearfix">
+                    <ul class="fn-left">
+                        <li class="blue-1 pt30 pb30"></li>
+                        <li class="mt10">#cce4f6</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="blue-2 pt30 pb30"></li>
+                        <li  class="mt10">#95ccf5</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="blue-3 pt30 pb30"></li>
+                        <li class="mt10">#6ac2f5</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="blue-4 pt30 pb30"></li>
+                        <li class="mt10">#2db7f5</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="blue-5 pt30 pb30"></li>
+                        <li class="mt10">#00a0e9</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="blue-6 pt30 pb30"></li>
+                        <li class="mt10">#1d80d3</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="blue-7 pt30 pb30"></li>
+                        <li class="mt10">#1f5aa3</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="blue-8 pt30 pb30"></li>
+                        <li class="mt10">#0b366a</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="blue-9 pt30 pb30"></li>
+                        <li class="mt10">#08172f</li>
+                    </ul>
+                </div>
+                <div class="mt10">
+                    <p class="mt20 mb30"><span class="color-list-title">深蓝色</span>的运用可以传递出可靠和稳定的情绪，而浅蓝色系则更为友好和清新，同时还代表了科技感与想象力。在很多专业类、管理类的后台系统设计中蓝色系常常会被选择作为设计的主色来使用。</p>
+                </div>
+            </div>
+
+            <!--浅蓝色-->
+            <div class="color-form-list ">
+                <div class="mt35 clearfix">
+                    <ul class="fn-left">
+                        <li class="wathet-1 pt30 pb30"></li>
+                        <li class="mt10">#e0f7fa</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="wathet-2 pt30 pb30"></li>
+                        <li  class="mt10">#b2ebf2</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="wathet-3 pt30 pb30"></li>
+                        <li class="mt10">#80deea</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="wathet-4 pt30 pb30"></li>
+                        <li class="mt10">#26c6da</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="wathet-5 pt30 pb30"></li>
+                        <li class="mt10">#01bad2</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="wathet-6 pt30 pb30"></li>
+                        <li class="mt10">#00acc2</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="wathet-7 pt30 pb30"></li>
+                        <li class="mt10">#00708f</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="wathet-8 pt30 pb30"></li>
+                        <li class="mt10">#014b62</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="wathet-9 pt30 pb30"></li>
+                        <li class="mt10">#031213</li>
+                    </ul>
+                </div>
+                <div class="mt10">
+                    <p class="mt20 mb30"><span class="color-list-title">浅蓝色</span>介于蓝色和绿色之间，带有专业、冷静、从容的心理暗示。在体验专业化和结构化的设计中常常被用到，可以作为系统主色来使用。</p>
+                </div>
+            </div>
+
+            <!--黄色-->
+            <div class="color-form-list ">
+                <div class="mt35 clearfix">
+                    <ul class="fn-left">
+                        <li class="yellow-1 pt30 pb30"></li>
+                        <li class="mt10">#f1ddbd</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="yellow-2 pt30 pb30"></li>
+                        <li  class="mt10">#fbca72</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="yellow-3 pt30 pb30"></li>
+                        <li class="mt10">#fdac23</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="yellow-4 pt30 pb30"></li>
+                        <li class="mt10">#ff8a0c</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="yellow-5 pt30 pb30"></li>
+                        <li class="mt10">#ff6100</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="yellow-6 pt30 pb30"></li>
+                        <li class="mt10">#ce630f</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="yellow-7 pt30 pb30"></li>
+                        <li class="mt10">#8b4a04</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="yellow-8 pt30 pb30"></li>
+                        <li class="mt10">#523a13</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="yellow-9 pt30 pb30"></li>
+                        <li class="mt10">#341f0b</li>
+                    </ul>
+                </div>
+                <div class="mt10">
+                    <p class="mt20 mb30"><span class="color-list-title">黄色</span>介于红色和黄色之间，传达愉悦，创造力，热情，吸引力。但橙色又不如红色那样具侵略性，同时又能够很好的引起视觉的注意力。可以作为设计的主色也可以用于辅助色。但大面积使用时需要慎重。</p>
+                </div>
+            </div>
+
+            <!--浅黄色-->
+            <div class="color-form-list ">
+                <div class="mt35 clearfix">
+                    <ul class="fn-left">
+                        <li class="buff-1 pt30 pb30"></li>
+                        <li class="mt10">#faf4b2</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="buff-2 pt30 pb30"></li>
+                        <li  class="mt10">#fdf161</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="buff-3 pt30 pb30"></li>
+                        <li class="mt10">#fde023</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="buff-4 pt30 pb30"></li>
+                        <li class="mt10">#f7cd07</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="buff-5 pt30 pb30"></li>
+                        <li class="mt10">#fac450</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="buff-6 pt30 pb30"></li>
+                        <li class="mt10">#d9b416</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="buff-7 pt30 pb30"></li>
+                        <li class="mt10">#b48513</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="buff-8 pt30 pb30"></li>
+                        <li class="mt10">#6b4c01</li>
+                    </ul>
+                    <ul class="fn-left">
+                        <li class="buff-9 pt30 pb30"></li>
+                        <li class="mt10">#241a06</li>
+                    </ul>
+                </div>
+                <div class="mt10">
+                    <p class="mt20 mb30"><span class="color-list-title">亮黄色</span>黄色传达了愉悦，活力，创造力等正面的情绪，是具正能量的色彩。在具体设计中黄色常常于表达警示性的信息。建议作为辅助色来使用。</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!--页脚-->
+<div class="footer clearfix">
+    <p class="fn-left">JuMore Component library 版权所有</p>
+    <span class="fn-right "></span>
+</div>
+</body>
+</html>

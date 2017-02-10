@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../dist/css/fly.less.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/jm-spec.css">
+</head>
+<body>
+<!-- 漂浮导航-->
+<div class="nav-float">
+    <ul class="">
+        <li><a href="#use">Color色彩</a></li>
+        <li><a href="#tips" onclick="$.scrollify('move','#color-form')">色彩的交互使用</a></li>
+        <li><a href="#" onclick="$.scrollify('move','#color-form')">常用色彩的基本构成</a></li>
+    </ul>
+</div>
+<!--内页公共导航 开始-->
+<div class="top clearfix">
+    <div class="logo fn-left"></div>
+    <div class="nav fn-right ">
+        <ul class="clearfix">
+            <li class="current fn-left"><a>首页</a></li>
+            <li class="fn-left"><a href="#">指南</a></li>
+            <li class="fn-left"><a href="#">规范</a></li>
+            <li class="fn-left"><a href="#">组件</a></li>
+            <li class="fn-left"><a href="#">模式</a></li>
+            <li class="fn-left"><a href="#">资源</a></li>
+        </ul>
+    </div>
+</div>
+<!--内页公共导航 结束-->
+
+
+<div class="main-wrapper fn-clear">
+    <!--左侧导航开始-->
+    <div class="main-left fn-left">
+        <ul>
+            <li class="main-left-title">设计规范</li>
+            <li>
+                <ul class="">
+                    <li><a href="#">字体</a></li>
+                    <li><a href="#">排版</a></li>
+                    <li><a href="#">色彩</a></li>
+                    <li><a href="#">安装</a></li>
+                    <li><a href="#">更新日志</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+    <!--右侧内容模块-->
+    <div class="main-right fn-left">
+        <!-- 中文常用字体-->
+        <div class="font-setting">
+            <h1>中文常用字体</h1>
+            <ul class=" clearfix">
+                <li class="fn-left">常用字体</li>
+                <li class="fn-left">字体颜色</li>
+                <li class="fn-left">字体大小</li>
+            </ul>
+        </div>
+        <!--字体的基本设置-->
+        <div class="mt50 font-use">
+
+            <h1>字体的基本设置</h1>
+            <ul class="clearfix">
+                <li class="fn-left">
+                    <div class="font-name">
+                        <p>微软雅黑</p>
+
+                        <p class="font-name-en">Microsoft YaHei</p>
+                    </div>
+                </li>
+                <li class="fn-left">
+                    <div class="font-name">
+                        <p>宋体</p>
+
+                        <p class="font-name-en">Arial</p>
+                    </div>
+                </li>
+
+            </ul>
+            <h3 class="mt50">字体代码如下：</h3>
+
+            <div class="code-demo clearfix ">
+                <div class="fn-left">
+                    <p class="code-demo-notes">/*字体的CSS样式*/</p>
+
+                    <p>
+                        <span class="blue">font-family:</span> <span class="green">"Microsoft YaHei","微软雅黑",Arial,sans-serif;</span>
+                    </p>
+                </div>
+                <div class="fn-right ml40 code-demo-copy">
+                    <a style="cursor: pointer" onclick="copyToCliBoard()" title="复制代码到编辑器">复制代码</a>
+
+                </div>
+            </div>
+        </div>
+
+        <!--英文常用字体-->
+        <div class="mt50 font-use">
+            <h1>英文常用字体</h1>
+            <ul class="clearfix">
+                <li class="fn-left">
+                    <div class="font-name">
+                        <p>RGag</p>
+
+                        <p class="font-name-en">Arial</p>
+                    </div>
+                </li>
+                <li class="fn-left">
+                    <div class="font-name">
+                        <p>RGag</p>
+
+                        <p class="font-name-en">Helvetica</p>
+                    </div>
+                </li>
+                <li class="fn-left">
+                    <div class="font-name">
+                        <p>RGag</p>
+
+                        <p class="font-name-en">Helvetica Neue</p>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!--字体使用规范-->
+        <div class="mt50">
+            <h1>字体使用规范</h1>
+
+            <div class="font-use-norm">
+                <table class="norm-table">
+                    <thead>
+                        <tr class="norm-height bor-bottom">
+                            <th class="width-15 ">类别</th>
+                            <th class="width-5"></th>
+                            <th class="width-15">示例</th>
+                            <th class="width-5"></th>
+                            <th class="width-15">字体颜色</th>
+                            <th class="width-5"></th>
+                            <th class="width-15">字体大小</th>
+                            <th class="width-5"></th>
+                            <th class="width-20">行间距</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="norm-height">
+                            <td class="width-15 ">主标题大小</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15 font-main-title">主标题颜色</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15">#333</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15">20px</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-20">38px</td>
+                        </tr>
+                        <tr class="norm-height">
+                            <td class="width-15 font-title-color">主标题大小</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15 font-second-title">次级标题颜色</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15">#333</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15">18px</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-20">30px</td>
+                        </tr>
+
+                        <tr class="norm-height">
+                            <td class="width-15">主标题大小</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15 font-little-title">小标题颜色</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15">#666</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15">16px</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-20">28px</td>
+                        </tr>
+
+                        <tr class="norm-height">
+                            <td class="width-15">主标题大小</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15 font-p-color">正文颜色</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15">#666</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15">14px</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-20">24px</td>
+                        </tr>
+
+                        <tr class="norm-height">
+                            <td class="width-15">主标题大小</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15 font-tips-color">辅助文字颜色</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15">#bababa</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15">14px</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-20">24px</td>
+                        </tr>
+
+                        <tr class="norm-height">
+                            <td class="width-15">失效文字大小</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15 font-cannot-color">失效文字颜色</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15">#ddd</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15">14px</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-20">24px</td>
+                        </tr>
+
+                        <tr  class="norm-height">
+                            <td class="width-15">链接文字大小</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15 font-link-color">链接文字颜色</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15">#0080ca</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15">14px</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-20">24px</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--页脚-->
+<div class=" footer">
+    <p class="fn-left">JuMore Component library 版权所有</p>
+</div>
+
+</body>
+</html>

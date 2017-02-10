@@ -1,10 +1,16 @@
 * {
     box-sizing: border-box;
     font-family: "Microsoft Yahei";
+    color: #666;
+    font-size: 14px;
 }
 
-.home-body {
+body {
+    color: #666666;
+    font-family: Arial, 'microsoft yahei';
     min-height: 100%;
+}
+.home-body {
     background: url(../img/index.jpg) no-repeat;
     background-size: cover;
 }
@@ -141,4 +147,793 @@
     color: #999;
     line-height: 50px;
     text-align: center;
+}
+
+/*基本设置*/
+body, input{
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+
+}
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+
+h1, h2, h3{
+    font-weight: normal;
+}
+
+/* 设置内联, 减少浮动带来的bug */
+.fn-left, .fn-right {
+    display: inline;
+}
+
+.fn-left {
+    float: left;
+}
+
+.fn-right {
+    float: right;
+}
+/* 清理浮动 */
+.fn-clear:before, .fn-clear:after, .clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.fn-clear:after, .clearfix:after {
+    clear: both;
+}
+
+.fn-clear, .clearfix {
+    zoom: 1;
+    /* for IE6 IE7 */
+}
+
+/* 链接 */
+a,a:link,a:active{
+    color: #666666;
+    outline: none;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* 鼠标悬停 */
+a:hover {
+    color: #0080ca;
+    text-decoration: none;
+}
+/* 默认不显示下划线，保持页面简洁 */
+ins, a {
+    text-decoration: none;
+}
+
+/*标题字大小*/
+h1{
+    font-size: 20px;
+}
+
+h2{
+    font-size: 18px;
+}
+
+h3{
+    font-size:16px ;
+}
+
+.ml20{
+    margin-left: 20px;
+}
+.ml10{
+    margin-left: 10px;
+}
+.mt10{
+    margin-top: 10px;
+}
+.mt20{
+    margin-top: 20px;
+}
+.mt35{
+    margin-top: 35px;
+}
+.mt40{
+    margin-top: 40px;
+}
+.mt50{
+    margin-top: 50px;
+}
+.mb20{
+    margin-bottom: 20px;
+}
+.mb10{
+    margin-bottom: 10px;
+}
+.mb30{
+    margin-bottom: 30px;
+}
+.logo {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1920px;
+    height: 2450px;
+    z-index: 189;
+}
+.pt30{
+    padding-top: 30px;
+}
+.pb30{
+    padding-bottom: 30px;
+}
+
+/* 去掉各Table  cell 的边距并让其边重合 */
+table {
+    border-collapse: collapse;
+    border-spacing: 10px;
+}
+
+/*头部公共导航*/
+.logo{
+    margin: 18px 0px 0px 40px;
+    background: url(../img/logo.png) no-repeat;
+    width: 257px;
+    height: 35px;
+}
+.jm-home-content{
+    padding-top:65px;
+    text-align: center;
+    background: url(../img/jm-home-content-bg.png) no-repeat bottom;
+    width: 800px;
+    height: 500px;
+    color: #d2d2d2;
+    font-size: 18px;
+    margin: 0 auto;
+}
+.jm-home-content p{
+    margin-top: 430px;
+    margin-left: 175px;
+    text-align: center;
+    line-height: 42px;
+    position: absolute;
+}
+.jm-right-menu{
+    position: fixed;
+    right:0;
+    background:#000;
+    opacity: 0.5;
+    width: 200px;
+    height:1129px;
+    display: none;
+}
+.jm-right-menu ul{margin-top:60px; }
+.jm-right-menu ul li{
+    height: 60px;
+    width: 200px;
+    line-height: 60px;
+    font-size: 16px;
+    color: #999;
+
+}
+.jm-right-menu ul li a:hover{
+    color: #0080ca;
+
+}
+.jm-right-menu .current{
+    color: #0080ca;
+}
+.jm-right-menu .menu-en{
+    color: #666;
+}
+.jm-menu-icon{
+    width: 160px;
+    height: 60px;
+    background:url(../img/jm-menu-icon.png) no-repeat;
+}
+.top{
+    width: auto;
+    height:80px ;
+    border-bottom:3px solid #0080ca ;
+    background: #333;
+}
+.nav{
+    margin-right:2%
+}
+.nav ul li a{
+    height: 80px;
+    line-height: 80px;
+    padding:0px 22px;
+    color:#999;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+}
+.nav ul li a:hover, .nav .current{
+    background: #0080ca;
+    color: #fff;
+}
+.nav .current a{
+    color: #fff;
+}
+
+.main-wrapper{
+    /*background: #999;*/
+    margin:0 4% 0 2%;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+}
+.main-left{
+    width: 15%;
+    height: 100%;
+    background: #f6f6f6;
+    margin-bottom:-9999px;
+    padding-bottom:9999px
+}
+/*.main-left ul{*/
+/*width: 20%;*/
+
+/*}*/
+.main-left-title{
+    padding-left: 20px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 18px;
+}
+
+.main-left ul li ul li a{
+    padding-left:40px;
+    display: block;
+    font-size: 14px;
+    height: 42px;
+    line-height: 42px;
+
+}
+
+.main-left ul li ul li a:hover{
+    background: #e5f4ff;
+    color: #0080ca;
+    font-weight: 600;
+
+}
+
+.main-right{
+    width: 73%;
+    height: auto;
+    padding: 40px 0 20px 40px;
+    /*background: #999;*/
+}
+
+/*中文常用字体*/
+.font-setting ul li{
+    margin:20px 96px 0 0;
+    padding-left: 20px;
+    color: #0080ca;
+    font-size: 16px;
+    background: url("../img/li-img.png") no-repeat left;
+}
+
+/*字体的基本设置*/
+.font-use ul li{
+    width: 200px;
+    height: 140px;
+    background: #f6f6f6;
+    border-radius: 4px;
+    overflow: hidden;
+    margin:20px 30px 0 0;
+}
+.font-name{
+    padding-top: 45px;
+
+}
+.font-use p{
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+}
+.font-name .font-name-en{
+    font-size: 14px;
+}
+
+/*字体的使用规范*/
+.font-use-norm .norm-table{
+    width: 100%;
+    border:1px solid #cbcbcb;
+    padding-left: 20px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.norm-table-border{
+    border:1px solid #cbcbcb;
+}
+
+.font-use-norm .norm-table .norm-height th,
+.font-use-norm .norm-table .norm-height td{
+    height: 50px;
+
+}
+
+.font-main-title{
+    font-size: 20px;
+    color: #333;
+}
+
+.font-second-title{
+    font-size: 18px;
+    color: #333;
+}
+
+.font-link-color{
+    font-size: 14px;
+    color:#0080ca;
+}
+.font-cannot-color{
+    font-size:14px ;
+    color: #dddddd;
+}
+.font-tips-color{
+    font-size: 12px;
+    color:#bababa
+}
+.font-p-color{
+    font-size: 14px;
+    color: #666;
+}
+.font-little-title{
+    font-size: 16px;
+    color:#666
+}
+
+/*表格的公共样式*/
+.width-5{
+    width: 5%;
+}
+.width-15{
+    width: 15%;
+}
+.width-20{
+    width: 20%;
+}
+.border{
+    border: 1px solid #cbcbcb;
+}
+.bor-bottom{
+    border-bottom: 1px solid #cbcbcb;
+}
+
+.code-demo-notes{
+    color: #bababa;
+}
+.code-demo{
+    width: 100%;
+    padding:20px 20px;
+    margin-top: 10px;
+    background: #e6f4ff;
+}
+.code-demo p{
+    text-align: left;
+    font-size: 14px;
+}
+.code-demo .blue{
+    color: #017ac0;
+}
+.code-demo .green{
+    color: #74ae06;
+}
+.code-demo .code-demo-copy a{
+    font-size: 14px;
+    color: #0080ca;
+}
+/*公共页脚*/
+.footer{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #333333;
+}
+.footer span{
+    font-size: 14px;
+    color: #999;
+    margin:0 20px;
+    width: 220px;
+    height: 49px;
+    background: url("../img/footer-logo.png") no-repeat;
+}
+.footer p{
+    margin-left:2% ;
+}
+
+
+    /*色彩的交互使用*/
+.color-list{
+    width: 100%;
+
+
+
+}
+.color-list li{
+    width: 24%;
+    margin-right: 1%;
+
+}
+
+/*.color-list li.black-white{*/
+/*width: 18%;*/
+/*color: #FFFFFF;*/
+
+/*}*/
+
+.black-white ul{
+    width: 45%;
+}
+.black-white ul li{
+    width: 100%;
+    color: #fff;
+}
+
+.black-white p{
+    width: 45%;
+}
+.black-white span{
+    width: 50%;
+    height: auto;
+}
+.color-use{
+    padding: 15px 0;
+    text-align: center;
+    font-weight: lighter;
+}
+.blue-click{
+    background: #069af0;
+}
+.blue-hover{
+    background: #0080ca;
+}
+.green-click{
+    background: #74ae06;
+}
+.green-hover{
+    background: #8dc81b;
+}
+.yellow-click{
+    background: #d99903;
+}
+.yellow-hover{
+    background: #f2aa00;
+}
+.red-click{
+    background: #db3f3f;
+}
+.red-hover{
+    background: #ea6262;
+}
+.bg-333{
+    background: #333;
+}
+.bg-666{
+    background: #666;
+}
+.bg-999{
+    background: #999;
+}
+.bg-bababa{
+    background: #bababa;
+    color: #333;
+}
+.bg-ddd{
+    background: #ddd;
+    color: #333;
+}
+.bg-f9f9f9{
+    background: #f9f9f9;
+    color: #333;
+}
+.color-use p{
+    color: #FFFFFF;
+}
+.color-scene p{
+    color: #666;
+}
+
+.color-form-list{
+    border-bottom: 1px solid #ddd;
+}
+.color-form-list ul{
+    width: 11.11%;
+    text-align: center;
+}
+
+/*gray*/
+.color-form-list .gray-1{
+    background: #fff;
+}
+.color-form-list .gray-2{
+    background: #fcfcfc;
+}
+.color-form-list .gray-3{
+    background: #ececec;
+}
+.color-form-list .gray-4{
+    background: #d9d9d9;
+}
+.color-form-list .gray-5{
+    background: #ccc;
+}
+.color-form-list .gray-6{
+    background: #989898;
+}
+.color-form-list .gray-7{
+    background: #666;
+}
+.color-form-list .gray-8{
+    background: #323232;
+}
+.color-form-list .gray-9{
+    background: #000;
+}
+
+/*red*/
+.red-1{
+    background: #f9ccd6;
+}
+.red-2{
+    background: #ffa5b4;
+}
+.red-3{
+    background: #fa727d;
+}
+.red-4{
+    background: #ff3858;
+}
+.red-5{
+    background: #e01515;
+}
+.red-6{
+    background: #bb0606;
+}
+.red-7{
+    background: #881414;
+}
+.red-8{
+    background: #4e1212;
+}
+.red-9{
+    background: #260404;
+}
+
+/*green*/
+.green-1{
+    background: #e2f582;
+}
+.green-2{
+    background: #d0ee9c;
+}
+.green-3{
+    background: #a6e33c;
+}
+.green-4{
+    background: #70d445;
+}
+.green-5{
+    background: #60be29;
+}
+.green-6{
+    background: #39a30e;
+}
+.green-7{
+    background: #18791b;
+}
+.green-8{
+    background: #1f4a12;
+}
+.green-9{
+    background: #102803;
+}
+
+/*blue*/
+.blue-1{
+    background: #cce4f6;
+}
+.blue-2{
+    background: #95ccf5;
+}
+.blue-3{
+    background: #6ac2f5;
+}
+.blue-4{
+    background: #2db7f5;
+}
+.blue-5{
+    background: #00a0e9;
+}
+.blue-6{
+    background: #1d80d3;
+}
+.blue-7{
+    background: #1f5aa3;
+}
+.blue-8{
+    background: #0b366a;
+}
+.blue-9{
+    background: #08172f;
+}
+
+
+/*wathet*/
+.wathet-1{
+    background: #e0f7fa;
+}
+.wathet-2{
+    background: #b2ebf2;
+}
+.wathet-3{
+    background: #80deea;
+}
+.wathet-4{
+    background: #26c6da;
+}
+.wathet-5{
+    background: #01bad2;
+}
+.wathet-6{
+    background: #00acc2;
+}
+.wathet-7{
+    background: #00708f;
+}
+.wathet-8{
+    background: #014b62;
+}
+.wathet-9{
+    background: #031213;
+}
+
+
+/*yellow*/
+.yellow-1{
+    background: #f1ddbd;
+}
+.yellow-2{
+    background: #fbca72;
+}
+.yellow-3{
+    background: #fdac23;
+}
+.yellow-4{
+    background: #ff8a0c;
+}
+.yellow-5{
+    background: #ff6100;
+}
+.yellow-6{
+    background: #ce630f;
+}
+.yellow-7{
+    background: #8b4a04;
+}
+.yellow-8{
+    background: #523a13;
+}
+.yellow-9{
+    background: #341f0b;
+}
+
+/*buff*/
+.buff-1{
+    background: #faf4b2;
+}
+.buff-2{
+    background: #fdf161;
+}
+.buff-3{
+    background: #fde023;
+}
+.buff-4{
+    background: #f7cd07;
+}
+.buff-5{
+    background: #fac450;
+}
+.buff-6{
+    background: #d9b416;
+}
+.buff-7{
+    background: #b48513;
+}
+.buff-8{
+    background: #6b4c01;
+}
+.buff-9{
+    background: #241a06;
+}
+
+
+.color-form-list p{
+
+}
+
+/*.color-list-title{*/
+/*font-size: 18px;*/
+/*font-weight: bold;*/
+/*}*/
+
+.com-search{
+    padding:0 2% 20px 5px;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+
+}
+.com-search i{
+    position: relative;
+    top:35px;
+    left: 10px;
+    font-size: 22px;
+    display: inline-block;
+    color: #bababa;
+}
+.com-search input{
+    width: 100%;
+    border-radius: 22px;
+}
+.com-search .search{
+    height:42px;
+    line-height: 42px;
+    padding-left:35px;
+}
+
+.nav-item{
+    font-size: 14px;
+}
+.nav-item h1{
+    padding-left: 15px;
+    height: 42px;
+    line-height: 42px;
+}
+.nav-item .nav-group-title{
+    color: #bababa;
+    padding-left: 15px;
+}
+.nav-item li.nav-group-list a{
+    display: inline-block;
+    height: 42px;
+    line-height: 42px;
+}
+.nav-item .nav-group-list{
+    color: #666;
+    height: 42px;
+    line-height: 42px;
+    padding-left: 35px;
+}
+
+.nav-item .nav-group-list:hover{
+    color: #0080ca;
+    background: #e5f4ff;
+}
+
+/*漂浮导航*/
+.nav-float{
+    position: fixed;
+    top:20%;
+    right:5%;
+
+}
+.nav-float ul li{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #cbcbcb;
+}
+.nav-float ul li a{
+    color: #666;
+    font-size: 14px;
+    padding-left: 10px;
+}
+.nav-float ul li a:hover{
+    display: inline-block;
+    color: #0080ca;
 }
