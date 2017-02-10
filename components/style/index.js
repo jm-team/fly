@@ -1,4 +1,4 @@
-import './index.less';
+import './index.scss';
 
 function isFlexSupported(style) {
     return 'flex' in style ||
