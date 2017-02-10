@@ -1,0 +1,10 @@
+.jm-datetime,.jm-date,.jm-time{
+	position: relative;
+}
+.jm-date input,
+.jm-datetime input{
+	background: url(../icons/date.png) right 9px center no-repeat;
+}
+.jm-time input{
+	background: url(../icons/time.png) right 9px center no-repeat;
+}
