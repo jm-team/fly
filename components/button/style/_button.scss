@@ -34,7 +34,7 @@
   &:hover,
   &:focus,
   &.focus {
-    color: $btn-default-color;
+    //color: $btn-default-color;
     text-decoration: none;
   }
 
@@ -151,21 +151,6 @@ a.jm-btn {
   @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
 }
 
-
-// button 固定尺寸
-.jm-btn-absolute-xs{
-  @include button-absolute-size(auto, $btn-absolute-xs, $font-size-small, $btn-absolute-icon-xs);
-  padding: 0 5px;
-}
-.jm-btn-absolute-sm{
-  @include button-absolute-size(auto, $btn-absolute-sm, $font-size-small, $btn-absolute-icon-sm);
-}
-.jm-btn-absolute-md{
-  @include button-absolute-size(auto, $btn-absolute-md, $font-size-base, $btn-absolute-icon-md);
-}
-.jm-btn-absolute-lg{
-  @include button-absolute-size(auto, $btn-absolute-lg, $font-size-base, $btn-absolute-icon-lg);
-}
 
 // icon button
 .jm-btn-circle-xs{

@@ -77,7 +77,8 @@
 
   &.jm-btn-dim:active {
     outline: none;
-    box-shadow: 0px 0px 0px darken($background, 10%);
+    //box-shadow:  #333;
+    box-shadow: 0px 1px 3px darken($background, 10%);
   }
 
 
@@ -97,13 +98,7 @@
   border-radius: $border-radius;
 }
 
-// 按钮绝对尺寸
-@mixin button-absolute-size($width, $height, $font-size, $icon-size){
-  width: $width;
-  height: $height;
-  font-size: $font-size;
-}
-
+// 圆形
 @mixin button-circle($width, $height, $font-size, $border-radius){
   width: $width;
   height: $height;
@@ -117,6 +112,7 @@
   }
 }
 
+// 3d 按钮
 @mixin button-dim($width, $height, $font-size){
   width: $width;
   height: $height;
