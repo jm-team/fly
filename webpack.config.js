@@ -10,6 +10,7 @@ var hash = chunkhash = contenthash = '';
 // chunkhash = '[chunkhash:8].';
 // contenthash = '[contenthash:8].';
 
+
 var extractSASS = new ExtractTextPlugin('css/[name].'+ contenthash +'css');
 
 module.exports = merge({
