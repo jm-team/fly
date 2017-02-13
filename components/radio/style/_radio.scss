@@ -1,0 +1,33 @@
+/******radio与checkbox标签样式******/
+
+.jm-radio-box {
+  position: relative;
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  .jm-icon {
+    display: inline-block;
+    font-size: 14px;
+    color: #cacaca;
+    margin-right: 10px;
+  }
+  &:hover .jm-icon, .jm-icon-radio {
+    color: #0080ca;
+  }
+}
+
+.jm-radio {
+  vertical-align: text-bottom;
+  margin-right: 10px;
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  opacity: 0;
+  filter: alpha(opacity = 0);
+  top: -9999px;
+  left: -9999px;
+}
+
+.jm-radio-box.jm-radio-disabled .jm-icon {
+  color: #cacaca;
+}
