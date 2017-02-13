@@ -1,0 +1,8 @@
+.form-ul{
+    padding: 40px;
+    width: 600px;
+    margin: 0 auto;
+}
+.form-ul li+li{
+    margin-top: 20px;
+}
