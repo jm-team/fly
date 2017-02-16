@@ -1037,8 +1037,7 @@ table {
 }
 .code-demo-display{
     padding: 0 20px;
-
-
+    display: none;
 }
 .code-demo-display .demo-display,
 .code-demo-display textarea{
@@ -1049,6 +1048,7 @@ table {
     line-height: 40px;
     text-align: center;
     border-top: 1px solid #ddd;
+    cursor: pointer;
 }
 .code-show i{
     font-size: 20px;

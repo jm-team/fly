@@ -320,47 +320,18 @@
                                 </code>
                             </pre>
                         </div>
-                        <textarea id="demo-textarea" class="hide"></textarea>
+                        <textarea id="demo-textarea" class=""></textarea>
                     </div>
-                    <!-- 复制代码-->
-                    <script type="text/javascript">
-                        function codeCopyUrl2() {
-                            $('#demo-textarea').text($('#demo-display').text())
-                            var Url2 = document.getElementById("demo-textarea");
-                            console.log(Url2);
-                            Url2.select(); // 选择对象
-                            document.execCommand("Copy"); // 执行浏览器复制命令
-                            alert("已复制好，可贴粘。");
-                        }
-                    </script>
                     <!-- 复制代码-->
                     <div class="fn-right code-demo-copy">
                         <input type="button" onClick="codeCopyUrl2()" value="复制代码"/>
                     </div>
-
-
                     <script>
                         hljs.initHighlightingOnLoad();
                     </script>
                 </div>
                 <!-- 收缩情况-->
-                <div class="code-show">
-                    <a href="javascript:show_div()"><i class="jm-icon jm-icon-xiala-copy icon-copy"></i></a>
-                </div>
-                <div class="code-show">
-                    <a href="javascript:show_div()"><i class="jm-icon jm-icon-xiala-copy icon-copy"></i></a>
-                </div>
-                <!-- 收缩JS代码-->
-                <script language="javascript">
-                    function show_div() {
-                        var obj_div = document.getElementById("starlist");
-                        obj_div.style.display = (obj_div.style.display == 'none') ? 'block' : 'none';
-                    }
-                    function hide_div() {
-                        var obj_div = document.getElementById("starlist");
-                        obj_div.style.display = (obj_div.style.display == 'none') ? 'block' : 'none';
-                    }
-                </script>
+                <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
             </div>
         </div>
 
@@ -494,6 +465,30 @@
     <p class="fn-left">JuMore Component library 版权所有</p>
     <span class="fn-right "></span>
 </div>
-
+<!-- 复制代码-->
+<script type="text/javascript">
+    function codeCopyUrl2() {
+        $('#demo-textarea').text($('#demo-display').text());
+        let Url2 = document.getElementById("demo-textarea");
+        console.log(Url2);
+        Url2.select(); // 选择对象
+        document.execCommand("Copy"); // 执行浏览器复制命令
+        alert("已复制好，可贴粘。");
+    }
+    $(function () {
+        $('.code-show').on('click',function () {
+            let i = $(this).children('i'),
+                div = $(this).prev('.code-demo-display');
+            console.log(div);
+            if(i.hasClass('jm-icon-down-copy')){
+                i.removeClass('jm-icon-down-copy').addClass('jm-icon-up-copy');
+                div.slideDown()
+            }else{
+                i.removeClass('jm-icon-up-copy').addClass('jm-icon-down-copy');
+                div.slideUp()
+            }
+        })
+    })
+</script>
 </body>
 </html>
