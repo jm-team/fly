@@ -1,18 +1,22 @@
 /******radio与checkbox标签样式******/
 
+$checkboxColor: #cacaca;
+$checkboxHoverColor: #0080ca;
+$checkboxSize: 14px;
+
 .jm-checkbox-box {
   position: relative;
   margin-right: 20px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: $checkboxSize;
   .jm-icon {
     display: inline-block;
-    font-size: 14px;
-    color: #cacaca;
+    font-size: $checkboxSize;
+    color: $checkboxColor;
     margin-right: 10px;
   }
   &:hover .jm-icon, .jm-icon-checkbook {
-    color: #0080ca;
+    color: $checkboxHoverColor;
   }
 }
 
@@ -29,5 +33,5 @@
 }
 
 .jm-checkbox-box.jm-checkbox-disabled .jm-icon {
-  color: #cacaca;
+  color: $checkboxColor;
 }

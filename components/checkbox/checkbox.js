@@ -2,11 +2,11 @@
 (function($){
     $.fn.extend({
         // 扩展多选框方法
-        JmCheckbox : function () {
+        jmCheckbox : function () {
             return this.each(function () {
-                var $this = $(this),
+                let $this = $(this),
                     _checkboxIcon = $this.find('.jm-icon'),
-                    _input = $this.children('input');
+                    _input = $this.find('.jm-checkbox');
 
                 if(_input.attr('disabled')){
                     $this.addClass('jm-checkbox-disabled')

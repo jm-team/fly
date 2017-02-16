@@ -2,7 +2,7 @@
 (function($){
     $.fn.extend({
         // 扩展单选框方法
-        JmRadio : function(){
+        jmRadio : function(){
             return this.each(function(){
                 var $this = $(this),
                     _radioIcon = $this.find('.jm-icon'),
