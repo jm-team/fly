@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+</script>
+<br />
+<br />
+<span onclick="copyText()">32323232323</span>
+<script type="text/javascript">
+    function copyText(obj)
+{
+    var rng = document.body.createTextRange();
+    rng.moveToElementText(obj);
+    rng.scrollIntoView();
+    rng.select();
+    rng.execCommand("Copy");
+    rng.collapse(false);
+    alert("复制成功!");
+}
+
+</script>
+
+</body>
+</html>
