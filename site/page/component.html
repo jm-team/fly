@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../../dist/css/fly.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/jm-code.css">
+    <script src="../../dep/jquery-1.11.1/jquery.js"></script>
     <script src="//cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js"></script>
 </head>
 <body>
@@ -29,10 +30,10 @@
 <div class="main-wrapper fn-clear">
     <!--左侧导航开始-->
     <div class="main-left fn-left">
-         <div class="com-search">
-             <i class="jm-icon jm-icon-search"></i>
-             <input type="text" placeholder="搜索组件名..." _v-6db9881e="" class="search">
-         </div>
+        <div class="com-search">
+            <i class="jm-icon jm-icon-search"></i>
+            <input type="text" placeholder="搜索组件名..." _v-6db9881e="" class="search">
+        </div>
         <div class="nav-item">
             <h1>组件</h1>
             <ul>
@@ -242,7 +243,6 @@
                     </a>
                 </li>
             </ul>
-
         </div>
     </div>
 
@@ -251,7 +251,7 @@
 
         <!--组件标题-->
         <div class="sub-title mb40">
-            <h1 >Select选择器</h1>
+            <h1>Select选择器</h1>
             <p>当选项过多时，使用select选择器下拉菜单展示并选择内容</p>
         </div>
         <div class="sub-layout">
@@ -259,26 +259,26 @@
             <div class="sub-layout-content clearfix">
                 <div class="fn-left sub-row">
                     <select class="sub-row-select">
-                        <option value ="最基础的选择器">基本select样式</option>
-                        <option value ="saab">Saab</option>
+                        <option value="最基础的选择器">基本select样式</option>
+                        <option value="saab">Saab</option>
                         <option value="opel">Opel</option>
                         <option value="audi">Audi</option>
                     </select>
                     <select class="sub-row-select">
-                        <option value ="最基础的选择器">基本select样式</option>
-                        <option value ="saab">Saab</option>
+                        <option value="最基础的选择器">基本select样式</option>
+                        <option value="saab">Saab</option>
                         <option value="opel">Opel</option>
                         <option value="audi">Audi</option>
                     </select>
                     <select class="sub-row-select">
-                        <option value ="最基础的选择器">基本select样式</option>
-                        <option value ="saab">Saab</option>
+                        <option value="最基础的选择器">基本select样式</option>
+                        <option value="saab">Saab</option>
                         <option value="opel">Opel</option>
                         <option value="audi">Audi</option>
                     </select>
                     <select class="sub-row-select">
-                        <option value ="最基础的选择器">基本select样式</option>
-                        <option value ="saab">Saab</option>
+                        <option value="最基础的选择器">基本select样式</option>
+                        <option value="saab">Saab</option>
                         <option value="opel">Opel</option>
                         <option value="audi">Audi</option>
                     </select>
@@ -297,38 +297,37 @@
                 <div class="code-demo-title"><span>代码演示</span></div>
 
                 <!-- 展开情况-->
-                <div class="code-demo-display clearfix" id="starlist" >
+                <div class="code-demo-display clearfix" id="starlist">
                     <!-- 代码显示区域-->
                     <div id="code-display">
-                    <div class="fn-left demo-display" id="demo-display">
-
+                        <div class="fn-left demo-display" id="demo-display">
                             <pre>
-                        <code class="JavaScript">
-                            function $initHighlight(block, cls) {
-                            try {
-                            if (cls.search(/\bno\-highlight\b/) != -1)
-                            return process(block, true, 0x0F) +
-                            ` class="${cls}"`;
-                            } catch (e) {
-                            /* handle exception */
-                            }
-                            for (var i = 0 / 2; i < classes.length; i++) {
-                            if (checkCondition(classes[i]) === undefined)
-                            console.log('undefined');
-                            }
-                            }
-
-                            export  $initHighlight;
-                        </code>
-                        </pre>
-
+                                <code class="JavaScript">
+                                    function $initHighlight(block, cls) {
+                                    try {
+                                    if (cls.search(/\bno\-highlight\b/) != -1)
+                                    return process(block, true, 0x0F) +
+                                    ` class="${cls}"`;
+                                    } catch (e) {
+                                    /* handle exception */
+                                    }
+                                    for (var i = 0 / 2; i < classes.length; i++) {
+                                    if (checkCondition(classes[i]) === undefined)
+                                    console.log('undefined');
+                                    }
+                                    }
+                                    export  $initHighlight;
+                                </code>
+                            </pre>
+                        </div>
+                        <textarea id="demo-textarea" class="hide"></textarea>
                     </div>
-                         </div>
                     <!-- 复制代码-->
                     <script type="text/javascript">
-                        function codeCopyUrl2()
-                        {
-                            var Url2=document.getElementById("code-display");
+                        function codeCopyUrl2() {
+                            $('#demo-textarea').text($('#demo-display').text())
+                            var Url2 = document.getElementById("demo-textarea");
+                            console.log(Url2);
                             Url2.select(); // 选择对象
                             document.execCommand("Copy"); // 执行浏览器复制命令
                             alert("已复制好，可贴粘。");
@@ -336,7 +335,7 @@
                     </script>
                     <!-- 复制代码-->
                     <div class="fn-right code-demo-copy">
-                        <input type="button" onClick="codeCopyUrl2()" value="复制代码" />
+                        <input type="button" onClick="codeCopyUrl2()" value="复制代码"/>
                     </div>
 
 
@@ -353,21 +352,17 @@
                 </div>
                 <!-- 收缩JS代码-->
                 <script language="javascript">
-                    function show_div(){
-                        var obj_div=document.getElementById("starlist");
-                        obj_div.style.display=(obj_div.style.display=='none')?'block':'none';
+                    function show_div() {
+                        var obj_div = document.getElementById("starlist");
+                        obj_div.style.display = (obj_div.style.display == 'none') ? 'block' : 'none';
                     }
-                    function hide_div(){
-                        var obj_div=document.getElementById("starlist");
-                        obj_div.style.display=(obj_div.style.display=='none')?'block':'none';
+                    function hide_div() {
+                        var obj_div = document.getElementById("starlist");
+                        obj_div.style.display = (obj_div.style.display == 'none') ? 'block' : 'none';
                     }
                 </script>
-
-
-
             </div>
         </div>
-
 
 
         <!--字体使用规范-->
@@ -462,7 +457,7 @@
                         <td class="width-20">24px</td>
                     </tr>
 
-                    <tr  class="norm-height">
+                    <tr class="norm-height">
                         <td class="width-15">链接文字大小</td>
                         <td class="width-5 border"></td>
                         <td class="width-15 font-link-color">链接文字颜色</td>
@@ -485,9 +480,12 @@
             <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#use">常见用法</a></li>
             <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#tips">带有倾向提示</a></li>
             <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#pianyi">推进偏移</a></li>
-            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#api" onclick="$.scrollify('move','#color-form')" >API</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#api"
+                                                                  onclick="$.scrollify('move','#color-form')">API</a>
+            </li>
         </ul>
     </div>
+
 
 </div>
 
