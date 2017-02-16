@@ -75,9 +75,13 @@ function getAreaItems(lev1Code,lev2Code,$selects){
 	return html.join("");
 }
 $(function(){
+	$.fn.select2.defaults.set("language", "zh-CN");
+	//$.fn.select2.defaults.set("containerCssClass", "jm-select");
 	$(".t-basic select,.t-single select").select2({
 		//allowClear: true,
-		minimumResultsForSearch: -1
+		minimumResultsForSearch: -1,
+		containerCssClass: "jm-select",
+     dropdownCssClass: "test3333"
 	});
 	$(".t-mix select").select2({
 		
