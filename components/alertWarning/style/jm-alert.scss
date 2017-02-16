@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-01-22 15:06:03
+ * @version $Id$
+ */
+ .jm-alert {
+     padding: 0 15px;
+     line-height: 36px;
+     margin-bottom: 20px;
+     border: 1px solid transparent;
+     border-radius: 4px;
+     font-size: 14px;
+ }
+ .jm-alert-success {
+     color: #8ec81c;
+     background-color: #fff;
+     border-color: #8ec81c;
+ }
+ .jm-alert-info {
+     color: #069af0;
+     background-color: #fff;
+     border-color: #069af0;
+ }
+ .jm-alert-warning {
+     color: #f2aa00;
+     background-color: #fff;
+     border-color: #f2aa00;
+ }
+ .jm-alert-danger {
+     color: #e86261;
+     background-color: #fff;
+     border-color: #e86261;
+ }
+ .jm-alert-success .alert-link {
+     color: #2b542c;
+ }
+ .jm-alert-info .alert-link {
+     color: #245269;
+ }
+ .jm-alert-warning .alert-link {
+     color: #66512c;
+ }
+ .jm-alert-danger .alert-link {
+     color: #843534;
+ }
+ .jm-alert .alert-link {
+     font-weight: 700;
+ }
+ .jm-alert-dismissible{
+ }
+ .jm-alert-dismissable .close, .jm-alert-dismissible .close {
+     position: relative;
+     right: 0px;
+     color: inherit;
+ }
+ .jm-alert button.close {
+     -webkit-appearance: none;
+     padding: 0;
+     cursor: pointer;
+     background: 0 0;
+     border: 0;
+ }
+ .jm-alert .close {
+     float: right; 
+     outline: none;
+ }
+ .jm-alert .close span.btn{
+     display: inline-block;
+     font-size: 28px;
+     font-weight: 200;
+     line-height: 38px;
+     color: #000;
+     filter: alpha(opacity=20);
+     opacity: .2;
+
+ }
+ .jm-alert .sr-only {
+     position: absolute;
+     width: auto;
+     height: auto;
+     color: inherit;
+     clip: auto;
+     right: 0;
+     font-size: 14px;   
+     border: 0;
+ }
+ .jm-alert-icon-s i.icon{
+     display: inline-block;
+     width: 20px;
+     height: 20px;
+     vertical-align: middle;
+     margin: 0 8px;
+ }
+ .jm-alert-icon-b{
+     height: auto;
+ }
+ .jm-alert-icon-b i.icon{
+     display: inline-block;
+     width: 40px;
+     height: 40px;
+     vertical-align: middle;
+     margin: 0 8px;
+ }
+ .jm-alert-icon-b h4{
+     display: block;
+     font-size: 16px;
+     margin-bottom: 8px;
+ }
+ .jm-alert-icon-b div.cont{
+     display: inline-block;
+ }
