@@ -5,6 +5,8 @@
     <title></title>
     <link rel="stylesheet" href="../../dist/css/fly.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/jm-code.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js"></script>
 </head>
 <body>
 <!--内页公共导航 开始-->
@@ -23,15 +25,6 @@
 </div>
 <!--内页公共导航 结束-->
 
-<!-- 漂浮导航-->
-<div class="nav-float">
-    <ul class="">
-        <li class="jm-icon jm-icon-list-style-type"><a href="#use">常见用法</a></li>
-        <li class="jm-icon jm-icon-list-style-type"><a href="#tips">带有倾向提示</a></li>
-        <li class="jm-icon jm-icon-list-style-type"><a href="#pianyi" >推进偏移</a></li>
-        <li class="jm-icon jm-icon-list-style-type"><a href="#api" onclick="$.scrollify('move','#color-form')" >API</a></li>
-    </ul>
-</div>
 
 <div class="main-wrapper fn-clear">
     <!--左侧导航开始-->
@@ -254,6 +247,243 @@
     </div>
 
     <!--右侧内容模块-->
+    <div class="main-right fn-left">
+
+        <!--组件标题-->
+        <div class="sub-title mb40">
+            <h1 >Select选择器</h1>
+            <p>当选项过多时，使用select选择器下拉菜单展示并选择内容</p>
+        </div>
+        <div class="sub-layout">
+            <div><span class="sub-layout-title">基本用法&尺寸</span></div>
+            <div class="sub-layout-content clearfix">
+                <div class="fn-left sub-row">
+                    <select class="sub-row-select">
+                        <option value ="最基础的选择器">基本select样式</option>
+                        <option value ="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                    <select class="sub-row-select">
+                        <option value ="最基础的选择器">基本select样式</option>
+                        <option value ="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                    <select class="sub-row-select">
+                        <option value ="最基础的选择器">基本select样式</option>
+                        <option value ="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                    <select class="sub-row-select">
+                        <option value ="最基础的选择器">基本select样式</option>
+                        <option value ="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+                <div class="fn-right sub-note">
+                    <h1>具体使用方法：</h1>
+                    <p>给select设置属性model绑定数据，需要将model设置.sync实现数据的双向绑定，否则在改变状态时，使用者的数据并没有变化。</p>
+                    <p>单选时，model 只接受字符串和数字类型，多选时只接受数组类型，组件会自动根据option的value来返回选中的数据。</p>
+                    <p>可以给select添加 style 样式，比如宽度。</p>
+                    <p>在展开选择器后，可以使用键盘的up和down快速上下选择，按下Enter选择，按下Esc收起选择器。</p>
+                </div>
+            </div>
+
+            <!-- 代码demo-->
+            <div class="code-demo">
+                <div class="code-demo-title"><span>代码演示</span></div>
+
+                <!-- 展开情况-->
+                <div class="code-demo-display clearfix" id="starlist" >
+                    <!-- 代码显示区域-->
+                    <p cols="20" rows="10" id="code-display">
+                    <div class="fn-left demo-display" id="demo-display">
+
+                            <pre>
+                        <code class="JavaScript">
+                            function $initHighlight(block, cls) {
+                            try {
+                            if (cls.search(/\bno\-highlight\b/) != -1)
+                            return process(block, true, 0x0F) +
+                            ` class="${cls}"`;
+                            } catch (e) {
+                            /* handle exception */
+                            }
+                            for (var i = 0 / 2; i < classes.length; i++) {
+                            if (checkCondition(classes[i]) === undefined)
+                            console.log('undefined');
+                            }
+                            }
+
+                            export  $initHighlight;
+                        </code>
+                        </pre>
+
+                    </div>
+                         </p>
+                    <!-- 复制代码-->
+                    <script type="text/javascript">
+                        function codeCopyUrl2()
+                        {
+                            var Url2=document.getElementById("code-display");
+                            Url2.select(); // 选择对象
+                            document.execCommand("Copy"); // 执行浏览器复制命令
+                            alert("已复制好，可贴粘。");
+                        }
+                    </script>
+                    <!-- 复制代码-->
+                    <div class="fn-right code-demo-copy">
+                        <input type="button" onClick="codeCopyUrl2()" value="复制代码" />
+                    </div>
+
+
+                    <script>
+                        hljs.initHighlightingOnLoad();
+                    </script>
+                </div>
+                <!-- 收缩情况-->
+                <div class="code-show">
+                    <a href="javascript:show_div()"><i class="jm-icon jm-icon-xiala-copy icon-copy"></i></a>
+                </div>
+                <div class="code-show">
+                    <a href="javascript:show_div()"><i class="jm-icon jm-icon-xiala-copy icon-copy"></i></a>
+                </div>
+                <!-- 收缩JS代码-->
+                <script language="javascript">
+                    function show_div(){
+                        var obj_div=document.getElementById("starlist");
+                        obj_div.style.display=(obj_div.style.display=='none')?'block':'none';
+                    }
+                    function hide_div(){
+                        var obj_div=document.getElementById("starlist");
+                        obj_div.style.display=(obj_div.style.display=='none')?'block':'none';
+                    }
+                </script>
+
+
+
+            </div>
+        </div>
+
+        <!--字体使用规范-->
+        <div class="api-table mt20">
+            <h1>字体使用规范</h1>
+            <div class="font-use-norm">
+                <table class="norm-table">
+                    <thead>
+                    <tr class="norm-height bor-bottom">
+                        <th class="width-15 ">类别</th>
+                        <th class="width-5"></th>
+                        <th class="width-15">示例</th>
+                        <th class="width-5"></th>
+                        <th class="width-15">字体颜色</th>
+                        <th class="width-5"></th>
+                        <th class="width-15">字体大小</th>
+                        <th class="width-5"></th>
+                        <th class="width-20">行间距</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="norm-height">
+                        <td class="width-15 ">主标题大小</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-main-title">主标题颜色</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">#333</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">20px</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-20">38px</td>
+                    </tr>
+                    <tr class="norm-height">
+                        <td class="width-15 font-title-color">主标题大小</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-second-title">次级标题颜色</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">#333</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">18px</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-20">30px</td>
+                    </tr>
+
+                    <tr class="norm-height">
+                        <td class="width-15">主标题大小</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-little-title">小标题颜色</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">#666</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">16px</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-20">28px</td>
+                    </tr>
+
+                    <tr class="norm-height">
+                        <td class="width-15">主标题大小</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-p-color">正文颜色</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">#666</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">14px</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-20">24px</td>
+                    </tr>
+
+                    <tr class="norm-height">
+                        <td class="width-15">主标题大小</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-tips-color">辅助文字颜色</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">#bababa</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">14px</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-20">24px</td>
+                    </tr>
+
+                    <tr class="norm-height">
+                        <td class="width-15">失效文字大小</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-cannot-color">失效文字颜色</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">#ddd</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">14px</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-20">24px</td>
+                    </tr>
+
+                    <tr  class="norm-height">
+                        <td class="width-15">链接文字大小</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-link-color">链接文字颜色</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">#0080ca</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">14px</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-20">24px</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <!-- 漂浮导航-->
+    <div class="nav-float fn-left">
+        <ul class="">
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#use">常见用法</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#tips">带有倾向提示</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#pianyi">推进偏移</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#api" onclick="$.scrollify('move','#color-form')" >API</a></li>
+        </ul>
+    </div>
 
 </div>
 

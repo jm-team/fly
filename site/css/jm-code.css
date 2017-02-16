@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    font-family: "Microsoft Yahei";
+    color: #666;
+    font-size: 14px;
+}
 .hljs {
     display: block;
     overflow-x: auto;
@@ -6,6 +12,7 @@
     color: #666;
     -webkit-text-size-adjust: none
 }
+
 
 .hljs-comment {
     color: #bababa;
@@ -16,18 +23,18 @@
     color: #74ae06
 }
 
-.html .hljs-tag,
+/*.html .hljs-tag,*/
 .hljs-keyword, .hljs-winutils, .method, .hljs-addition, .css .hljs-tag, .hljs-request, .hljs-status, .nginx .hljs-title {
-    color: #017ac0
+    color: #d99903
 }
 
 .hljs-number, .hljs-command, .hljs-string, .hljs-tag .hljs-value, .hljs-rule .hljs-value, .hljs-doctag, .tex .hljs-formula, .hljs-regexp, .hljs-hexcolor, .hljs-link_url {
-    color: #017ac0
+    color: #74ae06
 }
 
 .css .hljs-attribute,
 .hljs-title, .hljs-localvars, .hljs-chunk, .hljs-decorator, .hljs-built_in, .hljs-identifier, .vhdl .hljs-literal, .hljs-id, .css .hljs-function, .hljs-name {
-    color: #268bd2
+    color: #017ac0
 }
 
 .html .hljs-attr,

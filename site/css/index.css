@@ -9,6 +9,7 @@ body {
     color: #666666;
     font-family: Arial, 'microsoft yahei';
     min-height: 100%;
+    min-width: 1200px;
 }
 .home-body {
     background: url(../img/index.jpg) no-repeat;
@@ -162,6 +163,9 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
     padding: 0;
     border: 0 none;
 }
+li{
+    list-style-type: none;
+}
 
 h1, h2, h3{
     font-weight: normal;
@@ -215,6 +219,7 @@ ins, a {
 /*标题字大小*/
 h1{
     font-size: 20px;
+    color: #333;
 }
 
 h2{
@@ -331,7 +336,12 @@ table {
 .jm-menu-icon{
     width: 160px;
     height: 60px;
-    background:url(../img/jm-menu-icon.png) no-repeat;
+    background:url("../img/jm-menu-icon.png") no-repeat;
+}
+
+.list-icon-bg{
+    font-size: 20px;
+
 }
 .top{
     width: auto;
@@ -367,7 +377,7 @@ table {
     overflow: hidden;
 }
 .main-left{
-    width: 15%;
+    min-width: 260px;
     height: 100%;
     background: #f6f6f6;
     margin-bottom:-9999px;
@@ -401,9 +411,9 @@ table {
 }
 
 .main-right{
-    width: 73%;
+    width: 70%;
     height: auto;
-    padding: 40px 0 20px 40px;
+    padding: 40px 40px;
     /*background: #999;*/
 }
 
@@ -454,7 +464,8 @@ table {
 .font-use-norm .norm-table .norm-height th,
 .font-use-norm .norm-table .norm-height td{
     height: 50px;
-
+    padding-left: 10px;
+    font-size: 16px;
 }
 
 .font-main-title{
@@ -510,7 +521,6 @@ table {
 }
 .code-demo{
     width: 100%;
-    padding:20px 20px;
     margin-top: 10px;
     background: #e6f4ff;
 }
@@ -569,6 +579,7 @@ table {
 
 .black-white ul{
     width: 45%;
+    margin-right: 5%;
 }
 .black-white ul li{
     width: 100%;
@@ -580,6 +591,7 @@ table {
 }
 .black-white span{
     width: 50%;
+    margin-left: 5%;
     height: auto;
 }
 .color-use{
@@ -907,33 +919,160 @@ table {
     color: #666;
     height: 42px;
     line-height: 42px;
-    padding-left: 35px;
+    padding-left: 30px;
+    display: block;
 }
 
 .nav-item .nav-group-list:hover{
     color: #0080ca;
     background: #e5f4ff;
+    display: block;
 }
 
 /*漂浮导航*/
 .nav-float{
     position: fixed;
-    top:20%;
-    right:5%;
+    top:200px;
+}
 
+.nav-float i{
+    font-size: 12px;
+    position: relative;
+    top:0px;
+    color : #999;
 }
 .nav-float ul li{
     height: 30px;
     line-height: 30px;
     font-size: 14px;
     color: #cbcbcb;
+    display: block;
 }
 .nav-float ul li a{
     color: #666;
     font-size: 14px;
-    padding-left: 10px;
+    padding-left: 5px;
 }
 .nav-float ul li a:hover{
     display: inline-block;
     color: #0080ca;
 }
+
+/*公共标题设置*/
+.api-table h1{
+    height: 42px;
+    line-height: 42px;
+
+}
+.sub-title h1,
+.sub-title p{
+    height:30px;
+    line-height: 30px;
+}
+.sub-layout{
+    margin-top: 40px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+.sub-layout-title{
+    position: relative;
+    top:-18px;
+    margin-left: 20px;
+    padding: 0 22px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #FFFFFF;
+}
+.sub-layout-content{
+    margin:0 20px 20px 40px;
+}
+.sub-note{
+    width: 30%;
+}
+.sub-note p{
+    line-height: 24px;
+
+}
+.sub-row{
+     width: 65%;
+     margin-right: 5%;
+}
+
+/*选择器*/
+.sub-row-select{
+    width: 45%;
+    height: 36px;
+    padding-left: 10px;
+    margin: 0 20px 20px 0;
+    border:1px solid #ddd;
+    color: #bababa;
+
+}
+.sub-row-select:hover{
+    border: 1px solid #069af0;
+    color: #666;
+}
+.sub-row-select option{
+    background: #f9f9f9;
+    border: 1px solid #dddddd;
+
+}
+/*代码demo*/
+.code-demo-title{
+    margin-left: 20px;
+    height: 36px;
+    line-height: 36px;
+    position: relative;
+    top: -38px;
+    padding: 20px 20px;
+}
+.code-demo-title span{
+    padding: 5px 22px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #e6f4ff;
+}
+.code-demo-display{
+    padding: 0 20px;
+
+
+}
+.code-demo-display .demo-display,
+.code-demo-display textarea{
+    width: 90%;
+}
+.code-show{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+.code-show i{
+    font-size: 20px;
+    color: #333;
+}
+.code-show .icon-copy{
+    cursor: pointer;
+}
+.code-demo-copy input{
+    background: #e6f4ff;
+    font-size: 14px;
+    color: #0080ca;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
