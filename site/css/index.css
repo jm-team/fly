@@ -150,14 +150,14 @@ body {
     text-align: center;
 }
 
-/*»ù±¾ÉèÖÃ*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 body, input{
     font-size: 1rem;
     line-height: 1.5;
     color: #333;
 
 }
-/* ÄÚÍâ±ß¾àÍ¨³£ÈÃ¸÷¸öä¯ÀÀÆ÷ÑùÊ½µÄ±íÏÖÎ»ÖÃ²»Í¬ */
+/* ï¿½ï¿½ï¿½ï¿½ß¾ï¿½Í¨ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½Ä±ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½Í¬ */
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     margin: 0;
     padding: 0;
@@ -171,7 +171,7 @@ h1, h2, h3{
     font-weight: normal;
 }
 
-/* ÉèÖÃÄÚÁª, ¼õÉÙ¸¡¶¯´øÀ´µÄbug */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Ù¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½bug */
 .fn-left, .fn-right {
     display: inline;
 }
@@ -183,7 +183,7 @@ h1, h2, h3{
 .fn-right {
     float: right;
 }
-/* ÇåÀí¸¡¶¯ */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 .fn-clear:before, .fn-clear:after, .clearfix:before, .clearfix:after {
     content: "";
     display: table;
@@ -197,8 +197,10 @@ h1, h2, h3{
     zoom: 1;
     /* for IE6 IE7 */
 }
-
-/* Á´½Ó */
+.hide{
+    display: none;
+}
+/* ï¿½ï¿½ï¿½ï¿½ */
 a,a:link,a:active{
     color: #666666;
     outline: none;
@@ -206,17 +208,17 @@ a,a:link,a:active{
     -webkit-tap-highlight-color: transparent;
 }
 
-/* Êó±êÐüÍ£ */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½Í£ */
 a:hover {
     color: #0080ca;
     text-decoration: none;
 }
-/* Ä¬ÈÏ²»ÏÔÊ¾ÏÂ»®Ïß£¬±£³ÖÒ³Ãæ¼ò½à */
+/* Ä¬ï¿½Ï²ï¿½ï¿½ï¿½Ê¾ï¿½Â»ï¿½ï¿½ß£ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ */
 ins, a {
     text-decoration: none;
 }
 
-/*±êÌâ×Ö´óÐ¡*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ð¡*/
 h1{
     font-size: 20px;
     color: #333;
@@ -275,13 +277,13 @@ h3{
     padding-bottom: 30px;
 }
 
-/* È¥µô¸÷Table  cell µÄ±ß¾à²¢ÈÃÆä±ßÖØºÏ */
+/* È¥ï¿½ï¿½ï¿½ï¿½Table  cell ï¿½Ä±ß¾à²¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Øºï¿½ */
 table {
     border-collapse: collapse;
     border-spacing: 10px;
 }
 
-/*Í·²¿¹«¹²µ¼º½*/
+/*Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 .logo{
     margin: 18px 0px 0px 40px;
     background: url(../img/logo.png) no-repeat;
@@ -417,7 +419,7 @@ table {
     /*background: #999;*/
 }
 
-/*ÖÐÎÄ³£ÓÃ×ÖÌå*/
+/*ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 .font-setting ul li{
     margin:20px 96px 0 0;
     padding-left: 20px;
@@ -426,7 +428,7 @@ table {
     background: url("../img/li-img.png") no-repeat left;
 }
 
-/*×ÖÌåµÄ»ù±¾ÉèÖÃ*/
+/*ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 .font-use ul li{
     width: 200px;
     height: 140px;
@@ -448,7 +450,7 @@ table {
     font-size: 14px;
 }
 
-/*×ÖÌåµÄÊ¹ÓÃ¹æ·¶*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã¹æ·¶*/
 .font-use-norm .norm-table{
     width: 100%;
     border:1px solid #cbcbcb;
@@ -499,7 +501,7 @@ table {
     color:#666
 }
 
-/*±í¸ñµÄ¹«¹²ÑùÊ½*/
+/*ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½Ê½*/
 .width-5{
     width: 5%;
 }
@@ -538,7 +540,7 @@ table {
     font-size: 14px;
     color: #0080ca;
 }
-/*¹«¹²Ò³½Å*/
+/*ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½*/
 .footer{
     width: 100%;
     height: 50px;
@@ -558,7 +560,7 @@ table {
 }
 
 
-    /*É«²ÊµÄ½»»¥Ê¹ÓÃ*/
+    /*É«ï¿½ÊµÄ½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½*/
 .color-list{
     width: 100%;
 
@@ -929,7 +931,7 @@ table {
     display: block;
 }
 
-/*Æ¯¸¡µ¼º½*/
+/*Æ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 .nav-float{
     position: fixed;
     top:200px;
@@ -958,7 +960,7 @@ table {
     color: #0080ca;
 }
 
-/*¹«¹²±êÌâÉèÖÃ*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 .api-table h1{
     height: 42px;
     line-height: 42px;
@@ -999,7 +1001,7 @@ table {
      margin-right: 5%;
 }
 
-/*Ñ¡ÔñÆ÷*/
+/*Ñ¡ï¿½ï¿½ï¿½ï¿½*/
 .sub-row-select{
     width: 45%;
     height: 36px;
@@ -1018,7 +1020,7 @@ table {
     border: 1px solid #dddddd;
 
 }
-/*´úÂëdemo*/
+/*ï¿½ï¿½ï¿½ï¿½demo*/
 .code-demo-title{
     margin-left: 20px;
     height: 36px;
