@@ -320,7 +320,8 @@
                                 </code>
                             </pre>
                         </div>
-                        <textarea id="demo-textarea" class="hide"></textarea>
+                        <textarea id="demo-textarea"></textarea>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
                     </div>
                     <!-- 复制代码-->
                     <div class="fn-right code-demo-copy">
@@ -469,7 +470,7 @@
 <script type="text/javascript">
     function codeCopyUrl2() {
         $('#demo-textarea').text($('#demo-display').text());
-        let Url2 = document.getElementById("demo-textarea");
+        var Url2 = document.getElementById("demo-textarea");
         console.log(Url2);
         Url2.select(); // 选择对象
         document.execCommand("Copy"); // 执行浏览器复制命令

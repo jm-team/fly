@@ -1043,6 +1043,12 @@ table {
 .code-demo-display textarea{
     width: 90%;
 }
+#demo-textarea{
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
 .code-show{
     height: 40px;
     line-height: 40px;
