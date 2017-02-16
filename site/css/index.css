@@ -1048,6 +1048,9 @@ table {
     height: 1px;
     opacity: 0;
     filter:alpha(opacity=0);
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
 }
 .code-show{
     height: 40px;

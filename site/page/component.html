@@ -303,25 +303,46 @@
                         <div class="fn-left demo-display" id="demo-display">
                             <pre>
                                 <code class="JavaScript">
-                                    function $initHighlight(block, cls) {
-                                    try {
-                                    if (cls.search(/\bno\-highlight\b/) != -1)
-                                    return process(block, true, 0x0F) +
-                                    ` class="${cls}"`;
-                                    } catch (e) {
-                                    /* handle exception */
-                                    }
-                                    for (var i = 0 / 2; i < classes.length; i++) {
-                                    if (checkCondition(classes[i]) === undefined)
-                                    console.log('undefined');
-                                    }
-                                    }
-                                    export  $initHighlight;
+// radio & checkbox Method
+(function($){
+    $.fn.extend({
+        // 扩展多选框方法
+        jmCheckbox : function () {
+            return this.each(function () {
+                let $this = $(this),
+                    _checkboxIcon = $this.find('.jm-icon'),
+                    _input = $this.find('.jm-checkbox');
+
+                if(_input.attr('disabled')){
+                    $this.addClass('jm-checkbox-disabled')
+                }
+
+                if(_input.attr("checked")){
+                    _checkboxIcon.addClass('jm-icon-checkbook')
+                }else{
+                    _checkboxIcon.addClass('jm-icon-checkbaba')
+                }
+
+                $this.find('.jm-checkbox-icon-box').on("click",function(){
+                    if(_input.attr("disabled")){
+                        return false
+                    }
+                    if(_input.attr("checked")){
+                        _input.removeAttr('checked');
+                        _checkboxIcon.removeClass('jm-icon-checkbook').addClass('jm-icon-checkbaba')
+                    }else{
+                        _input.attr('checked',true);
+                        _checkboxIcon.removeClass('jm-icon-checkbaba').addClass('jm-icon-checkbook')
+                    }
+                });
+            })
+        }
+    });
+})(jQuery);
                                 </code>
                             </pre>
                         </div>
                         <textarea id="demo-textarea"></textarea>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
                     </div>
                     <!-- 复制代码-->
                     <div class="fn-right code-demo-copy">
@@ -477,14 +498,14 @@
         alert("已复制好，可贴粘。");
     }
     $(function () {
-        $('.code-show').on('click',function () {
+        $('.code-show').on('click', function () {
             let i = $(this).children('i'),
                 div = $(this).prev('.code-demo-display');
             console.log(div);
-            if(i.hasClass('jm-icon-down-copy')){
+            if (i.hasClass('jm-icon-down-copy')) {
                 i.removeClass('jm-icon-down-copy').addClass('jm-icon-up-copy');
                 div.slideDown()
-            }else{
+            } else {
                 i.removeClass('jm-icon-up-copy').addClass('jm-icon-down-copy');
                 div.slideUp()
             }
