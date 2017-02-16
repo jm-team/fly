@@ -18,7 +18,7 @@
                     _checkboxIcon.addClass('jm-icon-checkbaba')
                 }
 
-                $this.children('span').on("click",function(){
+                $this.find('.jm-checkbox-icon-box').on("click",function(){
                     if(_input.attr("disabled")){
                         return false
                     }

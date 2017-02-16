@@ -4,9 +4,9 @@
         // 扩展单选框方法
         jmRadio : function(){
             return this.each(function(){
-                var $this = $(this),
+                let $this = $(this),
                     _radioIcon = $this.find('.jm-icon'),
-                    _input = $this.children('input'),
+                    _input = $this.find('.jm-radio'),
                     siblings = $this.siblings();
 
                 if(_input.attr('disabled')){
@@ -19,7 +19,7 @@
                     _radioIcon.addClass('jm-icon-radio-none')
                 }
 
-                $this.children('span').on("click",function(){
+                $this.find('.jm-radio-icon-box').on("click",function(){
                     if(!_input.attr("disabled")){
                         _input.attr("checked",true);
                         _radioIcon.removeClass('jm-icon-radio-none').addClass('jm-icon-radio');
