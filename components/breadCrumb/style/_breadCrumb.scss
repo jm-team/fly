@@ -10,6 +10,9 @@ $crumbsFontSize: 14px;
     float: left;
     color: $crumbsColor;
     font-size: $crumbsFontSize;
+    span{
+      vertical-align: middle;
+    }
   }
   a {
     color: $crumbsColor;
@@ -20,6 +23,7 @@ $crumbsFontSize: 14px;
   i {
     padding: 0 4px;
     color: $crumbsOtherColor;
+    font-family: $font-family-base;
   }
   .jm-icon {
     font-size: $crumbsFontSize;
