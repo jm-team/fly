@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="../../dep/layer-3.0.1/skin/default/layer.css">
     <link rel="stylesheet" href="../../dist/css/fly.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/jm-code.css">
     <script src="../../dep/jquery-1.11.1/jquery.js"></script>
+    <script src="../../dep/layer-3.0.1/layer.js"></script>
     <script src="//cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js"></script>
 </head>
 <body>
@@ -299,7 +301,7 @@
                 <!-- 展开情况-->
                 <div class="code-demo-display clearfix" id="starlist">
                     <!-- 代码显示区域-->
-                    <div id="code-display">
+                    <div class="fn-left" id="code-display">
                         <div class="fn-left demo-display" id="demo-display">
                             <pre>
                                 <code class="JavaScript">
@@ -342,11 +344,12 @@
                                 </code>
                             </pre>
                         </div>
-                        <textarea id="demo-textarea"></textarea>
+                        <textarea class="demo-textarea"></textarea>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
                     </div>
                     <!-- 复制代码-->
                     <div class="fn-right code-demo-copy">
-                        <input type="button" onClick="codeCopyUrl2()" value="复制代码"/>
+                        <input type="button" value="复制代码"/>
                     </div>
                     <script>
                         hljs.initHighlightingOnLoad();
@@ -488,29 +491,9 @@
     <span class="fn-right "></span>
 </div>
 <!-- 复制代码-->
-<script type="text/javascript">
-    function codeCopyUrl2() {
-        $('#demo-textarea').text($('#demo-display').text());
-        var Url2 = document.getElementById("demo-textarea");
-        console.log(Url2);
-        Url2.select(); // 选择对象
-        document.execCommand("Copy"); // 执行浏览器复制命令
-        alert("已复制好，可贴粘。");
-    }
-    $(function () {
-        $('.code-show').on('click', function () {
-            let i = $(this).children('i'),
-                div = $(this).prev('.code-demo-display');
-            console.log(div);
-            if (i.hasClass('jm-icon-down-copy')) {
-                i.removeClass('jm-icon-down-copy').addClass('jm-icon-up-copy');
-                div.slideDown()
-            } else {
-                i.removeClass('jm-icon-up-copy').addClass('jm-icon-down-copy');
-                div.slideUp()
-            }
-        })
-    })
+<script type="text/javascript" src="../js/site.js"></script>
+<script>
+    $('.code-demo-copy').jmCopy()
 </script>
 </body>
 </html>

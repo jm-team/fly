@@ -191,6 +191,10 @@ h1, h2, h3{
 
 .fn-clear:after, .clearfix:after {
     clear: both;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
 }
 
 .fn-clear, .clearfix {
@@ -1043,7 +1047,7 @@ table {
 .code-demo-display textarea{
     width: 90%;
 }
-#demo-textarea{
+.demo-textarea{
     width: 1px;
     height: 1px;
     opacity: 0;

@@ -1,1 +1,1 @@
-import './_crumbs.scss';
+import './_index.scss';

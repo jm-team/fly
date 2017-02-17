@@ -1,10 +1,11 @@
 /******面包屑样式******/
-$crumbsColor: #666666;
+$crumbsColor: $gray666;
 $crumbsOtherColor: #bababa;
 $crumbsFontSize: 14px;
 
 .jm-crumbs {
-
+  @include list-unstyled;
+  @include clearfix;
   li {
     float: left;
     color: $crumbsColor;
