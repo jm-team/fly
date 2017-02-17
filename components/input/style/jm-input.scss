@@ -66,10 +66,16 @@ span.jm-link-input{
 	background:#f6f6f6;
 }
 
+span.jm-input-wrap{
+	box-sizing: border-box;
+}
+span.jm-input-wrap *{
+	box-sizing: inherit;
+}
 span.jm-input-wrap .jm-input-search{
 	display:inline-block;
 	width:90px;
-	height:34px;
+	height:36px;
 	border:1px solid #ddd;
 	border-left:none;
 	background:#f6f6f6 url('../img/search.png') 36px 9px no-repeat;
@@ -79,7 +85,7 @@ span.jm-input-wrap .jm-input-search{
 span.jm-input-wrap .select-classify{
 	display:inline-block;
 	width:125px;
-	height:34px;
+	height:36px;
 	line-height: 34px;
 	color:#666;
 	border:1px solid #ddd;
