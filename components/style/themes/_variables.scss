@@ -890,3 +890,11 @@ $dl-horizontal-offset:        $component-offset-horizontal !default;
 $dl-horizontal-breakpoint:    $grid-float-breakpoint !default;
 //** 水平线颜色
 $hr-border:                   $gray-lighter !default;
+
+
+// radio & checkbox 色值
+
+// 基础颜色
+$radioColor:                  #cacaca;
+// hover 颜色
+$radioHoverColor:             #0080ca;

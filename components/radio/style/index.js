@@ -1,4 +1,1 @@
-/**
- * Created by jayanne on 2017/1/22.
- */
-import './_radio.scss';
+import './_index.scss';

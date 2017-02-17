@@ -1,55 +1,594 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Radio</title>
-        <link rel="stylesheet" href="../../../dist/css/fly.css"/>
-        <script src="../../../dep/jquery-1.11.1/jquery.js"></script>
-        <script src="../../../dist/js/fly.js"></script>
-    </head>
-    <body>
-        <form action="">
-            <ul class="form-ul">
-                <li>可选择单选框</li>
-                <li>
-                    <label class="jm-radio-box" for="">
-                        <span class="jm-radio-icon-box">
-                            <span class="jm-icon"></span>一
-                        </span>
-                        <input type="radio" class="jm-radio" checked name="isMale">
-                    </label>
-                    <label class="jm-radio-box" for="">
-                        <span class="jm-radio-icon-box">
-                            <span class="jm-icon"></span>二
-                        </span>
-                        <input type="radio" class="jm-radio" name="isMale">
-                    </label>
-                    <label class="jm-radio-box" for="">
-                        <span class="jm-radio-icon-box">
-                            <span class="jm-icon"></span>三
-                        </span>
-                        <input type="radio" class="jm-radio" name="isMale">
-                    </label>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../../dep/layer-3.0.1/skin/default/layer.css">
+    <link rel="stylesheet" href="../../../dist/css/fly.css">
+    <link rel="stylesheet" href="../../../site/css/index.css">
+    <link rel="stylesheet" href="../../../site/css/jm-code.css">
+    <script src="../../../dep/jquery-1.11.1/jquery.js"></script>
+    <script src="../../../dep/layer-3.0.1/layer.js"></script>
+    <script src="//cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js"></script>
+    <script src="../../../dist/js/fly.js"></script>
+</head>
+<body>
+<!--内页公共导航 开始-->
+<div class="top clearfix">
+    <div class="logo fn-left"></div>
+    <div class="nav fn-right ">
+        <ul class="clearfix">
+            <li class="current fn-left"><a>首页</a></li>
+            <li class="fn-left"><a href="#">指南</a></li>
+            <li class="fn-left"><a href="#">规范</a></li>
+            <li class="fn-left"><a href="#">组件</a></li>
+            <li class="fn-left"><a href="#">模式</a></li>
+            <li class="fn-left"><a href="#">资源</a></li>
+        </ul>
+    </div>
+</div>
+<!--内页公共导航 结束-->
+
+
+<div class="main-wrapper fn-clear">
+    <!--左侧导航开始-->
+    <div class="main-left fn-left">
+        <div class="com-search">
+            <i class="jm-icon jm-icon-search"></i>
+            <input type="text" placeholder="搜索组件名..." _v-6db9881e="" class="search">
+        </div>
+        <div class="nav-item">
+            <h1>组件</h1>
+            <!-- general-->
+            <ul>
+                <li class="nav-group-title">General</li>
+                <li class="nav-group-list">
+                    <a href="../../components/button/demo/button.html">
+                        <span>Button</span>
+                        <span>按钮</span>
+                    </a>
                 </li>
-                <li>禁止单选框</li>
-                <li>
+                <!--<li class="nav-group-list">-->
+                    <!--<a href="../../components/icon/demo/icon.html">-->
+                        <!--<span>Icon</span>-->
+                        <!--<span>图标</span>-->
+                    <!--</a>-->
+                <!--</li>-->
+            </ul>
+            <!-- form-->
+            <ul>
+                <li class="nav-group-title">Form</li>
+                <li class="nav-group-list">
+                    <a href="../../components/input/demo/input.html">
+                        <span>Input</span>
+                        <span>输入框</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="../../components/radio/demo/radio.html">
+                        <span>Radio</span>
+                        <span>单选框</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="../../components/checkbox/demo/checkbox.html">
+                        <span>Checkbox</span>
+                        <span>多选框</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="../../components/select/demo/select.html">
+                        <span>Select</span>
+                        <span>选择器</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="../../components/datetime/demo/time.html">
+                        <span>TimePicker</span>
+                        <span>时间选择器</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="../../components/datetime/demo/date.html">
+                        <span>DatePicker</span>
+                        <span>日期选择器</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="../../components/datetime/demo/index.html">
+                        <span>DateTimePicker</span>
+                        <span>日期时间选择器</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="../../components/upload/demo/upload.html">
+                        <span>Upload</span>
+                        <span>上传</span>
+                    </a>
+                </li>
+                <!--<li class="nav-group-list">-->
+                    <!--<a href="">-->
+                        <!--<span>Rate</span>-->
+                        <!--<span>评分</span>-->
+                    <!--</a>-->
+                <!--</li>-->
+            </ul>
+
+            <!-- data-->
+            <ul>
+                <li class="nav-group-title">Data</li>
+                <!--<li class="nav-group-list">-->
+                    <!--<a href="">-->
+                        <!--<span>Table</span>-->
+                        <!--<span>表格</span>-->
+                    <!--</a>-->
+                <!--</li>-->
+                <li class="nav-group-list">
+                    <a href="../../components/tag/demo/tag.html">
+                        <span>Tag</span>
+                        <span>标签</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="../../components/upload/demo/pagination.html">
+                        <span>Pagination</span>
+                        <span>分页</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="../../components/badge/demo/badge.html">
+                        <span>Badge</span>
+                        <span>标记</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- notice-->
+            <ul>
+                <li class="nav-group-title">Notice</li>
+                <li class="nav-group-list">
+                    <a href="../../components/alertWarning/demo/alert.html">
+                        <span>Alert</span>
+                        <span>警告</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="../../components/loading/demo/load.html">
+                        <span>Loading</span>
+                        <span>加载</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="../../components/message/demo/message.html">
+                        <span>Message</span>
+                        <span>消息提示</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="../../components/messagebox/demo/messagebox.html">
+                        <span>MessageBox</span>
+                        <span>弹框</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="../../components/notification/demo/notification.html">
+                        <span>Notification</span>
+                        <span>通知</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Navigation-->
+            <ul>
+                <li class="nav-group-title">Navigation</li>
+                <li class="nav-group-list">
+                    <a href="../../components/navmenu/demo/navmenu.html">
+                        <span>NavMenu</span>
+                        <span>导航菜单</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Tabs</span>
+                        <span>标签页</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="../../components/breadCrumb/demo/breadCrumb.html">
+                        <span>Breadcrumb</span>
+                        <span>面包屑</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="../../components/dropdown/demo/dropdown.html">
+                        <span>Dropdown</span>
+                        <span>下拉菜单</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="../../components/steps/demo/steps.html">
+                        <span>Steps</span>
+                        <span>步骤</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- Others-->
+            <ul>
+                <li class="nav-group-title">Others</li>
+                <li class="nav-group-list">
+                    <a href="../../components/dialog/demo/dialog.html">
+                        <span>Dialog</span>
+                        <span>对话框</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="../../components/tooltip/demo/tooltip.html">
+                        <span>Tooltip</span>
+                        <span>文字提示</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="../../components/popover/demo/popover.html">
+                        <span>Popover</span>
+                        <span>弹出框</span>
+                    </a>
+                </li>
+            </ul>
+
+
+        </div>
+
+
+    </div>
+
+    <!--右侧内容模块-->
+    <div class="main-right fn-left">
+
+        <!--组件标题-->
+        <div class="sub-title mb40">
+            <h1>Radio 单选框</h1>
+            <p>在一组备选项中进行单选。</p>
+        </div>
+        <!--基础用法-->
+        <div class="sub-layout">
+            <div><span class="sub-layout-title">基础用法</span></div>
+            <div class="sub-layout-content clearfix">
+                <div class="fn-left sub-row">
                     <label class="jm-radio-box" for="">
                         <span class="jm-radio-icon-box">
-                            <span class="jm-icon"></span>四
+                            <span class="jm-icon"></span>备选项
+                        </span>
+                        <input type="radio" class="jm-radio" checked name="options">
+                    </label>
+                    <label class="jm-radio-box" for="">
+                        <span class="jm-radio-icon-box">
+                            <span class="jm-icon"></span>备选项
+                        </span>
+                        <input type="radio" class="jm-radio" name="options">
+                    </label>
+                </div>
+                <div class="fn-right sub-note">
+                    <p>由于选项默认可见，不宜过多，若选项过多，建议使用 Select 选择器。</p>
+                </div>
+            </div>
+
+            <!-- 代码demo-->
+            <div class="code-demo">
+                <div class="code-demo-title"><span>代码演示</span></div>
+
+                <!-- 展开情况-->
+                <div class="code-demo-display clearfix">
+                    <!-- 代码显示区域-->
+                    <div class="fn-left code-display">
+                        <div class="fn-left demo-display">
+                            <pre>
+                                <code class="JavaScript">
+&lt;label class="jm-radio-box" for=""&gt;
+    &lt;span class="jm-radio-icon-box"&gt;
+        &lt;span class="jm-icon"&gt;&lt;/span&gt;备选项
+    &lt;/span&gt;
+    &lt;input type="radio" class="jm-radio" checked name="options"&gt;
+&lt;/label&gt;
+&lt;label class="jm-radio-box" for=""&gt;
+    &lt;span class="jm-radio-icon-box"&gt;
+        &lt;span class="jm-icon"&gt;&lt;/span&gt;备选项
+    &lt;/span&gt;
+    &lt;input type="radio" class="jm-radio" name="options"&gt;
+&lt;/label&gt;
+                                </code>
+                            </pre>
+                        </div>
+                        <textarea class="demo-textarea"></textarea>
+                    </div>
+                    <!-- 复制代码-->
+                    <div class="fn-right code-demo-copy">
+                        <input type="button" value="复制代码"/>
+                    </div>
+                    <script>
+                        hljs.initHighlightingOnLoad();
+                    </script>
+                </div>
+                <!-- 收缩情况-->
+                <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+            </div>
+        </div>
+        <!--禁用状态-->
+        <div class="sub-layout">
+            <div><span class="sub-layout-title">禁用状态</span></div>
+            <div class="sub-layout-content clearfix">
+                <div class="fn-left sub-row">
+                    <label class="jm-radio-box" for="">
+                        <span class="jm-radio-icon-box">
+                            <span class="jm-icon"></span>备选项
                         </span>
                         <input type="radio" class="jm-radio" checked="checked" disabled name="isMale">
                     </label>
                     <label class="jm-radio-box" for="">
                         <span class="jm-radio-icon-box">
-                            <span class="jm-icon"></span>五
+                            <span class="jm-icon"></span>备选项
                         </span>
                         <input type="radio" class="jm-radio" disabled name="isMale">
                     </label>
-                </li>
-            </ul>
-        </form>
-        <script>
-            $('.jm-radio-box').jmRadio()
-        </script>
-    </body>
+                </div>
+                <div class="fn-right sub-note">
+                    <p>单选框不可用的状态。</p>
+                </div>
+            </div>
+
+            <!-- 代码demo-->
+            <div class="code-demo">
+                <div class="code-demo-title"><span>代码演示</span></div>
+
+                <!-- 展开情况-->
+                <div class="code-demo-display clearfix">
+                    <!-- 代码显示区域-->
+                    <div class="fn-left code-display">
+                        <div class="fn-left demo-display">
+                            <pre>
+                                <code class="JavaScript">
+&lt;label class="jm-radio-box" for=""&gt;
+    &lt;span class="jm-radio-icon-box"&gt;
+        &lt;span class="jm-icon"&gt;&lt;/span&gt;备选项
+    &lt;/span&gt;
+    &lt;input type="radio" class="jm-radio" checked="checked" disabled name="isMale"&gt;
+&lt;/label&gt;
+&lt;label class="jm-radio-box" for=""&gt;
+    &lt;span class="jm-radio-icon-box"&gt;
+        &lt;span class="jm-icon"&gt;&lt;/span&gt;备选项
+    &lt;/span&gt;
+    &lt;input type="radio" class="jm-radio" disabled name="isMale"&gt;
+&lt;/label&gt;
+                                </code>
+                            </pre>
+                        </div>
+                        <textarea class="demo-textarea"></textarea>
+                    </div>
+                    <!-- 复制代码-->
+                    <div class="fn-right code-demo-copy">
+                        <input type="button" value="复制代码"/>
+                    </div>
+                    <script>
+                        hljs.initHighlightingOnLoad();
+                    </script>
+                </div>
+                <!-- 收缩情况-->
+                <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+            </div>
+        </div>
+        <!--按钮样式-->
+        <div class="sub-layout">
+            <div><span class="sub-layout-title">禁用状态</span></div>
+            <div class="sub-layout-content clearfix">
+                <div class="fn-left sub-row">
+                    <ul class="jm-radio-btn-box">
+                       <li class="jm-radio-box">
+                            <span class="jm-radio-icon-box">备选项</span>
+                           <input type="radio" class="jm-radio" checked="checked" name="isMale">
+                       </li>
+                        <li class="jm-radio-box">
+                            <span class="jm-radio-icon-box">备选项</span>
+                            <input type="radio" class="jm-radio" name="isMale">
+                        </li>
+                        <li class="jm-radio-box">
+                            <span class="jm-radio-icon-box">备选项</span>
+                            <input type="radio" class="jm-radio" name="isMale">
+                        </li>
+                    </ul>
+                    <ul class="jm-radio-btn-box">
+                        <li class="jm-radio-box">
+                            <span class="jm-radio-icon-box">备选项</span>
+                            <input type="radio" class="jm-radio" checked="checked" name="isMale1">
+                        </li>
+                        <li class="jm-radio-box">
+                            <span class="jm-radio-icon-box">备选项</span>
+                            <input type="radio" class="jm-radio" disabled name="isMale1">
+                        </li>
+                        <li class="jm-radio-box">
+                            <span class="jm-radio-icon-box">备选项</span>
+                            <input type="radio" class="jm-radio" name="isMale1">
+                        </li>
+                    </ul>
+                </div>
+                <div class="fn-right sub-note">
+                    <p>单选框不可用的状态。</p>
+                </div>
+            </div>
+
+            <!-- 代码demo-->
+            <div class="code-demo">
+                <div class="code-demo-title"><span>代码演示</span></div>
+
+                <!-- 展开情况-->
+                <div class="code-demo-display clearfix">
+                    <!-- 代码显示区域-->
+                    <div class="fn-left code-display">
+                        <div class="fn-left demo-display">
+                            <pre>
+                                <code class="JavaScript">
+&lt;label class="jm-radio-box" for=""&gt;
+    &lt;span class="jm-radio-icon-box"&gt;
+        &lt;span class="jm-icon"&gt;&lt;/span&gt;备选项
+    &lt;/span&gt;
+    &lt;input type="radio" class="jm-radio" checked="checked" disabled name="isMale"&gt;
+&lt;/label&gt;
+&lt;label class="jm-radio-box" for=""&gt;
+    &lt;span class="jm-radio-icon-box"&gt;
+        &lt;span class="jm-icon"&gt;&lt;/span&gt;备选项
+    &lt;/span&gt;
+    &lt;input type="radio" class="jm-radio" disabled name="isMale"&gt;
+&lt;/label&gt;
+                                </code>
+                            </pre>
+                        </div>
+                        <textarea class="demo-textarea"></textarea>
+                    </div>
+                    <!-- 复制代码-->
+                    <div class="fn-right code-demo-copy">
+                        <input type="button" value="复制代码"/>
+                    </div>
+                    <script>
+                        hljs.initHighlightingOnLoad();
+                    </script>
+                </div>
+                <!-- 收缩情况-->
+                <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+            </div>
+        </div>
+
+        <!--字体使用规范-->
+        <div id="api" class="api-table mt20">
+            <h1>字体使用规范</h1>
+            <div class="font-use-norm">
+                <table class="norm-table">
+                    <thead>
+                    <tr class="norm-height bor-bottom">
+                        <th class="width-15 ">类别</th>
+                        <th class="width-5"></th>
+                        <th class="width-15">示例</th>
+                        <th class="width-5"></th>
+                        <th class="width-15">字体颜色</th>
+                        <th class="width-5"></th>
+                        <th class="width-15">字体大小</th>
+                        <th class="width-5"></th>
+                        <th class="width-20">行间距</th>
+                    </tr>
+
+
+                    </thead>
+                    <tbody>
+                    <tr class="norm-height">
+                        <td class="width-15 ">主标题大小</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-main-title">主标题颜色</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">#333</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">20px</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-20">38px</td>
+                    </tr>
+                    <tr class="norm-height">
+                        <td class="width-15 font-title-color">主标题大小</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-second-title">次级标题颜色</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">#333</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">18px</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-20">30px</td>
+                    </tr>
+
+                    <tr class="norm-height">
+                        <td class="width-15">主标题大小</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-little-title">小标题颜色</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">#666</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">16px</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-20">28px</td>
+                    </tr>
+
+                    <tr class="norm-height">
+                        <td class="width-15">主标题大小</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-p-color">正文颜色</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">#666</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">14px</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-20">24px</td>
+                    </tr>
+
+                    <tr class="norm-height">
+                        <td class="width-15">主标题大小</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-tips-color">辅助文字颜色</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">#bababa</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">14px</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-20">24px</td>
+                    </tr>
+
+                    <tr class="norm-height">
+                        <td class="width-15">失效文字大小</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-cannot-color">失效文字颜色</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">#ddd</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">14px</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-20">24px</td>
+                    </tr>
+
+                    <tr class="norm-height">
+                        <td class="width-15">链接文字大小</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-link-color">链接文字颜色</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">#0080ca</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">14px</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-20">24px</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <!-- 漂浮导航-->
+    <div class="nav-float fn-left">
+        <ul class="">
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#use">常见用法</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#tips">带有倾向提示</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#pianyi">推进偏移</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#api">API</a>
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+
+<!--页脚-->
+<div class="footer clearfix">
+    <p class="fn-left">JuMore Component library 版权所有</p>
+    <span class="fn-right "></span>
+</div>
+<!-- 复制代码-->
+<script type="text/javascript" src="../../../site/js/site.js"></script>
+<script>
+    $('.code-demo-copy').jmCopy();
+    $('.jm-radio-box').jmRadio({type:0});
+    $('.jm-radio-btn-box .jm-radio-box').jmRadio({type:1})
+</script>
+</body>
 </html>
