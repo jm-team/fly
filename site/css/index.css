@@ -1,8 +1,6 @@
 @charset "UTF-8";
 * {
     box-sizing: border-box;
-    font-family: "Microsoft Yahei";
-    color: #666;
     font-size: 14px;
 }
 
@@ -377,18 +375,13 @@ table {
 }
 
 .main-wrapper{
-    /*background: #999;*/
     margin:0 4% 0 2%;
-    height: auto;
     width: auto;
-    overflow: hidden;
 }
 .main-left{
     min-width: 260px;
-    height: 100%;
     background: #f6f6f6;
-    margin-bottom:-9999px;
-    padding-bottom:9999px
+    margin-bottom: 40px;
 }
 /*.main-left ul{*/
 /*width: 20%;*/
