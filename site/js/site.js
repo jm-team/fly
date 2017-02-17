@@ -28,5 +28,18 @@ $(function () {
             i.removeClass('jm-icon-up-copy').addClass('jm-icon-down-copy');
             div.slideUp()
         }
-    })
+    });
+
+    // badge封顶
+    var NUM_MSG = 1000;
+
+    $('.badge-dynamic .icon-badge').each(function (index, item) {
+        var maxNum = $(item).attr('max-number');
+        if (maxNum < NUM_MSG) {
+            $(item).text(maxNum + '+');
+        } else {
+            $(item).text(NUM_MSG);
+        }
+    });
+
 });
