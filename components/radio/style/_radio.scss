@@ -1,6 +1,5 @@
 /******radio与checkbox标签样式******/
 
-
 .jm-radio-box {
   position: relative;
   margin-right: 20px;
@@ -16,23 +15,46 @@
     color: $radioHoverColor;
   }
 }
-.jm-radio-btn-box{
-  @include  clearfix;
 
-  .jm-radio-icon-box{
-    padding: 10px 20px;
+.jm-radio-btn-box {
+  @include clearfix;
+
+  .jm-radio-icon-box {
+    padding: 6px 33px;
     float: left;
     color: $gray-light;
     border: 1px solid $table-border-color;
-    &:hover{
+    &:hover {
       color: $radioHoverColor;
     }
   }
-  .jm-radio-icon-box-style{
+  .jm-radio-icon-box-style {
     color: $radioHoverColor;
     border: 1px solid $radioHoverColor;
   }
+  .jm-radio-box + .jm-radio-box {
+    .jm-radio-icon-box {
+      border-left: 1px solid transparent;
+    }
+  }
+  .jm-radio-box + .jm-radio-box {
+    .jm-radio-icon-box-style {
+      border-left: 1px solid $radioHoverColor;
+    }
+  }
+  .jm-radio-disabled {
+    .jm-radio-icon-box {
+      color: $radioDisabledColor;
+      border: 1px solid $table-border-color;
+      background-color: $table-bg-accent;
+    }
+  }
 }
+
+.jm-radio-btn-box + .jm-radio-btn-box {
+  margin-top: 40px;
+}
+
 .jm-radio {
   vertical-align: text-bottom;
   margin-right: 10px;
@@ -40,7 +62,7 @@
   width: 14px;
   position: absolute;
   opacity: 0;
-  filter: alpha(opacity = 0);
+  filter: alpha(opacity=0);
   top: -9999px;
   left: -9999px;
 }
