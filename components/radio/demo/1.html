@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Radio</title>
+        <link rel="stylesheet" href="../../../dist/css/fly.css"/>
+        <script src="../../../dep/jquery-1.11.1/jquery.js"></script>
+        <script src="../../../dist/js/fly.js"></script>
+    </head>
+    <body>
+        <form action="">
+            <ul class="form-ul">
+                <li>可选择单选框</li>
+                <li>
+                    <label class="jm-radio-box" for="">
+                        <span class="jm-radio-icon-box">
+                            <span class="jm-icon"></span>一
+                        </span>
+                        <input type="radio" class="jm-radio" checked name="isMale">
+                    </label>
+                    <label class="jm-radio-box" for="">
+                        <span class="jm-radio-icon-box">
+                            <span class="jm-icon"></span>二
+                        </span>
+                        <input type="radio" class="jm-radio" name="isMale">
+                    </label>
+                    <label class="jm-radio-box" for="">
+                        <span class="jm-radio-icon-box">
+                            <span class="jm-icon"></span>三
+                        </span>
+                        <input type="radio" class="jm-radio" name="isMale">
+                    </label>
+                </li>
+                <li>禁止单选框</li>
+                <li>
+                    <label class="jm-radio-box" for="">
+                        <span class="jm-radio-icon-box">
+                            <span class="jm-icon"></span>四
+                        </span>
+                        <input type="radio" class="jm-radio" checked="checked" disabled name="isMale">
+                    </label>
+                    <label class="jm-radio-box" for="">
+                        <span class="jm-radio-icon-box">
+                            <span class="jm-icon"></span>五
+                        </span>
+                        <input type="radio" class="jm-radio" disabled name="isMale">
+                    </label>
+                </li>
+            </ul>
+        </form>
+        <script>
+            $('.jm-radio-box').jmRadio()
+        </script>
+    </body>
+</html>
