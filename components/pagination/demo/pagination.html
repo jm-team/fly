@@ -257,7 +257,7 @@
             <h1>分页</h1>
             <p>分页</p>
         </div>
-        <div class="sub-layout">
+        <div id="basic" class="sub-layout">
             <div><span class="sub-layout-title">基本用法</span></div>
             <div class="sub-layout-content clearfix">
                 <div class="fn-left sub-row">
@@ -722,106 +722,130 @@ laypage({
 
         <!--字体使用规范-->
         <div class="api-table mt20">
-            <h1>字体使用规范</h1>
+            <h1>API</h1>
             <div class="font-use-norm">
                 <table class="norm-table">
                     <thead>
                     <tr class="norm-height bor-bottom">
-                        <th class="width-15 ">类别</th>
+                        <th class="width-15 ">属性</th>
                         <th class="width-5"></th>
-                        <th class="width-15">示例</th>
+                        <th class="width-15">默认值</th>
                         <th class="width-5"></th>
-                        <th class="width-15">字体颜色</th>
+                        <th class="width-15">类型</th>
                         <th class="width-5"></th>
-                        <th class="width-15">字体大小</th>
-                        <th class="width-5"></th>
-                        <th class="width-20">行间距</th>
+                        <th class="width-15">描述</th>
                     </tr>
 
 
                     </thead>
                     <tbody>
                     <tr class="norm-height">
-                        <td class="width-15 ">主标题大小</td>
+                        <td class="width-15 ">cont</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15 font-main-title">主标题颜色</td>
+                        <td class="width-15 font-main-title">必填</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15">#333</td>
+                        <td class="width-15">String/Object</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15">20px</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-20">38px</td>
+                        <td class="width-15">容器。值可以传入元素id或原生DOM或jquery对象</td>
                     </tr>
                     <tr class="norm-height">
-                        <td class="width-15 font-title-color">主标题大小</td>
+                        <td class="width-15 font-title-color">pages</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15 font-second-title">次级标题颜色</td>
+                        <td class="width-15 font-second-title">必填</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15">#333</td>
+                        <td class="width-15">Number</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15">18px</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-20">30px</td>
+                        <td class="width-15">分页数</td>
                     </tr>
 
                     <tr class="norm-height">
-                        <td class="width-15">主标题大小</td>
+                        <td class="width-15">curr</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15 font-little-title">小标题颜色</td>
+                        <td class="width-15 font-little-title">1</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15">#666</td>
+                        <td class="width-15">Number</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15">16px</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-20">28px</td>
+                        <td class="width-15">当前页</td>
                     </tr>
 
                     <tr class="norm-height">
-                        <td class="width-15">主标题大小</td>
+                        <td class="width-15">groups</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15 font-p-color">正文颜色</td>
+                        <td class="width-15 font-p-color">5</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15">#666</td>
+                        <td class="width-15">Number</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15">14px</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-20">24px</td>
+                        <td class="width-15">连续分页数</td>
                     </tr>
 
                     <tr class="norm-height">
-                        <td class="width-15">主标题大小</td>
+                        <td class="width-15">first</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15 font-tips-color">辅助文字颜色</td>
+                        <td class="width-15 font-p-color">1</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15">#bababa</td>
+                        <td class="width-15">Number/String/Boolean</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15">14px</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-20">24px</td>
+                        <td class="width-15">用于控制首页。值支持三种类型。如first:'首页'。如frist:false，则表示不显示首页项</td>
                     </tr>
 
                     <tr class="norm-height">
-                        <td class="width-15">失效文字大小</td>
+                        <td class="width-15">last</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15 font-cannot-color">失效文字颜色</td>
+                        <td class="width-15 font-p-color">总页数</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15">#ddd</td>
+                        <td class="width-15">Number/String/Boolean</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15">14px</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-20">24px</td>
+                        <td class="width-15">用于控制尾页。值支持三种类型。如last:'尾页'。如last:false，则表示不显示尾页项</td>
                     </tr>
 
                     <tr class="norm-height">
-                        <td class="width-15">链接文字大小</td>
+                        <td class="width-15">prev</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15 font-link-color">链接文字颜色</td>
+                        <td class="width-15 font-p-color">上一页</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15">#0080ca</td>
+                        <td class="width-15">String/Boolean</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15">14px</td>
+                        <td class="width-15">用于控制上一页。若不显示，设置false即可</td>
+                    </tr>
+
+                    <tr class="norm-height">
+                        <td class="width-15">next</td>
                         <td class="width-5 border"></td>
-                        <td class="width-20">24px</td>
+                        <td class="width-15 font-p-color">下一页</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">String/Boolean</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">用于控制下一页。若不显示，设置false即可</td>
+                    </tr>
+
+                    <tr class="norm-height">
+                        <td class="width-15">skip</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-p-color">false</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">Boolean</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">是否显示跳转</td>
+                    </tr>
+
+                    <tr class="norm-height">
+                        <td class="width-15">jump</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-p-color">核心参数</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">Function</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">触发分页后的回调，函数返回两个参数。obj是一个Object类型，包括分页的所有配置信息。first是一个Boolean类型，检测页面是否初始加载。非常有用，可避免无限刷新</td>
+                    </tr>
+
+                    <tr class="norm-height">
+                        <td class="width-15">size</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-p-color">default</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">String</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">分页的尺寸类型，可选值为sm</td>
                     </tr>
                     </tbody>
                 </table>
@@ -832,7 +856,7 @@ laypage({
     <!-- 漂浮导航-->
     <div class="nav-float fn-left">
         <ul class="">
-            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#use">基本用法</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#basic">基本用法</a></li>
             <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#tips">带有倾向提示</a></li>
             <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#pianyi">推进偏移</a></li>
             <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#api"
