@@ -1,8 +1,7 @@
-/* 公用样式 */
-.w1190{
-	width: 1190px;
-	margin: 30px auto;
-} 
+/* badge公用样式 */
+.badge-case{
+	padding:20px 0;
+}
 .badge-bg{
 	width: 60px;
 	height: 30px;
@@ -25,22 +24,25 @@
 }
 .icon-badge{
 	position: absolute;
-	color: #fff;
-	background: #f00;
+	color: $badge-color;
+	background: $badge-icon-bg;
 	padding: 0px 6px;
 	font-size: 14px;
-	line-height: 20px;
+	line-height: 18px;
 	height: 20px;
 	min-width: 20px;
 	border-radius: 10px;
 	border: 1px solid #f00;
 	box-shadow: 0 0 0 1px #fff;
+	font-style: normal;
 }
-.badge-bg .badge-text{
+.badge-text{
 	display: inline-block;
 	text-align: center;
 	line-height: 30px;
 	font-size: 14px;
+	font-style: normal;
+	color: $badge-color;
 }
 .badge-bg .icon-badge{
 	top: -10px;
@@ -49,7 +51,7 @@
 }
 .badge-clear .icon-badge{
 	top:5px;
-	right:0px;
+	right:-15px;
 }
 /* badge 红点样式 */
 .badge-point .icon-badge-point{
@@ -72,6 +74,7 @@
 .badge-bubble .icon-badge{
 	position: static;
 	display: inline-block;
+	margin-right:15px;
 }
 .badge-bubble .icon-badge.icon-badge-clear{
 	color: #666;
