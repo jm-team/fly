@@ -3,162 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <title>步骤demo</title>
-    <link rel="stylesheet" href="../../../dep/bootstrap-3.3.1/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="../style/common.css" type="text/css"/>
-    <link rel="stylesheet" href="../style/step.css" type="text/css"/>
+    <link rel="stylesheet" href="../../../dist/css/fly.css" type="text/css"/>
     <script type="text/javascript" src="../../../dep/jquery-1.11.1/jquery.min.js"></script>
 </head>
 <body>
 <div class="layout">
     <div class="panel panel-primary">
-        <div class="panel-heading">当前第一步</div>
+        <div class="panel-heading">基础用法</div>
         <div class="panel-body">
             <div class="alert alert-info">
                 正在进行的步骤添加.jm-steps-cross
             </div>
-            <div class="jm-steps-wrap">
-                <div class="jm-steps-item jm-steps-cross">
-                    <!-- S横线-->
-                    <div class="jm-steps-tail"><i></i></div>
-                    <!-- E横线-->
-                    <div class="jm-steps-step">
-                        <div class="jm-steps-head">
-                            <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">1</div>
+            <div class="steps-outer">
+                <div class="jm-steps-wrap">
+                    <div class="jm-steps-item jm-steps-cross">
+                        <!-- S横线-->
+                        <div class="jm-steps-tail"><i></i></div>
+                        <!-- E横线-->
+                        <div class="jm-steps-step">
+                            <div class="jm-steps-head">
+                                <div class="jm-steps-head-inner">
+                                    <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                    <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                    <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                    <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                    <span class="jm-steps-txt">1</span>
+                                </div>
+                            </div>
+                            <div class="jm-steps-main">
+                                <div class="jm-steps-title">第一步</div>
+                                <div class="jm-steps-description">第一步第一步第一步第一步第一步</div>
                             </div>
                         </div>
-                        <div class="jm-steps-main">
-                            <div class="jm-steps-title">第一步</div>
-                            <div class="jm-steps-description">第一步第一步第一步第一步第一步</div>
+                    </div>
+                    <div class="jm-steps-item">
+                        <div class="jm-steps-tail"><i></i></div>
+                        <div class="jm-steps-step">
+                            <div class="jm-steps-head">
+                                <div class="jm-steps-head-inner">
+                                    <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                    <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                    <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                    <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                    <span class="jm-steps-txt">2</span>
+                                </div>
+                            </div>
+                            <div class="jm-steps-main">
+                                <div class="jm-steps-title">第二步</div>
+                                <div class="jm-steps-description">第二步第二步</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jm-steps-item jm-steps-item-last">
+                        <div class="jm-steps-step">
+                            <div class="jm-steps-head">
+                                <div class="jm-steps-head-inner">
+                                    <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                    <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                    <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                    <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                    <span class="jm-steps-txt">3</span>
+                                </div>
+                            </div>
+                            <div class="jm-steps-main">
+                                <div class="jm-steps-title">第三步</div>
+                                <div class="jm-steps-description">第三步第三步</div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="jm-steps-item">
-                    <div class="jm-steps-tail"><i></i></div>
-                    <div class="jm-steps-step">
-                        <div class="jm-steps-head">
-                            <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">2</div>
-                            </div>
-                        </div>
-                        <div class="jm-steps-main">
-                            <div class="jm-steps-title">第二步</div>
-                            <div class="jm-steps-description">第二步第二步</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="jm-steps-item jm-steps-item-last">
-                    <div class="jm-steps-step">
-                        <div class="jm-steps-head">
-                            <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">3</div>
-                            </div>
-                        </div>
-                        <div class="jm-steps-main">
-                            <div class="jm-steps-title">第三步</div>
-                            <div class="jm-steps-description">第三步第三步</div>
-                        </div>
-                    </div>
-                </div>
+                <input type="button" class="jm-btn jm-btn-primary jm-btn-sm J_next" value="下一步"/>
+                <input type="button" class="jm-btn jm-btn-primary jm-btn-sm J_prev" value="上一步"/>
             </div>
 
-            <!-- 带描述-->
-            <div class="jm-steps-wrap">
-                <div class="jm-steps-item jm-steps-cross">
-                    <!-- S横线-->
-                    <div class="jm-steps-tail"><i></i></div>
-                    <!-- E横线-->
-                    <div class="jm-steps-step">
-                        <div class="jm-steps-head">
-                            <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">1</div>
-                            </div>
-                        </div>
-                        <div class="jm-steps-main">
-                            <div class="jm-steps-title">第一步</div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="jm-steps-item">
-                    <div class="jm-steps-tail"><i></i></div>
-                    <div class="jm-steps-step">
-                        <div class="jm-steps-head">
-                            <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">2</div>
+            <div class="steps-outer">
+                <!-- 带描述-->
+                <div class="jm-steps-wrap">
+                    <div class="jm-steps-item jm-steps-cross">
+                        <!-- S横线-->
+                        <div class="jm-steps-tail"><i></i></div>
+                        <!-- E横线-->
+                        <div class="jm-steps-step">
+                            <div class="jm-steps-head">
+                                <div class="jm-steps-head-inner">
+                                    <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                    <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                    <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                    <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                    <span class="jm-steps-txt">1</span>
+                                </div>
+                            </div>
+                            <div class="jm-steps-main">
+                                <div class="jm-steps-title">第一步</div>
                             </div>
                         </div>
-                        <div class="jm-steps-main">
-                            <div class="jm-steps-title">第二步</div>
-                        </div>
                     </div>
-                </div>
 
-                <div class="jm-steps-item">
-                    <div class="jm-steps-step">
-                        <div class="jm-steps-head">
-                            <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">3</div>
+                    <div class="jm-steps-item">
+                        <div class="jm-steps-tail"><i></i></div>
+                        <div class="jm-steps-step">
+                            <div class="jm-steps-head">
+                                <div class="jm-steps-head-inner">
+                                    <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                    <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                    <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                    <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                    <span class="jm-steps-txt">2</span>
+                                </div>
+                            </div>
+                            <div class="jm-steps-main">
+                                <div class="jm-steps-title">第二步</div>
                             </div>
                         </div>
-                        <div class="jm-steps-main">
-                            <div class="jm-steps-title">第三步</div>
-                        </div>
                     </div>
-                </div>
-            </div>
-            <!-- 带描述-->
 
-            <div class="jm-steps-wrap jm-steps-wrap-small">
-                <div class="jm-steps-item jm-steps-cross">
-                    <!-- S横线-->
-                    <div class="jm-steps-tail"><i></i></div>
-                    <!-- E横线-->
-                    <div class="jm-steps-step">
-                        <div class="jm-steps-head">
-                            <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">1</div>
+                    <div class="jm-steps-item">
+                        <div class="jm-steps-step">
+                            <div class="jm-steps-head">
+                                <div class="jm-steps-head-inner">
+                                    <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                    <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                    <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                    <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                    <span class="jm-steps-txt">3</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="jm-steps-main">
-                            <div class="jm-steps-title">第一步</div>
+                            <div class="jm-steps-main">
+                                <div class="jm-steps-title">第三步</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="jm-steps-item">
-                    <div class="jm-steps-tail"><i></i></div>
-                    <div class="jm-steps-step">
-                        <div class="jm-steps-head">
-                            <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">2</div>
-                            </div>
-                        </div>
-                        <div class="jm-steps-main">
-                            <div class="jm-steps-title">第二步</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="jm-steps-item">
-                    <div class="jm-steps-step">
-                        <div class="jm-steps-head">
-                            <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">3</div>
-                            </div>
-                        </div>
-                        <div class="jm-steps-main">
-                            <div class="jm-steps-title">第三步</div>
-                        </div>
-                    </div>
-                </div>
+                <!-- 带描述-->
+                <input type="button" class="jm-btn jm-btn-primary jm-btn-sm J_next" value="下一步"/>
+                <input type="button" class="jm-btn jm-btn-primary jm-btn-sm J_prev" value="上一步"/>
             </div>
 
-            <input type="button" class="btn btn-primary J_next" value="下一步"/>
 
-            <input type="button" class="btn btn-primary J_prev" value="上一步"/>
+            <div class="steps-outer">
+                <div class="jm-steps-wrap jm-steps-wrap-small">
+                    <div class="jm-steps-item jm-steps-cross">
+                        <!-- S横线-->
+                        <div class="jm-steps-tail"><i></i></div>
+                        <!-- E横线-->
+                        <div class="jm-steps-step">
+                            <div class="jm-steps-head">
+                                <div class="jm-steps-head-inner">
+                                    <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                    <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                    <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                    <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                    <span class="jm-steps-txt">1</span>
+                                </div>
+                            </div>
+                            <div class="jm-steps-main">
+                                <div class="jm-steps-title">第一步</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="jm-steps-item">
+                        <div class="jm-steps-tail"><i></i></div>
+                        <div class="jm-steps-step">
+                            <div class="jm-steps-head">
+                                <div class="jm-steps-head-inner">
+                                    <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                    <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                    <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                    <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                    <span class="jm-steps-txt">2</span>
+                                </div>
+                            </div>
+                            <div class="jm-steps-main">
+                                <div class="jm-steps-title">第二步</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="jm-steps-item">
+                        <div class="jm-steps-step">
+                            <div class="jm-steps-head">
+                                <div class="jm-steps-head-inner">
+                                    <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                    <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                    <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                    <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                    <span class="jm-steps-txt">3</span>
+                                </div>
+                            </div>
+                            <div class="jm-steps-main">
+                                <div class="jm-steps-title">第三步</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="button" class="jm-btn jm-btn-primary jm-btn-sm J_next" value="下一步"/>
+                <input type="button" class="jm-btn jm-btn-primary jm-btn-sm J_prev" value="上一步"/>
+            </div>
         </div>
     </div>
 
@@ -176,7 +220,11 @@
                     <div class="jm-steps-step">
                         <div class="jm-steps-head">
                             <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">1</div>
+                                <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                <span class="jm-steps-txt">1</span>
                             </div>
                         </div>
                         <div class="jm-steps-main">
@@ -190,7 +238,11 @@
                     <div class="jm-steps-step">
                         <div class="jm-steps-head">
                             <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">2</div>
+                                <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                <span class="jm-steps-txt">2</span>
                             </div>
                         </div>
                         <div class="jm-steps-main">
@@ -203,7 +255,11 @@
                     <div class="jm-steps-step">
                         <div class="jm-steps-head">
                             <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">3</div>
+                                <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                <span class="jm-steps-txt">3</span>
                             </div>
                         </div>
                         <div class="jm-steps-main">
@@ -220,7 +276,11 @@
                     <div class="jm-steps-step">
                         <div class="jm-steps-head">
                             <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">1</div>
+                                <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                <span class="jm-steps-txt">1</span>
                             </div>
                         </div>
                         <div class="jm-steps-main">
@@ -234,7 +294,11 @@
                     <div class="jm-steps-step">
                         <div class="jm-steps-head">
                             <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">2</div>
+                                <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                <span class="jm-steps-txt">2</span>
                             </div>
                         </div>
                         <div class="jm-steps-main">
@@ -247,7 +311,11 @@
                     <div class="jm-steps-step">
                         <div class="jm-steps-head">
                             <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">3</div>
+                                <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                <span class="jm-steps-txt">3</span>
                             </div>
                         </div>
                         <div class="jm-steps-main">
@@ -257,9 +325,9 @@
                 </div>
             </div>
 
-            <input type="button" class="btn btn-success J_next" value="下一步"/>
 
-            <input type="button" class="btn btn-success J_prev" value="上一步"/>
+            <input type="button" class="jm-btn jm-btn-primary jm-btn-sm J_next" value="下一步"/>
+            <input type="button" class="jm-btn jm-btn-primary jm-btn-sm J_prev" value="上一步"/>
         </div>
     </div>
 
@@ -278,7 +346,11 @@
                     <div class="jm-steps-step">
                         <div class="jm-steps-head">
                             <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">1</div>
+                                <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                <span class="jm-steps-txt">1</span>
                             </div>
                         </div>
                         <div class="jm-steps-main">
@@ -292,7 +364,11 @@
                     <div class="jm-steps-step">
                         <div class="jm-steps-head">
                             <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">2</div>
+                                <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                <span class="jm-steps-txt">2</span>
                             </div>
                         </div>
                         <div class="jm-steps-main">
@@ -305,7 +381,11 @@
                     <div class="jm-steps-step">
                         <div class="jm-steps-head">
                             <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">3</div>
+                                <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                <span class="jm-steps-txt">3</span>
                             </div>
                         </div>
                         <div class="jm-steps-main">
@@ -323,7 +403,11 @@
                     <div class="jm-steps-step">
                         <div class="jm-steps-head">
                             <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">1</div>
+                                <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                <span class="jm-steps-txt">1</span>
                             </div>
                         </div>
                         <div class="jm-steps-main">
@@ -337,7 +421,11 @@
                     <div class="jm-steps-step">
                         <div class="jm-steps-head">
                             <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">2</div>
+                                <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                <span class="jm-steps-txt">2</span>
                             </div>
                         </div>
                         <div class="jm-steps-main">
@@ -350,7 +438,11 @@
                     <div class="jm-steps-step">
                         <div class="jm-steps-head">
                             <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">3</div>
+                                <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                <span class="jm-steps-txt">3</span>
                             </div>
                         </div>
                         <div class="jm-steps-main">
@@ -365,110 +457,142 @@
     <div class="panel panel-primary">
         <div class="panel-heading">列向步骤</div>
         <div class="panel-body">
-            <div class="jm-steps-wrap jm-steps-vertical">
-                <div class="jm-steps-item jm-steps-finish">
-                    <!-- S横线-->
-                    <div class="jm-steps-tail"><i></i></div>
-                    <!-- E横线-->
-                    <div class="jm-steps-step">
-                        <div class="jm-steps-head">
-                            <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">1</div>
+            <div class="steps-outer">
+
+                <div class="jm-steps-wrap jm-steps-vertical">
+                    <div class="jm-steps-item jm-steps-cross">
+                        <!-- S横线-->
+                        <div class="jm-steps-tail"><i></i></div>
+                        <!-- E横线-->
+                        <div class="jm-steps-step">
+                            <div class="jm-steps-head">
+                                <div class="jm-steps-head-inner">
+                                    <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                    <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                    <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                    <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                    <span class="jm-steps-txt">1</span>
+                                </div>
+                            </div>
+                            <div class="jm-steps-main">
+                                <div class="jm-steps-title">第一步</div>
+                                <div class="jm-steps-description">第二步第二步</div>
                             </div>
                         </div>
-                        <div class="jm-steps-main">
-                            <div class="jm-steps-title">第一步</div>
-                            <div class="jm-steps-description">第二步第二步</div>
+                    </div>
+
+                    <div class="jm-steps-item">
+                        <div class="jm-steps-tail"><i></i></div>
+                        <div class="jm-steps-step">
+                            <div class="jm-steps-head">
+                                <div class="jm-steps-head-inner">
+                                    <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                    <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                    <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                    <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                    <span class="jm-steps-txt">2</span>
+                                </div>
+                            </div>
+                            <div class="jm-steps-main">
+                                <div class="jm-steps-title">第二步</div>
+                                <div class="jm-steps-description">第二步第二步</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="jm-steps-item">
+                        <div class="jm-steps-step">
+                            <div class="jm-steps-head">
+                                <div class="jm-steps-head-inner">
+                                    <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                    <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                    <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                    <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                    <span class="jm-steps-txt">3</span>
+                                </div>
+                            </div>
+                            <div class="jm-steps-main">
+                                <div class="jm-steps-title">第三步</div>
+                                <div class="jm-steps-description">第二步第二步</div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="jm-steps-item">
-                    <div class="jm-steps-tail"><i></i></div>
-                    <div class="jm-steps-step">
-                        <div class="jm-steps-head">
-                            <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">2</div>
-                            </div>
-                        </div>
-                        <div class="jm-steps-main">
-                            <div class="jm-steps-title">第二步</div>
-                            <div class="jm-steps-description">第二步第二步</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="jm-steps-item">
-                    <div class="jm-steps-step">
-                        <div class="jm-steps-head">
-                            <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">3</div>
-                            </div>
-                        </div>
-                        <div class="jm-steps-main">
-                            <div class="jm-steps-title">第三步</div>
-                            <div class="jm-steps-description">第二步第二步</div>
-                        </div>
-                    </div>
-                </div>
+                <input type="button" class="jm-btn jm-btn-primary jm-btn-sm J_next" value="下一步"/>
+                <input type="button" class="jm-btn jm-btn-primary jm-btn-sm J_prev" value="上一步"/>
             </div>
 
-            <div class="jm-steps-wrap jm-steps-wrap-small jm-steps-vertical">
-                <div class="jm-steps-item jm-steps-finish">
-                    <!-- S横线-->
-                    <div class="jm-steps-tail"><i></i></div>
-                    <!-- E横线-->
-                    <div class="jm-steps-step">
-                        <div class="jm-steps-head">
-                            <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">1</div>
+            <div class="steps-outer">
+                <div class="jm-steps-wrap jm-steps-wrap-small jm-steps-vertical">
+                    <div class="jm-steps-item jm-steps-cross">
+                        <!-- S横线-->
+                        <div class="jm-steps-tail"><i></i></div>
+                        <!-- E横线-->
+                        <div class="jm-steps-step">
+                            <div class="jm-steps-head">
+                                <div class="jm-steps-head-inner">
+                                    <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                    <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                    <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                    <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                    <span class="jm-steps-txt">1</span>
+                                </div>
+                            </div>
+                            <div class="jm-steps-main">
+                                <div class="jm-steps-title">第一步</div>
+                                <div class="jm-steps-description">第二步第二步</div>
                             </div>
                         </div>
-                        <div class="jm-steps-main">
-                            <div class="jm-steps-title">第一步</div>
-                            <div class="jm-steps-description">第二步第二步</div>
+                    </div>
+
+                    <div class="jm-steps-item">
+                        <div class="jm-steps-tail"><i></i></div>
+                        <div class="jm-steps-step">
+                            <div class="jm-steps-head">
+                                <div class="jm-steps-head-inner">
+                                    <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                    <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                    <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                    <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                    <span class="jm-steps-txt">2</span>
+                                </div>
+                            </div>
+                            <div class="jm-steps-main">
+                                <div class="jm-steps-title">第二步</div>
+                                <div class="jm-steps-description">第二步第二步</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="jm-steps-item">
+                        <div class="jm-steps-step">
+                            <div class="jm-steps-head">
+                                <div class="jm-steps-head-inner">
+                                    <div class="jm-steps-icon jm-steps-circle jm-icon jm-icon-radio-none"></div>
+                                    <div class="jm-steps-icon jm-steps-bg jm-icon jm-icon-circle"></div>
+                                    <div class="jm-steps-icon jm-steps-right jm-icon jm-icon-success"></div>
+                                    <div class="jm-steps-icon jm-steps-wrong jm-icon jm-icon-wrong"></div>
+                                    <span class="jm-steps-txt">3</span>
+                                </div>
+                            </div>
+                            <div class="jm-steps-main">
+                                <div class="jm-steps-title">第三步</div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="jm-steps-item">
-                    <div class="jm-steps-tail"><i></i></div>
-                    <div class="jm-steps-step">
-                        <div class="jm-steps-head">
-                            <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">2</div>
-                            </div>
-                        </div>
-                        <div class="jm-steps-main">
-                            <div class="jm-steps-title">第二步</div>
-                            <div class="jm-steps-description">第二步第二步</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="jm-steps-item">
-                    <div class="jm-steps-step">
-                        <div class="jm-steps-head">
-                            <div class="jm-steps-head-inner">
-                                <div class="jm-steps-icon">3</div>
-                            </div>
-                        </div>
-                        <div class="jm-steps-main">
-                            <div class="jm-steps-title">第三步</div>
-                        </div>
-                    </div>
-                </div>
+                <input type="button" class="jm-btn jm-btn-primary jm-btn-sm J_next" value="下一步"/>
+                <input type="button" class="jm-btn jm-btn-primary jm-btn-sm J_prev" value="上一步"/>
             </div>
 
 
-            <input type="button" class="btn btn-primary J_next" value="下一步"/>
-
-            <input type="button" class="btn btn-primary J_prev" value="上一步"/>
         </div>
     </div>
 
 </div>
 
-<script type="text/javascript" src="../style/script.js"></script>
+<script type="text/javascript" src="../steps.js"></script>
 </body>
 </html>
