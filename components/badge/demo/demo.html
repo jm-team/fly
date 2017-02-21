@@ -263,8 +263,8 @@
             <div class="sub-layout-content clearfix">
                 <div class="fn-left sub-row">
                     <div class="badge-case">
-                        <span class="badge-bg"><em class="badge-text"></em><i class="icon-badge">1</i></span>
-                        <span class="badge-clear"><em class="badge-text">文字</em><i class="icon-badge">1</i></span>
+                        <span class="badge-bg"><em class="badge-text"></em><i class="icon-badge" count="1"></i></span>
+                        <span class="badge-clear"><em class="badge-text">文字</em><i class="icon-badge" count="1"></i></span>
                     </div>
                 </div>
                 <div class="fn-right sub-note">
@@ -286,11 +286,11 @@
 &lt;div&gt;
     &lt;span class="badge-bg"&gt;
         &lt;em class="badge-text"&gt;&lt;/em&gt;
-        &lt;i class="icon-badge"&gt;1&lt;/i&gt;
+        &lt;i class="icon-badge" count="1"&gt;&lt;/i&gt;
     &lt;/span&gt;
     &lt;span class="badge-clear"&gt;
         &lt;em class="badge-text"&gt;文字&lt;/em&gt;
-        &lt;i class="icon-badge"&gt;1&lt;/i&gt;
+        &lt;i class="icon-badge" count="1"&gt;&lt;/i&gt;
     &lt;/span&gt;
 &lt;/div&gt;
                                 </code>
@@ -318,16 +318,16 @@
                     <div class="badge-dynamic badge-case">
                         <span class="badge-bg">
                             <em class="badge-text"></em>
-                            <i max-number="9"
+                            <i overflow="9" count="10"
                                class="icon-badge"></i>
                         </span>
                         <span class="badge-bg">
                             <em class="badge-text"></em>
-                            <i max-number="99" class="icon-badge"></i>
+                            <i overflow="99" count="100" class="icon-badge"></i>
                         </span>
                         <span class="badge-bg">
                             <em class="badge-text"></em>
-                            <i max-number="999" class="icon-badge"></i>
+                            <i overflow="999" count="1000" class="icon-badge"></i>
                         </span>
                     </div>
                 </div>
@@ -350,15 +350,15 @@
 &lt;div class="badge-dynamic"&gt;
   &lt;span class="badge-bg"&gt;
       &lt;em class="badge-text"&gt;&lt;/em&gt;
-      &lt;i max-number="9" class="icon-badge"&gt;&lt;/i&gt;
+      &lt;i overflow="9" count="10" class="icon-badge"&gt;&lt;/i&gt;
   &lt;/span&gt;
   &lt;span class="badge-bg"&gt;
       &lt;em class="badge-text"&gt;&lt;/em&gt;
-      &lt;i max-number="99" class="icon-badge"&gt;&lt;/i&gt;
+      &lt;i overflow="99" count="100" class="icon-badge"&gt;&lt;/i&gt;
   &lt;/span&gt;
   &lt;span class="badge-bg"&gt;
       &lt;em class="badge-text"&gt;&lt;/em&gt;
-      &lt;i max-number="999" class="icon-badge"&gt;&lt;/i&gt;
+      &lt;i overflow="999" count="1000" class="icon-badge"&gt;&lt;/i&gt;
   &lt;/span&gt;
 &lt;/div&gt;
                                 </code>
@@ -437,9 +437,9 @@
             <div class="sub-layout-content clearfix">
                 <div class="fn-left sub-row">
                     <div class="badge-case badge-bubble">
-                        <i class="icon-badge">9</i>
-                        <i class="icon-badge">99+</i>
-                        <i class="icon-badge-clear icon-badge">999</i>
+                        <i class="icon-badge" count="9" overflow="99"></i>
+                        <i class="icon-badge" count="100" overflow="99"></i>
+                        <i class="icon-badge-clear icon-badge" count="999" overflow="999"></i>
                     </div>
                 </div>
                 <div class="fn-right sub-note">
@@ -459,9 +459,9 @@
                             <pre>
                                 <code class="JavaScript">
 &lt;div class="badge-bubble"&gt;
-    &lt;i class="icon-badge"&gt;9&lt;/i&gt;
-    &lt;i class="icon-badge"&gt;99+&lt;/i&gt;
-    &lt;i class="icon-badge-clear icon-badge"&gt;99&lt;/i&gt;
+    &lt;i class="icon-badge" count="9" overflow="99"&gt;&lt;/i&gt;
+    &lt;i class="icon-badge" count="100" overflow="99"&gt;&lt;/i&gt;
+    &lt;i class="icon-badge-clear icon-badge" count="999" overflow="999"&gt;&lt;/i&gt;
 &lt;/div&gt;
                                 </code>
                             </pre>
@@ -489,99 +489,34 @@
                     <tr class="norm-height bor-bottom">
                         <th class="width-15 ">类别</th>
                         <th class="width-5"></th>
-                        <th class="width-15">示例</th>
+                        <th class="width-15">属性名</th>
                         <th class="width-5"></th>
-                        <th class="width-15">字体颜色</th>
+                        <th class="width-15">类型</th>
                         <th class="width-5"></th>
-                        <th class="width-15">字体大小</th>
-                        <th class="width-5"></th>
-                        <th class="width-20">行间距</th>
+                        <th class="width-15">默认值</th>
                     </tr>
 
 
                     </thead>
                     <tbody>
                     <tr class="norm-height">
-                        <td class="width-15 ">主标题大小</td>
+                        <td class="width-15 ">消息数量</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15 font-main-title">主标题颜色</td>
+                        <td class="width-15 font-main-title">count</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15">#333</td>
+                        <td class="width-15">Number</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15">20px</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-20">38px</td>
-                    </tr>
-                    <tr class="norm-height">
-                        <td class="width-15 font-title-color">主标题大小</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-15 font-second-title">次级标题颜色</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-15">#333</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-15">18px</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-20">30px</td>
+                        <td class="width-15"></td>
                     </tr>
 
                     <tr class="norm-height">
-                        <td class="width-15">主标题大小</td>
+                        <td class="width-15 ">封顶数量</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15 font-little-title">小标题颜色</td>
+                        <td class="width-15 font-main-title">overflow</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15">#666</td>
+                        <td class="width-15">Number</td>
                         <td class="width-5 border"></td>
-                        <td class="width-15">16px</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-20">28px</td>
-                    </tr>
-
-                    <tr class="norm-height">
-                        <td class="width-15">主标题大小</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-15 font-p-color">正文颜色</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-15">#666</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-15">14px</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-20">24px</td>
-                    </tr>
-
-                    <tr class="norm-height">
-                        <td class="width-15">主标题大小</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-15 font-tips-color">辅助文字颜色</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-15">#bababa</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-15">14px</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-20">24px</td>
-                    </tr>
-
-                    <tr class="norm-height">
-                        <td class="width-15">失效文字大小</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-15 font-cannot-color">失效文字颜色</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-15">#ddd</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-15">14px</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-20">24px</td>
-                    </tr>
-
-                    <tr class="norm-height">
-                        <td class="width-15">链接文字大小</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-15 font-link-color">链接文字颜色</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-15">#0080ca</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-15">14px</td>
-                        <td class="width-5 border"></td>
-                        <td class="width-20">24px</td>
+                        <td class="width-15">99</td>
                     </tr>
                     </tbody>
                 </table>

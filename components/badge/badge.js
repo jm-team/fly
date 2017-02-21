@@ -11,21 +11,28 @@
         init: function (options) {
             var self = this;
             self.defaults = {
-                number: '',     // 消息实际数量
-                selector: ''    // bagde 的 className
+                overflow: '',                // 最大显示信息数量
+                selector: '.icon-badge',     // bagde 的 className
+                count: '',                   // 实际数量
+                attrs: {
+                    count: 'count',
+                    overflow: 'overflow'
+                }
             };
             $.extend(true, this.defaults, options || {});
-            self.maxMsg(self.defaults);
+            self.maxMsg();
             return self;
         },
-        maxMsg: function (defaults) {
-            var self = this,
-                n = defaults.number;
-            $(defaults.selector).each(function () {
+        maxMsg: function () {
+            var self = this;
+            $(self.defaults.selector).each(function () {
+
                 var $self = $(this),
-                    m = Number($self.attr('max-number'));   // 最大显示消息数量
-                if (isNaN(m)) return true;
-                $self.text(m > n ? m : m + '+');
+                    m = Number($self.attr(self.defaults.attrs.overflow)) || self.defaults.overflow,
+                    n = $self.attr(self.defaults.attrs.count);
+
+                $self.text(m >= n ? n : m + '+');
+
             });
 
             return self;
@@ -33,8 +40,8 @@
     });
     $(function () {
         new Badge({
-            selector: ".icon-badge",
-            number: 1000
+            overflow: 99,
+            count: ''
         });
     })
 })(jQuery);
