@@ -1,0 +1,25 @@
+/******面包屑样式******/
+.jm-crumbs li {
+    float: left;
+    color: #666666;
+    font-size: 14px;
+    list-style: none;
+}
+
+.jm-crumbs a {
+    color: #666666;
+}
+
+.jm-crumbs .active {
+    color: #bababa;
+}
+
+.jm-crumbs i {
+    padding: 0 4px;
+    color: #bababa;
+}
+
+.jm-crumbs .jm-icon {
+    font-size: 14px;
+    margin-right: 4px;
+}

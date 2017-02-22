@@ -3,16 +3,22 @@
     box-sizing: border-box;
     font-size: 14px;
 }
-
+html{
+    height: 100%;
+}
 body {
     color: #666666;
     font-family: Arial, 'microsoft yahei';
-    min-height: 100%;
+    height: 100%;
     min-width: 1200px;
+}
+#app{
+    height: 100%;
 }
 .home-body {
     background: url(../img/index.jpg) no-repeat;
     background-size: cover;
+    height: 100%;
 }
 
 .home-body .logo {
@@ -296,7 +302,7 @@ table {
 .jm-home-content{
     padding-top:65px;
     text-align: center;
-    background: url(../img/jm-home-content-bg.png) no-repeat bottom;
+    /*background: url(../img/jm-home-content-bg.png) no-repeat bottom;*/
     width: 800px;
     height: 500px;
     color: #d2d2d2;
@@ -341,7 +347,7 @@ table {
 .jm-menu-icon{
     width: 160px;
     height: 60px;
-    background:url("../img/jm-menu-icon.png") no-repeat;
+    /*background:url("../img/jm-menu-icon.png") no-repeat;*/
 }
 
 .list-icon-bg{
