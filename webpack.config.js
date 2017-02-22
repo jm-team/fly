@@ -26,7 +26,7 @@ module.exports = merge({
     // 构建之后的文件目录配置
     output: {
         path: path.join(__dirname, 'dist'),
-        publicPath: '/dist', // html 中引用资源的位置
+        publicPath: '/dist/', // html 中引用资源的位置
         filename: 'js/[name].' + chunkhash + 'js',
         chunkFilename: 'js/[name].' + chunkhash + 'js'
     },
