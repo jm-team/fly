@@ -14,7 +14,6 @@ button{
 	font-family:'Microsoft Yahei','Arial';
 	font-size:14px;
 	color:#666;
-	padding:34px 40px;
 }
 
 .loading-title{
@@ -29,7 +28,6 @@ button{
 
 .loading-page{
 	width:1160px;
-	min-height:570px;
 	border:1px solid #ddd;
 	padding:0px 40px;
 }

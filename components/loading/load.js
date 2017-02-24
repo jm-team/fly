@@ -44,7 +44,7 @@
 	    };
 
 	     $.fn.blurLoaded = function () {
-	        var loadingMask = this.find('.jm-spin');
+	        var loadingMask = this.find('.jm-spin'),
 	        	loadingBlur = this.find('.mask-blur');
 	        loadingMask.fadeOut(100, function(){
 	            loadingMask.remove();

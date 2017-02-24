@@ -1,0 +1,484 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../../../dep/layer-3.0.1/skin/default/layer.css">
+        <link rel="stylesheet" href="../../../dist/css/fly.css">
+        <link rel="stylesheet" href="../../../site/css/index.css">
+        <link rel="stylesheet" href="../../../site/css/jm-code.css">
+        <link rel="stylesheet" href = "../style/demo.css">
+        <script src="../../../dep/jquery-1.11.1/jquery.js"></script>
+        <script src="../../../dep/layer-3.0.1/layer.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js"></script>
+        <script src="../../../dist/js/fly.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+
+                $('#loadingTwin1').on('click',function(){
+                    $('#containerTwin').loading('twin','拼命加载中...');
+                    setTimeout(function(){
+                        $('#containerTwin').loaded();
+                    },2000);
+                });
+
+                 $('#loadingTwin2').on('click',function(){
+                    $('#containerTwin1').loading('twin','加载中...');
+                    setTimeout(function(){
+                        $('#containerTwin1').loaded();
+                    },2000);
+                });
+
+                $('#loadingTwin3').on('click',function(){
+                    $('#containerMaskBlur').addClass('mask-blur');
+                    $('#containerTwin2').loading('twin','拼命加载中...');
+                    setTimeout(function(){
+                        $('#containerTwin2').blurLoaded();
+                    },2000);
+                });
+
+            $('#loadingTwin4').on('click',function(){
+                $('#containerMaskBlur1').addClass('mask-blur');
+                $('#containerTwin3').loading('twin','加载中...');
+                setTimeout(function(){
+                    $('#containerTwin3').blurLoaded();
+                },2000);
+            });
+
+            });
+        </script>
+    </head>
+    <body>
+    <!--内页公共导航 开始-->
+    <div class="top clearfix">
+        <div class="logo fn-left"></div>
+        <div class="nav fn-right ">
+            <ul class="clearfix">
+                <li class="current fn-left"><a>首页</a></li>
+                <li class="fn-left"><a href="#">指南</a></li>
+                <li class="fn-left"><a href="#">规范</a></li>
+                <li class="fn-left"><a href="#">组件</a></li>
+                <li class="fn-left"><a href="#">模式</a></li>
+                <li class="fn-left"><a href="#">资源</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--内页公共导航 结束-->
+
+    <div class="main-wrapper fn-clear">
+        <!--左侧导航开始-->
+        <div class="main-left fn-left">
+            <div class="com-search">
+                <i class="jm-icon jm-icon-search"></i>
+                <input type="text" placeholder="搜索组件名..." _v-6db9881e="" class="search">
+            </div>
+            <div class="nav-item">
+                <h1>组件</h1>
+                <ul>
+                    <li class="nav-group-title">General</li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Button</span>
+                            <span>按钮</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Icon</span>
+                            <span>图标</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="nav-group-title">Form</li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Input</span>
+                            <span>输入框</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Radio</span>
+                            <span>单选框</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Checkbox</span>
+                            <span>多选框</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Select</span>
+                            <span>选择器</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>TimePicker</span>
+                            <span>时间选择器</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>DateTimePicker</span>
+                            <span>日期时间选择器</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Upload</span>
+                            <span>上传</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Rate</span>
+                            <span>评分</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="nav-item">
+                <h1>组件</h1>
+                <ul>
+                    <li class="nav-group-title">General</li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Button</span>
+                            <span>按钮</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Icon</span>
+                            <span>图标</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="nav-group-title">Form</li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Input</span>
+                            <span>输入框</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Radio</span>
+                            <span>单选框</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Checkbox</span>
+                            <span>多选框</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Select</span>
+                            <span>选择器</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>TimePicker</span>
+                            <span>时间选择器</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>DateTimePicker</span>
+                            <span>日期时间选择器</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Upload</span>
+                            <span>上传</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Rate</span>
+                            <span>评分</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="nav-item">
+                <h1>组件</h1>
+                <ul>
+                    <li class="nav-group-title">General</li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Button</span>
+                            <span>按钮</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Icon</span>
+                            <span>图标</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="nav-group-title">Form</li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Input</span>
+                            <span>输入框</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Radio</span>
+                            <span>单选框</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Checkbox</span>
+                            <span>多选框</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Select</span>
+                            <span>选择器</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>TimePicker</span>
+                            <span>时间选择器</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>DateTimePicker</span>
+                            <span>日期时间选择器</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Upload</span>
+                            <span>上传</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-list">
+                        <a href="">
+                            <span>Rate</span>
+                            <span>评分</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--右侧内容模块-->
+        <div class="main-right fn-left">
+            <div class="loading-demo">
+                <div class="loading-title">
+                    <h3>Loading 加载</h3>
+                    <p>用于显示一页或一段加载状态的微调.</p>
+                </div>
+
+                <fieldset class="loading-page fn-clear">
+                    <legend>整页或者区域非模糊加载</legend>
+
+                    <div class="fn-left">
+                        <div id="containerTwin" class="page-example">
+                            <img src="../img/demoBg.jpg">
+                        </div>
+
+                        <button id="containerTwin1" class="fn-left"> xjisjxisjx </button>
+                    </div>
+
+                    <div class="page-example-descr fn-left">
+                        <div class="condition alert">
+                            所有浏览器都支持的写法
+                        </div>
+
+                        <div class="trigger">
+                            <a id = loadingTwin1 class="button">一般尺寸</a>
+                        </div>
+
+                        <div class="trigger">
+                            <a id = loadingTwin2 class="button">按钮尺寸</a>
+                        </div>
+                    </div>
+
+                    <!-- 代码demo-->
+                    <div class="code-demo" style="float:left;width:107.4%;margin:40px -40px 0px;">
+                        <div class="code-demo-title"><span>代码演示</span></div>
+
+                        <!-- 展开情况-->
+                        <div class="code-demo-display clearfix">
+                            <!-- 代码显示区域-->
+                            <div class="fn-left code-display">
+                                <div class="fn-left demo-display">
+                            <pre>
+                                <code class="JavaScript">
+    &ltdiv id="containerTwin" class="page-example"&gt
+         &ltimg src="../img/demoBg.jpg"&gt
+    &lt/div&gt
+
+    &ltbutton id="containerTwin1" class="fn-left"&gt xjisjxisjx &lt/button&gt
+                                </code>
+                            </pre>
+                                </div>
+                                <textarea class="demo-textarea"></textarea>
+                            </div>
+                            <!-- 复制代码-->
+                            <div class="fn-right code-demo-copy">
+                                <input type="button" value="复制代码"/>
+                            </div>
+                            <script>
+                                hljs.initHighlightingOnLoad();
+                            </script>
+                        </div>
+                        <!-- 收缩情况-->
+                        <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="loading-page fn-clear">
+                    <legend>整页或者区域模糊加载</legend>
+
+                    <div class="fn-left">
+                        <div id="containerTwin2" class="section-example">
+                            <div id="containerMaskBlur">
+                                djioasdjoijwio
+                            </div>
+                        </div>
+
+                        <button id="containerTwin3">
+                            <div id="containerMaskBlur1">
+                                djioasdjo
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="page-example-descr fn-left" style="height:300px;">
+                        <div class="condition alert">
+                            IE9及以上版本支持，但是blur的模糊效果支持没有chrome好
+                        </div>
+
+                        <div class="condition alert" style="color:#e71818;">
+                            特别注意：要在需要模糊效果的容器上手动添加id，这里是id="containerMaskBlur"和id="containerMaskBlur1"
+                        </div>
+
+                        <div class="trigger">
+                            <a id = loadingTwin3 class="button">一般尺寸</a>
+                        </div>
+
+                        <div class="trigger">
+                            <a id = loadingTwin4 class="button">按钮尺寸</a>
+                        </div>
+                    </div>
+
+                    <!-- 代码demo-->
+                    <div class="code-demo" style="float:left;width:107.4%;margin:40px -40px 0px;">
+                        <div class="code-demo-title"><span>代码演示</span></div>
+
+                        <!-- 展开情况-->
+                        <div class="code-demo-display clearfix">
+                            <!-- 代码显示区域-->
+                            <div class="fn-left code-display">
+                                <div class="fn-left demo-display">
+                            <pre>
+                                <code class="JavaScript">
+    &ltdiv id="containerTwin2" class="section-example"&gt
+        &ltdiv id="containerMaskBlur"&gt
+            djioasdjoijwio
+        &lt/div&gt
+    &lt/div&gt
+
+    &ltbutton id="containerTwin3"&gt
+        &ltdiv id="containerMaskBlur1"&gt
+            djioasdjo
+        &lt/div&gt
+    &lt/button&gt
+                                </code>
+                            </pre>
+                                </div>
+                                <textarea class="demo-textarea"></textarea>
+                            </div>
+                            <!-- 复制代码-->
+                            <div class="fn-right code-demo-copy">
+                                <input type="button" value="复制代码"/>
+                            </div>
+                            <script>
+                                hljs.initHighlightingOnLoad();
+                            </script>
+                        </div>
+                        <!-- 收缩情况-->
+                        <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <!--字体使用规范-->
+            <div id="api" class="api-table mt20">
+                <h1>API</h1>
+                <div class="font-use-norm">
+                    <table class="norm-table">
+                        <thead>
+                        <tr class="norm-height bor-bottom">
+                            <th class="width-15 ">类别</th>
+                            <th class="width-5"></th>
+                            <th class="width-15">说明</th>
+                            <th class="width-5"></th>
+                            <th class="width-15">类型</th>
+                            <th class="width-5"></th>
+                            <th class="width-15">默认值</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="norm-height">
+                            <td class="width-10 ">初始化方法</td>
+                            <td class="width-5 border"></td>
+                            <td class="width-20 font-main-title"></td>
+                            <td class="width-5 border"></td>
+                            <td class="width-10"></td>
+                            <td class="width-5 border"></td>
+                            <td class="width-15"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <!-- 漂浮导航-->
+        <div class="nav-float fn-left">
+            <ul class="">
+                <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#use">常见用法</a></li>
+                <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#tips">带有倾向提示</a></li>
+                <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#pianyi">推进偏移</a></li>
+                <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#api">API</a>
+                </li>
+            </ul>
+        </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- 复制代码-->
+    <script type="text/javascript" src="../../../site/js/site.js"></script>
+    <script>
+        $('.code-demo-copy').jmCopy();
+    </script>
+    </body>
+</html>
