@@ -10,7 +10,7 @@ export default {
 }
 </script>
 <style scoped>
-  @import "../../dist/css/fly.css";
-  @import "../../site/css/index.css";
-  @import "../../site/css/jm-code.css";
+  @import "../dist/css/fly.css";
+  @import "../site/css/index.css";
+  @import "../site/css/jm-code.css";
 </style>

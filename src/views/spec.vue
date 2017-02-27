@@ -11,9 +11,9 @@
   </div>
 </template>
 <script>
-  import HeaderView from '../views/header.vue'
-  import FooterView from '../views/footer.vue'
-  import LeftView from '../views/spec_left_nav.vue'
+  import HeaderView from '../components/header.vue'
+  import FooterView from '../components/footer.vue'
+  import LeftView from '../components/spec_left_nav.vue'
 
   export default {
     components: {

@@ -4,16 +4,16 @@
     <div class="main-wrapper fn-clear">
       <left-view></left-view>
       <div class="main-right fn-left">
-        <iframe src="../../static/breadCrumb/demo/breadCrumb.html" frameborder="0"></iframe>
+        <iframe width="100%" height="1354" src="../../components/breadCrumb/demo/breadCrumb.html" frameborder="0"></iframe>
       </div>
     </div>
     <footer-view></footer-view>
   </div>
 </template>
 <script>
-  import HeaderView from '../views/header.vue'
-  import FooterView from '../views/footer.vue'
-  import LeftView from '../views/left_nav.vue'
+  import HeaderView from '../components/header.vue'
+  import FooterView from '../components/footer.vue'
+  import LeftView from '../components/left_nav.vue'
 
   export default {
     components: {

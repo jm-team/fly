@@ -1,6 +1,6 @@
 <template>
   <div class="home-body">
-    <div class="logo"><img src="../../../site/img/logo.png" alt="聚贸 Jumore"/></div>
+    <div class="logo"><img src="../assets/logo.png" alt="聚贸 Jumore"/></div>
     <div class="welcome-wrapper">
       <h2>
         <small>Story</small>
