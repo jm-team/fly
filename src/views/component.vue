@@ -3,8 +3,8 @@
     <header-view></header-view>
     <div class="main-wrapper fn-clear">
       <left-view></left-view>
-      <div class="main-right fn-left">
-        <iframe width="100%" height="1354" src="../../components/button/demo/button.html" frameborder="0"></iframe>
+      <div class="main-right">
+        <iframe width="100%" height="1354" :src="'../../components/'+ $route.params.name + '/demo/'+ $route.params.name+ '.html'" frameborder="0"></iframe>
       </div>
     </div>
     <footer-view></footer-view>

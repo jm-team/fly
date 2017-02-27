@@ -11,10 +11,7 @@
       <ul>
         <li class="nav-group-title">General</li>
         <li class="nav-group-list">
-          <a href="../../../components/button/demo/button.html">
-            <span>Button</span>
-            <span>按钮</span>
-          </a>
+          <router-link to="/component/button">Button 按钮</router-link>
         </li>
       </ul>
       <!-- form-->

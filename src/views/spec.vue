@@ -3,7 +3,7 @@
     <header-view></header-view>
     <div class="main-wrapper fn-clear">
       <left-view></left-view>
-      <div class="main-right fn-left">
+      <div class="main-right">
         <router-view></router-view>
       </div>
     </div>

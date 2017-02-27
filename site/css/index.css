@@ -416,7 +416,7 @@ table {
 }
 
 .main-right{
-    width: 70%;
+    overflow-x: hidden;
     height: auto;
     padding: 40px 40px;
     /*background: #999;*/
