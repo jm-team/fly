@@ -32,11 +32,11 @@ $tag-color: #0080ca!default;
 
 .tabs a {
   line-height: 36px;
-  padding: 0px 22px;
+  padding: 0 22px;
 }
 
 /* tab干净样式 禁止 */
-.tab-disabled, .tab-disabled > a {
+.tasbs .tab-disabled, .tabs .tab-disabled > a {
   cursor: not-allowed;
   color: $tag-border-color;
 }
@@ -91,7 +91,7 @@ a.tab-disabled:hover {
 /* tab卡片样式 添加 */
 .tab-card .tab-card-add-icon {
   color: $tag-border-color;
-  padding: 0px;
+  padding: 0;
   display: inline-block;
   border: 1px solid $tag-border-color;
   width:20px;
