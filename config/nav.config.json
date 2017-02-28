@@ -5,22 +5,6 @@
       "groupName": "Basic",
       "list": [
         {
-          "path": "/layout",
-          "title": "Layout 布局"
-        },
-        {
-          "path": "/color",
-          "title": "Color 色彩"
-        },
-        {
-          "path": "/typography",
-          "title": "Typography 字体"
-        },
-        {
-          "path": "/icon",
-          "title": "Icon 图标"
-        },
-        {
           "path": "/button",
           "title": "Button 按钮"
         }
@@ -30,6 +14,10 @@
       "groupName": "Form",
       "list": [
         {
+          "path": "/input",
+          "title": "Input 输入框"
+        },
+        {
           "path": "/radio",
           "title": "Radio 单选框"
         },
@@ -38,28 +26,8 @@
           "title": "Checkbox 多选框"
         },
         {
-          "path": "/input",
-          "title": "Input 输入框"
-        },
-        {
-          "path": "/input-number",
-          "title": "InputNumber 计数器"
-        },
-        {
           "path": "/select",
           "title": "Select 选择器"
-        },
-        {
-          "path": "/cascader",
-          "title": "Cascader 级联选择器"
-        },
-        {
-          "path": "/switch",
-          "title": "Switch 开关"
-        },
-        {
-          "path": "/slider",
-          "title": "Slider 滑块"
         },
         {
           "path": "/time-picker",
@@ -76,18 +44,6 @@
         {
           "path": "/upload",
           "title": "Upload 上传"
-        },
-        {
-          "path": "/rate",
-          "title": "Rate 评分"
-        },
-        {
-          "path": "/color-picker",
-          "title": "ColorPicker 颜色选择器"
-        },
-        {
-          "path": "/form",
-          "title": "Form 表单"
         }
       ]
     },
@@ -95,20 +51,8 @@
       "groupName": "Data",
       "list": [
         {
-          "path": "/table",
-          "title": "Table 表格"
-        },
-        {
           "path": "/tag",
           "title": "Tag 标签"
-        },
-        {
-          "path": "/progress",
-          "title": "Progress 进度条"
-        },
-        {
-          "path": "/tree",
-          "title": "Tree 树形控件"
         },
         {
           "path": "/pagination",
@@ -184,18 +128,6 @@
         {
           "path": "/popover",
           "title": "Popover 弹出框"
-        },
-        {
-          "path": "/card",
-          "title": "Card 卡片"
-        },
-        {
-          "path": "/carousel",
-          "title": "Carousel 走马灯"
-        },
-        {
-          "path": "/collapse",
-          "title": "Collapse 折叠面板"
         }
       ]
     }
