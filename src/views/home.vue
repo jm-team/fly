@@ -24,7 +24,7 @@
         <li><a href="/">首页 <span>Home</span></a></li>
         <li><a href="">指南 <span>Guide</span></a></li>
         <li><router-link to="/spec">规范 <span>Standard</span></router-link></li>
-        <li><router-link to="/component">组件 <span>Assembly</span></router-link></li>
+        <li><router-link to="/component/button">组件 <span>Assembly</span></router-link></li>
         <li><a href="">模式 <span>Pattern</span></a></li>
         <li><a href="">资源 <span>Resources</span></a></li>
       </ul>
