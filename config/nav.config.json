@@ -30,19 +30,23 @@
           "title": "Select 选择器"
         },
         {
-          "path": "/time-picker",
+          "path": "/datetime",
+          "type": "time",
           "title": "TimePicker 时间选择器"
         },
         {
-          "path": "/date-picker",
+          "path": "/datetime",
+          "type": "index",
           "title": "DatePicker 日期选择器"
         },
         {
-          "path": "/datetime-picker",
+          "path": "/datetime",
+          "type": "date",
           "title": "DateTimePicker 日期时间选择器"
         },
         {
           "path": "/upload",
+          "type": "index",
           "title": "Upload 上传"
         }
       ]
@@ -68,7 +72,7 @@
       "groupName": "Notice",
       "list": [
         {
-          "path": "/alert",
+          "path": "/alertWarning",
           "title": "Alert 警告"
         },
         {

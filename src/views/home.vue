@@ -13,7 +13,7 @@
       </h3>
       <p>一套为开发者、设计师和产品经理准备的组件库，提供了配套设计资源，帮助你的网站快速成型</p>
       <div class="btn-wrapper">
-        <router-link to="/component" class="btn btn-link">查看内容</router-link>
+        <router-link to="/component/button" class="btn btn-link">查看内容</router-link>
       </div>
     </div>
     <div class="sidebar">

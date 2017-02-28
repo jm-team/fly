@@ -13,7 +13,7 @@
         <ul v-for="group in navList.groups">
           <li class="nav-group-title">{{group.groupName}}</li>
           <li class="nav-group-list" v-for="navItem in group.list">
-            <router-link :to="'/component'+navItem.path">{{navItem.title}}</router-link>
+            <router-link :to="'/component'+navItem.path + (navItem.type ?'?type=' + navItem.type : '')">{{navItem.title}}</router-link>
           </li>
         </ul>
       </template>

@@ -4,7 +4,7 @@
     <div class="main-wrapper fn-clear">
       <left-view></left-view>
       <div class="main-right">
-        <iframe width="100%" height="1354" :src="'../../components/'+ $route.params.name + '/demo/'+ $route.params.name+ '.html'" frameborder="0"></iframe>
+        <iframe width="100%" height="1354" :src="'../../components/'+ $route.params.name + '/demo/'+ ($route.query.type || $route.params.name)+ '.html'" frameborder="0"></iframe>
       </div>
     </div>
     <footer-view></footer-view>
