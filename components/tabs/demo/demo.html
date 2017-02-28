@@ -1,113 +1,794 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Tabs标签页</title>
-    <link rel="stylesheet" href="../style/common.css">
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_ap1nhtkczt1emi.css">
-    <link rel="stylesheet" href="../style/style.css">
+    <title>Tabs 标签页</title>
+    <link rel="stylesheet" href="../../../dep/layer-3.0.1/skin/default/layer.css">
+    <link rel="stylesheet" href="../../../dist/css/fly.css">
+    <link rel="stylesheet" href="../../../site/css/index.css">
+    <link rel="stylesheet" href="../../../site/css/jm-code.css">
+    <script src="../../../dep/jquery-1.11.1/jquery.js"></script>
+    <script src="//cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js"></script>
+    <script src="../../../dep/layer-3.0.1/layer.js"></script>
+    <script src="../../../dist/js/fly.js"></script>
 </head>
-
 <body>
-    <!-- tab干净样式 默认 -->
-    <div class="tab-clear-default-wrap w1190 tabs tab-clear">
-        <ul class="fn-clear tab-clear-default">
-            <li class="fn-left active">
-                <a href="javascript:;">标签一</a>
-            </li>
-            <li class="fn-left">
-                <a href="javascript:;">标签二</a>
-            </li>
-            <li class="fn-left">
-                <a href="javascript:;">标签三</a>
+<!--内页公共导航 开始-->
+<div class="top clearfix">
+    <div class="logo fn-left"></div>
+    <div class="nav fn-right ">
+        <ul class="clearfix">
+            <li class="current fn-left"><a>首页</a></li>
+            <li class="fn-left"><a href="#">指南</a></li>
+            <li class="fn-left"><a href="#">规范</a></li>
+            <li class="fn-left"><a href="#">组件</a></li>
+            <li class="fn-left"><a href="#">模式</a></li>
+            <li class="fn-left"><a href="#">资源</a></li>
+        </ul>
+    </div>
+</div>
+<!--内页公共导航 结束-->
+
+
+<div class="main-wrapper fn-clear">
+    <!--左侧导航开始-->
+    <div class="main-left fn-left">
+        <div class="com-search">
+            <i class="jm-icon jm-icon-search"></i>
+            <input type="text" placeholder="搜索组件名..." _v-6db9881e="" class="search">
+        </div>
+        <div class="nav-item">
+            <h1>组件</h1>
+            <ul>
+                <li class="nav-group-title">General</li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Button</span>
+                        <span>按钮</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Icon</span>
+                        <span>图标</span>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li class="nav-group-title">Form</li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Input</span>
+                        <span>输入框</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Radio</span>
+                        <span>单选框</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Checkbox</span>
+                        <span>多选框</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Select</span>
+                        <span>选择器</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>TimePicker</span>
+                        <span>时间选择器</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>DateTimePicker</span>
+                        <span>日期时间选择器</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Upload</span>
+                        <span>上传</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Rate</span>
+                        <span>评分</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="nav-item">
+            <h1>组件</h1>
+            <ul>
+                <li class="nav-group-title">General</li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Button</span>
+                        <span>按钮</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Icon</span>
+                        <span>图标</span>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li class="nav-group-title">Form</li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Input</span>
+                        <span>输入框</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Radio</span>
+                        <span>单选框</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Checkbox</span>
+                        <span>多选框</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Select</span>
+                        <span>选择器</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>TimePicker</span>
+                        <span>时间选择器</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>DateTimePicker</span>
+                        <span>日期时间选择器</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Upload</span>
+                        <span>上传</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Rate</span>
+                        <span>评分</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="nav-item">
+            <h1>组件</h1>
+            <ul>
+                <li class="nav-group-title">General</li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Button</span>
+                        <span>按钮</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Icon</span>
+                        <span>图标</span>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li class="nav-group-title">Form</li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Input</span>
+                        <span>输入框</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Radio</span>
+                        <span>单选框</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Checkbox</span>
+                        <span>多选框</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Select</span>
+                        <span>选择器</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>TimePicker</span>
+                        <span>时间选择器</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>DateTimePicker</span>
+                        <span>日期时间选择器</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Upload</span>
+                        <span>上传</span>
+                    </a>
+                </li>
+                <li class="nav-group-list">
+                    <a href="">
+                        <span>Rate</span>
+                        <span>评分</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--右侧内容模块-->
+    <div class="main-right fn-left">
+
+        <!--组件标题-->
+        <div class="sub-title mb40" id="use">
+            <h1>Tabs 标签页</h1>
+            <p>选项卡切换组件,常用于平级区域大块内容的收纳和展现。</p>
+        </div>
+        <!-- tab干净样式 默认 -->
+        <div class="sub-layout" id="tips">
+            <div><span class="sub-layout-title">基本用法</span></div>
+            <div class="sub-layout-content clearfix">
+                <div class="fn-left sub-row">
+                    <div class="tabs">
+                        <ul class="fn-clear">
+                            <li class="fn-left">
+                                <a href="javascript:;">标签一</a>
+                            </li>
+                            <li class="fn-left">
+                                <a href="javascript:;">标签二</a>
+                            </li>
+                            <li class="fn-left">
+                                <a href="javascript:;">标签三</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content"></div>
+                    </div>
+                </div>
+                <div class="fn-right sub-note">
+                    <p></p>
+                </div>
+            </div>
+
+            <!-- 代码demo-->
+            <div class="code-demo">
+                <div class="code-demo-title"><span>代码演示</span></div>
+
+                <!-- 展开情况-->
+                <div class="code-demo-display clearfix">
+                    <!-- 代码显示区域-->
+                    <div class="fn-left">
+                        <div class="fn-left demo-display">
+                            <pre>
+                                <code class="JavaScript">
+&lt;div class="tabs"&gt;
+    &lt;ul class="fn-clear"&gt;
+        &lt;li class="fn-left"&gt;
+            &lt;a href="javascript:;"&gt;标签一&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="fn-left"&gt;
+            &lt;a href="javascript:;"&gt;标签二&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="fn-left"&gt;
+            &lt;a href="javascript:;"&gt;标签三&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                        <textarea class="demo-textarea"></textarea>
+                    </div>
+                    <!-- 复制代码-->
+                    <div class="fn-right code-demo-copy">
+                        <input type="button" value="复制代码"/>
+                    </div>
+                    <script>
+                        hljs.initHighlightingOnLoad();
+                    </script>
+                </div>
+                <!-- 收缩情况-->
+                <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+            </div>
+        </div>
+        <!-- tab干净样式 禁用 -->
+        <div class="sub-layout" id="disabled">
+            <div><span class="sub-layout-title">禁用</span></div>
+            <div class="sub-layout-content clearfix">
+                <div class="fn-left sub-row">
+                    <div class="tabs">
+                        <ul class="fn-clear">
+                            <li class="fn-left">
+                                <a href="javascript:;">标签一</a>
+                            </li>
+                            <li class="fn-left" tab-disabled=true>
+                                <a href="javascript:;">标签二</a>
+                            </li>
+                            <li class="fn-left">
+                                <a href="javascript:;">标签三</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content"></div>
+                    </div>
+                </div>
+                <div class="fn-right sub-note">
+                    <p></p>
+                </div>
+            </div>
+
+            <!-- 代码demo-->
+            <div class="code-demo">
+                <div class="code-demo-title"><span>代码演示</span></div>
+
+                <!-- 展开情况-->
+                <div class="code-demo-display clearfix">
+                    <!-- 代码显示区域-->
+                    <div class="fn-left">
+                        <div class="fn-left demo-display">
+                            <pre>
+                                <code class="JavaScript">
+&lt;div class="tabs"&gt;
+    &lt;ul class="fn-clear"&gt;
+        &lt;li class="fn-left"&gt;
+            &lt;a href="javascript:;"&gt;标签一&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="fn-left" tab-disabled=true&gt;
+            &lt;a href="javascript:;"&gt;标签二&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="fn-left"&gt;
+            &lt;a href="javascript:;"&gt;标签三&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                        <textarea class="demo-textarea"></textarea>
+                    </div>
+                    <!-- 复制代码-->
+                    <div class="fn-right code-demo-copy">
+                        <input type="button" value="复制代码"/>
+                    </div>
+                    <script>
+                        hljs.initHighlightingOnLoad();
+                    </script>
+                </div>
+                <!-- 收缩情况-->
+                <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+            </div>
+        </div>
+        <!-- tab干净样式 图标 -->
+        <div class="sub-layout" id="icon">
+            <div><span class="sub-layout-title">图标</span></div>
+            <div class="sub-layout-content clearfix">
+                <div class="fn-left sub-row">
+                    <div class="tabs" current="2">
+                        <ul class="fn-clear">
+                            <li class="fn-left" tab-icon="jm-icon-account">
+                                <a href="javascript:;">
+                                    <span class="tab-title">标签一</span>
+                                </a>
+                            </li>
+                            <li class="fn-left" tab-icon="jm-icon-icon-tupian">
+                                <a href="javascript:;">
+                                    <span class="tab-title">标签二</span>
+                                </a>
+                            </li>
+                            <li class="fn-left" tab-icon="jm-icon-duanxin">
+                                <a href="javascript:;">
+                                    <span class="tab-title">标签三</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content"></div>
+                    </div>
+                </div>
+                <div class="fn-right sub-note">
+                    <p></p>
+                </div>
+            </div>
+
+            <!-- 代码demo-->
+            <div class="code-demo">
+                <div class="code-demo-title"><span>代码演示</span></div>
+
+                <!-- 展开情况-->
+                <div class="code-demo-display clearfix" id="starlist">
+                    <!-- 代码显示区域-->
+                    <div class="fn-left" id="code-display">
+                        <div class="fn-left demo-display" id="demo-display">
+                            <pre>
+                                <code class="JavaScript">
+&lt;div class="tabs" current="2"&gt;
+    &lt;ul class="fn-clear"&gt;
+        &lt;li class="fn-left" tab-icon="jm-icon-account"&gt;
+            &lt;a href="javascript:;"&gt;
+                &lt;span class="tab-title"&gt;标签一&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="fn-left" tab-icon="jm-icon-icon-tupian"&gt;
+            &lt;a href="javascript:;"&gt;
+                &lt;span class="tab-title"&gt;标签二&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="fn-left" tab-icon="jm-icon-duanxin"&gt;
+            &lt;a href="javascript:;"&gt;
+                &lt;span class="tab-title"&gt;标签三&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;                                </code>
+                            </pre>
+                        </div>
+                        <textarea class="demo-textarea"></textarea>
+                    </div>
+                    <!-- 复制代码-->
+                    <div class="fn-right code-demo-copy">
+                        <input type="button" value="复制代码"/>
+                    </div>
+                    <script>
+                        hljs.initHighlightingOnLoad();
+                    </script>
+                </div>
+                <!-- 收缩情况-->
+                <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+            </div>
+        </div>
+        <!-- tab卡片样式 默认-->
+        <div class="sub-layout" id="card">
+            <div><span class="sub-layout-title">卡片样式</span></div>
+            <div class="sub-layout-content clearfix">
+                <div class="fn-left sub-row">
+                    <div class="tabs" tab-type="card">
+                        <ul class="fn-clear">
+                            <li class="fn-left">
+                                <a href="javascript:;">标签一</a>
+                            </li>
+                            <li class="fn-left">
+                                <a href="javascript:;">标签二</a>
+                            </li>
+                            <li class="fn-left">
+                                <a href="javascript:;">标签三</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content"></div>
+                    </div>
+                </div>
+                <div class="fn-right sub-note">
+                    <p></p>
+                </div>
+            </div>
+
+            <!-- 代码demo-->
+            <div class="code-demo">
+                <div class="code-demo-title"><span>代码演示</span></div>
+
+                <!-- 展开情况-->
+                <div class="code-demo-display clearfix">
+                    <!-- 代码显示区域-->
+                    <div class="fn-left">
+                        <div class="fn-left demo-display">
+                            <pre>
+                                <code class="JavaScript">
+&lt;div class="tabs" tab-type="card"&gt;
+    &lt;ul class="fn-clear"&gt;
+        &lt;li class="fn-left"&gt;
+            &lt;a href="javascript:;"&gt;标签一&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="fn-left"&gt;
+            &lt;a href="javascript:;"&gt;标签二&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="fn-left"&gt;
+            &lt;a href="javascript:;"&gt;标签三&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                        <textarea class="demo-textarea"></textarea>
+                    </div>
+                    <!-- 复制代码-->
+                    <div class="fn-right code-demo-copy">
+                        <input type="button" value="复制代码"/>
+                    </div>
+                    <script>
+                        hljs.initHighlightingOnLoad();
+                    </script>
+                </div>
+                <!-- 收缩情况-->
+                <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+            </div>
+        </div>
+        <!-- tab卡片样式 关闭-->
+        <div class="sub-layout" id="closed">
+            <div><span class="sub-layout-title">可关闭</span></div>
+            <div class="sub-layout-content clearfix">
+                <div class="fn-left sub-row">
+                    <div class="tabs" tab-type="card" tab-close=true>
+                        <ul class="fn-clear">
+                            <li class="fn-left">
+                                <a href="javascript:;">
+                                    <span class="tab-title">标签一</span>
+                                </a>
+                            </li>
+                            <li class="fn-left">
+                                <a href="javascript:;">
+                                    <span class="tab-title">标签二</span>
+                                </a>
+                            </li>
+                            <li class="fn-left">
+                                <a href="javascript:;">
+                                    <span class="tab-title">标签三</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content"></div>
+                    </div>
+                </div>
+                <div class="fn-right sub-note">
+                    <p></p>
+                </div>
+            </div>
+
+            <!-- 代码demo-->
+            <div class="code-demo">
+                <div class="code-demo-title"><span>代码演示</span></div>
+
+                <!-- 展开情况-->
+                <div class="code-demo-display clearfix">
+                    <!-- 代码显示区域-->
+                    <div class="fn-left">
+                        <div class="fn-left demo-display">
+                            <pre>
+                                <code class="JavaScript">
+&lt;div class="tabs" tab-type="card" tab-close=true&gt;
+    &lt;ul class="fn-clear"&gt;
+        &lt;li class="fn-left"&gt;
+            &lt;a href="javascript:;"&gt;
+                &lt;span class="tab-title"&gt;标签一&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="fn-left"&gt;
+            &lt;a href="javascript:;"&gt;
+                &lt;span class="tab-title"&gt;标签二&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="fn-left"&gt;
+            &lt;a href="javascript:;"&gt;
+                &lt;span class="tab-title"&gt;标签三&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;                                </code>
+                            </pre>
+                        </div>
+                        <textarea class="demo-textarea"></textarea>
+                    </div>
+                    <!-- 复制代码-->
+                    <div class="fn-right code-demo-copy">
+                        <input type="button" value="复制代码"/>
+                    </div>
+                    <script>
+                        hljs.initHighlightingOnLoad();
+                    </script>
+                </div>
+                <!-- 收缩情况-->
+                <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+            </div>
+        </div>
+
+        <!-- tab卡片样式 关闭.添加-->
+        <div class="sub-layout" id="add">
+            <div><span class="sub-layout-title">动态增加</span></div>
+            <div class="sub-layout-content clearfix">
+                <div class="fn-left sub-row">
+                    <div class="tabs" tab-type="card" tab-close="true" tab-add="true">
+                        <ul class="fn-clear">
+                            <li class="fn-left">
+                                <a href="javascript:;">
+                                    <span class="tab-title">标签一</span>
+                                </a>
+                            </li>
+                            <li class="fn-left">
+                                <a href="javascript:;">
+                                    <span class="tab-title">标签二</span>
+                                </a>
+                            </li>
+                            <li class="fn-left">
+                                <a href="javascript:;">
+                                    <span class="tab-title">标签三</span>
+                                </a>
+                            </li>
+                            <a class="jm-icon jm-icon-add fn-right tab-card-add-icon" href="javascript:;"></a>
+                        </ul>
+                        <div class="tab-content"></div>
+                    </div>
+                </div>
+                <div class="fn-right sub-note">
+                    <p></p>
+                </div>
+            </div>
+
+            <!-- 代码demo-->
+            <div class="code-demo">
+                <div class="code-demo-title"><span>代码演示</span></div>
+
+                <!-- 展开情况-->
+                <div class="code-demo-display clearfix">
+                    <!-- 代码显示区域-->
+                    <div class="fn-left">
+                        <div class="fn-left demo-display">
+                            <pre>
+                                <code class="JavaScript">
+&lt;div class="tabs" tab-type="card" tab-close="true" tab-add="true"&gt;
+    &lt;ul class="fn-clear"&gt;
+        &lt;li class="fn-left"&gt;
+            &lt;a href="javascript:;"&gt;
+                &lt;span class="tab-title"&gt;标签一&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="fn-left"&gt;
+            &lt;a href="javascript:;"&gt;
+                &lt;span class="tab-title"&gt;标签二&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="fn-left"&gt;
+            &lt;a href="javascript:;"&gt;
+                &lt;span class="tab-title"&gt;标签三&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;a class="jm-icon jm-icon-add fn-right tab-card-add-icon" href="javascript:;"&gt;&lt;/a&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                        <textarea class="demo-textarea"></textarea>
+                    </div>
+                    <!-- 复制代码-->
+                    <div class="fn-right code-demo-copy">
+                        <input type="button" value="复制代码"/>
+                    </div>
+                    <script>
+                        hljs.initHighlightingOnLoad();
+                    </script>
+                </div>
+                <!-- 收缩情况-->
+                <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+            </div>
+        </div>
+        <!--字体使用规范-->
+        <div class="api-table mt20" id="api">
+            <h1>API</h1>
+            <div class="font-use-norm">
+                <table class="norm-table">
+                    <thead>
+                    <tr class="norm-height bor-bottom">
+                        <th class="width-15 ">类别</th>
+                        <th class="width-5"></th>
+                        <th class="width-15">属性名</th>
+                        <th class="width-5"></th>
+                        <th class="width-15">类型</th>
+                        <th class="width-5"></th>
+                        <th class="width-15">默认值</th>
+                    </tr>
+
+
+                    </thead>
+                    <tbody>
+                    <tr class="norm-height">
+                        <td class="width-15 ">类型</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-main-title">tab-type</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">String</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">default</td>
+                    </tr>
+
+                    <tr class="norm-height">
+                        <td class="width-15 ">禁用</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-main-title">tab-disabled</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">Boolean</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">false</td>
+                    </tr>
+
+                    <tr class="norm-height">
+                        <td class="width-15 ">关闭</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-main-title">tab-close</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">Boolean</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">false</td>
+                    </tr>
+
+                    <tr class="norm-height">
+                        <td class="width-15 ">图标</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-main-title">tab-icon</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">String</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15"></td>
+                    </tr>
+
+                    <tr class="norm-height">
+                        <td class="width-15 ">添加</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-main-title">tab-add</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">Boolean</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">false</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <!-- 漂浮导航-->
+    <div class="nav-float fn-left">
+        <ul class="nav-list">
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#use">概述</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#tips">基础用法</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#disabled">禁用</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#icon">图标</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#card">卡片样式</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#closed">可关闭</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#add">动态增加</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#api">API</a>
             </li>
         </ul>
-        <div class="tab-content"></div>
     </div>
-    <!-- tab干净样式 禁止 -->
-    <div class="tab-clear-disabled-wrap w1190 tabs tab-clear">
-        <ul class="fn-clear tab-clear-disabled">
-            <li class="fn-left active">
-                <a href="javascript:;">标签一</a>
-            </li>
-            <li class="fn-left" jm-disabled='true'>
-                <a href="javascript:;">标签二</a>
-            </li>
-            <li class="fn-left">
-                <a href="javascript:;">标签三</a>
-            </li>
-        </ul>
-        <div class="tab-content"></div>
-    </div>
-    <!-- tab干净样式 icon -->
-    <div class="tab-clear-icon-wrap w1190 tabs tab-clear">
-        <ul class="fn-clear tab-clear-icon">
-            <li class="fn-left active">
-                <a class="jm-icon jm-icon-account" href="javascript:;">标签一</a>
-            </li>
-            <li class="fn-left">
-                <a class="jm-icon jm-icon-icon-tupian" href="javascript:;">标签二</a>
-            </li>
-            <li class="fn-left">
-                <a class="jm-icon jm-icon-duanxin" href="javascript:;">标签三</a>
-            </li>
-        </ul>
-        <div class="tab-content"></div>
-    </div>
-    <!-- tab卡片样式 默认-->
-    <div class="tab-card-default-wrap w1190 tabs tab-card">
-        <ul class="fn-clear tab-card-default">
-            <li class="fn-left active">
-                <a href="javascript:;">标签一</a>
-            </li>
-            <li class="fn-left">
-                <a href="javascript:;">标签二</a>
-            </li>
-            <li class="fn-left">
-                <a href="javascript:;">标签三</a>
-            </li>
-        </ul>
-        <div class="tab-content"></div>
-    </div>
-    <!-- tab卡片样式 关闭-->
-    <div class="tab-card-close-wrap w1190 tabs tab-card">
-        <ul class="fn-clear tab-card-close">
-            <li class="fn-left active">
-                <a href="javascript:;">标签一</a>
-                <i class="jm-icon jm-icon-wrong"></i>
-            </li>
-            <li class="fn-left">
-                <a href="javascript:;">标签二</a>
-                <i class="jm-icon jm-icon-wrong"></i>
-            </li>
-            <li class="fn-left">
-                <a href="javascript:;">标签三</a>
-                <i class="jm-icon jm-icon-wrong"></i>
-            </li>
-        </ul>
-        <div class="tab-content"></div>
-    </div>
-    <!-- tab卡片样式 关闭.添加-->
-    <div class="tab-card-add-wrap w1190 tabs tab-card ">
-        <ul class="fn-clear tab-card-add">
-            <li class="fn-left active">
-                <a href="javascript:;">标签一</a>
-                <i class="jm-icon jm-icon-wrong"></i>
-            </li>
-            <li class="fn-left">
-                <a href="javascript:;">标签二</a>
-                <i class="jm-icon jm-icon-wrong"></i>
-            </li>
-            <li class="fn-left">
-                <a href="javascript:;">标签三</a>
-                <i class="jm-icon jm-icon-wrong"></i>
-            </li>
-            <a class="jm-icon jm-icon-jiahao fn-right tab-card-add-icon" href="javascript:;"></a>
-        </ul>
-        <div class="tab-content"></div>
-    </div>
+</div>
+
+<!--页脚-->
+<div class="footer clearfix">
+    <p class="fn-left">JuMore Component library 版权所有</p>
+    <span class="fn-right "></span>
+</div>
+<!-- 复制代码-->
+<script type="text/javascript" src="../../../site/js/site.js"></script>
+<script type="text/javascript">
+    $('.code-demo-copy').jmCopy();
+</script>
 </body>
-<script src="../../../dep/jquery-1.11.1/jquery.min.js"></script>
-<script type="text/javascript" src="../tabs.js"></script>
 </html>

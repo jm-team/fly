@@ -20,7 +20,6 @@ $(function () {
     $('.code-show').on('click', function () {
         let i = $(this).children('i'),
             div = $(this).prev('.code-demo-display');
-        console.log(div);
         if (i.hasClass('jm-icon-down-copy')) {
             i.removeClass('jm-icon-down-copy').addClass('jm-icon-up-copy');
             div.slideDown()

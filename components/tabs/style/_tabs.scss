@@ -1,0 +1,107 @@
+$tag-border-color: #ddd!default;
+$tag-color: #0080ca!default;
+
+
+/* tab干净样式  默认*/
+.tabs {
+  margin-bottom: 30px;
+}
+
+.tabs > ul {
+  border-bottom: 1px solid $tag-border-color;
+}
+
+.tab-clear li {
+  position: relative;
+  top: 1px;
+}
+
+.tab-card li{
+  position: relative;
+  top: 1px;
+}
+
+.tab-clear li.active > a,
+.tab-card li.active > a {
+  color: $tag-color;
+}
+
+.tab-clear li.active {
+  border-bottom: 2px solid $tag-color;
+}
+
+.tabs a {
+  line-height: 36px;
+  padding: 0 22px;
+}
+
+/* tab干净样式 禁止 */
+.tasbs .tab-disabled, .tabs .tab-disabled > a {
+  cursor: not-allowed;
+  color: $tag-border-color;
+}
+
+.tab-disabled > a:hover,
+a.tab-disabled:hover {
+  color: $tag-border-color;
+}
+
+.tab-disabled:hover {
+  color: $tag-border-color;
+}
+
+/* tab干净样式 icon */
+.tab-card .jm-icon {
+  font-size: 14px;
+}
+
+.tab-clear .jm-icon {
+  font-size: 16px;
+}
+
+/* tab卡片样式 默认 */
+.tab-card li {
+  background-color: #f6f6f6;
+  margin-right: 10px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border: 1px solid $tag-border-color;
+}
+
+.tab-card li.active {
+  background-color: #fff;
+  border-bottom-color: #fff;
+}
+
+/* tab卡片样式 关闭 */
+.tab-card li > i {
+  display: none;
+}
+
+.tab-card li.active > i {
+  display: block;
+  font-size: 12px;
+  color: $tag-color;
+  position: absolute;
+  right: -5px;
+  top: 10px;
+  cursor: pointer;
+}
+
+/* tab卡片样式 添加 */
+.tab-card .tab-card-add-icon {
+  color: $tag-border-color;
+  padding: 0;
+  display: inline-block;
+  border: 1px solid $tag-border-color;
+  width:20px;
+  height:20px;
+  font-size:12px;
+  margin:9px 15px 0 0;
+  line-height:20px;
+  text-align: center;
+  &:hover{
+    color: $tag-color;
+    border-color: $tag-color;
+  }
+}
