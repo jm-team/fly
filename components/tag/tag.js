@@ -28,7 +28,7 @@ $(function() {
     $('.tag-dynamic').on('blur', 'input', function(e) {
         e.preventDefault();
         var self = $(this);
-        var value = self.val();
+        var value = self.val().trim();
         if (value) {
             var oTag = $('<a href="javascript:;">').text(value);
             // 添加自定义标签
