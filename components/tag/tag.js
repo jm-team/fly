@@ -3,8 +3,8 @@ $(function() {
     // 删除input框 增加添加标签
     function addTag(selector) {
         var oAdd = $('<a href="javascript:;">').addClass('tag-add');
-        oAdd.append($('<i class="jm-icon jm-icon-add">'));
-        oAdd.append($('<em>').text('添加标签'));
+        oAdd.text('添加标签');
+        oAdd.prepend($('<i class="jm-icon jm-icon-add">'));
         $(selector).parent().append(oAdd).end().remove();
     }
 
@@ -46,12 +46,24 @@ $(function() {
         var self = $(this);
         if(e.which === 13){
             self.trigger('blur');
-        }     
+        }
     });
 
     // tag 可点击
-    $('.tag-clear').on('click', 'a', function(e){
+    $('.tag').on('click', 'a', function(e){
     	var self = $(this);
     	self.toggleClass('active');
+    })
+
+    // tag 颜色设置
+    $('.tag a').each(function () {
+      var $self = $(this),
+          color = $self.attr('color');
+      if(color){
+        $self.css({
+          color:color,
+          border:'1px solid' + color
+        })
+      }
     })
 })

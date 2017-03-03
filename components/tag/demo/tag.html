@@ -1,46 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Tag标签</title>
-	<link rel="stylesheet" href="../style/common.css">
-	<link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_3xxedbi13llvunmi.css">
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="../../../dep/layer-3.0.1/skin/default/layer.css">
+  <link rel="stylesheet" href="../../../dist/css/fly.css">
+  <link rel="stylesheet" href="../../../site/css/index.css">
+  <link rel="stylesheet" href="../../../site/css/jm-code.css">
+  <script src="../../../dep/jquery-1.11.1/jquery.js"></script>
+  <script src="//cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js"></script>
+  <script src="../../../dep/layer-3.0.1/layer.js"></script>
+  <script src="../../../dist/js/fly.js"></script>
 </head>
 <body>
-	<!-- tag 标签基础示例 -->
-	<div class="w1190">
-		<span>标签一</span>
-		<span>标签二</span>
-		<span>标签三</span>
-	</div>
-	<!-- tag标签 添加与删除 -->
-	<div class="w1190 tag-dynamic">
-		<a href="javascript:;">标签一<i class="jm-icon jm-icon-wrong"></i></a>
-		<a href="javascript:;">标签二<i class="jm-icon jm-icon-wrong"></i></a>
-		<a href="javascript:;">标签三<i class="jm-icon jm-icon-wrong"></i></a>
-		<a href="javascript:;" class="tag-add"><i class="jm-icon jm-icon-add"></i><em>添加标签</em></a>
-	</div>
-	<!-- tag 热门标签示例 -->
-	<div class="w1190 tag-clear">
-		<span>标签一</span>
-		<span>标签二</span>
-		<span>标签三</span>
-	</div>
-	<!-- tag 标签可选择示例 -->
-	<div class="w1190 tag-clear">
-		<a class="active" href="javascript:;">标签一</a>
-		<a href="javascript:;">标签二</a>
-		<a href="javascript:;">标签三</a>
-	</div>
-	<!-- tag 多彩标签示例 -->
-	<div class="w1190">
-		<span class="tag-color-8ec81c">标签一</span>
-		<span class="tag-color-f2aa00">标签二</span>
-		<span class="tag-color-e86261">标签三</span>
-		<span class="tag-color-0080cb">标签四</span>
-	</div>
+
+<div class="main-wrapper fn-clear">
+
+  <!--右侧内容模块-->
+  <div class="main-right">
+
+    <!--组件标题-->
+    <div class="sub-title mb40" id="use">
+      <h1>Tag 标签</h1>
+      <p>进行标记和分类的小标签</p>
+    </div>
+    <!--基础用法-->
+    <div class="sub-layout" id="tips">
+      <div><span class="sub-layout-title">基本用法&尺寸</span></div>
+      <div class="sub-layout-content clearfix">
+        <div class="fn-left sub-row">
+          <!-- tag 标签基础示例 -->
+          <div class="tag">
+            <a href="javascript:;">标签一</a>
+            <a href="javascript:;">标签二</a>
+            <a href="javascript:;">标签三</a>
+          </div>
+        </div>
+        <div class="fn-right sub-note">
+          <p>基本用法</p>
+        </div>
+      </div>
+
+      <!-- 代码demo-->
+      <div class="code-demo">
+        <div class="code-demo-title"><span>代码演示</span></div>
+
+        <!-- 展开情况-->
+        <div class="code-demo-display clearfix">
+          <!-- 代码显示区域-->
+          <div class="fn-left code-display">
+            <div class="fn-left demo-display">
+                            <pre>
+                                <code class="JavaScript">
+&lt;div class="tag"&gt;
+  &lt;a href="javascript:;"&gt;标签一&lt;/a&gt;
+  &lt;a href="javascript:;"&gt;标签二&lt;/a&gt;
+  &lt;a href="javascript:;"&gt;标签三&lt;/a&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+            </div>
+            <textarea class="demo-textarea"></textarea>
+          </div>
+          <!-- 复制代码-->
+          <div class="fn-right code-demo-copy">
+            <input type="button" value="复制代码"/>
+          </div>
+          <script>
+            hljs.initHighlightingOnLoad();
+          </script>
+        </div>
+        <!-- 收缩情况-->
+        <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+      </div>
+    </div>
+    <!--动态添加与删除-->
+    <div class="sub-layout" id="dynamic">
+      <div><span class="sub-layout-title">动态添加与删除</span></div>
+      <div class="sub-layout-content clearfix">
+        <div class="fn-left sub-row">
+          <!-- tag标签 添加与删除 -->
+          <div class="tag tag-dynamic">
+            <a href="javascript:;">标签一<i class="jm-icon jm-icon-wrong"></i></a>
+            <a href="javascript:;">标签二<i class="jm-icon jm-icon-wrong"></i></a>
+            <a href="javascript:;">标签三<i class="jm-icon jm-icon-wrong"></i></a>
+            <a href="javascript:;" class="tag-add"><i class="jm-icon jm-icon-add"></i>添加标签</a>
+          </div>
+        </div>
+        <div class="fn-right sub-note">
+          <p>可动态添加和删除</p>
+        </div>
+      </div>
+
+      <!-- 代码demo-->
+      <div class="code-demo">
+        <div class="code-demo-title"><span>代码演示</span></div>
+
+        <!-- 展开情况-->
+        <div class="code-demo-display clearfix">
+          <!-- 代码显示区域-->
+          <div class="fn-left code-display">
+            <div class="fn-left demo-display">
+                            <pre>
+                                <code class="JavaScript">
+&lt;div class="tag tag-dynamic"&gt;
+  &lt;a href="javascript:;"&gt;标签一&lt;i class="jm-icon jm-icon-wrong"&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;a href="javascript:;"&gt;标签二&lt;i class="jm-icon jm-icon-wrong"&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;a href="javascript:;"&gt;标签三&lt;i class="jm-icon jm-icon-wrong"&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;a href="javascript:;" class="tag-add"&gt;&lt;i class="jm-icon jm-icon-add"&gt;&lt;/i&gt;添加标签&lt;/a&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+            </div>
+            <textarea class="demo-textarea"></textarea>
+          </div>
+          <!-- 复制代码-->
+          <div class="fn-right code-demo-copy">
+            <input type="button" value="复制代码"/>
+          </div>
+          <script>
+            hljs.initHighlightingOnLoad();
+          </script>
+        </div>
+        <!-- 收缩情况-->
+        <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+      </div>
+    </div>
+    <!--热门标签-->
+    <div class="sub-layout" id="hot">
+      <div><span class="sub-layout-title">热门标签</span></div>
+      <div class="sub-layout-content clearfix">
+        <div class="fn-left sub-row">
+          <!-- tag 热门标签示例 -->
+          <div class="tag tag-clear">
+            <a href="javascript:;">标签一</a>
+            <a href="javascript:;">标签二</a>
+            <a href="javascript:;">标签三</a>
+          </div>
+        </div>
+        <div class="fn-right sub-note">
+          <p>选择你感兴趣的话题。</p>
+        </div>
+      </div>
+
+      <!-- 代码demo-->
+      <div class="code-demo">
+        <div class="code-demo-title"><span>代码演示</span></div>
+
+        <!-- 展开情况-->
+        <div class="code-demo-display clearfix">
+          <!-- 代码显示区域-->
+          <div class="fn-left code-display">
+            <div class="fn-left demo-display">
+                            <pre>
+                                <code class="JavaScript">
+&lt;div class="tag tag-clear"&gt;
+  &lt;a href="javascript:;"&gt;标签一&lt;/a&gt;
+  &lt;a href="javascript:;"&gt;标签二&lt;/a&gt;
+  &lt;a href="javascript:;"&gt;标签三&lt;/a&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+            </div>
+            <textarea class="demo-textarea"></textarea>
+          </div>
+          <!-- 复制代码-->
+          <div class="fn-right code-demo-copy">
+            <input type="button" value="复制代码"/>
+          </div>
+          <script>
+            hljs.initHighlightingOnLoad();
+          </script>
+        </div>
+        <!-- 收缩情况-->
+        <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+      </div>
+    </div>
+    <!--当前选择-->
+    <div class="sub-layout" id="active">
+      <div><span class="sub-layout-title">当前选择</span></div>
+      <div class="sub-layout-content clearfix">
+        <div class="fn-left sub-row">
+          <!-- tag 标签可选择示例 -->
+          <div class="tag tag-clear">
+            <a class="active" href="javascript:;">标签一</a>
+            <a href="javascript:;">标签二</a>
+            <a href="javascript:;">标签三</a>
+          </div>
+        </div>
+        <div class="fn-right sub-note">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- 代码demo-->
+      <div class="code-demo">
+        <div class="code-demo-title"><span>代码演示</span></div>
+
+        <!-- 展开情况-->
+        <div class="code-demo-display clearfix">
+          <!-- 代码显示区域-->
+          <div class="fn-left code-display">
+            <div class="fn-left demo-display">
+                            <pre>
+                                <code class="JavaScript">
+&lt;div class="tag tag-clear"&gt;
+  &lt;a class="active" href="javascript:;"&gt;标签一&lt;/a&gt;
+  &lt;a href="javascript:;"&gt;标签二&lt;/a&gt;
+  &lt;a href="javascript:;"&gt;标签三&lt;/a&gt;
+&lt;div&gt;
+                                </code>
+                            </pre>
+            </div>
+            <textarea class="demo-textarea"></textarea>
+          </div>
+          <!-- 复制代码-->
+          <div class="fn-right code-demo-copy">
+            <input type="button" value="复制代码"/>
+          </div>
+          <script>
+            hljs.initHighlightingOnLoad();
+          </script>
+        </div>
+        <!-- 收缩情况-->
+        <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+      </div>
+    </div>
+    <!--各种颜色-->
+    <div class="sub-layout" id="color">
+      <div><span class="sub-layout-title">各种颜色</span></div>
+      <div class="sub-layout-content clearfix">
+        <div class="fn-left sub-row">
+          <!-- tag 多彩标签示例 -->
+          <div class="tag tag-color">
+            <a href="javascript:;" color="#8ec81c">标签一</a>
+            <a href="javascript:;" color="#f2aa00">标签二</a>
+            <a href="javascript:;" color="#e86261">标签三</a>
+            <a href="javascript:;" color="#0080cb">标签四</a>
+          </div>
+        </div>
+        <div class="fn-right sub-note">
+          <p>基本标签可以通过color设置背景色，以提供视觉暗示区不同的目的标签</p>
+        </div>
+      </div>
+
+      <!-- 代码demo-->
+      <div class="code-demo">
+        <div class="code-demo-title"><span>代码演示</span></div>
+
+        <!-- 展开情况-->
+        <div class="code-demo-display clearfix">
+          <!-- 代码显示区域-->
+          <div class="fn-left code-display">
+            <div class="fn-left demo-display">
+                            <pre>
+                                <code class="JavaScript">
+&lt;div class="tag tag-color"&gt;
+  &lt;a href="javascript:;" color="#8ec81c"&gt;标签一&lt;/a&gt;
+  &lt;a href="javascript:;" color="#f2aa00"&gt;标签二&lt;/a&gt;
+  &lt;a href="javascript:;" color="#e86261"&gt;标签三&lt;/a&gt;
+  &lt;a href="javascript:;" color="#0080cb"&gt;标签四&lt;/a&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+            </div>
+            <textarea class="demo-textarea"></textarea>
+          </div>
+          <!-- 复制代码-->
+          <div class="fn-right code-demo-copy">
+            <input type="button" value="复制代码"/>
+          </div>
+          <script>
+            hljs.initHighlightingOnLoad();
+          </script>
+        </div>
+        <!-- 收缩情况-->
+        <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+      </div>
+    </div>
+
+
+    <!--字体使用规范-->
+    <div class="api-table mt20" id="api">
+      <h1>字体使用规范</h1>
+      <div class="font-use-norm">
+        <table class="norm-table">
+          <thead>
+          <tr class="norm-height bor-bottom">
+            <th class="width-15 ">类别</th>
+            <th class="width-5"></th>
+            <th class="width-15">属性</th>
+            <th class="width-5"></th>
+            <th class="width-15">类型</th>
+            <th class="width-5"></th>
+            <th class="width-15">默认值</th>
+          </tr>
+
+
+          </thead>
+          <tbody>
+          <tr class="norm-height">
+            <td class="width-15 ">颜色</td>
+            <td class="width-5 border"></td>
+            <td class="width-15 font-main-title">color</td>
+            <td class="width-5 border"></td>
+            <td class="width-15">String</td>
+            <td class="width-5 border"></td>
+            <td class="width-15"></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+  <!-- 漂浮导航-->
+  <div class="nav-float fn-left">
+    <ul class="">
+      <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#use">概述</a></li>
+      <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#tips">基础用法</a></li>
+      <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#dynamic">动态添加与删除</a></li>
+      <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#hot">热门标签</a></li>
+      <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#active">当前标签</a></li>
+      <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#color">各种颜色</a></li>
+      <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#api">API</a>
+      </li>
+    </ul>
+  </div>
+
+
+</div>
+
+<!--页脚-->
+<div class="footer clearfix">
+  <p class="fn-left">JuMore Component library 版权所有</p>
+  <span class="fn-right "></span>
+</div>
+<!-- 复制代码-->
+<script type="text/javascript" src="../../../site/js/site.js"></script>
+<script src="../tag.js"></script>
+<script>
+  $('.code-demo-copy').jmCopy()
+</script>
 </body>
-<script src="../../../dep/jquery-1.11.1/jquery.min.js"></script>
-<script type="text/javascript" src="../tag.js"></script>
 </html>
