@@ -53,7 +53,7 @@
     button,
     input {
         border:1px solid #ccc;
-        border-color:#fff;
+        background-color:#fff;
     }
 
     * {
@@ -81,6 +81,7 @@
         height:34px;
         line-height:34px;
         border-radius:2px;
+        box-sizing: initial;
     }
 
     input {
@@ -173,6 +174,27 @@
     }
 }
 
+.jm-pageskin_default.jm-page_sm {
+    a {
+        border:1px solid #ccc;
+        background-color:#fff;
+    }
+
+    span {
+        height:22px;
+        line-height:22px;
+        color:#777;
+    }
+
+    .jm-page_curr {
+        color:#fff;
+        min-width:10px;
+        height:22px;
+        line-height:22px;
+        background: #0080cb;
+    }
+}
+
 .jm-page_main.jm-page_sm {
     a,
     input,
@@ -200,9 +222,9 @@
     span {
         margin:0 2px 6px;
         padding:0 6px;
-        min-width:8px;
-        height:20px;
-        line-height:20px;
+        min-width:10px;
+        height:22px;
+        line-height:22px;
         border-radius:2px;
     }
 
@@ -213,27 +235,6 @@
         padding:0 6px;
         color:#777;
         border-radius:2px;
-    }
-}
-
-.jm-pageskin_default.jm-page_sm {
-    a {
-        border:1px solid #ccc;
-        background-color:#fff;
-    }
-
-    span {
-        height:22px;
-        line-height:22px;
-        color:#777;
-    }
-
-    .jm-page_curr {
-        color:#fff;
-        min-width:10px;
-        height:22px;
-        line-height:22px;
-        background: #0080cb;
     }
 }
 

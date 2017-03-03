@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Badge 标记</title>
+    <link rel="stylesheet" href="../../../dep/layer-3.0.1/skin/default/layer.css">
+    <link rel="stylesheet" href="../../../dist/css/fly.css">
+    <link rel="stylesheet" href="../../../site/css/index.css">
+    <link rel="stylesheet" href="../../../site/css/jm-code.css">
+    <script src="../../../dep/jquery-1.11.1/jquery.js"></script>
+    <script src="//cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js"></script>
+    <script src="../../../dep/layer-3.0.1/layer.js"></script>
+    <script src="../../../dist/js/fly.js"></script>
+</head>
+<body>
+<div class="main-wrapper fn-clear">
+    <!--右侧内容模块-->
+    <div class="main-right">
+
+        <!--组件标题-->
+        <div class="sub-title mb40" id="use">
+            <h1>Badge 标记</h1>
+            <p>出现在按钮、图标旁的数字或状态标记。</p>
+        </div>
+        <!-- badge 基础样式 -->
+        <div class="sub-layout" id="tips">
+            <div><span class="sub-layout-title">基本用法</span></div>
+            <div class="sub-layout-content clearfix">
+                <div class="fn-left sub-row">
+                    <div class="badge-case">
+                        <span class="badge-bg"><em class="badge-text"></em><i class="icon-badge" count="1"></i></span>
+                        <span class="badge-clear"><em class="badge-text">文字</em><i class="icon-badge" count="1"></i></span>
+                    </div>
+                </div>
+                <div class="fn-right sub-note">
+                    <p>展示新消息数量。</p>
+                </div>
+            </div>
+
+            <!-- 代码demo-->
+            <div class="code-demo">
+                <div class="code-demo-title"><span>代码演示</span></div>
+
+                <!-- 展开情况-->
+                <div class="code-demo-display clearfix" id="starlist">
+                    <!-- 代码显示区域-->
+                    <div class="fn-left" id="code-display">
+                        <div class="fn-left demo-display" id="demo-display">
+                            <pre>
+                                <code class="JavaScript">
+&lt;div&gt;
+    &lt;span class="badge-bg"&gt;
+        &lt;em class="badge-text"&gt;&lt;/em&gt;
+        &lt;i class="icon-badge" count="1"&gt;&lt;/i&gt;
+    &lt;/span&gt;
+    &lt;span class="badge-clear"&gt;
+        &lt;em class="badge-text"&gt;文字&lt;/em&gt;
+        &lt;i class="icon-badge" count="1"&gt;&lt;/i&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                        <textarea class="demo-textarea"></textarea>
+                    </div>
+                    <!-- 复制代码-->
+                    <div class="fn-right code-demo-copy">
+                        <input type="button" value="复制代码"/>
+                    </div>
+                    <script>
+                        hljs.initHighlightingOnLoad();
+                    </script>
+                </div>
+                <!-- 收缩情况-->
+                <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+            </div>
+        </div>
+        <!-- badge 封顶数字 -->
+        <div class="sub-layout" id="dynamic">
+            <div><span class="sub-layout-title">封顶数字</span></div>
+            <div class="sub-layout-content clearfix">
+                <div class="fn-left sub-row">
+                    <div class="badge-dynamic badge-case">
+                        <span class="badge-bg">
+                            <em class="badge-text"></em>
+                            <i overflow="9" count="10"
+                               class="icon-badge"></i>
+                        </span>
+                        <span class="badge-bg">
+                            <em class="badge-text"></em>
+                            <i overflow="99" count="100" class="icon-badge"></i>
+                        </span>
+                        <span class="badge-bg">
+                            <em class="badge-text"></em>
+                            <i overflow="999" count="1000" class="icon-badge"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="fn-right sub-note">
+                    <p>可以自定义最大值。</p>
+                </div>
+            </div>
+
+            <!-- 代码demo-->
+            <div class="code-demo">
+                <div class="code-demo-title"><span>代码演示</span></div>
+
+                <!-- 展开情况-->
+                <div class="code-demo-display clearfix">
+                    <!-- 代码显示区域-->
+                    <div class="fn-left">
+                        <div class="fn-left demo-display">
+                            <pre>
+                                <code class="JavaScript">
+&lt;div class="badge-dynamic"&gt;
+  &lt;span class="badge-bg"&gt;
+      &lt;em class="badge-text"&gt;&lt;/em&gt;
+      &lt;i overflow="9" count="10" class="icon-badge"&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  &lt;span class="badge-bg"&gt;
+      &lt;em class="badge-text"&gt;&lt;/em&gt;
+      &lt;i overflow="99" count="100" class="icon-badge"&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  &lt;span class="badge-bg"&gt;
+      &lt;em class="badge-text"&gt;&lt;/em&gt;
+      &lt;i overflow="999" count="1000" class="icon-badge"&gt;&lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                        <textarea class="demo-textarea"></textarea>
+                    </div>
+                    <!-- 复制代码-->
+                    <div class="fn-right code-demo-copy">
+                        <input type="button" value="复制代码"/>
+                    </div>
+                    <script>
+                        hljs.initHighlightingOnLoad();
+                    </script>
+                </div>
+                <!-- 收缩情况-->
+                <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+            </div>
+        </div>
+        <!-- badge 红点样式 -->
+        <div class="sub-layout" id="point">
+            <div><span class="sub-layout-title">小红点</span></div>
+            <div class="sub-layout-content clearfix">
+                <div class="fn-left sub-row">
+                    <div class="badge-point badge-case">
+                        <span class="badge-bg"><em class="badge-text"></em><i class="icon-badge-point"></i></span>
+                        <span class="badge-clear"><em class="badge-text">文字</em><i class="icon-badge-point"></i></span>
+                    </div>
+                </div>
+                <div class="fn-right sub-note">
+                    <p>以红点的形式标注需要关注的内容。</p>
+                </div>
+            </div>
+
+            <!-- 代码demo-->
+            <div class="code-demo">
+                <div class="code-demo-title"><span>代码演示</span></div>
+
+                <!-- 展开情况-->
+                <div class="code-demo-display clearfix">
+                    <!-- 代码显示区域-->
+                    <div class="fn-left">
+                        <div class="fn-left demo-display">
+                            <pre>
+                                <code class="JavaScript">
+&lt;div class="badge-point"&gt;
+    &lt;span class="badge-bg"&gt;
+        &lt;em class="badge-text"&gt;&lt;/em&gt;
+        &lt;i class="icon-badge-point"&gt;&lt;/i&gt;
+    &lt;/span&gt;
+    &lt;span class="badge-clear"&gt;
+        &lt;em class="badge-text"&gt;文字&lt;/em&gt;
+        &lt;i class="icon-badge-point"&gt;&lt;/i&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                        <textarea class="demo-textarea"></textarea>
+                    </div>
+                    <!-- 复制代码-->
+                    <div class="fn-right code-demo-copy">
+                        <input type="button" value="复制代码"/>
+                    </div>
+                    <script>
+                        hljs.initHighlightingOnLoad();
+                    </script>
+                </div>
+                <!-- 收缩情况-->
+                <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+            </div>
+        </div>
+        <!-- badge 单独样式 -->
+        <div class="sub-layout" id="bubble">
+            <div><span class="sub-layout-title">独立使用</span></div>
+            <div class="sub-layout-content clearfix">
+                <div class="fn-left sub-row">
+                    <div class="badge-case badge-bubble">
+                        <i class="icon-badge" count="9" overflow="99"></i>
+                        <i class="icon-badge" count="100" overflow="99"></i>
+                        <i class="icon-badge-clear icon-badge" count="999" overflow="999"></i>
+                    </div>
+                </div>
+                <div class="fn-right sub-note">
+                    <p>不包裹任何元素即是独立使用，可自定样式展现。</p>
+                </div>
+            </div>
+
+            <!-- 代码demo-->
+            <div class="code-demo">
+                <div class="code-demo-title"><span>代码演示</span></div>
+
+                <!-- 展开情况-->
+                <div class="code-demo-display clearfix">
+                    <!-- 代码显示区域-->
+                    <div class="fn-left">
+                        <div class="fn-left demo-display">
+                            <pre>
+                                <code class="JavaScript">
+&lt;div class="badge-bubble"&gt;
+    &lt;i class="icon-badge" count="9" overflow="99"&gt;&lt;/i&gt;
+    &lt;i class="icon-badge" count="100" overflow="99"&gt;&lt;/i&gt;
+    &lt;i class="icon-badge-clear icon-badge" count="999" overflow="999"&gt;&lt;/i&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                        <textarea class="demo-textarea"></textarea>
+                    </div>
+                    <!-- 复制代码-->
+                    <div class="fn-right code-demo-copy">
+                        <input type="button" value="复制代码"/>
+                    </div>
+                    <script>
+                        hljs.initHighlightingOnLoad();
+                    </script>
+                </div>
+                <!-- 收缩情况-->
+                <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+            </div>
+        </div>
+        <!--字体使用规范-->
+        <div class="api-table mt20" id="api">
+            <h1>API</h1>
+            <div class="font-use-norm">
+                <table class="norm-table">
+                    <thead>
+                    <tr class="norm-height bor-bottom">
+                        <th class="width-15 ">类别</th>
+                        <th class="width-5"></th>
+                        <th class="width-15">属性名</th>
+                        <th class="width-5"></th>
+                        <th class="width-15">类型</th>
+                        <th class="width-5"></th>
+                        <th class="width-15">默认值</th>
+                    </tr>
+
+
+                    </thead>
+                    <tbody>
+                    <tr class="norm-height">
+                        <td class="width-15 ">消息数量</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-main-title">count</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">Number</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15"></td>
+                    </tr>
+
+                    <tr class="norm-height">
+                        <td class="width-15 ">封顶数量</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15 font-main-title">overflow</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">Number</td>
+                        <td class="width-5 border"></td>
+                        <td class="width-15">99</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <!-- 漂浮导航-->
+    <div class="nav-float fn-left">
+        <ul class="nav-list">
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#use">概述</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#tips">基础用法</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#dynamic">封顶数字</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#point">小红点</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#bubble">独立使用</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#api">API</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--页脚-->
+<div class="footer clearfix">
+    <p class="fn-left">JuMore Component library 版权所有</p>
+    <span class="fn-right "></span>
+</div>
+<!-- 复制代码-->
+<script type="text/javascript" src="../../../site/js/site.js"></script>
+<script type="text/javascript">
+    $('.code-demo-copy').jmCopy();
+</script>
+</body>
+</html>

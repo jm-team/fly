@@ -1,0 +1,139 @@
+{
+  "name": "组件",
+  "groups": [
+    {
+      "groupName": "Basic",
+      "list": [
+        {
+          "path": "/button",
+          "title": "Button 按钮"
+        }
+      ]
+    },
+    {
+      "groupName": "Form",
+      "list": [
+        {
+          "path": "/input",
+          "title": "Input 输入框"
+        },
+        {
+          "path": "/radio",
+          "title": "Radio 单选框"
+        },
+        {
+          "path": "/checkbox",
+          "title": "Checkbox 多选框"
+        },
+        {
+          "path": "/select",
+          "title": "Select 选择器"
+        },
+        {
+          "path": "/datetime",
+          "type": "time",
+          "title": "TimePicker 时间选择器"
+        },
+        {
+          "path": "/datetime",
+          "type": "index",
+          "title": "DatePicker 日期选择器"
+        },
+        {
+          "path": "/datetime",
+          "type": "date",
+          "title": "DateTimePicker 日期时间选择器"
+        },
+        {
+          "path": "/upload",
+          "type": "index",
+          "title": "Upload 上传"
+        }
+      ]
+    },
+    {
+      "groupName": "Data",
+      "list": [
+        {
+          "path": "/tag",
+          "title": "Tag 标签"
+        },
+        {
+          "path": "/pagination",
+          "title": "Pagination 分页"
+        },
+        {
+          "path": "/badge",
+          "title": "Badge 标记"
+        }
+      ]
+    },
+    {
+      "groupName": "Notice",
+      "list": [
+        {
+          "path": "/alertWarning",
+          "title": "Alert 警告"
+        },
+        {
+          "path": "/loading",
+          "title": "Loading 加载"
+        },
+        {
+          "path": "/message",
+          "title": "Message 消息提示"
+        },
+        {
+          "path": "/message-box",
+          "title": "MessageBox 弹框"
+        },
+        {
+          "path": "/notification",
+          "title": "Notification 通知"
+        }
+      ]
+    },
+    {
+      "groupName": "Navigation",
+      "list": [
+        {
+          "path": "/menu",
+          "title": "NavMenu 导航菜单"
+        },
+        {
+          "path": "/tabs",
+          "title": "Tabs 标签页"
+        },
+        {
+          "path": "/breadcrumb",
+          "title": "Breadcrumb 面包屑"
+        },
+        {
+          "path": "/dropdown",
+          "title": "Dropdown 下拉菜单"
+        },
+        {
+          "path": "/steps",
+          "title": "Steps 步骤条"
+        }
+      ]
+    },
+    {
+      "groupName": "Others",
+      "list": [
+        {
+          "path": "/dialog",
+          "title": "Dialog 对话框"
+        },
+        {
+          "path": "/tooltip",
+          "title": "Tooltip 文字提示"
+        },
+        {
+          "path": "/popover",
+          "title": "Popover 弹出框"
+        }
+      ]
+    }
+  ]
+}

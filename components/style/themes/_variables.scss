@@ -13,6 +13,7 @@ $gray-base:              #000 !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:              lighten($gray-base, 20%) !default;   // #333
 $gray:                   lighten($gray-base, 33.5%) !default; // #555
+$gray666:                lighten($gray-base, 43.75%) !default; // #666
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
@@ -86,7 +87,11 @@ $headings-color:          inherit !default;
 $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "//at.alicdn.com/t/") !default;
 
 //** 所有字体文件的文件名。
+<<<<<<< HEAD
 $icon-font-name:          "font_lhh5zdxwuuymbo6r" !default;
+=======
+$icon-font-name:          "font_inymh4eptlnmi" !default;
+>>>>>>> a942a42701e17204c16012b419d7519678193077
 //** SVG图标文件中的元素ID。
 $icon-font-svg-id:        "jm-icon" !default;
 
@@ -803,7 +808,7 @@ $badge-active-bg:             #fff !default;
 $badge-font-weight:           bold !default;
 $badge-line-height:           1 !default;
 $badge-border-radius:         10px !default;
-
+$badge-icon-bg:               #f00 !default;
 
 //== 面包屑
 //
@@ -889,3 +894,13 @@ $dl-horizontal-offset:        $component-offset-horizontal !default;
 $dl-horizontal-breakpoint:    $grid-float-breakpoint !default;
 //** 水平线颜色
 $hr-border:                   $gray-lighter !default;
+
+
+// radio & checkbox 色值
+
+// 基础颜色
+$radioColor:                  #cacaca;
+// hover 颜色
+$radioHoverColor:             #0080ca;
+// disabled 颜色
+$radioDisabledColor:          #bababa;

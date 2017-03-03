@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breadcrumb</title>
+    <link rel="stylesheet" href="../../../dep/layer-3.0.1/skin/default/layer.css">
+    <link rel="stylesheet" href="../../../dist/css/fly.css">
+    <link rel="stylesheet" href="../../../site/css/index.css">
+    <link rel="stylesheet" href="../../../site/css/jm-code.css">
+    <script src="../../../dep/jquery-1.11.1/jquery.js"></script>
+    <script src="../../../dep/layer-3.0.1/layer.js"></script>
+    <script src="//cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper fn-clear">
+    <!--右侧内容模块-->
+    <div style="margin-right: 150px">
+
+        <!--组件标题-->
+        <div class="sub-title mb40">
+            <h1>Breadcrumb 面包屑</h1>
+            <p>显示当前页面在系统层级结构中的位置，并能向上返回。</p>
+        </div>
+        <div class="sub-layout">
+            <div><span class="sub-layout-title">基本用法</span></div>
+            <div class="sub-layout-content clearfix">
+                <div class="fn-left sub-row">
+                    <ul class="jm-crumbs">
+                        <li><a href="">首页</a><i>/</i></li>
+                        <li><a href="">联系信息</a><i>/</i></li>
+                        <li class="active">通讯录</li>
+                    </ul>
+                </div>
+                <div class="fn-right sub-note">
+                    <p>适用广泛的基础用法。</p>
+                </div>
+            </div>
+
+            <!-- breadCrumb基础用法-->
+            <div class="code-demo">
+                <div class="code-demo-title"><span>代码演示</span></div>
+
+                <!-- 展开情况-->
+                <div class="code-demo-display clearfix" id="starlist">
+                    <!-- 代码显示区域-->
+                    <div class="fn-left" id="code-display">
+                        <div class="fn-left demo-display" id="demo-display">
+                            <pre>
+                                <code class="JavaScript">
+&lt;ul class="jm-crumbs"&gt;
+    &lt;li&gt;&lt;a href=""&gt;首页&lt;/a&gt;&lt;i&gt;/&lt;/i&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;联系信息&lt;/a&gt;&lt;i&gt;/&lt;/i&gt;&lt;/li&gt;
+    &lt;li class="active"&gt;通讯录&lt;/li&gt;
+&lt;/ul&gt;
+                                </code>
+                            </pre>
+                        </div>
+                        <textarea class="demo-textarea"></textarea>
+                    </div>
+                    <!-- 复制代码-->
+                    <div class="fn-right code-demo-copy">
+                        <input type="button" value="复制代码"/>
+                    </div>
+                    <script>
+                        hljs.initHighlightingOnLoad();
+                    </script>
+                </div>
+                <!-- 收缩情况-->
+                <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+            </div>
+        </div>
+        <div class="sub-layout">
+            <div><span class="sub-layout-title">带图标的</span></div>
+            <div class="sub-layout-content clearfix">
+                <div class="fn-left sub-row">
+                    <ul class="jm-crumbs">
+                        <li><a href=""><span class="jm-icon jm-icon-home"></span><span>首页</span></a><i>/</i></li>
+                        <li><a href=""><span class="jm-icon jm-icon-menu"></span><span>联系信息</span></a><i>/</i></li>
+                        <li class="active"><span class="jm-icon jm-icon-account"></span><span>通讯录</span></li>
+                    </ul>
+                </div>
+                <div class="fn-right sub-note">
+                    <p>图标放在文字前面。</p>
+                </div>
+            </div>
+
+            <!-- breadCrumb带图标用法-->
+            <div class="code-demo">
+                <div class="code-demo-title"><span>代码演示</span></div>
+
+                <!-- 展开情况-->
+                <div class="code-demo-display clearfix">
+                    <!-- 代码显示区域-->
+                    <div class="fn-left" id="code-display">
+                        <div class="fn-left demo-display">
+                            <pre>
+                                <code class="JavaScript">
+&lt;ul class="jm-crumbs"&gt;
+    &lt;li&gt;&lt;a href=""&gt;&lt;span class="jm-icon jm-icon-detail"&gt;&lt;/span&gt;&lt;span&gt;首页&lt;/span&gt;&lt;/a&gt;&lt;i&gt;/&lt;/i&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;&lt;span class="jm-icon jm-icon-detail"&gt;&lt;/span&gt;&lt;span&gt;联系信息&lt;/span&gt;&lt;/a&gt;&lt;i&gt;/&lt;/i&gt;&lt;/li&gt;
+    &lt;li class="active"&gt;&lt;span class="jm-icon jm-icon-detail"&gt;&lt;/span&gt;&lt;span&gt;通讯录&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+                                </code>
+                            </pre>
+                        </div>
+                        <textarea class="demo-textarea"></textarea>
+                    </div>
+                    <!-- 复制代码-->
+                    <div class="fn-right code-demo-copy">
+                        <input type="button" value="复制代码"/>
+                    </div>
+                    <script>
+                        hljs.initHighlightingOnLoad();
+                    </script>
+                </div>
+                <!-- 收缩情况-->
+                <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+            </div>
+        </div>
+        <div class="sub-layout">
+            <div><span class="sub-layout-title">分隔符</span></div>
+            <div class="sub-layout-content clearfix">
+                <div class="fn-left sub-row">
+                    <ul class="jm-crumbs">
+                        <li><a href="">首页</a><i>></i></li>
+                        <li><a href="">联系信息</a><i>></i></li>
+                        <li class="active">通讯录</li>
+                    </ul>
+                </div>
+                <div class="fn-right sub-note">
+                    <p>可以自定义分隔符。</p>
+                </div>
+            </div>
+
+            <!-- breadCrumb分隔符用法-->
+            <div class="code-demo">
+                <div class="code-demo-title"><span>代码演示</span></div>
+
+                <!-- 展开情况-->
+                <div class="code-demo-display clearfix">
+                    <!-- 代码显示区域-->
+                    <div class="fn-left">
+                        <div class="fn-left demo-display">
+                            <pre>
+                                <code class="JavaScript">
+&lt;ul class="jm-crumbs"&gt;
+    &lt;li&gt;&lt;a href=""&gt;首页&lt;/a&gt;&lt;i&gt;>&lt;/i&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;联系信息&lt;/a&gt;&lt;i&gt;>&lt;/i&gt;&lt;/li&gt;
+    &lt;li class="active"&gt;通讯录&lt;/li&gt;
+&lt;/ul&gt;
+                                </code>
+                            </pre>
+                        </div>
+                        <textarea class="demo-textarea"></textarea>
+                    </div>
+                    <!-- 复制代码-->
+                    <div class="fn-right code-demo-copy">
+                        <input type="button" value="复制代码"/>
+                    </div>
+                    <script>
+                        hljs.initHighlightingOnLoad();
+                    </script>
+                </div>
+                <!-- 收缩情况-->
+                <div class="code-show"><i class="jm-icon jm-icon-down-copy icon-copy"></i></div>
+            </div>
+        </div>
+    </div>
+    <!-- 漂浮导航-->
+    <div class="nav-float">
+        <ul class="">
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#use">常见用法</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#tips">带有倾向提示</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#pianyi">推进偏移</a></li>
+            <li><i class="jm-icon jm-icon-list-style-type"></i><a href="#api"
+                                                                  onclick="$.scrollify('move','#color-form')">API</a>
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+<!-- 复制代码-->
+<script type="text/javascript" src="../../../site/js/site.js"></script>
+<script>
+    $('.code-demo-copy').jmCopy()
+</script>
+</body>
+</html>

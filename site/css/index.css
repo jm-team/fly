@@ -1,19 +1,23 @@
+@charset "UTF-8";
 * {
     box-sizing: border-box;
-    font-family: "Microsoft Yahei";
-    color: #666;
     font-size: 14px;
 }
-
+html{
+    height: 100%;
+}
 body {
     color: #666666;
     font-family: Arial, 'microsoft yahei';
-    min-height: 100%;
-    min-width: 1200px;
+    height: 100%;
+}
+#app{
+    height: 100%;
 }
 .home-body {
     background: url(../img/index.jpg) no-repeat;
     background-size: cover;
+    height: 100%;
 }
 
 .home-body .logo {
@@ -150,14 +154,14 @@ body {
     text-align: center;
 }
 
-/*��������*/
+/*公共样式*/
 body, input{
     font-size: 1rem;
     line-height: 1.5;
     color: #333;
 
 }
-/* ����߾�ͨ���ø����������ʽ�ı���λ�ò�ͬ */
+/*公共样式 */
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     margin: 0;
     padding: 0;
@@ -191,6 +195,10 @@ h1, h2, h3{
 
 .fn-clear:after, .clearfix:after {
     clear: both;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
 }
 
 .fn-clear, .clearfix {
@@ -293,7 +301,7 @@ table {
 .jm-home-content{
     padding-top:65px;
     text-align: center;
-    background: url(../img/jm-home-content-bg.png) no-repeat bottom;
+    /*background: url(../img/jm-home-content-bg.png) no-repeat bottom;*/
     width: 800px;
     height: 500px;
     color: #d2d2d2;
@@ -338,7 +346,7 @@ table {
 .jm-menu-icon{
     width: 160px;
     height: 60px;
-    background:url("../img/jm-menu-icon.png") no-repeat;
+    /*background:url("../img/jm-menu-icon.png") no-repeat;*/
 }
 
 .list-icon-bg{
@@ -372,18 +380,13 @@ table {
 }
 
 .main-wrapper{
-    /*background: #999;*/
     margin:0 4% 0 2%;
-    height: auto;
     width: auto;
-    overflow: hidden;
 }
 .main-left{
     min-width: 260px;
-    height: 100%;
     background: #f6f6f6;
-    margin-bottom:-9999px;
-    padding-bottom:9999px
+    margin-bottom: 40px;
 }
 /*.main-left ul{*/
 /*width: 20%;*/
@@ -413,7 +416,7 @@ table {
 }
 
 .main-right{
-    width: 70%;
+    overflow-x: hidden;
     height: auto;
     padding: 40px 40px;
     /*background: #999;*/
@@ -523,7 +526,7 @@ table {
 }
 .code-demo{
     width: 100%;
-    margin-top: 10px;
+    margin-top: 40px;
     background: #e6f4ff;
 }
 .code-demo p{
@@ -902,6 +905,7 @@ table {
 
 .nav-item{
     font-size: 14px;
+    margin-bottom: 40px;
 }
 .nav-item h1{
     padding-left: 15px;
@@ -935,6 +939,7 @@ table {
 .nav-float{
     position: fixed;
     top:200px;
+    right: 0;
 }
 
 .nav-float i{
@@ -1039,11 +1044,14 @@ table {
     padding: 0 20px;
     display: none;
 }
-.code-demo-display .demo-display,
-.code-demo-display textarea{
+.code-display{
     width: 90%;
 }
-#demo-textarea{
+.code-demo-display .demo-display,
+.code-demo-display textarea{
+    width: 100%;
+}
+.demo-textarea{
     width: 1px;
     height: 1px;
     opacity: 0;
