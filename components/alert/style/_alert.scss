@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-01-22 15:06:03
+ * @version $Id$
+ */
+$close: #bababa;
+.jm-alert {
+   position: relative;
+   padding: 0 15px;
+   line-height: 36px;
+   margin-bottom: 20px;
+   border: 1px solid transparent;
+   font-size: 14px;
+}
+.jm-alert-success {
+   color: $brand-success;
+   background-color: #fff;
+   border-color: $brand-success;
+}
+.jm-alert-info {
+   color: #069af0;
+   background-color: #fff;
+   border-color: #069af0;
+}
+.jm-alert-warning {
+   color: #f2aa00;
+   background-color: #fff;
+   border-color: #f2aa00;
+}
+.jm-alert-danger {
+   color: #e86261;
+   background-color: #fff;
+   border-color: #e86261;
+}
+.jm-alert-success .alert-link {
+   color: #2b542c;
+}
+.jm-alert-info .alert-link {
+   color: #245269;
+}
+.jm-alert-warning .alert-link {
+   color: #66512c;
+}
+.jm-alert-danger .alert-link {
+   color: #843534;
+}
+.jm-alert .alert-link {
+   font-weight: 700;
+}
+.jm-alert-dismissible{
+}
+.jm-alert-dismissable .close, .jm-alert-dismissible .close {
+   position: relative;
+   right: 0px;
+   color: inherit;
+}
+.jm-alert button.close {
+   -webkit-appearance: none;
+   padding: 0;
+   cursor: pointer;
+   background: 0 0;
+   border: 0;
+}
+.jm-alert .close {
+   float: right;
+   outline: none;
+}
+.jm-alert .close span.btn{
+   display: inline-block;
+}
+.jm-alert .sr-only {
+   position: absolute;
+   width: auto;
+   height: auto;
+   color: inherit;
+   clip: auto;
+   right: 0;
+   font-size: 14px;
+   border: 0;
+}
+.jm-alert-icon-s{
+   padding-left: 50px;
+   i{
+      position: absolute;
+      top: 0;
+      left: 20px;
+      line-height: 36px;
+      font-size: 24px;
+      vertical-align: middle;
+      &.top-icon{
+        color: #fff;
+        font-size: 12px;
+        margin-left: 6px;
+      }
+   }
+  &.jm-alert-success{
+    i{
+      color: $brand-success;
+      &.top-icon{
+        color: #fff;
+      }
+    }
+  }
+  &.jm-alert-info{
+    i{
+      color: $brand-info;
+      &.top-icon{
+        color: #fff;
+      }
+    }
+  }
+  &.jm-alert-warning{
+    i{
+      color: $brand-warning;
+      &.top-icon{
+        color: #fff;
+      }
+    }
+  }
+  &.jm-alert-danger{
+    i{
+      color: $brand-danger;
+      &.top-icon{
+        color: #fff;
+      }
+    }
+  }
+  button i{
+    position: static;
+    color: $close !important;
+    font-size: 16px;
+  }
+}
+.jm-alert-icon-b{
+  height: 76px;
+  border: 1px solid $close;
+  padding-left: 70px;
+  color: $gray-light;
+  padding-top: 8px;
+  .cont{
+    line-height: 1;
+  }
+  i{
+    position: absolute;
+    top: 0;
+    left: 20px;
+    line-height: 76px;
+    font-size: 48px;
+    vertical-align: middle;
+    &.top-icon{
+      color: #fff;
+      font-size: 28px;
+      margin-left: 10px;
+    }
+  }
+  &.jm-alert-success{
+    h4{
+      color: $brand-success;
+    }
+    i{
+      color: $brand-success;
+      &.top-icon{
+        color: #fff;
+      }
+    }
+  }
+  &.jm-alert-info{
+    h4{
+      color: $brand-info;
+    }
+    i{
+      color: $brand-info;
+      &.top-icon{
+        color: #fff;
+      }
+    }
+  }
+  &.jm-alert-warning{
+    h4{
+      color: $brand-warning;
+    }
+    i{
+      color: $brand-warning;
+      &.top-icon{
+        color: #fff;
+      }
+    }
+  }
+  &.jm-alert-danger{
+    h4{
+      color: $brand-danger;
+    }
+    i{
+      color: $brand-danger;
+      &.top-icon{
+        color: #fff;
+      }
+    }
+  }
+  button{
+    i{
+      line-height: 36px;
+      position: static;
+      color: $close !important;
+      font-size: 16px;
+    }
+  }
+
+}
+.jm-alert>
+.jm-alert>
+.jm-alert-icon-b{
+   height: auto;
+}
+.jm-alert-icon-b i.icon{
+   display: inline-block;
+   width: 40px;
+   height: 40px;
+   vertical-align: middle;
+   margin: 0 8px;
+}
+.jm-alert-icon-b h4{
+   display: block;
+   font-size: 16px;
+   margin-bottom: 8px;
+}
+.jm-alert-icon-b div.cont{
+   display: inline-block;
+}
+.jm-icon{
+  font-family: 'jm-icon' !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  color: $close;
+}

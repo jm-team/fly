@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="fragment" content="!">
+<link rel="stylesheet" href="../../../dist/css/fly.css"/>
+<!-- <link rel="stylesheet" type="text/css" href="../style/jm-alert.css"> -->
+<script type="text/javascript" src="../../../dep/jquery-1.11.1/jquery.min.js"></script>
+
+<style type="text/css">
+    html{
+        font-size: 14px;
+        font-family: 'microsoft yahei','微软雅黑',arial;
+    }
+    fieldset{
+        margin: 30px 0;
+        padding: 30px;
+        border: solid 1px #DDDDDD;
+    }
+    fieldset legend{
+        font-size: 20px;
+        font-weight: bold;
+        padding: 0 1em;
+        width: auto;
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+    #alert-demo{
+        padding: 30px;
+        width: 680px;
+    }
+    #alert-demo h2{
+        font-size: 28px;
+        color: #666;
+        font-weight: 400;        
+        margin-top: 20px;
+        line-height: 50px;
+    }
+</style>
+</head>
+<body>
+    <div id="alert-demo">
+        <fieldset>
+            <legend>普通实例</legend>
+            <div class="jm-alert jm-alert-success" role="alert">
+                <strong>Well done!</strong> You successfully read this important alert message.
+            </div>
+            <div class="jm-alert jm-alert-info" role="alert">
+                <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+            </div>
+            <div class="jm-alert jm-alert-warning" role="alert">
+                <strong>Warning!</strong> Better check yourself, you're not looking too good.
+            </div>
+            <div class="jm-alert jm-alert-danger" role="alert">
+                <strong>Oh snap!</strong> Change a few things up and try submitting again.
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>可关闭的实例</legend>
+            <div class="jm-alert jm-alert-warning jm-alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true" class="btn"><i class="jm-icon">&#xe618;</i></span>
+                </button>
+                <strong>Warning!</strong> Better check yourself, you're not looking too good.
+            </div>
+            <div class="jm-alert jm-alert-success jm-alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert">
+                    <span class="sr-only">Close</span>
+                </button>
+                <strong>Warning!</strong> Better check yourself, you're not looking too good.
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>带图标的实例</legend>
+            <div class="jm-alert jm-alert-icon-s jm-alert-success jm-alert-dismissible" role="alert">
+                <i class="jm-icon">&#xe646;</i><i class="jm-icon top-icon">&#xe63e;</i>
+                <strong>Well done!</strong> You successfully read this important alert message.
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true" class="btn"><i class="jm-icon">&#xe618;</i></span>
+                </button>
+            </div>
+            <div class="jm-alert jm-alert-icon-s jm-alert-info jm-alert-dismissible" role="alert">
+                <i class="jm-icon">&#xe646;</i><i class="jm-icon top-icon">&#xe6d4;</i>
+                <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true" class="btn"><i class="jm-icon">&#xe618;</i></span>
+                </button>
+            </div>
+            <div class="jm-alert jm-alert-icon-s jm-alert-warning jm-alert-dismissible" role="alert">
+                <i class="jm-icon">&#xe646;</i><i class="jm-icon top-icon">&#xe616;</i>
+                <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true" class="btn"><i class="jm-icon">&#xe618;</i></span>
+                </button>
+            </div>
+            <div class="jm-alert jm-alert-icon-s jm-alert-danger jm-alert-dismissible" role="alert">
+                <i class="jm-icon">&#xe646;</i><i class="jm-icon top-icon">&#xe618;</i>
+                <strong>Oh snap!</strong> Change a few things up and try submitting again.
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true" class="btn"><i class="jm-icon">&#xe618;</i></span>
+                </button>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>带文字介绍和辅助性文字介绍</legend>
+            <div class="jm-alert jm-alert-icon-b jm-alert-success jm-alert-dismissible" role="alert">
+                <i class="jm-icon">&#xe646;</i><i class="jm-icon top-icon">&#xe63e;</i>
+                <div class="cont">
+                    <h4>Well done!</h4> You successfully read this important alert message.
+                </div>
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true" class="btn"><i class="jm-icon">&#xe618;</i></span>
+                </button>
+            </div>
+            <div class="jm-alert jm-alert-icon-b jm-alert-info jm-alert-dismissible" role="alert">
+                <i class="jm-icon">&#xe646;</i><i class="jm-icon top-icon">&#xe6d4;</i>
+                <div class="cont">
+                    <h4>Heads up!</h4> This alert needs your attention, but it's not super important.
+                </div>
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true" class="btn"><i class="jm-icon">&#xe618;</i></span>
+                </button>
+            </div>
+            <div class="jm-alert jm-alert-icon-b jm-alert-warning jm-alert-dismissible" role="alert">
+                <i class="jm-icon">&#xe646;</i><i class="jm-icon top-icon">&#xe616;</i>
+                <div class="cont">
+                    <h4>Warning!</h4> Better check yourself, you're not looking too good.
+                </div>
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true" class="btn"><i class="jm-icon">&#xe618;</i></span>
+                </button>
+            </div>
+            <div class="jm-alert jm-alert-icon-b jm-alert-danger jm-alert-dismissible" role="alert">
+                <i class="jm-icon">&#xe646;</i><i class="jm-icon top-icon">&#xe618;</i>
+                <div class="cont">
+                    <h4>Oh snap!</h4> Change a few things up and try submitting again.
+                </div>
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true" class="btn"><i class="jm-icon">&#xe618;</i></span>
+                </button>
+            </div>
+        </fieldset>
+    </div>
+    <script src="../../../dist/js/fly.js"></script>
+
+</body>
+</html>

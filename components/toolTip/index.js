@@ -4,7 +4,6 @@
  * @date    2017-02-13 14:21:46
  * @version $Id$
  */
- import AlertWarning from './alertWarning';
-
- export default AlertWarning;
-
+ import ToolTip from './toolTip';
+ console.log('ToolTip',ToolTip)
+ export default ToolTip;
