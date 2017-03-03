@@ -1,8 +1,8 @@
 {
-  "name": "vue_site",
+  "name": "fly",
   "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "piluohen <1012106967@qq.com>",
+  "description": "Diao de fei qi~",
+  "author": "jm-team <jmfe@jumore.com>",
   "private": true,
   "scripts": {
     "dev": "node build/build.js && node build/dev-server.js",

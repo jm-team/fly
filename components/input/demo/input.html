@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Input 输入框</title>
+  <link rel="stylesheet" type="text/css" href="../../../dist/css/fly.css">
+  <script src="../../../dep/jquery-1.11.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+  <style>
+  html{
+  	font-size: 14px;
+  	font-family: 'microsoft yahei','微软雅黑',arial;
+  }
+  ul{
+    padding:0px;
+  }
+  ul li{
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+  }
+  .content{
+  	width: 980px;
+  	margin: 0 auto;
+  	padding-top: 20px;
+  	font-size: 14px;
+  	font-family: 'microsoft yahei','微软雅黑',arial;
+  }
+  .t-left{
+  	float: left;
+  }
+  .t-right{
+  	float: right;
+  }
+  input,textarea{
+  	box-sizing: border-box;
+  	font-size: 14px;
+  	border: solid 1px #DDDDDD;
+  }
+  fieldset{
+  	margin: 30px 0;
+  	padding: 30px;
+  	border: solid 1px #DDDDDD;
+  }
+  fieldset legend{
+  	font-size: 20px;
+  	font-weight: bold;
+  	padding: 0 1em;
+  }
+  fieldset.t-basic div{
+  	width: 720px;
+  }
+  fieldset.t-basic input,
+  fieldset.t-basic textarea{
+  	width: 100%;
+  	margin-bottom: 20px;
+  }
+  fieldset.t-basic input[disabled]{
+  	color: #DDDDDD;
+  	background-color: #F6F6F6;
+  }
+  fieldset.t-basic .t-left,
+  fieldset.t-basic .t-right{
+  	width: 350px;
+  }
+  fieldset.t-single input,
+  fieldset.t-mix input{
+  	margin-bottom: 20px;
+  }
+  fieldset input[type="text"]{  	
+  	padding: 0 10px;
+  	font-size: 14px;
+  	vertical-align: top;
+  	font-family: inherit;
+  }
+  fieldset textarea{
+  	padding: 10px;
+  }
+  .jm-input1{
+  	width: 230px;
+  }
+  .jm-input2{
+  	width: 260px;
+  }
+  .jm-input3,
+  .jm-input-default{
+  	width: 310px;
+  }
+  .jm-input4{
+  	width: 360px;
+  }
+
+  .t-mix-type ul{
+    clear:both;
+    overflow: hidden;
+  } 
+
+  .t-mix-type li{
+    float:left;
+    margin-right: 45px;
+  }
+
+  .t-mix-type a{
+    color:#0080ca;
+  }
+  </style>
+ </head>
+ <body>
+ 	<div id="wrapper">
+ 		<div class="content">
+		  	<form>
+		  	<fieldset class="t-basic">
+		  		<legend>Input类型</legend>
+		  		<div>
+		  			<input class="t-left jm-input jm-input-default" type="text" placeholder="我是常见输入框">
+		  			<input class="t-right jm-input jm-input-default" type="text" placeholder="有下拉菜单的输入框">
+		  			<input class="t-left jm-input jm-input-default" type="text" placeholder="带图标的输入框">
+		  			<input class="t-right jm-input jm-input-default" type="text" placeholder="禁用输入框..." disabled>
+		  			<input class="jm-input jm-input-default" type="text" placeholder="数值输入框...">
+		  			<textarea class="jm-input" placeholder="文章简要内容..." style="height: 200px"></textarea>
+		  		</div>
+		  	</fieldset>
+		  	<fieldset class="t-single">
+		  		<legend>尺寸与交互</legend>
+			  	<input class="jm-input jm-input1" type="text" placeholder="默认文字颜色#bababa  字号：12px"><br>
+			  	<input class="jm-input jm-input2" type="text" placeholder="默认文字颜色#bababa  字号：12px"><br>
+			  	<input class="jm-input jm-input3" type="text" placeholder="默认文字颜色#bababa  字号：14px"><br>
+			  	<input class="jm-input jm-input4" type="text" placeholder="默认文字颜色#bababa  字号：14px"><br>
+			  	<input class="jm-input jm-input-default" type="text" placeholder="默认状态" style="margin-top: 12px;">
+			  	<br><br>		  		
+		  	</fieldset>
+		  	<fieldset class="t-mix">
+		  		<legend>混合组合</legend>			  	
+			  	<input class="jm-input3" type="text" placeholder="" value="0579" style="width: 141px;"><input class="jm-input3" type="text" value="88788251" placeholder="" style="width: 348px;margin-left: 20px;"><br>
+			  	<span class="jm-input-wrap"><span class="jm-link-input">HTTP://</span><input class="jm-input jm-input3" type="text" placeholder="默认文字颜色#bababa  字号：14px"></span><br>
+			  	<div class="t-mix-type">
+			  		<ul><li><a href="javascript:void(0)">类别1</a></li><li><a href="javascript:void(0)">类别2</a></li></ul>
+			  	</div>
+          <div>
+            <span class="jm-input-wrap"><input class="jm-input jm-input-default" type="text" placeholder="默认文字颜色#bababa  字号：14px"><a class="jm-input-search"></a></span>
+          </div>
+          <div>
+			  	  <span class="jm-input-wrap"><input class="jm-input jm-input-default" type="text" placeholder="默认文字颜色#bababa  字号：14px"><a class="jm-input-search"></a></span>
+          </div>
+          <div>
+			  	  <span class="jm-input-wrap"><span class="select-classify">选择分类</span><input class="jm-input jm-input-default" type="text" placeholder="默认文字颜色#bababa  字号：14px"><a></a></span>
+          </div>
+          <div>
+			  	  <input class="jm-input jm-input-default" type="text" placeholder="激活列出输入建议"><input class="jm-input jm-input-default" type="text" placeholder="输入后匹配输入建议" style="margin-left: 20px">
+          </div>
+		  	</fieldset>
+		  	</form>
+ 		</div>
+ 	</div>
+ </body>
+</html>

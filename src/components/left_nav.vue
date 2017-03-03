@@ -23,7 +23,7 @@
 </template>
 
 <script>
-  import navList from '../../config/nav.config.json'
+  import navList from '../../site/nav.config.json'
 
   export default {
     name: 'leftNav',
