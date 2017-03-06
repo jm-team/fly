@@ -929,6 +929,11 @@ table {
     display: block;
 }
 
+.nav-item li.nav-group-list.current a {
+    color: #0080ca;
+}
+
+.nav-item .nav-group-list.current,
 .nav-item .nav-group-list:hover{
     color: #0080ca;
     background: #e5f4ff;

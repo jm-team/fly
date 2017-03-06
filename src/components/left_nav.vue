@@ -12,7 +12,7 @@
       <template v-if="navList.groups">
         <ul v-for="group in navList.groups">
           <li class="nav-group-title">{{group.groupName}}</li>
-          <li class="nav-group-list" v-for="navItem in group.list">
+          <li class="nav-group-list" v-for="navItem in group.list" :class="{current: '/' + $route.params.name === navItem.path && navItem.type === $route.query.type}">
             <router-link :to="'/component'+navItem.path + (navItem.type ?'?type=' + navItem.type : '')">{{navItem.title}}</router-link>
           </li>
         </ul>
