@@ -22,7 +22,8 @@ $tag-color: #0080ca!default;
 }
 
 .tab-clear li.active > a,
-.tab-card li.active > a {
+.tab-clear li.active .jm-icon,
+.tab-card li.active > a{
   color: $tag-color;
 }
 

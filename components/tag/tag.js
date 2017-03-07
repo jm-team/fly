@@ -56,7 +56,7 @@ $(function() {
     })
 
     // tag 颜色设置
-    $('.tag a').each(function () {
+    $('.tag > a').each(function () {
       var $self = $(this),
           color = $self.attr('color');
       if(color){
