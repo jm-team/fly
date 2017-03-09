@@ -1,6 +1,5 @@
 .panel {
   position: relative;
-  width: $modal-lg;
   padding: $modal-inner-padding;
   margin: 40px auto;
   border: 1px solid $modal-content-border-color;
@@ -219,13 +218,11 @@
 .jm-steps-wrap .jm-steps-cross .jm-steps-head-inner {
   color: $btn-primary-bg;
 
-  .jm-steps-circle {
+  .jm-steps-circle,.jm-steps-bg {
     display: block;
+    color: $btn-primary-bg;
   }
 
-  .jm-steps-bg {
-    display: block;
-  }
   .jm-steps-txt {
     color: #fff;
   }
@@ -237,6 +234,7 @@
 
   .jm-steps-circle {
     display: block;
+    color: $btn-primary-bg;
   }
 
   .jm-steps-bg {
@@ -246,6 +244,7 @@
   .jm-steps-right {
     display: block;
     font-size: 16px;
+    color: $btn-primary-bg;
   }
 
   .jm-steps-wrong {
@@ -270,10 +269,12 @@
 
   .jm-steps-circle {
     display: block;
+    color: #db3f40;
   }
 
   .jm-steps-wrong {
     display: block;
+    color: #db3f40;
   }
   .jm-steps-txt {
     display: none;
@@ -282,7 +283,7 @@
 }
 
 
-  /*���ڵ�ǰ����*/
+  /*??????????*/
 
   .jm-steps-wrap .jm-steps-cross .jm-steps-head-inner {
     color: $btn-primary-bg;
@@ -303,7 +304,7 @@
     color: $btn-primary-bg;
   }
 
-  /*����״̬*/
+  /*??????*/
   .jm-steps-wrap .jm-steps-next-error .jm-steps-tail i:after {
     background: #db3f40;
   }
