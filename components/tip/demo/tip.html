@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="fragment" content="!">
+    <link rel="stylesheet" href="../../../dist/css/fly.css"/>
+    <link rel="stylesheet" href="../../../site/css/index.css">
+    <link rel="stylesheet" href="../../../site/css/jm-code.css">
+    <link rel="stylesheet" type="text/css" href="../../../dep/jquery.qtip/jquery.qtip.css">
+    
+    <!-- <link rel="stylesheet" type="text/css" href="../style/tip.css"> -->
+    
+    <script type="text/javascript" src="../../../dep/jquery-1.11.1/jquery.min.js"></script>
+    <script src="../../../dep/layer-3.0.1/layer.js"></script>
+    <script type="text/javascript" src="../../../dep/jquery.qtip/jquery.qtip.min.js"></script>
+    <!-- <script type="text/javascript" src="http://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.js"></script> -->
+    <!--<script src="../../../dist/js/fly.js"></script>-->
+   <script src="//cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js"></script>
+    <style type="text/css">
+        #target-test{
+            margin-top: 200px;
+            margin-left: 200px;
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+        
+        a.button{
+            margin: 50px 100px;
+            padding: 0 10px;
+            font-size: 14px;
+            border: 1px solid #069af0;
+            border-radius: 4px;
+            line-height: 40px;
+            color: #069af0;
+            display:  inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- <ul id="nav">
+        <li><a href="#normal-title">普通title提示</a></li>
+        <li><a href="#normal-html">html提示</a></li>
+        <li><a href="#ajax-html">ajax'd html提示</a></li>
+        <li><a href="#input-title">input 输入提示</a></li>
+        <li><a href="#jGrow">jGrow 弹框</a></li>
+        <li><a href="#dialogs">Alert Confirm Prompt</a></li>
+        <li><a href="#title-tip">可传入标题的提示框</a></li>
+        <li><a href="#position-tip">提示框位置控制</a></li>
+        <li><a href="#options">参数说明</a></li>
+    </ul> -->
+        <div class="main-wrapper fn-clear">
+            <div id="basic" class="sub-layout">
+                <div><span class="sub-layout-title">基本用法</span></div>
+                <div class="sub-layout-content clearfix">
+                    <div class="fn-left sub-row">
+                        <div id="page1"><a class="button" href="#" title="My tooltip text">基本用法</a></div>
+                        
+                    </div>
+                    <div class="fn-right sub-note">
+                        <!-- <h1>具体使用方法：</h1>
+                        <p>给select设置属性model绑定数据，需要将model设置.sync实现数据的双向绑定，否则在改变状态时，使用者的数据并没有变化。</p>
+                        <p>单选时，model 只接受字符串和数字类型，多选时只接受数组类型，组件会自动根据option的value来返回选中的数据。</p>
+                        <p>可以给select添加 style 样式，比如宽度。</p>
+                        <p>在展开选择器后，可以使用键盘的up和down快速上下选择，按下Enter选择，按下Esc收起选择器。</p> -->
+                    </div>
+                </div>
+
+                <!-- 代码demo-->
+                <div class="code-demo">
+                    <div class="code-demo-title"><span>代码演示</span></div>
+
+                    <!-- 展开情况-->
+                    <div class="code-demo-display clearfix">
+                        <!-- 代码显示区域-->
+                        <div class="fn-left">
+                            <div class="fn-left demo-display">
+                                <pre>
+                                    <code class="JavaScript">
+    
+    $('a[title]').qtip({
+        style:{
+            classes: 'qtip-orange'
+        },
+        position:{
+            my: 'bottom,center',
+            at: 'top center'
+        }
+    });
+                                    </code>
+                                </pre>
+                            </div>
+                            <textarea class="demo-textarea"></textarea>
+                        </div>
+                        <!-- 复制代码-->
+                        <div class="fn-right code-demo-copy">
+                            <input type="button" value="复制代码"/>
+                        </div>
+                        <script>
+                            hljs.initHighlightingOnLoad();
+                        </script>
+                    </div>
+                    <!-- 收缩情况-->
+                    <div class="code-show"><i class="jm-icon  icon-copy jm-icon-down-copy"></i></div>
+                </div>
+            </div>
+            <div id="use2" class="sub-layout">
+                <div><span class="sub-layout-title">位置</span></div>
+                <div class="sub-layout-content clearfix">
+                    <div class="fn-left sub-row">
+                        <div id="page1"><a class="button one" href="#" title="My tooltip text">左上</a>
+                        <a class="button two" href="#" title="My tooltip text">上中</a>
+                        <a class="button three" href="#" title="My tooltip text">上右</a>
+                        <a class="button four" href="#" title="My tooltip text">右中</a>
+                        <a class="button five" href="#" title="My tooltip text">下右</a>
+                        <a class="button six" href="#" title="My tooltip text">下中</a>
+                        <a class="button seven" href="#" title="My tooltip text">下左</a>
+                        <a class="button eight" href="#" title="My tooltip text">左中</a>
+                        </div>
+                        
+                    </div>
+                    <div class="fn-right sub-note">
+                        <!-- <h1>具体使用方法：</h1>
+                        <p>给select设置属性model绑定数据，需要将model设置.sync实现数据的双向绑定，否则在改变状态时，使用者的数据并没有变化。</p>
+                        <p>单选时，model 只接受字符串和数字类型，多选时只接受数组类型，组件会自动根据option的value来返回选中的数据。</p>
+                        <p>可以给select添加 style 样式，比如宽度。</p>
+                        <p>在展开选择器后，可以使用键盘的up和down快速上下选择，按下Enter选择，按下Esc收起选择器。</p> -->
+                    </div>
+                </div>
+
+                <!-- 代码demo-->
+                <div class="code-demo">
+                    <div class="code-demo-title"><span>代码演示</span></div>
+
+                    <!-- 展开情况-->
+                    <div class="code-demo-display clearfix">
+                        <!-- 代码显示区域-->
+                        <div class="fn-left">
+                            <div class="fn-left demo-display">
+                                <pre>
+                                    <code class="JavaScript">
+    
+    $('#use2 a.one').qtip({
+        style:{
+            classes: 'qtip-gray'
+        },
+        position:{
+            my: 'bottom,left',
+            at: 'top left'
+        }
+    });
+    $('#use2 a.two').qtip({
+        style:{
+            classes: 'qtip-gray'
+        },
+        position:{
+            my: 'bottom,center',
+            at: 'top center'
+        }
+    });
+    $('#use2 a.three').qtip({
+        style:{
+            classes: 'qtip-gray'
+        },
+        position:{
+            my: 'bottom,right',
+            at: 'top right'
+        }
+    });
+    $('#use2 a.four').qtip({
+        style:{
+            classes: 'qtip-gray'
+        },
+        position:{
+            my: 'center,left',
+            at: 'center right'
+        }
+    });
+    $('#use2 a.five').qtip({
+        style:{
+            classes: 'qtip-gray'
+        },
+        position:{
+            my: 'top,left',
+            at: 'bottom right'
+        }
+    });
+    $('#use2 a.six').qtip({
+        style:{
+            classes: 'qtip-gray'
+        },
+        position:{
+            my: 'top,center',
+            at: 'bottom center'
+        }
+    });
+    $('#use2 a.seven').qtip({
+        style:{
+            classes: 'qtip-gray'
+        },
+        position:{
+            my: 'top,left',
+            at: 'bottom right'
+        }
+    });
+    $('#use2 a.eight').qtip({
+        style:{
+            classes: 'qtip-gray'
+        },
+        position:{
+            my: 'center,right',
+            at: 'center left'
+        }
+    });
+                                    </code>
+                                </pre>
+                            </div>
+                            <textarea class="demo-textarea"></textarea>
+                        </div>
+                        <!-- 复制代码-->
+                        <div class="fn-right code-demo-copy">
+                            <input type="button" value="复制代码"/>
+                        </div>
+                        <script>
+                            hljs.initHighlightingOnLoad();
+                        </script>
+                    </div>
+                    <!-- 收缩情况-->
+                    <div class="code-show"><i class="jm-icon  icon-copy jm-icon-down-copy"></i></div>
+                </div>
+            </div>
+            <div id="use3" class="sub-layout">
+                <div><span class="sub-layout-title">多行文本</span></div>
+                <div class="sub-layout-content clearfix">
+                    <div class="fn-left sub-row">
+                        <div id="page1"><a class="button one" href="#" title="My tooltip text">多行文本</a></div>
+                        
+                    </div>
+                    <div class="fn-right sub-note">
+                        <!-- <h1>具体使用方法：</h1>
+                        <p>给select设置属性model绑定数据，需要将model设置.sync实现数据的双向绑定，否则在改变状态时，使用者的数据并没有变化。</p>
+                        <p>单选时，model 只接受字符串和数字类型，多选时只接受数组类型，组件会自动根据option的value来返回选中的数据。</p>
+                        <p>可以给select添加 style 样式，比如宽度。</p>
+                        <p>在展开选择器后，可以使用键盘的up和down快速上下选择，按下Enter选择，按下Esc收起选择器。</p> -->
+                    </div>
+                </div>
+
+                <!-- 代码demo-->
+                <div class="code-demo">
+                    <div class="code-demo-title"><span>代码演示</span></div>
+
+                    <!-- 展开情况-->
+                    <div class="code-demo-display clearfix">
+                        <!-- 代码显示区域-->
+                        <div class="fn-left">
+                            <div class="fn-left demo-display">
+                                <pre>
+                                    <code class="JavaScript">
+    
+    $('#use3 a.one').qtip({
+        content:{
+            text:$('.tooltiptext')
+        },
+        style:{
+            classes: 'qtip-gray'
+        },
+        position:{
+            my: 'bottom center',
+            at: 'top center'
+        }
+    });
+                                    </code>
+                                </pre>
+                            </div>
+                            <textarea class="demo-textarea"></textarea>
+                        </div>
+                        <!-- 复制代码-->
+                        <div class="fn-right code-demo-copy">
+                            <input type="button" value="复制代码"/>
+                        </div>
+                        <script>
+                            hljs.initHighlightingOnLoad();
+                        </script>
+                    </div>
+                    <!-- 收缩情况-->
+                    <div class="code-show"><i class="jm-icon  icon-copy jm-icon-down-copy"></i></div>
+                </div>
+            </div>
+            <div id="use4" class="sub-layout">
+                <div><span class="sub-layout-title">自定义标题任意文本</span></div>
+                <div class="sub-layout-content clearfix">
+                    <div class="fn-left sub-row">
+                        <div id="page1"><a class="button one" href="#" title="My tooltip text">内容自定义</a></div>
+                        
+                    </div>
+                    <div class="fn-right sub-note">
+                        <!-- <h1>具体使用方法：</h1>
+                        <p>给select设置属性model绑定数据，需要将model设置.sync实现数据的双向绑定，否则在改变状态时，使用者的数据并没有变化。</p>
+                        <p>单选时，model 只接受字符串和数字类型，多选时只接受数组类型，组件会自动根据option的value来返回选中的数据。</p>
+                        <p>可以给select添加 style 样式，比如宽度。</p>
+                        <p>在展开选择器后，可以使用键盘的up和down快速上下选择，按下Enter选择，按下Esc收起选择器。</p> -->
+                    </div>
+                </div>
+
+                <!-- 代码demo-->
+                <div class="code-demo">
+                    <div class="code-demo-title"><span>代码演示</span></div>
+
+                    <!-- 展开情况-->
+                    <div class="code-demo-display clearfix">
+                        <!-- 代码显示区域-->
+                        <div class="fn-left">
+                            <div class="fn-left demo-display">
+                                <pre>
+                                    <code class="JavaScript">
+    
+    $('#use4 a.one').qtip({
+        content:{
+            title: "这里是title",
+            text:$('.tooltiptext')
+        },
+        style:{
+            classes: 'qtip-gray'
+        },
+        position:{
+            my: 'top center',
+            at: 'bottom center'
+        }
+    });
+                                    </code>
+                                </pre>
+                            </div>
+                            <textarea class="demo-textarea"></textarea>
+                        </div>
+                        <!-- 复制代码-->
+                        <div class="fn-right code-demo-copy">
+                            <input type="button" value="复制代码"/>
+                        </div>
+                        <script>
+                            hljs.initHighlightingOnLoad();
+                        </script>
+                    </div>
+                    <!-- 收缩情况-->
+                    <div class="code-show"><i class="jm-icon  icon-copy jm-icon-down-copy"></i></div>
+                </div>
+            </div>
+   <!--  <div id="tool-tip">
+        <div id="normal-title" class="cont-box">
+            <a href="#" title="My tooltip text">Mouse over me - title!</a>
+            <pre>
+                $('a[title]').qtip({
+                    style:{
+                        classes: 'qtip-blue'
+                    },
+                    position:{
+                        my: 'bottom center',
+                        at: 'top center'
+                    }
+                });
+            </pre>
+        </div>
+        <div id="normal-html" class="cont-box">
+            <a href="#" class="normal-html-demo">Mouse over me - html!</a>
+            <div class="tooltiptext">
+                Complex <b>inline</b> <i>HTML</i> in your <u>config</u><br>
+                Complex <b>inline</b> <i>HTML</i> in your <u>config</u>
+            </div>
+            <pre>
+                $('.normal-html-demo').qtip({
+                    content:{
+                        text:$('.tooltiptext')
+                    },
+                    style:{
+                        classes: 'qtip-blue'
+                    },
+                    position:{
+                        my: 'bottom center',
+                        at: 'top center'
+                    }
+                });
+            </pre>
+        </div>
+        <div id="ajax-html" class="cont-box">
+            <a href="#" class="ajax-html-demo">ajax'd html!</a>            
+            <pre>
+                $('.ajax-html-demo').qtip({
+                        content: {
+                            text: function(event, api) {
+                                $.ajax({
+                                    url: api.elements.target.attr('href') // Use href attribute as URL
+                                })
+                                .then(function(content) {
+                                    // Set the tooltip content upon successful retrieval
+                                    api.set('content.text', content);
+                                }, function(xhr, status, error) {
+                                    // Upon failure... set the tooltip content to error
+                                    api.set('content.text', status + ': ' + error);
+                                });
+                    
+                                return 'Loading...'; // Set some initial text
+                            }
+                        },
+                        position: {
+                            viewport: $(window)
+                        },
+                        style: 'qtip-wiki'
+                });
+            </pre>
+        </div>
+        <div id="input-title" class="cont-box">
+            <input type="text" value="Focus and blur" title="Please enter your name" />            
+            <pre>
+                $('input[title]').qtip({
+                        position:{
+                            my: 'left center',
+                            at: 'right center'
+                        },
+                        show: 'focus',
+                        hide: 'blur'
+                });
+            </pre>
+        </div>
+        <div id="jGrow" class="cont-box">
+            <div id="qtip-growl-container"></div>
+            <button onclick="createGrowl()">Create a Growl!</button>            
+            <pre>
+                window.createGrowl = function(persistent) {
+                    var target = $('.qtip.jgrowl:visible:last');
+
+                    $('<div/>').qtip({
+                        content: {
+                            text: 'This is a jGrowl-esque qTip!',
+                            title: {
+                                text: 'Attention!',
+                                button: true
+                            }
+                        },
+                        position: {
+                            target: [0,0],
+                            container: $('#qtip-growl-container')
+                        },
+                        show: {
+                            event: false,
+                            ready: true,
+                            effect: function() {
+                                $(this).stop(0, 1).animate({ height: 'toggle' }, 400, 'swing');
+                            },
+                            delay: 0,
+                            persistent: persistent
+                        },
+                        hide: {
+                            event: false,
+                            effect: function(api) {
+                                $(this).stop(0, 1).animate({ height: 'toggle' }, 400, 'swing');
+                            }
+                        },
+                        style: {
+                            width: 250,
+                            classes: 'jgrowl',
+                            tip: false
+                        },
+                        events: {
+                            render: function(event, api) {
+                                if(!api.options.show.persistent) {
+                                    $(this).bind('mouseover mouseout', function(e) {
+                                        var lifespan = 5000;
+
+                                        clearTimeout(api.timer);
+                                        if (e.type !== 'mouseover') {
+                                            api.timer = setTimeout(function() { api.hide(e) }, lifespan);
+                                        }
+                                    })
+                                    .triggerHandler('mouseout');
+                                }
+                            }
+                        }
+                    });
+                }
+            </pre>
+        </div>
+        <div id="title-tip" class="cont-box">
+            <a href="#" >可传入标题的提示框!</a>           
+            <pre>
+               $('#title-tip a').qtip({
+                   content:{
+                       title: "这里是title"
+                       text:$('.tooltiptext')
+                   },
+                   style:{
+                       classes: 'qtip-blue'
+                   },
+                   position:{
+                       my: 'bottom center',
+                       at: 'top center'
+                   }
+               });
+            </pre>
+        </div>
+        <div id="position-tip" class="cont-box">
+            <a href="#" class="one" >可传入标题的提示框!</a>
+            <a href="#" class="two" >可传入标题的提示框!</a> 
+            <a href="#" class="three" >可传入标题的提示框!</a> 
+            <a href="#" class="foure" >可传入标题的提示框!</a> 
+            <a href="#" class="five" >可传入标题的提示框!</a> 
+            <a href="#" class="six" >可传入标题的提示框!</a>            
+            <pre>
+               $('#position-tip a').qtip({
+                   content:{
+                       title: "这里是title"
+                       text:$('.tooltiptext')
+                   },
+                   style:{
+                       classes: 'qtip-blue'
+                   },
+                   position:{
+                       my: 'bottom center',
+                       at: 'top center'
+                   }
+               });
+            </pre>
+        </div>
+        <div id="dialogs" class="cont-box">
+            <button onclick="Alert()">Alert</button>
+            <button onclick="Prompt()">Prompt</button>
+            <button onclick="Confirm()">Confirm</button>            
+            <pre><code>
+                // Alert/Confirm/Prompt
+                function dialogue(content, title) {
+                    $('<div />').qtip({
+                        content: {
+                            text: content,
+                            title: title
+                        },
+                        position: {
+                            my: 'center', at: 'center',
+                            target: $(window)
+                        },
+                        show: {
+                            ready: true,
+                            modal: {
+                                on: true,
+                                blur: false
+                            }
+                        },
+                        hide: false,
+                        style: 'dialogue',
+                        events: {
+                            render: function(event, api) {
+                                $('button', api.elements.content).click(function(e) {
+                                    api.hide(e);
+                                });
+                            },
+                            hide: function(event, api) { api.destroy(); }
+                        }
+                    });
+                }
+
+
+                
+            <code></pre>
+        </div>
+        <div id="options" class="cont-box">
+            <a href="#" title="My tooltip text">接口参数说明!</a>
+            <pre>
+                $.fn.qtip.defaults = {
+                    prerender: false, // Render tooltip HTML on $(document).ready()
+                    id: false, // Incremental numerical ID used by default
+                    overwrite: true, // Overwrite previous tooltips on this element
+                    suppress: true, // Translate 'title' to 'oldtitle' attribute (prevent browser tooltip)
+                    content: {
+                        text: true,
+                        attr: 'title',
+                        text: false,
+                        button: false
+                    },
+                    position: {
+                        my: 'top left',
+                        at: 'bottom right',
+                        target: false, // Defaults to target element
+                        container: false, // Defaults to $(document.body)
+                        viewport: false, // Requires Viewport plugin
+                        adjust: {
+                            x: 0, y: 0, // Minor x/y adjustments
+                            mouse: true, // Follow mouse when using target:'mouse'
+                            resize: true, // Reposition on resize by default
+                            method: 'flip flip' // Requires Viewport plugin
+                        },
+                        effect: function(api, pos, viewport) {
+                            $(this).animate(pos, {
+                                duration: 200,
+                                queue: false
+                            });
+                        }
+                    },
+                    show: {
+                        target: false, // Defaults to target element
+                        event: 'mouseenter', // Show on mouse over by default
+                        effect: true, // Use default 90ms fade effect
+                        delay: 90, // 90ms delay before showing
+                        solo: false, // Do not hide others when showing
+                        ready: false, // Do not show immediately
+                        modal: { // Requires Modal plugin
+                            on: false, // No modal backdrop by default
+                            effect: true, // Mimic show effect on backdrop
+                            blur: true, // Hide tooltip by clicking backdrop
+                            escape: true // Hide tooltip when Esc pressed
+                        }
+                    },
+                    hide: {
+                        target: false, // Defaults to target element
+                        event: 'mouseleave', // Hide on mouse out by default
+                        effect: true, // Use default 90ms fade effect
+                        delay: 0, // No hide delay by default
+                        fixed: false, // Non-hoverable by default
+                        inactive: false, // Do not hide when inactive
+                        leave: 'window', // Hide when we leave the window
+                        distance: false // Don't hide after a set distance
+                    },
+                    style: {
+                        classes: '', // No additional classes added to .qtip element
+                        widget: false, // Not a jQuery UI widget
+                        width: false, // No set width
+                        height: false, // No set height
+                        tip: { // Requires Tips plugin
+                            corner: true, // Use position.my by default
+                            mimic: false, // Don't mimic a particular corner
+                            width: 8, 
+                            height: 8,
+                            border: true, // Detect border from tooltip style
+                            offset: 0 // Do not apply an offset from corner
+                        }
+                    },
+                    events: {
+                        render: null, // Called when tooltip rendered
+                        move: null, // Called when tooltip repositioned
+                        show: null, // Called when tooltip is about to be shown
+                        hide: null, // Called when tooltip is about to be hidden
+                        toggle: null, // Shortcut to binding to two events above
+                        visible: null, // Called when tooltip is shown
+                        hidden: null, // Called when tooltip is hidden
+                        focus: null, // Called when tooltip gains focus
+                        blur: null // Called when tooltip loses focus
+                    }
+                };
+            </pre>
+        </div>
+    </div> -->
+    <!-- <div id="api" class="api-table mt20">
+        <h1>API</h1>
+        <div class="font-use-norm">
+            <table class="norm-table">
+                <thead>
+                <tr class="norm-height bor-bottom">
+                    <th class="width-15 ">属性</th>
+                    <th class="width-5"></th>
+                    <th class="width-15">默认值</th>
+                    <th class="width-5"></th>
+                    <th class="width-15">类型</th>
+                    <th class="width-5"></th>
+                    <th class="width-15">描述</th>
+                </tr>
+
+
+                </thead>
+                <tbody>
+                <tr class="norm-height">
+                    <td class="width-15 ">cont</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15 font-main-title">必填</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">String/Object</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">容器。值可以传入元素id或原生DOM或jquery对象</td>
+                </tr>
+                <tr class="norm-height">
+                    <td class="width-15 font-title-color">pages</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15 font-second-title">必填</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">Number</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">分页数</td>
+                </tr>
+
+                <tr class="norm-height">
+                    <td class="width-15">curr</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15 font-little-title">1</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">Number</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">当前页</td>
+                </tr>
+
+                <tr class="norm-height">
+                    <td class="width-15">groups</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15 font-p-color">5</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">Number</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">连续分页数</td>
+                </tr>
+
+                <tr class="norm-height">
+                    <td class="width-15">first</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15 font-p-color">1</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">Number/String/Boolean</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">用于控制首页。值支持三种类型。如first:'首页'。如frist:false，则表示不显示首页项</td>
+                </tr>
+
+                <tr class="norm-height">
+                    <td class="width-15">last</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15 font-p-color">总页数</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">Number/String/Boolean</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">用于控制尾页。值支持三种类型。如last:'尾页'。如last:false，则表示不显示尾页项</td>
+                </tr>
+
+                <tr class="norm-height">
+                    <td class="width-15">prev</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15 font-p-color">上一页</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">String/Boolean</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">用于控制上一页。若不显示，设置false即可</td>
+                </tr>
+
+                <tr class="norm-height">
+                    <td class="width-15">next</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15 font-p-color">下一页</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">String/Boolean</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">用于控制下一页。若不显示，设置false即可</td>
+                </tr>
+
+                <tr class="norm-height">
+                    <td class="width-15">skip</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15 font-p-color">false</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">Boolean</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">是否显示跳转</td>
+                </tr>
+
+                <tr class="norm-height">
+                    <td class="width-15">jump</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15 font-p-color">核心参数</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">Function</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">触发分页后的回调，函数返回两个参数。obj是一个Object类型，包括分页的所有配置信息。first是一个Boolean类型，检测页面是否初始加载。非常有用，可避免无限刷新</td>
+                </tr>
+
+                <tr class="norm-height">
+                    <td class="width-15">size</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15 font-p-color">default</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">String</td>
+                    <td class="width-5 border"></td>
+                    <td class="width-15">分页的尺寸类型，可选值为sm</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> -->
+</div>    
+    <!-- 
+    <div id="target-test">111111111</div> -->
+    <script type="text/javascript">
+    $(document).ready(function(){
+        //普通title提示
+        $('a[title]').qtip({
+            style:{
+                classes: 'qtip-gray'
+            },
+            position:{
+                my: 'bottom,center',
+                at: 'top center'
+            }
+        });
+        //html提示
+        $('#use3 a.one').qtip({
+            content:{
+                text:$('.tooltiptext')
+            },
+            style:{
+                classes: 'qtip-gray'
+            },
+            position:{
+                my: 'bottom center',
+                at: 'top center'
+            }
+        });
+        //ajax html 提示
+        $('.ajax-html-demo').qtip({
+                content: {
+                    text: function(event, api) {
+                        $.getJSON("test_json.js",function(result){
+                             api.set('content.text', content);
+                        });
+                        // $.ajax({
+                        //     url: 'test.js' // Use href attribute as URL
+                        // })
+                        // .then(function(content) {
+                        //     // Set the tooltip content upon successful retrieval
+                        //     api.set('content.text', content);
+                        // }, function(xhr, status, error) {
+                        //     // Upon failure... set the tooltip content to error
+                        //     api.set('content.text', status + ': ' + error);
+                        // });
+            
+                        return 'Loading...'; // Set some initial text
+                    }
+                },
+                position: {
+                    viewport: $(window)
+                },
+                style: 'qtip-wiki'
+        });
+        //input 输入提示
+        $('input[title]').qtip({
+                position:{
+                    my: 'left center',
+                    at: 'right center'
+                },
+                style:{
+                    classes: 'qtip-gray'
+                },
+                show: 'focus',
+                hide: 'blur'
+        });
+        window.createGrowl = function(persistent) {
+            var target = $('.qtip.jgrowl:visible:last');
+
+            $('<div/>').qtip({
+                content: {
+                    text: 'This is a jGrowl-esque qTip!',
+                    title: {
+                        text: 'Attention!',
+                        button: true
+                    }
+                },
+                position: {
+                    target: [0,0],
+                    container: $('#qtip-growl-container')
+                },
+                show: {
+                    event: false,
+                    ready: true,
+                    effect: function() {
+                        $(this).stop(0, 1).animate({ height: 'toggle' }, 400, 'swing');
+                    },
+                    delay: 0,
+                    persistent: persistent
+                },
+                hide: {
+                    event: false,
+                    effect: function(api) {
+                        $(this).stop(0, 1).animate({ height: 'toggle' }, 400, 'swing');
+                    }
+                },
+                style: {
+                    width: 250,
+                    classes: 'jgrowl',
+                    tip: false
+                },
+                events: {
+                    render: function(event, api) {
+                        if(!api.options.show.persistent) {
+                            $(this).bind('mouseover mouseout', function(e) {
+                                var lifespan = 5000;
+
+                                clearTimeout(api.timer);
+                                if (e.type !== 'mouseover') {
+                                    api.timer = setTimeout(function() { api.hide(e) }, lifespan);
+                                }
+                            })
+                            .triggerHandler('mouseout');
+                        }
+                    }
+                }
+            });
+        }
+        //Alert Prompt Confirm
+        // Alert/Confirm/Prompt
+        function dialogue(content, title) {
+            $('<div />').qtip({
+                content: {
+                    text: content,
+                    title: title
+                },
+                position: {
+                    my: 'center', at: 'center',
+                    target: $(window)
+                },
+                show: {
+                    ready: true,
+                    modal: {
+                        on: true,
+                        blur: false
+                    }
+                },
+                hide: false,
+                style: 'dialogue',
+                events: {
+                    render: function(event, api) {
+                        $('button', api.elements.content).click(function(e) {
+                            api.hide(e);
+                        });
+                    },
+                    hide: function(event, api) { api.destroy(); }
+                }
+            });
+        }
+
+
+        window.Alert = function() {
+          var message = $('<p />', { text: 'This is a sample alert dialogue' }),
+              ok = $('<button />', { text: 'Ok', 'class': 'full' });
+
+            dialogue( message.add(ok), 'Alert!' );
+        }
+
+        window.Prompt = function() {
+          var message = $('<p />', { text: 'What do you think about these custom dialogues?' }),
+              input = $('<input />', { val: 'Fantastic!' }),
+              ok = $('<button />', {
+                text: 'Ok'
+              }),
+              cancel = $('<button />', {
+                text: 'Cancel'
+              });
+
+            dialogue( message.add(input).add(ok).add(cancel), 'Attention!' );
+        }
+
+        window.Confirm = function() {
+          var message = $('<p />', { text: 'Click a button to exit the custom dialogue' }),
+              ok = $('<button />', {
+                text: 'Ok'
+              }),
+              cancel = $('<button />', {
+                text: 'Cancel'
+              });
+
+            dialogue( message.add(ok).add(cancel), 'Do you agree?' );
+        }
+
+        //带有title的提示框
+        $('#use4 a.one').qtip({
+            content:{
+                title: "这里是title",
+                text:$('.tooltiptext')
+            },
+            style:{
+                classes: 'qtip-gray'
+            },
+            position:{
+                my: 'top center',
+                at: 'bottom center'
+            }
+        });
+        $('#use2 a.one').qtip({
+            style:{
+                classes: 'qtip-gray'
+            },
+            position:{
+                my: 'bottom,left',
+                at: 'top left'
+            }
+        });
+        $('#use2 a.two').qtip({
+            style:{
+                classes: 'qtip-gray'
+            },
+            position:{
+                my: 'bottom,center',
+                at: 'top center'
+            }
+        });
+        $('#use2 a.three').qtip({
+            style:{
+                classes: 'qtip-gray'
+            },
+            position:{
+                my: 'bottom,right',
+                at: 'top right'
+            }
+        });
+        $('#use2 a.four').qtip({
+            style:{
+                classes: 'qtip-gray'
+            },
+            position:{
+                my: 'center,left',
+                at: 'center right'
+            }
+        });
+        $('#use2 a.five').qtip({
+            style:{
+                classes: 'qtip-gray'
+            },
+            position:{
+                my: 'top,left',
+                at: 'bottom right'
+            }
+        });
+        $('#use2 a.six').qtip({
+            style:{
+                classes: 'qtip-gray'
+            },
+            position:{
+                my: 'top,center',
+                at: 'bottom center'
+            }
+        });
+        $('#use2 a.seven').qtip({
+            style:{
+                classes: 'qtip-gray'
+            },
+            position:{
+                my: 'top,left',
+                at: 'bottom right'
+            }
+        });
+        $('#use2 a.eight').qtip({
+            style:{
+                classes: 'qtip-gray'
+            },
+            position:{
+                my: 'center,right',
+                at: 'center left'
+            }
+        });
+        //提示框位置控制
+        $('#position-tip a.one').qtip({
+            content:{
+                title: "这里是title",
+                text: '<div>这里是内容</div>'
+            },
+            style:{
+                classes: 'qtip-gray'
+            },
+            position:{
+                my: 'top left',
+                at: 'bottom right'
+            }
+        });
+        $('#position-tip a.two').qtip({
+            content:{
+                title: "这里是title",
+                text:'<div>这里是内容</div>'
+            },
+            style:{
+                classes: 'qtip-gray'
+            },
+            position:{
+                my: 'left center',
+                at: 'right center'
+            }
+        });
+        $('#position-tip a.three').qtip({
+            content:{
+                title: "这里是title",
+                text:'<div>这里是内容</div>'
+            },
+            style:{
+                classes: 'qtip-gray'
+            },
+            position:{
+                my: 'bottom left',
+                at: 'top right'
+            }
+        });
+        $('#position-tip a.foure').qtip({
+            content:{
+                title: "这里是title",
+                text:'<div>这里是内容</div>'
+            },
+            style:{
+                classes: 'qtip-gray'
+            },
+            position:{
+                my: 'bottom center',
+                at: 'top center'
+            }
+        });
+        $('#position-tip a.five').qtip({
+            content:{
+                title: "这里是title",
+                text:'<div>这里是内容</div>'
+            },
+            style:{
+                classes: 'qtip-gray'
+            },
+            position:{
+                my: 'top center',
+                at: 'bottom center'
+            }
+        });
+      
+    })
+     
+    </script>
+    <!-- 复制代码-->
+    <script type="text/javascript" src="../../../site/js/site.js"></script>
+    <script>
+        $('.code-demo-copy').jmCopy()
+    </script>
+   
+</body>
+</html>
