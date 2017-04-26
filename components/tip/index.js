@@ -4,5 +4,5 @@
  * @date    2017-02-13 14:21:46
  * @version $Id$
  */
- import './jquery.qtip.min.scss'
-
+ import Tip from './tip';
+ export default Tip;
