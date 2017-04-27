@@ -1,0 +1,20 @@
+{
+  "name": "设计规范",
+  "groups": [
+    {
+      "groupName": "设计规范",
+      "list": [
+        {
+          "path": "/font",
+          "type": "font",
+          "title": "Font 字体"
+        },
+        {
+          "path": "/color",
+          "type": "color",
+          "title": "Color 颜色"
+        }
+      ]
+    }
+  ]
+}

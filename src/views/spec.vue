@@ -2,9 +2,11 @@
   <div>
     <header-view></header-view>
     <div class="main-wrapper fn-clear">
-      <left-view></left-view>
+      <spec-left-view></spec-left-view>
       <div class="main-right">
-        <router-view></router-view>
+    <router-view>          <iframe width="100%" height="1354" frameborder="0" :src="'../../components/'+ $route.params.name + '/demo/'+ ($route.query.type || $route.params.name)+ '.html'" >22222</iframe>
+    </router-view>
+
       </div>
     </div>
     <footer-view></footer-view>
@@ -13,13 +15,13 @@
 <script>
   import HeaderView from '../components/header.vue'
   import FooterView from '../components/footer.vue'
-  import LeftView from '../components/spec_left_nav.vue'
+  import SpecLeftView from '../components/spec_left_nav.vue'
 
   export default {
     components: {
       HeaderView,
       FooterView,
-      LeftView
+      SpecLeftView
     }
   }
 </script>
