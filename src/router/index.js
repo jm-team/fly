@@ -21,11 +21,6 @@ export default new Router({
       component: Component
     },
     {
-      path: '/spec',
-      name: 'Spec',
-      component: Spec
-    },
-    {
       path: '/spec/:name',
       name: 'Spec',
       component: Spec

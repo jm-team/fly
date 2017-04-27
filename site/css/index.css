@@ -1049,8 +1049,9 @@ table {
 }
 
 .nav-item {
+  padding-top: 20px;
   font-size: 14px;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .nav-item h1 {
@@ -1065,7 +1066,7 @@ table {
 }
 
 .nav-item li.nav-group-list a {
-  display: inline-block;
+  display: block;
   height: 42px;
   line-height: 42px;
 }
